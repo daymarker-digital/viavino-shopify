@@ -1,0 +1,80 @@
+{%- if card_item and card_item != blank %}
+
+  {%- liquid
+
+    comment
+      Accepts:
+        - aos_id: {String} Optionally include element id for AOS
+        - card_classes: {String} Optionally include custom classes
+        - card_colour_theme: {String} Optionally include colour parameter
+        - card_index: {String} Optionally include index
+        - card_item: {Object} Shopify line_item object
+    endcomment
+
+    assign index = card_index | default: 1
+    assign snippet_name = 'cart-line-item'
+    assign snippet_classes = snippet_name
+    assign snipped_id = snippet_name | append: '--' | append: index
+
+    assign aos_id = aos_id | default: ''
+    assign aos_delay = 250 | times: index
+    assign aos_delay_increment = 250
+
+    assign colour_theme = card_colour_theme | default: 'off-white'
+    assign line_item = card_item | default: false
+    assign line_item_final_price = line_item.final_line_price | default: ''
+    assign line_item_id = line_item.id | default: ''
+    assign line_item_image = line_item.image | default: false
+    assign line_item_key = line_item.key | default: ''
+    assign line_item_product_title = line_item.product.title | default: ''
+    assign line_item_quantity = line_item.quantity | default: ''
+    assign line_item_title = line_item_product_title
+    assign line_item_url = line_item.url | default: ''
+    assign line_item_url_to_remove = line_item.url_to_remove | default: ''
+    assign line_item_variant_title = line_item.variant.title | default: ''
+
+    unless 'Default Title' == line_item_variant_title
+      assign line_item_title = line_item_title | append: ' ' | append: line_item_variant_title
+    endunless
+
+    if card_classes and card_classes != blank
+      assign snippet_classes = snippet_classes | prepend: ' ' | prepend: card_classes
+    endif
+
+    if section_id and section_id != blank
+      assign snipped_id = snipped_id | append: '--' | append: section_id
+    endif
+
+  -%}
+
+  <div class="{{ snippet_name }}" id="{{ snippet_name }}--{{ line_item_key }}" data-key="{{ line_item_key }}">
+
+    <div class="{{ snippet_name }}__image">
+      <a class="{{ snippet_name }}__image-link link" href="{{ line_item_url }}" title="{{ line_item_title }}" target="_self">
+        {% render 'lazyload-image', image: line_item_image %}
+      </a>
+    </div>
+
+    <div class="{{ snippet_name }}__content">
+      <div class="{{ snippet_name }}__info">
+        <strong class="{{ snippet_name }}__product-title">
+          <a class="{{ snippet_name }}__title-link link" href="{{ line_item_url }}" title="{{ line_item_title }}" target="_self">{{ line_item_product_title }}</a>
+        </strong>
+        {% unless 'Default Title' == line_item_variant_title %}
+          <span class="{{ snippet_name }}__variant-title">{{ line_item_variant_title }}</span>
+        {% endunless %}
+      </div>
+      <div class="{{ snippet_name }}__price">{{ line_item_final_price | money_with_currency }}</div>
+      <div class="{{ snippet_name }}__stepper">
+        {% render 'stepper', stepper_value: line_item_quantity %}
+      </div>
+      <div class="{{ snippet_name }}__action">
+        <button class="{{ snippet_name }}__button-remove button button--remove-cart-line-item js--remove-cart-line-item" type="button">
+          {% render 'svg', type: 'icon.trash' %}
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+{%- endif -%}

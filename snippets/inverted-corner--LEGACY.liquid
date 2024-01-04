@@ -1,0 +1,34 @@
+{%- liquid
+
+  assign border_rgba = border_colour | default: 'none'
+  assign fill_rgba = fill_colour | default: 'none'
+
+-%}
+
+{%- unless 'none' == border_colour -%}
+  {%- capture border_rgba  -%}
+    rgba(var(--theme-colour-{{ border_colour }}), 1)
+  {%- endcapture  -%}
+{%- endunless -%}
+
+{%- unless 'none' == fill_colour  -%}
+  {%- capture fill_rgba  -%}
+    rgba(var(--theme-colour-{{ fill_colour }}), 1)
+  {%- endcapture  -%}
+{%- endunless  -%}
+
+{%- if type and type != blank -%}
+  {%- case type -%}
+
+    {%- when 'button' -%}
+
+      <svg x="0px" y="0px" viewBox="0 0 336 48" style="enable-background:new 0 0 336 48;" xml:space="preserve">
+        <path fill="{{- fill_rgba -}}" d="M336,35.7V12.3c-6.8,0-12.3-5.5-12.3-12.3H12.3c0,6.8-5.5,12.3-12.3,12.3v23.4c6.8,0,12.3,5.5,12.3,12.3h311.4
+	        C323.7,41.2,329.2,35.7,336,35.7z"/>
+        <path fill="{{- border_rgba -}}" d="M321,3c1.2,6,6,10.8,12,12v18c-6,1.2-10.8,6-12,12H15c-1.2-6-6-10.8-12-12V15c6-1.2,10.8-6,12-12H321 M323.7,0
+	        H12.3c0,6.8-5.5,12.3-12.3,12.3v23.4c6.8,0,12.3,5.5,12.3,12.3h311.4c0-6.8,5.5-12.3,12.3-12.3V12.3C329.2,12.3,323.7,6.8,323.7,0
+	        L323.7,0z"/>
+      </svg>
+
+  {%- endcase -%}
+{%- endif -%}

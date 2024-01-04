@@ -1,0 +1,160 @@
+{%- if card_item and card_item != blank %}
+
+  {%- liquid
+
+    comment
+      Accepts:
+        - aos_id: {String} Optionally include element id for AOS
+        - card_classes: {String} Optionally include custom classes
+        - card_colour_theme: {String} Optionally include colour parameter
+        - card_index: {String} Optionally include index
+        - card_item: {Object} Shopify product object
+        - card_style: {String} Optionally include style parameter
+        - section_id: {String} Optionally include parent id
+    endcomment
+
+    assign index = card_index | default: 1
+    assign snippet_name = 'card-product'
+    assign snippet_classes = snippet_name
+    assign snipped_id = snippet_name | append: '--' | append: index
+
+    if card_classes and card_classes != blank
+      assign snippet_classes = snippet_classes | prepend: ' ' | prepend: card_classes
+    endif
+
+    if section_id and section_id != blank
+      assign snipped_id = snipped_id | append: '--' | append: section_id
+    endif
+
+    assign aos_id = aos_id | default: ''
+    assign aos_delay = 250 | times: index
+    assign aos_delay_increment = 250
+
+    assign colour_theme = card_colour_theme | default: 'not-set'
+    assign product = card_item | default: false
+    assign style = card_style | default: 'not-set'
+
+    assign available = product.available | default: false
+    assign cta_title = 'Add to cart'
+    assign description = product.description | default: ''
+    assign images = product.images | default: false
+    assign price = product.price
+    assign title = product.title | default: ''
+    assign url = product.url | default: ''
+
+    unless available
+      assign cta_title = 'Subscribe for updates'
+    endunless
+
+  -%}
+
+  <article class="{{ snippet_classes }}" id="{{ snippet_id }}" data-colour-theme="{{ colour_theme }}" data-index="{{ index }}" data-style="{{ style }}" {% unless available %}data-unavailable{% endunless %}>
+
+    {% case style %}
+
+      {% when 'featured-products' %}
+
+        {%- liquid
+          capture aos_attrs
+            render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-up'
+          endcapture
+          assign aos_delay = aos_delay | plus: aos_delay_increment
+        -%}
+        <div class="{{ snippet_name }}__image" {{ aos_attrs }}>
+          <a class="{{ snippet_name }}__image-link link" href="{{ url }}" title="{{ title }}" target="_self">
+            {% render 'lazyload-image', image: images[0] %}
+          </a>
+        </div>
+
+        <div class="{{ snippet_name }}__content">
+          {%- liquid
+            capture aos_attrs
+              render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-right'
+            endcapture
+          -%}
+          <div class="{{ snippet_name }}__cta" {{ aos_attrs }}>
+            <a class="{{ snippet_name }}__button button--primary" href="{{ url }}" title="{{ title }}" target="_self" data-colour-theme="{{ colour_theme }}">
+              <span class="button__title">{{ title }}</span>
+            </a>
+          </div>
+        </div>
+
+      {% else %}
+
+        {% unless available %}
+          {%- liquid
+            capture aos_attrs
+              render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-down'
+            endcapture
+            assign aos_delay = aos_delay | plus: aos_delay_increment
+          -%}
+          <div class="{{ snippet_name }}__badge" {{ aos_attrs }}>
+            <img src="{{ 'badge--sold-out.png' | asset_url }}" alt="Sold Out" height="246" width="246" />
+          </div>
+        {% endunless %}
+
+        {%- liquid
+          capture aos_attrs
+            render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-down'
+          endcapture
+          assign aos_delay = aos_delay | plus: aos_delay_increment
+        -%}
+
+        <div class="{{ snippet_name }}__image" {{ aos_attrs }}>
+          <a class="{{ snippet_name }}__image-link link" href="{{ url }}" title="{{ title }}" target="_self">
+            {% render 'lazyload-image', image: images[0] %}
+          </a>
+        </div>
+
+        <div class="{{ snippet_name }}__content">
+
+          {%- liquid
+            capture aos_attrs
+              render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-left'
+            endcapture
+            assign aos_delay = aos_delay | plus: aos_delay_increment
+          -%}
+
+          <strong class="{{ snippet_name }}__title heading--primary" {{ aos_attrs }}>
+            <a class="{{ snippet_name }}__title-link link" href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a>
+          </strong>
+
+          {% if description != blank %}
+            {%- liquid
+              capture aos_attrs
+                render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-left'
+              endcapture
+              assign aos_delay = aos_delay | plus: aos_delay_increment
+            -%}
+            <div class="{{ snippet_name }}__description body-copy--primary body-copy--sm" {{ aos_attrs }}>{{ description }}</div>
+          {% endif %}
+
+          <div class="{{ snippet_name }}__price body-copy--primary body-copy--sm">{{ price | money_with_currency }}</div>
+
+          {%- liquid
+            capture aos_attrs
+              render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-up'
+            endcapture
+            assign aos_delay = aos_delay | plus: aos_delay_increment
+          -%}
+          <div class="{{ snippet_name }}__cta" {{ aos_attrs }}>
+            {% if available %}
+              {% if product.has_only_default_variant %}
+                <button class="button button--secondary js--add-to-cart-product-card" type="button" data-product-variant-id="{{ product.first_available_variant.id }}">{{ cta_title }}</button>
+              {% else %}
+                <a class="button button--secondary" href="{{ url }}" title="Shop {{ title }}">Shop Now</a>
+              {% endif %}
+            {% else %}
+              <button class="button button--secondary out-of-stock" type="button" data-bs-toggle="modal" data-bs-target="#newsletter-popup">
+                <span class="button__title">{{ cta_title }}</span>
+              </button>
+            {% endif %}
+          </div>
+
+        </div>
+
+    {% endcase %}
+
+  </article>
+
+{%- endif -%}

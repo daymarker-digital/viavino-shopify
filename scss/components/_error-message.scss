@@ -1,0 +1,84 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins/border' as *;
+
+.error-message {
+
+  @include border-solid(var(--theme-border-width), 'off-black' );
+  transition:
+    opacity var(--theme-transition--duration),
+    transform var(--theme-transition--duration);
+  padding: 4px 8px;
+  background: rgba(var(--theme-colour-rosso), 1);
+  color: rgba(var(--theme-colour-off-white), 1);
+  text-transform: none;
+  display: inline-flex;
+  width: auto;
+  position: absolute;
+  top: calc(100% + 3px);
+  opacity: 0;
+  transform: translate3d( 0, -5px, 0 );
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow( 5px 5px 15px -2px rgba(51,51,51,0.6) );
+  z-index: 10;
+
+  &__icon {
+    aspect-ratio: 21.8/10.5;
+    width: auto;
+    height: 10.5px;
+    position: absolute;
+    top: -10.5px;
+    img, svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &--left {
+    left: var(--bs-container-fluid-padding);
+    .error-message__icon {
+      left: 10px;
+    }
+  }
+
+  &--right {
+    right: var(--bs-container-fluid-padding);
+    .error-message__icon {
+      right: 10px;
+    }
+  }
+
+  .error & {
+    opacity: 1;
+    transform: translate3d( 0, 0, 0 );
+  }
+
+  .field--email &,
+  .field--text & {
+    top: calc(100% + 7px);
+  }
+
+  .footer .field--email & {
+    top: calc(100% + 10px);
+  }
+
+  .field--textarea & {
+    top: calc(100% + 2px);
+  }
+
+  .newsletter-popup .field--email & {
+    @include border-solid(var(--theme-border-width), 'off-white' );
+    .error-message__icon {
+      .border {
+        fill: rgba(var(--theme-colour-off-white), 1);
+      }
+      .background {
+        fill: rgba(var(--theme-colour-rosso), 1);
+      }
+    }
+  }
+
+}

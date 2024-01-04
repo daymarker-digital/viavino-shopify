@@ -1,0 +1,13 @@
+{
+  "name": "Article",
+  "order": [
+    "main"
+  ],
+  "sections": {
+    "main": {
+      "settings": {
+      },
+      "type": "main-article"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins/button' as *;
+@use '../utils/mixins/font' as *;
+@use '../utils/mixins/ui' as *;
+
+.button {
+
+  @extend %ui-base;
+  @extend %ui-transition;
+
+  display: inline-flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+
+  &--close,
+  &--primary,
+  &--secondary {
+    @extend .button;
+  }
+
+  &--cart {
+    .button {
+      &__icon,
+      &__title {
+        display: block;
+      }
+      &__icon {
+        height: 20px;
+        width: auto;
+        img, svg {
+          display: block;
+          height: 100%;
+          width: auto;
+        }
+      }
+      &__title {
+        line-height: 1;
+        margin-bottom: -4px;
+      }
+    }
+    span {
+      & + span {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &--close {
+    height: 22px;
+    width: 22px;
+    img, svg {
+      color: currentcolor;
+      display: block;
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  // ---------------------------------------- Style
+  &--primary {
+    @include button-style( 'primary' );
+  }
+
+  &--secondary {
+    @include button-style( 'secondary' );
+  }
+
+  &--tertiary {
+    @include button-style( 'tertiary' );
+  }
+
+  // ---------------------------------------- Colour
+  @each $name, $value in $theme-colours {
+    &--text-colour-#{$name} {
+      color: $value;
+      &:hover {
+        color: $value;
+        // color: color.scale( $value, $lightness: -15% );
+      }
+    }
+  }
+
+  &:disabled,
+  &[disabled] {
+    opacity: 0.3;
+    cursor: no-drop;
+    &:focus,
+    &:hover {
+      background: initial;
+      opacity: 0.3;
+      color: initial;
+    }
+  }
+
+}

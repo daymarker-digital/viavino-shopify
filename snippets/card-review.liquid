@@ -1,0 +1,74 @@
+{%- if card_review and card_review != blank %}
+
+  {%- liquid
+
+    comment
+      Accepts:
+        - card_review: {Object} Product Liquid object
+        - classes: {String} Optionally include additional classes
+        - index: {String} Optionally include index value for iteration placement
+        - section_id: {String} Optionally include section id value for uniqueness
+    endcomment
+
+    assign index = index | default: 1
+    assign snippet_name = 'card-review'
+    assign snippet_classes = snippet_name
+    assign snippet_id = id | default: 'card-review--' | append: section_id | append: '--' | append: index
+
+    if classes and classes != empty
+      assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes
+    endif
+
+    assign aos_delay = 250 | times: index
+    assign aos_delay_increment = 250
+
+    assign background = card_review.settings.background | default: 'not-set'
+    assign background_image = card_review.settings.background_image | default: false
+    assign rating = card_review.settings.rating | default: 0
+    assign review = card_review.settings.review | default: ''
+    assign reviewer_logo = card_review.settings.reviewer_logo | default: false
+
+  -%}
+
+  <article class="{{ snippet_classes }}" id="{{ snippet_id }}">
+
+    {%- liquid
+      capture aos_attrs
+        render 'aos-attributes', anchor: snippet_id, delay: aos_delay, transition: 'fade-left'
+      endcapture
+      assign aos_delay = aos_delay | plus: aos_delay_increment
+    -%}
+
+    <div class="{{ snippet_name }}__review" {{ aos_attrs }}>&#8220;{{ review }}&#8221;</div>
+
+    {% if reviewer_logo %}
+      {%- liquid
+        capture aos_attrs
+          render 'aos-attributes', anchor: snippet_id, delay: aos_delay, transition: 'fade-left'
+        endcapture
+        assign aos_delay = aos_delay | plus: aos_delay_increment
+      -%}
+      <div class="{{ snippet_name }}__reviewer" {{ aos_attrs }}>
+        {% render 'lazyload-image', image: reviewer_logo %}
+      </div>
+    {% endif %}
+
+    {%- liquid
+      capture aos_attrs
+        render 'aos-attributes', anchor: snippet_id, delay: aos_delay, transition: 'fade-left'
+      endcapture
+    -%}
+    <div class="{{ snippet_name }}__rating" {{ aos_attrs }}>
+      {% for i in (1..10) %}
+        {% if i <= rating %}
+          {% assign abc = 'fill' %}
+        {% else %}
+          {% assign abc = 'outline' %}
+        {% endif %}
+        <span class="{{ snippet_name }}__rating-item {{ abc }}" data-index="{{ forloop.index }}"></span>
+      {% endfor %}
+    </div>
+
+  </article>
+
+{%- endif -%}

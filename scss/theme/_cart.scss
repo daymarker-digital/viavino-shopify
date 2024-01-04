@@ -1,0 +1,88 @@
+@use '../utils/mixins/border' as *;
+@use '../utils/mixins/breakpoint' as *;
+@use '../utils/mixins/font' as *;
+
+.cart {
+
+  @include clarendon-wide(700);
+  text-transform: uppercase;
+
+  .inverted-corner-box {
+    width: 100%;
+  }
+
+  &__footer-content,
+  &__header-content,
+  &__main-content {
+    width: calc(100% + var(--bs-container-fluid-padding)*2);
+    left: calc(-1*var(--bs-container-fluid-padding));
+    position: relative;
+  }
+
+  &__actions,
+  &__footer-content {
+    @include border-solid( var(--theme-border-width), 'inherit', 'top' );
+  }
+
+  &__actions,
+  &__cart-subtotal,
+  &__header-content {
+    padding: var(--theme-cart-line-item-padding);
+    display: flex;
+  }
+
+  &__actions {
+    justify-content: center;
+  }
+
+  &__cart-subtotal {
+    background: rgba(var(--theme-colour-rosa), 1);
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__header-content {
+    @include border-solid( var(--theme-border-width), 'inherit', 'bottom' );
+    justify-content: center;
+  }
+
+  &__heading {
+    line-height: 0.9;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  @include breakpoint(sm) {
+
+    &__footer-content,
+    &__header-content,
+    &__main-content {
+      @include border-solid( var(--theme-border-width), 'inherit', 'left' );
+      @include border-solid( var(--theme-border-width), 'inherit', 'right' );
+      position: relative;
+      width: 100%;
+      left: unset;
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    .inverted-corner-box {
+      width: 50%;
+      margin-left: auto;
+    }
+
+    &__actions,
+    &__cart-subtotal {
+      padding: var(--theme-cart-line-item-padding--lg);
+      display: flex;
+    }
+
+    &__actions {
+      justify-content: flex-end;
+    }
+
+  }
+
+}

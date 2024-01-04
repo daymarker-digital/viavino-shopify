@@ -1,0 +1,29 @@
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use "../utils/mixins/breakpoint" as *;
+@use '../utils/mixins/font' as *;
+@use '../utils/mixins/heading' as *;
+
+.heading {
+
+  $heading-sizes:( 'xl', 'lg', 'md', 'sm', 'xs' );
+
+  @each $size in $heading-sizes {
+    &--#{$size} {
+      @include heading-size( $size );
+    }
+  }
+
+  &--primary {
+    @include heading-style( 'primary' );
+  }
+
+  &--secondary {
+    @include heading-style( 'secondary' );
+  }
+
+  &--tertiary {
+    @include heading-style( 'tertiary' );
+  }
+
+}

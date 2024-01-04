@@ -1,0 +1,100 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../variables' as *;
+@use "border" as *;
+@use "breakpoint" as *;
+@use "font" as *;
+
+@mixin button($style:primary) {
+
+  // ---------------------------------------- Primary
+  @if $style == primary {
+
+    @each $name, $value in $theme-button-heights {
+      @if $name == 'base' {
+        height: $value;
+      } @else {
+        @include breakpoint(#{$name}) {
+          height: $value;
+        }
+      }
+    }
+
+    @include clarendon-wide(700);
+    border-style: solid;
+    border-color: currentcolor;
+    border-width: var(--theme-border-width);
+    color: currentcolor;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 400px;
+
+  }
+
+  // ---------------------------------------- Primary
+  @if $style == secondary {
+
+    @include sarina(400);
+    border-bottom-width: var(--theme-border-width);
+    border-bottom-style: solid;
+    border-bottom-color: currentcolor;
+    color: currentcolor;
+    line-height: 1.5;
+
+    &:hover {
+      border-bottom-color: transparent;
+      color: inherit;
+    }
+
+  }
+
+}
+
+@mixin button-style( $style: 'primary' ) {
+
+  @if $style == 'primary' {
+    @include clarendon-wide(700);
+    text-transform: uppercase;
+    @each $name, $value in $theme-button-heights {
+      @if $name == 'base' {
+        height: $value;
+      } @else {
+        @include breakpoint(#{$name}) {
+          height: $value;
+        }
+      }
+    }
+  }
+
+  @if $style == 'secondary' {
+    @include border-solid( var(--theme-border-width), 'inherit', 'bottom' );
+    @include sarina(400);
+    &:hover {
+      border-bottom-color: transparent;
+      color: currentcolor;
+    }
+  }
+
+  @if $style == 'tertiary' {
+    @include new-sprint(300);
+  }
+
+}
+
+@mixin button-text( $style: 'dark' ) {
+
+  $colour: map.get( $theme-colours, 'off-black' );
+
+  @if $style == 'light' {
+    $colour: map.get( $theme-colours, 'off-white' );
+  }
+
+  $colour-hover: color.scale( $colour, $lightness: -15% );
+
+  color:  $colour;
+
+  &:hover {
+    color: $colour-hover;
+  }
+
+}

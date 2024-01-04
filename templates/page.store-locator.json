@@ -1,0 +1,248 @@
+{
+  "order": [
+    "13faecdc-ffdd-4ada-9b1d-ba1547d9d3ed",
+    "dd05744e-fe72-45dc-9a85-9b084e804018",
+    "91c571c9-c1ed-4efe-a703-25dbff007398",
+    "6a9eeaa5-fc90-47aa-b3bb-ad9943003bf9",
+    "e03a452f-d124-4b06-9c15-e7f24ed51905",
+    "1a88d120-0f19-468e-8609-7eeb478452aa",
+    "d27d2ebe-cd35-4f2a-b79e-578c98af4885",
+    "main"
+  ],
+  "sections": {
+    "13faecdc-ffdd-4ada-9b1d-ba1547d9d3ed": {
+      "type": "hero",
+      "blocks": {
+        "730a2d6c-685e-4de3-8874-c6363583e924": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ page.title }}",
+            "text_colour": "off-white"
+          }
+        }
+      },
+      "block_order": [
+        "730a2d6c-685e-4de3-8874-c6363583e924"
+      ],
+      "settings": {
+        "height_desktop": "auto",
+        "height_mobile": "auto",
+        "border_top": false,
+        "border_bottom": false,
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/HEADER_345560c2-d2a3-4002-a51a-bdce288be3c5.jpg",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 68,
+        "padding_bottom": 60,
+        "anchor_id": ""
+      }
+    },
+    "dd05744e-fe72-45dc-9a85-9b084e804018": {
+      "type": "marquee",
+      "settings": {
+        "text": "<p>Scusi!<\/p>",
+        "reverse": false,
+        "font_size": 18,
+        "duration": 46,
+        "gap": 5,
+        "style": "primary",
+        "border_top": true,
+        "border_bottom": false,
+        "text_colour": "dark",
+        "background": "none",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "91c571c9-c1ed-4efe-a703-25dbff007398": {
+      "type": "stockists",
+      "settings": {
+        "border_top": true,
+        "border_bottom": false,
+        "background": "off-white",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
+      }
+    },
+    "6a9eeaa5-fc90-47aa-b3bb-ad9943003bf9": {
+      "type": "full-width-feature",
+      "disabled": true,
+      "blocks": {
+        "ba0f2cbf-b3e8-4d90-8239-b08147730767": {
+          "type": "heading",
+          "settings": {
+            "heading": "Scusi!",
+            "heading_size": "md",
+            "heading_tag": "h2"
+          }
+        },
+        "240c19cf-cc84-46dd-8b21-27ca08249f8d": {
+          "type": "message",
+          "settings": {
+            "message": "<p>STOCKISTS COMING SOON!<\/p>",
+            "message_style": "tertiary"
+          }
+        }
+      },
+      "block_order": [
+        "ba0f2cbf-b3e8-4d90-8239-b08147730767",
+        "240c19cf-cc84-46dd-8b21-27ca08249f8d"
+      ],
+      "settings": {
+        "height_desktop": "auto",
+        "height_mobile": "auto",
+        "border_top": true,
+        "border_bottom": false,
+        "content_border_enable": false,
+        "content_width_desktop": 75,
+        "content_width_mobile": 85,
+        "text_colour": "dark",
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/store-locator--full-width-feature-01_1800x2_1f571b10-62ae-4f47-b89c-1aee620e8fc3.jpg",
+        "background_image_position_desktop": "bottom center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "anchor_id": ""
+      }
+    },
+    "e03a452f-d124-4b06-9c15-e7f24ed51905": {
+      "type": "full-width-feature",
+      "blocks": {
+        "1ac35e7c-ba78-466a-aa2e-638bcf9178f5": {
+          "type": "heading",
+          "settings": {
+            "heading": "Want to carry Viavino in your store?",
+            "heading_size": "md",
+            "heading_tag": "h2"
+          }
+        },
+        "2603aaee-4cdd-4770-99ba-d8efd1da9077": {
+          "type": "button",
+          "settings": {
+            "button_title": "Contact Us Today",
+            "button_link": "shopify:\/\/pages\/contact",
+            "button_style": "secondary",
+            "button_background_colour": "none",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-white"
+          }
+        }
+      },
+      "block_order": [
+        "1ac35e7c-ba78-466a-aa2e-638bcf9178f5",
+        "2603aaee-4cdd-4770-99ba-d8efd1da9077"
+      ],
+      "settings": {
+        "height_desktop": "auto",
+        "height_mobile": "auto",
+        "border_top": true,
+        "border_bottom": false,
+        "content_border_enable": false,
+        "content_width_desktop": 75,
+        "content_width_mobile": 85,
+        "text_colour": "off-white",
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/store-locator--full-width-feature-02_1800x2_20f58515-2a75-49c1-8342-d4bcab00cd72.jpg",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 164,
+        "padding_bottom": 164,
+        "anchor_id": ""
+      }
+    },
+    "1a88d120-0f19-468e-8609-7eeb478452aa": {
+      "type": "fifty-fifty",
+      "blocks": {
+        "03b855d3-6400-49fc-a409-10d2f5afc016": {
+          "type": "text",
+          "settings": {
+            "heading": "Need more info?",
+            "heading_size": "sm",
+            "message": "",
+            "message_style": "secondary",
+            "button_title": "Contact Us",
+            "button_link": "shopify:\/\/pages\/contact",
+            "button_style": "primary",
+            "button_background_colour": "off-white",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black",
+            "content_width_desktop": 75,
+            "content_width_mobile": 85,
+            "content_text_colour": "off-white",
+            "background": "off-black",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "c54eb762-bd8f-47cd-87f0-84ed180f9a34": {
+          "type": "image",
+          "settings": {
+            "image_sizing": "custom",
+            "image_aspect_ratio": "3\/3.5",
+            "image_border_enable": true,
+            "image_border_colour": "off-black",
+            "image": "shopify:\/\/shop_images\/store-locator--fifty-fifty-01_1800x_403a4171-2e9f-4f93-ba41-e8782e48fbb3.jpg",
+            "content_width_desktop": 70,
+            "content_width_mobile": 90,
+            "background": "off-white",
+            "padding_top": 100,
+            "padding_bottom": 100
+          }
+        }
+      },
+      "block_order": [
+        "03b855d3-6400-49fc-a409-10d2f5afc016",
+        "c54eb762-bd8f-47cd-87f0-84ed180f9a34"
+      ],
+      "settings": {
+        "content_border_mobile": false,
+        "content_border_desktop": false,
+        "border_top": false,
+        "border_bottom": false,
+        "background": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
+      }
+    },
+    "d27d2ebe-cd35-4f2a-b79e-578c98af4885": {
+      "type": "full-width-feature",
+      "settings": {
+        "height_desktop": "650px",
+        "height_mobile": "450px",
+        "border_top": false,
+        "border_bottom": false,
+        "content_border_enable": false,
+        "content_width_desktop": 100,
+        "content_width_mobile": 100,
+        "text_colour": "light",
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/VIA--product-full-width-feature_3x_1800x2_a59d64b6-4eb7-4224-871d-f71f7a1578a4.jpg",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "width": "full",
+        "background": "none",
+        "container": "container",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "anchor_id": ""
+      }
+    }
+  }
+}

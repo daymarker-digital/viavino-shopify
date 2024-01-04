@@ -1,0 +1,31 @@
+@use 'sass:map';
+@use '../variables' as *;
+@use "breakpoint" as *;
+@use "font" as *;
+
+@mixin input( $style: 'primary' ) {
+
+  @include clarendon-wide(700);
+  text-transform: uppercase;
+
+  @if $style == 'primary' {
+    @each $name, $value in $theme-button-heights {
+      @if $name == 'base' {
+        height: $value;
+      } @else {
+        @include breakpoint(#{$name}) {
+          height: $value;
+        }
+      }
+    }
+    border-bottom-width: var(--theme-border-width);
+    border-bottom-style: solid;
+    border-bottom-color: currentColor;
+  }
+
+  @if $style == 'secondary' {
+    background: pink;
+    border: green;
+  }
+
+}

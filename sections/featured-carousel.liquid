@@ -1,0 +1,426 @@
+{%- liquid
+
+  assign section_name = 'featured-carousel'
+  assign section_classes = section_name
+  assign section_id = section_name | append: '--' | append: section.id
+
+  assign aos_id = section_id | append: '--aos'
+  assign aos_delay = 250
+  assign aos_delay_increment = 250
+
+  assign container = section.settings.container | default: 'container'
+
+  assign carousel_animation_duration = section.settings.carousel_animation_duration | default: 450
+  assign carousel_autoplay = section.settings.carousel_autoplay | default: 3500
+  assign carousel_gap = section.settings.carousel_gap | default: 28
+  assign carousel_id = section_id | append: '--glide'
+  assign carousel_pagination = section.settings.carousel_pagination | default: false
+  assign carousel_navigation = section.settings.carousel_navigation | default: false
+
+  assign carousel_navigation_button_previous = settings.carousel_button_previous | default: false
+  assign carousel_navigation_button_next = settings.carousel_button_next | default: false
+
+  assign slides = section.blocks | where: 'type', 'slide' | default: false
+
+  if section.settings.anchor_id != blank
+    assign section_id = section.settings.anchor_id
+  endif
+
+-%}
+
+{% if slides and slides.size > 0 %}
+
+  {%- style -%}
+
+    {%
+      render 'element-styles',
+      element_background: 'off-white'
+      element_border_bottom: section.settings.border_bottom,
+      element_border_top: section.settings.border_top,
+      element_id: section_id,
+      element_padding_bottom: section.settings.padding_bottom,
+      element_padding_top: section.settings.padding_top
+    %}
+
+  {%- endstyle -%}
+
+  <link rel="stylesheet" href="{{ 'section-featured-carousel.css' | asset_url }}" media="print" onload="this.media='all'">
+  <noscript>{{ 'section-featured-carousel.css' | asset_url | stylesheet_tag }}</noscript>
+
+  <div
+    {%-
+      render 'element-attrs',
+      element_class: section_classes,
+      element_id: section_id
+    -%}
+  >
+    {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
+      <div
+        class="{{ section_name }}__glide glide js--glide"
+        id="{{ carousel_id }}"
+        data-glide-animation-duration="{{ carousel_animation_duration }}"
+        data-glide-autoplay="{{ carousel_autoplay }}"
+        data-glide-gap="{{ carousel_gap }}"
+        data-glide-style="{{ section_name }}"
+      >
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+
+            {% for item in slides %}
+
+              {%- liquid
+
+                assign button_background_colour = item.settings.button_background_colour | default: 'off-white'
+                assign button_border_colour = item.settings.button_border_colour | default: 'off-black'
+                assign button_link = item.settings.button_link | default: ''
+                assign button_text_colour = item.settings.button_text_colour | default: 'off-black'
+                assign button_title = item.settings.button_title | default: ''
+
+                assign content_background = item.settings.content_background | default: 'off-white'
+                assign content_text_colour = item.settings.content_text_colour | default: 'off-black'
+
+                assign heading = item.settings.heading | default: ''
+
+                assign image_main = item.settings.image_main | default: false
+                assign image_supporting = item.settings.image_supporting | default: false
+
+                assign item_id = section_id | prepend: 'carousel-item--' | append: forloop.index
+
+              -%}
+
+              <li class="glide__slide">
+
+                {%- style -%}
+                  {%
+                    render 'element-styles',
+                      element_background: content_background,
+                      element_id: item_id,
+                  %}
+                {%- endstyle -%}
+
+                <div class="{{ section_name }}__item" id="{{ item_id }}">
+                  <div class="{{ section_name }}__item-grid">
+
+                    <div class="{{ section_name }}__item-column">
+                      <div class="{{ section_name }}__item-image-main">
+                        {% render 'lazyload-image', image: image_main %}
+                      </div>
+                    </div>
+
+                    <div class="{{ section_name }}__item-column">
+                      <div class="{{ section_name }}__item-main text-colour--{{ content_text_colour }}">
+                        <div class="{{ section_name }}__item-image-supporting">
+                          {% render 'lazyload-image', image: image_supporting %}
+                        </div>
+                        <div class="{{ section_name }}__item-content">
+
+                          {% if heading != blank %}
+                            <strong class="{{ section_name }}__item-heading heading--primary">{{ heading }}</strong>
+                          {% endif %}
+
+                          {% if button_link != blank and button_title != blank %}
+                            <div class="{{ section_name }}__item-cta">
+
+                              {%- capture button_classes -%}
+                                {{ section_name }}__button button--primary button--text-colour-{{ button_text_colour }}
+                              {%- endcapture -%}
+                              {%- capture inverted_corner_box_content -%}
+                                {%- render 'link', classes: button_classes, link: button_link, title: button_title -%}
+                              {%- endcapture -%}
+                              {%-
+                                render 'inverted-corner-box',
+                                background: button_background_colour,
+                                border: button_border_colour,
+                                content: inverted_corner_box_content,
+                                type: 'button'
+                              -%}
+
+                            </div>
+                          {% endif %}
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+
+            {% endfor %}
+
+          </ul>
+        </div>
+
+        {% if carousel_navigation or carousel_pagination %}
+          <div class="glide__navigation">
+
+            {% if carousel_navigation %}
+              <button class="glide__navigation-button button prev" data-glide-navigation="#{{ carousel_id }}" type="button">
+                <span class="button__image">{% render 'lazyload-image', image: carousel_navigation_button_previous %}</span>
+                <span class="button__title heading--primary">Back</span>
+              </button>
+            {% endif %}
+
+            {% if carousel_pagination %}
+              <div class="glide__bullets" data-glide-el="controls[nav]">
+                {% for item in slides %}
+                  <button class="glide__bullet" type="button" data-glide-dir="={{ forloop.index0 }}"></button>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            {% if carousel_navigation %}
+              <button class="glide__navigation-button button next" data-glide-navigation="#{{ carousel_id }}" type="button">
+                <span class="button__image">{% render 'lazyload-image', image: carousel_navigation_button_next %}</span>
+                <span class="button__title heading--primary">Next</span>
+              </button>
+            {% endif %}
+
+          </div>
+        {% endif %}
+
+      </div>
+
+    {% render 'bs-container', state: 'closed', container: container %}
+  </div>
+
+{% endif %}
+
+{% schema %}
+{
+  "name": "Featured Carousel",
+  "tag": "section",
+  "class": "section section--featured-carousel",
+  "settings": [
+    {
+      "content": "Carousel",
+      "type": "header"
+    },
+    {
+      "label": "Enable Pagination",
+      "type": "checkbox",
+      "default": false,
+      "id": "carousel_pagination"
+    },
+    {
+      "label": "Enable Navigation",
+      "type": "checkbox",
+      "default": false,
+      "id": "carousel_navigation"
+    },
+    {
+      "label": "Carousel Autoplay",
+      "info": "Time in milliseconds before a slide changes. Set to '0' to disable autoplay.",
+      "type": "range",
+      "min": 0,
+      "max": 8000,
+      "step": 250,
+      "default": 3000,
+      "id": "carousel_autoplay"
+    },
+    {
+      "label": "Carousel Animation Duration",
+      "info": "Duration of the slide transition animation in milliseconds.",
+      "type": "range",
+      "min": 250,
+      "max": 3500,
+      "step": 50,
+      "default": 450,
+      "id": "carousel_animation_duration"
+    },
+    {
+      "label": "Carousel Slide Gap",
+      "type": "range",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 20,
+      "id": "carousel_gap"
+    },
+    {
+      "content": "Border",
+      "type": "header"
+    },
+    {
+      "label": "Top Border",
+      "type": "checkbox",
+      "default": true,
+      "id": "border_top"
+    },
+    {
+      "label": "Bottom Border",
+      "type": "checkbox",
+      "default": false,
+      "id": "border_bottom"
+    },
+    {
+      "label": "Container",
+      "type": "select",
+      "options": [
+        {
+          "label": "Static",
+          "value": "container"
+        },
+        {
+          "label": "Fluid",
+          "value": "container-fluid"
+        },
+        {
+          "label": "Full Width",
+          "value": "full-width"
+        }
+      ],
+      "default": "container",
+      "id": "container"
+    },
+
+    {
+      "content": "Padding",
+      "type": "header"
+    },
+    {
+      "label": "Top Padding",
+      "type": "range",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "id": "padding_top"
+    },
+    {
+      "label": "Bottom Padding",
+      "type": "range",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "id": "padding_bottom"
+    },
+    {
+      "content": "Anchor",
+      "type": "header"
+    },
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "limit": 7,
+      "settings": [
+        {
+          "content": "Images",
+          "type": "header"
+        },
+        {
+          "label": "Main Image",
+          "type": "image_picker",
+          "id": "image_main"
+        },
+        {
+          "label": "Supporting Image",
+          "type": "image_picker",
+          "id": "image_supporting"
+        },
+        {
+          "content": "Content",
+          "type": "header"
+        },
+        {
+          "content": "Style",
+          "type": "paragraph"
+        },
+        {
+          "label": "Background",
+          "type": "select",
+          "options": [
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" },
+            { "label": "Rosa", "value": "rosa" },
+            { "label": "Rosso", "value": "rosso" }
+          ],
+          "default": "off-white",
+          "id": "content_background"
+        },
+        {
+          "label": "Text Colour",
+          "type": "select",
+          "options": [
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" }
+          ],
+          "default": "off-black",
+          "id": "content_text_colour"
+        },
+        {
+          "content": "Content",
+          "type": "paragraph"
+        },
+        {
+          "label": "Heading",
+          "type": "textarea",
+          "id": "heading"
+        },
+        {
+          "content": "Button",
+          "type": "header"
+        },
+        {
+          "label": "Button Title",
+          "type": "text",
+          "id": "button_title"
+        },
+        {
+          "label": "Button Link",
+          "type": "url",
+          "id": "button_link"
+        },
+        {
+          "label": "Button Background",
+          "type": "select",
+          "options": [
+            { "label": "None", "value": "none" },
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" },
+            { "label": "Rosa", "value": "rosa" },
+            { "label": "Rosso", "value": "rosso" }
+          ],
+          "default": "none",
+          "id": "button_background_colour"
+        },
+        {
+          "label": "Button Border",
+          "type": "select",
+          "options": [
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" }
+          ],
+          "default": "off-black",
+          "id": "button_border_colour"
+        },
+        {
+          "label": "Button Text Colour",
+          "type": "select",
+          "options": [
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" }
+          ],
+          "default": "off-black",
+          "id": "button_text_colour"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Carousel"
+    }
+  ]
+}
+{% endschema %}

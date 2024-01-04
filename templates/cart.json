@@ -1,0 +1,16 @@
+{
+  "order": [
+    "main"
+  ],
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+        "heading": "Your Bag",
+        "empty_message": "",
+        "empty_cta_title": "",
+        "empty_cta_link": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{%- if section_id and section_id != blank -%}
+
+  {%- liquid
+
+    comment
+      Accepts:
+        - section_background: {String} Optionally include a named colour value
+        - section_background_image: {Object} Optionally include a background image
+        - section_border_bottom: {Boolean} Optionally include bottom border
+        - section_border_top: {Boolean} Optionally include top border
+        - section_id: {String} Section ID
+        - section_padding_bottom: {Integer} Optionally include an integer value for bottom padding
+        - section_padding_top: {Integer} Optionally include an integer value for top padding
+      Usage:
+        render 'section-styles',
+          section_background: section.settings.background,
+          section_background_image: section.settings.background_image,
+          section_border_bottom: section.settings.border_bottom,
+          section_border_top: section.settings.border_top,
+          section_id: section.id,
+          section_padding_bottom: section.settings.padding_bottom
+          section_padding_top: section.settings.padding_top,
+    endcomment
+
+  -%}
+
+  #{{ section_id }} {
+
+    padding-top: calc({{ section_padding_top }}px * 0.75);
+    padding-bottom: calc({{ section_padding_bottom }}px  * 0.75);
+
+    {%- if section_background == 'image' and section_background_image and section_background_image != blank -%}
+      background: url('{{ section_background_image | img_url:'1800x' }}');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    {%- endif -%}
+
+    {%- if section_border_bottom -%}
+      border-bottom-color: rgba(var(--theme-colour-off-black), 1);
+      border-bottom-width: var(--theme-border-width);
+      border-bottom-style: solid;
+    {%- endif -%}
+
+    {%- if section_border_top -%}
+      border-top-color: rgba(var(--theme-colour-off-black), 1);
+      border-top-width: var(--theme-border-width);
+      border-top-style: solid;
+    {%- endif -%}
+
+  }
+
+  @media screen and (min-width: 992px) {
+    #{{ section_id }} {
+      padding-top: {{ section_padding_top }}px;
+      padding-bottom: {{ section_padding_bottom }}px;
+    }
+  }
+
+{%- endif -%}

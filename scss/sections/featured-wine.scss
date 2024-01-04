@@ -1,0 +1,155 @@
+@use '../utils/mixins/breakpoint' as *;
+
+.featured-wine {
+
+  .accordion {
+    &:last-of-class {
+      border-bottom-width: var(--theme-border-width);
+      border-bottom-style: solid;
+      border-bottom-color: currentcolor;
+    }
+  }
+
+  .glide {
+    .inverted-corner {
+      width: 100%;
+      height: 100%;
+    }
+    &__bullet {
+      height: var(--theme-border-width);
+      width: 100%;
+      border: none;
+      outline: none;
+      margin: 0;
+      padding: 0;
+      opacity: 0.2;
+      &:focus,
+      &:hover {
+        opacity: 0.75;
+      }
+      &.glide__bullet--active {
+        opacity: 1;
+      }
+    }
+    &__bullets {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 20px;
+      align-items: center;
+      margin: 25px auto 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .inverted-corner-box {
+    width: 100%;
+  }
+
+  &__content,
+  &__gallery {
+    display: block;
+    width: 100%;
+  }
+
+  &__accordion {
+    & + .featured-wine__cta {
+      margin-top: 30px;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    width: 100%;
+  }
+
+  &__description {
+    margin: var(--bs-gutter-width) 0;
+  }
+
+  &__gallery {
+    & + .featured-wine__content {
+      margin-top: 42px;
+    }
+  }
+
+  &__cta {
+    & + .featured-wine__cta {
+      margin-top: calc(0.75 * var(--bs-gutter-width));
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    img, svg {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+  }
+
+  &__layout {
+    display: grid;
+    width: 100%;
+    min-width: 0;
+  }
+
+  &__title {
+    line-height: 1;
+  }
+
+  @include breakpoint(lg) {
+
+    .glide {
+      &__bullets {
+        width: 75%;
+        margin-top: 36px;
+      }
+    }
+
+    &__gallery {
+      & + .featured-wine__content {
+        margin-top: 0;
+      }
+    }
+
+    &__layout {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      &.gallery-right {
+        .featured-wine {
+          &__content {
+            order: 1;
+          }
+          &__gallery {
+            order: 2;
+          }
+        }
+      }
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    &__title {
+      font-size: 40px;
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    &__title {
+      font-size: 46px;
+    }
+
+  }
+
+}

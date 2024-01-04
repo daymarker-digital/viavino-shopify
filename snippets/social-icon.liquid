@@ -1,0 +1,20 @@
+{%- if social_icon_url and social_icon_url != blank -%}
+
+  {% render 'social-icon', social_icon_classes: 'footer__main-social-icon', social_icon_type: 'Twitter', social_icon_url: social_twitter_url %}
+
+  {%- liquid
+    assign social_icon_type = 'icon.' | append: social_icon_type | default: 'facebook' | downcase
+    assign social_icon_link_title = shop.name | append: ' ' | append: social_type
+    assign snippet_class = 'social-icon'
+
+    if social_icon_classes and social_icon_classes != blank
+      assign snippet_class = snippet_class | prepend: ' ' | prepend: social_icon_classes
+    endif
+
+  -%}
+
+  <a class="{{ social_icon_classes }} link" href="{{ social_icon_url }}" target="_blank" title="{{ social_icon_link_title }}">
+    {% render 'svg', type: social_icon_type %}
+  </a>
+
+{%- endif -%}

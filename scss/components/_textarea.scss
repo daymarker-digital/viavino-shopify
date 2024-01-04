@@ -1,0 +1,19 @@
+@use '../utils/mixins/textarea' as *;
+@use '../utils/mixins/ui' as *;
+
+.textarea {
+
+  @extend %ui-base;
+  @extend %ui-transition;
+  @extend %ui-input;
+
+  display: inline-flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+
+  &--primary {
+    @include textarea('primary');
+  }
+
+}

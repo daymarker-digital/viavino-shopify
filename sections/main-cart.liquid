@@ -1,0 +1,83 @@
+{%- liquid
+
+  assign section_name = 'cart'
+  assign section_classes = section_name
+  assign section_id = section_name | append: '--' | append: section.id
+
+  assign container = section.settings.container | default: 'container'
+  assign form_action = routes.cart_url
+  assign form_id = section_name | append: '__cart-line-items'
+  assign heading = settings.cart_heading | default: 'Cart'
+
+  if section.settings.anchor_id != blank
+    assign section_id = section.settings.anchor_id
+  endif
+
+-%}
+
+{%- style -%}
+
+  {%
+    render 'element-styles',
+      element_background: 'off-white',
+      element_id: section_id
+  %}
+
+{%- endstyle -%}
+
+{% if heading != blank %}
+  <div class="{{ section_name }}__header">
+    {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
+      <div class="{{ section_name }}__header-content">
+        <h1 class="{{ section_name }}__heading heading--primary heading--sm">{{ heading }}</h1>
+      </div>
+    {% render 'bs-container', state: 'closed', col: 'col-12', container: container %}
+  </div>
+{% endif %}
+
+<div class="{{ section_name }}__main">
+  {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
+    <div class="{{ section_name }}__main-content">
+      <form class="{{ form_id }} js--cart" id="{{ form_id }}" action="{{ form_action }}" method="post">
+        {%- for item in cart.items -%}
+          {%- render 'card-cart-line-item', card_classes: 'cart__cart-line-item', card_index: forloop.index, card_item: item -%}
+        {%- endfor -%}
+      </form>
+    </div>
+  {% render 'bs-container', state: 'closed', col: 'col-12', container: container %}
+</div>
+
+<div class="{{ section_name }}__footer">
+  {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
+    <div class="{{ section_name }}__footer-content">
+
+      <div class="{{ section_name }}__cart-subtotal">
+        <div class="{{ section_name }}__cart-subtotal-label">Subtotal</div>
+        <div class="{{ section_name }}__cart-subtotal-value js--cart-subtotal">{{ cart.items_subtotal_price | money_with_currency }}</div>
+      </div>
+
+      <div class="{{ section_name }}__actions">
+        {%- capture inverted_corner_box_content -%}
+          <button class="{{ section_name }}__button-checkout button--primary text-colour--off-white" form="{{ form_id }}" name="checkout" type="submit" value="Checkout">Checkout</button>
+        {%- endcapture -%}
+        {%-
+          render 'inverted-corner-box',
+          background: 'off-black',
+          border: 'off-black',
+          content: inverted_corner_box_content,
+          type: 'button'
+        -%}
+      </div>
+
+    </div>
+  {% render 'bs-container', state: 'closed', col: 'col-12', container: container %}
+</div>
+
+{% schema %}
+{
+  "name": "Cart",
+  "tag": "section",
+  "class": "section section--cart cart",
+  "settings": []
+}
+{% endschema %}

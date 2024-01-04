@@ -1,0 +1,219 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins/breakpoint' as *;
+
+.collection {
+
+  .card-product {
+    &__description,
+    &__title {
+      & + .card-product__price {
+        margin-top: 20px;
+      }
+    }
+    &__badge {
+      width: 72px;
+      height: 72px;
+    }
+    &__button {
+      max-width: none;
+      width: auto;
+    }
+    &__content {
+      padding: 0 7.5% 44px;
+    }
+    &__cta {
+      padding-top: 42px;
+    }
+    &__title {
+      &-link {
+        &:hover {
+          color: inherit;
+          opacity: 0.6666;
+        }
+      }
+      & + .card-product__description {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .grid {
+    background: rgba(var(--theme-colour-off-black), 1);
+    column-gap: var(--theme-border-radius);
+    row-gap: var(--theme-border-radius);
+    &__item {
+      background: rgba(var(--theme-colour-off-white), 1);
+      &.filler {
+        display: none;
+      }
+    }
+  }
+
+  .pagination {
+    border-top-width: var(--theme-border-width);
+    border-top-style: solid;
+    border-top-color: currentcolor;
+    padding: 30px 0;
+  }
+
+  @include breakpoint(md) {
+
+    .card-product {
+      &__content {
+        padding: 0 10% 42px;
+      }
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    .card-product {
+      &__cta {
+        padding-top: 32px;
+      }
+    }
+
+    .grid {
+      &--two-column {
+        .card-product {
+          &__badge {
+            width: 92px;
+            height: 92px;
+          }
+          &__content {
+            padding: 0 14.5% 60px;
+          }
+        }
+      }
+      &--three-column {
+        .card-product {
+          &__badge {
+            width: 72px;
+            height: 72px;
+          }
+          &__content {
+            padding: 0 12.5% 36px;
+          }
+        }
+      }
+      &--four-column {
+        .card-product {
+          &__badge {
+            width: 52px;
+            height: 52px;
+          }
+          &__content {
+            padding: 0 7.5% 35px;
+          }
+        }
+      }
+      &__item {
+        &.filler {
+          background: color.scale( map.get($theme-colours, 'off-white'), $lightness: -10% );
+          display: block;
+        }
+      }
+    }
+
+    .pagination {
+      padding: 45px 0;
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    .card-product {
+      &__cta {
+        padding-top: 32px;
+      }
+    }
+
+    .grid {
+      &--two-column {
+        .card-product {
+          &__badge {
+            width: 92px;
+            height: 92px;
+          }
+          &__content {
+            padding: 0 14.5% 60px;
+          }
+        }
+      }
+      &--three-column {
+        .card-product {
+          &__badge {
+            width: 72px;
+            height: 72px;
+          }
+          &__content {
+            padding: 0 12.5% 42px;
+          }
+        }
+      }
+      &--four-column {
+        .card-product {
+          &__badge {
+            width: 52px;
+            height: 52px;
+          }
+          &__content {
+            padding: 0 7.5% 38px;
+          }
+        }
+      }
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    .card-product {
+      &__cta {
+        padding-top: 32px;
+      }
+    }
+
+    .grid {
+      &--two-column {
+        .card-product {
+          &__badge {
+            width: 122px;
+            height: 122px;
+          }
+          &__content {
+            padding: 0 7.5% 38px;
+          }
+        }
+      }
+      &--three-column {
+        .card-product {
+          &__badge {
+            width: 92px;
+            height: 92px;
+          }
+          &__content {
+            padding: 0 7.5% 44px;
+          }
+        }
+      }
+      &--four-column {
+        .card-product {
+          &__badge {
+            width: 72px;
+            height: 72px;
+          }
+          &__content {
+            padding: 0 7.5% 42px;
+          }
+        }
+      }
+    }
+
+  }
+
+}

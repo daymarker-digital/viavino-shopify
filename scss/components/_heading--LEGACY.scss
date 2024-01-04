@@ -1,0 +1,126 @@
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use "../utils/mixins/breakpoint" as *;
+@use '../utils/mixins/font' as *;
+@use '../utils/mixins/heading' as *;
+
+.heading {
+
+  $font-size: map.get($theme-font-sizes-heading, 'base');
+
+  margin: 0;
+  padding: 0;
+
+  &--1,
+  &--page-title,
+  &--primary {
+    @extend .heading;
+  }
+
+  &--1,
+  &--page-title {
+    @include heading(1);
+  }
+
+  // ---------------------------------------- Style
+  &--primary {
+    @include clarendon-wide(700);
+    text-transform: uppercase;
+  }
+
+  &--secondary {
+    @include new-sprint(300);
+  }
+
+  &--tertiary {
+    @include sarina(400);
+  }
+
+  // ---------------------------------------- Sizing
+  &--large {
+    font-size: $font-size;
+  }
+  &--compact,
+  &--standard {
+    font-size: $font-size * 0.5625;
+  }
+
+  @include breakpoint(sm) {
+
+    $font-size: map.get($theme-font-sizes-heading, 'sm');
+
+    // ---------------------------------------- Sizing
+    &--large {
+      font-size: $font-size;
+    }
+    &--compact,
+    &--standard {
+      font-size: $font-size * 0.5625;
+    }
+
+  }
+
+  @include breakpoint(md) {
+
+    $font-size: map.get($theme-font-sizes-heading, 'md');
+
+    // ---------------------------------------- Sizing
+    &--large {
+      font-size: $font-size;
+    }
+    &--compact,
+    &--standard {
+      font-size: $font-size * 0.5625;
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    $font-size: map.get($theme-font-sizes-heading, 'lg');
+
+    &--large {
+      font-size: $font-size;
+    }
+    &--standard {
+      font-size: $font-size * 0.66;
+    }
+    &--compact {
+      font-size: $font-size * 0.46;
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    $font-size: map.get($theme-font-sizes-heading, 'xl');
+
+    &--large {
+      font-size: $font-size;
+    }
+    &--standard {
+      font-size: $font-size * 0.66;
+    }
+    &--compact {
+      font-size: $font-size * 0.46;
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    $font-size: map.get($theme-font-sizes-heading, 'xxl');
+
+    &--large {
+      font-size: $font-size;
+    }
+    &--standard {
+      font-size: $font-size * 0.66;
+    }
+    &--compact {
+      font-size: $font-size * 0.46;
+    }
+
+  }
+
+}

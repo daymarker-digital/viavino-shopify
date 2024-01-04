@@ -1,0 +1,39 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../utils/variables' as *;
+
+.text-colour {
+
+  &--dark {
+    color: rgba(var(--theme-colour-off-black), 1);
+    .glide {
+      &__bullet {
+        background: rgba(var(--theme-colour-off-black), 1);
+      }
+    }
+  }
+
+  &--light {
+    color: rgba(var(--theme-colour-off-white), 1);
+    .glide {
+      &__bullet {
+        background: rgba(var(--theme-colour-off-white), 1);
+      }
+    }
+  }
+
+  @each $name, $value in $theme-colours {
+    &--#{$name} {
+
+      color: $value;
+
+      .glide {
+        &__bullet {
+          background: $value;
+        }
+      }
+
+    }
+  }
+
+}

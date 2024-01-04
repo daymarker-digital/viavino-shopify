@@ -1,0 +1,141 @@
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins/border' as *;
+@use '../utils/mixins/breakpoint' as *;
+
+.card-grid {
+
+  $heading-size: map.get($theme-font-sizes-heading, 'base') * 0.7;
+
+  height: auto;
+  min-height: 100%;
+
+  &__heading,
+  &__message {
+    display: block;
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    flex-flow: column wrap;
+    padding-top: 40px;
+    padding-bottom: 55px;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  &__heading {
+    font-size: $heading-size;
+    line-height: 1.1;
+    & + .card-grid__message {
+      margin-top: 20px;
+    }
+  }
+
+  &__image {
+    @include border-solid( var(--theme-border-width), 'inherit', 'bottom' );
+    display: block;
+    width: 100%;
+    height: auto;
+    img, svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__main {
+    display: block;
+  }
+
+  @include breakpoint(sm) {
+
+    $heading-size: map.get($theme-font-sizes-heading, 'sm') * 0.75;
+
+    &__content {
+      padding-top: 45px;
+      padding-bottom: 60px;
+      padding-left: 17.5%;
+      padding-right: 17.5%;
+    }
+
+    &__heading {
+      font-size: $heading-size;
+    }
+
+  }
+
+  @include breakpoint(md) {
+
+    $heading-size: map.get($theme-font-sizes-heading, 'md') * 0.8;
+
+    &__content {
+      padding-top: 50px;
+      padding-bottom: 65px;
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+
+    &__heading {
+      font-size: $heading-size;
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    $heading-size: map.get($theme-font-sizes-heading, 'lg') * 0.4;
+
+    &__content {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+
+    &__heading {
+      font-size: $heading-size;
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    $heading-size: map.get($theme-font-sizes-heading, 'xl') * 0.425;
+
+    &__content {
+      padding-top: 55px;
+      padding-bottom: 55px;
+      padding-left: 17.5%;
+      padding-right: 17.5%;
+    }
+
+    &__heading {
+      font-size: $heading-size;
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    $heading-size: map.get($theme-font-sizes-heading, 'xxl') * 0.45;
+
+    &__content {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+
+    &__heading {
+      font-size: $heading-size;
+    }
+
+  }
+
+}

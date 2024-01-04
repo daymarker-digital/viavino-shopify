@@ -1,0 +1,52 @@
+@use '../utils/mixins/breakpoint' as *;
+@use "../utils/variables" as *;
+
+.media {
+
+  width: 100%;
+
+  &--mobile {
+    @each $option in $theme-heights {
+      &-#{$option} {
+        @if $option == 'adapt' {
+          height: auto;
+          img {
+            height: auto;
+            object-fit: initial;
+          }
+        } @else {
+          height: #{$option};
+          img {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(lg) {
+
+    &--desktop {
+      @each $option in $theme-heights {
+        &-#{$option} {
+          @if $option == 'adapt' {
+            height: auto;
+            img {
+              height: auto;
+              object-fit: initial;
+            }
+          } @else {
+            height: #{$option};
+            img {
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}

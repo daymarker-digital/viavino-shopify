@@ -1,0 +1,133 @@
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/functions/hex-to-rgb' as *;
+@use "../utils/mixins/tools" as *;
+
+:root {
+
+  @include scss-map-to-css-var( '--theme-aos', $theme-aos-settings );
+  @include scss-map-to-css-var( '--theme-header-height', $theme-header-heights );
+  @include scss-map-to-css-var( '--theme-transition', $theme-transition-settings );
+
+  // ---------------------------------------- Gutter Width
+  --bs-gutter-width: #{ $grid-gutter-width };
+  --bs-gutter-x: #{ $grid-gutter-width };
+
+  // ---------------------------------------- Container Fluid Padding
+  --bs-container-fluid-padding: 24px;
+
+  // ---------------------------------------- Container Breakpoints
+  --bs-container-breakpoint--sm: #{ map-get( $grid-breakpoints, sm ) };
+  --bs-container-breakpoint--md: #{ map-get( $grid-breakpoints, md ) };
+  --bs-container-breakpoint--lg: #{ map-get( $grid-breakpoints, lg ) };
+  --bs-container-breakpoint--xl: #{ map-get( $grid-breakpoints, xl ) };
+  --bs-container-breakpoint--xxl: #{ map-get( $grid-breakpoints, xxl ) };
+
+  // ---------------------------------------- Container Max Widths
+  --bs-container-width--sm: #{ map-get( $container-max-widths, sm ) };
+  --bs-container-width--md: #{ map-get( $container-max-widths, md ) };
+  --bs-container-width--lg: #{ map-get( $container-max-widths, lg ) };
+  --bs-container-width--xl: #{ map-get( $container-max-widths, xl ) };
+  --bs-container-width--xxl: #{ map-get( $container-max-widths, xxl ) };
+
+  //////////////////////////////////////////////////////////
+  ////  Theme
+  //////////////////////////////////////////////////////////
+
+  // ---------------------------------------- Body Copy
+  --theme-body-copy: #{ map-get( $theme-body-copy-sizes, 'base' ) };
+  --theme-body-copy--sm: #{ map-get( $theme-body-copy-sizes, 'sm' ) };
+  --theme-body-copy--md: #{ map-get( $theme-body-copy-sizes, 'md' ) };
+  --theme-body-copy--lg: #{ map-get( $theme-body-copy-sizes, 'lg' ) };
+  --theme-body-copy--xl: #{ map-get( $theme-body-copy-sizes, 'xl' ) };
+  --theme-body-copy--xxl: #{ map-get( $theme-body-copy-sizes, 'xxl' ) };
+
+  // ---------------------------------------- Border
+  --theme-border-radius: #{ map.get( $theme-border, 'radius' ) };
+  --theme-border-width: #{ map.get( $theme-border, 'width' ) };
+  --theme-border-mask: radial-gradient(20px at 20px 20px, #0000 98%, #000) -20px -20px;
+
+  // ---------------------------------------- Button | Font Size
+  --theme-button-font-size: #{ map.get( $theme-font-sizes-button, 'base' ) };
+  --theme-button-font-size--sm: #{ map.get( $theme-font-sizes-button, 'sm' ) };
+  --theme-button-font-size--md: #{ map.get( $theme-font-sizes-button, 'md' ) };
+  --theme-button-font-size--lg: #{ map.get( $theme-font-sizes-button, 'lg' ) };
+  --theme-button-font-size--xl: #{ map.get( $theme-font-sizes-button, 'xl' ) };
+  --theme-button-font-size--xxl: #{ map.get( $theme-font-sizes-button, 'xxl' ) };
+
+  // ---------------------------------------- Button | Height
+  --theme-button-min-height: #{ map-get( $theme-button-heights, base ) };
+  --theme-button-min-height--sm: #{ map-get( $theme-button-heights, sm ) };
+  --theme-button-min-height--md: #{ map-get( $theme-button-heights, md ) };
+  --theme-button-min-height--lg: #{ map-get( $theme-button-heights, lg ) };
+  --theme-button-min-height--xl: #{ map-get( $theme-button-heights, xl ) };
+  --theme-button-min-height--xxl: #{ map-get( $theme-button-heights, xxl ) };
+
+  // ---------------------------------------- Button | Height
+  --theme-button-min-width: #{ map-get( $theme-button-min-widths, base ) };
+  --theme-button-min-width--sm: #{ map-get( $theme-button-min-widths, sm ) };
+  --theme-button-min-width--md: #{ map-get( $theme-button-min-widths, md ) };
+  --theme-button-min-width--lg: #{ map-get( $theme-button-min-widths, lg ) };
+  --theme-button-min-width--xl: #{ map-get( $theme-button-min-widths, xl ) };
+  --theme-button-min-width--xxl: #{ map-get( $theme-button-min-widths, xxl ) };
+
+  --theme-cart-line-item-image-size: 80px;
+  --theme-cart-line-item-image-size--lg: 90px;
+  --theme-cart-line-item-image-size--xl: 100px;
+  --theme-cart-line-item-image-size--xxl: 100px;
+
+  // ---------------------------------------- Cart Line Item Padding
+  --theme-cart-line-item-padding: 18px;
+  --theme-cart-line-item-padding--lg: 18px;
+  --theme-cart-line-item-padding--xl: 20px;
+  --theme-cart-line-item-padding--xxl: 22px;
+
+  // ---------------------------------------- Colours
+  --theme-colour-black: #{ hex-to-rgb( map-get( $theme-colours, 'black' ) ) };
+  --theme-colour-off-black: #{ hex-to-rgb( map-get( $theme-colours, 'off-black' ) ) };
+  --theme-colour-off-white: #{ hex-to-rgb( map-get( $theme-colours, 'off-white' ) ) };
+  --theme-colour-rosa: #{ hex-to-rgb( map-get( $theme-colours, 'rosa' ) ) };
+  --theme-colour-rosso: #{ hex-to-rgb( map-get( $theme-colours, 'rosso' ) ) };
+  --theme-colour-white: #{ hex-to-rgb( map-get( $theme-colours, 'white' ) ) };
+
+  // ---------------------------------------- Container
+  --theme-container--sm: #{ map-get( $container-max-widths, 'sm' ) };
+  --theme-container--md: #{ map-get( $container-max-widths, 'md' ) };
+  --theme-container--lg: #{ map-get( $container-max-widths, 'lg' ) };
+  --theme-container--xl: #{ map-get( $container-max-widths, 'xl' ) };
+  --theme-container--xxl: #{ map-get( $container-max-widths, 'xxl' ) };
+
+    // ---------------------------------------- Header Height Scrolled
+  --theme-header-height-scrolled: #{ map.get( $theme-header-heights-scrolled, 'base' ) };
+  --theme-header-height-scrolled--sm: #{ map.get( $theme-header-heights-scrolled, 'sm' ) };
+  --theme-header-height-scrolled--md: #{ map.get( $theme-header-heights-scrolled, 'md' ) };
+  --theme-header-height-scrolled--lg: #{ map.get( $theme-header-heights-scrolled, 'lg' ) };
+  --theme-header-height-scrolled--xl: #{ map.get( $theme-header-heights-scrolled, 'xl' ) };
+  --theme-header-height-scrolled--xxl: #{ map.get( $theme-header-heights-scrolled, 'xxl' ) };
+
+  // ---------------------------------------- Font Families
+  --theme-font-family--sans-serif: sans-serif;
+  --theme-font-family--serif: sans-serif;
+  --theme-font-family--display: serif;
+
+  // ---------------------------------------- Marquee
+  --theme-marquee-duration: 2.5s;
+  --theme-marquee-gap: 10px;
+
+  // ---------------------------------------- Radial Gradient
+  --theme-radial-gradient: radial-gradient(10px at 10px 10px,#0000 98%,#000) -10px -10px;
+  --theme-radial-gradient--lg: radial-gradient(12px at 12px 12px,#0000 98%,#000) -12px -12px;
+  --theme-radial-gradient--xxl: radial-gradient(15px at 15px 15px,#0000 98%,#000) -15px -15px;
+
+  // ---------------------------------------- Radio
+  --theme-radio-size: 42px;
+  --theme-radio-size--lg: 52px;
+  --theme-radio-size--xxl: 62px;
+
+  // ---------------------------------------- Stepper Button Size
+  --theme-stepper-button-size: 32px;
+  --theme-stepper-button-size--lg: 34px;
+  --theme-stepper-button-size--xl: 36px;
+  --theme-stepper-button-size--xxl: 38px;
+
+}

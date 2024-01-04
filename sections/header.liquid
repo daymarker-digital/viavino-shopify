@@ -1,0 +1,87 @@
+{%- liquid
+
+  assign section_name = 'header'
+  assign section_id = section_name | append: '--' | append: section.id
+
+  assign announcements = section.blocks | where: 'type', 'announcement' | default: false
+  assign announcements_enabled = section.settings.announcements_enabled | default: false
+  assign announcements_homepage_only = section.settings.announcements_homepage_only | default: false
+  assign is_glide = false
+  assign main_menu = section.settings.main_menu | default: false
+  assign main_menu_extras = section.settings.main_menu_extras | default: false
+
+  if announcements_enabled
+    if announcements_homepage_only and 'index' != template.name
+      assign announcements_enabled = false
+    endif
+  endif
+
+  if announcements and announcements.size > 1
+    assign is_glide = true
+  endif
+
+-%}
+
+<div class="{{ section_name }}__main">
+
+  <nav class="{{ section_name }}__navigation-main navigation navigation--main">
+    <div class="navigation__item d-lg-none">
+      <button class="navigation__button-cart button js--open-drawer" data-drawer-id="drawer-menu" type="button">
+        <span class="button__title">Menu</span>
+      </button>
+    </div>
+    {%- if main_menu -%}
+      {%- for link in linklists[main_menu].links -%}
+        {%- render 'navigation-item', item_classes: 'd-none d-lg-block', item_index: forloop.index, item_link: link -%}
+      {%- endfor -%}
+    {%- endif -%}
+  </nav>
+
+  <div class="{{ section_name }}__brand">
+    <a class="{{ section_name }}__brand-link link" href="/" target="_self" title="{{ shop.name }} Home">
+      {%- render 'svg', type: 'brand.logo' -%}
+    </a>
+  </div>
+
+  <nav class="{{ section_name }}__navigation-extras navigation navigation--extras">
+    {%- if main_menu_extras -%}
+      {%- for link in linklists[main_menu_extras].links -%}
+        {%- render 'navigation-item', item_classes: 'd-none d-lg-block', item_index: forloop.index, item_link: link -%}
+      {%- endfor -%}
+    {%- endif -%}
+    {% unless request.path == '/cart' %}
+      <div class="navigation__item">
+        <button class="navigation__button-cart button button--cart js--open-drawer" data-drawer-id="drawer-cart" type="button">
+          <span class="button__icon">{%- render 'svg', type: 'icon.cart' -%}</span>
+          <span class="button__title js--cart-line-items-total">({{ cart.item_count }})</span>
+        </button>
+      </div>
+    {% endunless %}
+  </nav>
+
+</div>
+
+{%- schema -%}
+{
+  "name": "Header",
+  "tag": "header",
+  "class": "header header--sticky",
+  "settings": [
+    {
+      "content": "Menus",
+      "type": "header"
+    },
+    {
+      "label": "Main Menu",
+      "type": "link_list",
+      "id": "main_menu"
+    },
+    {
+      "label": "Main Menu Extras",
+      "type": "link_list",
+      "id": "main_menu_extras"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}

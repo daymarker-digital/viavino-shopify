@@ -1,0 +1,77 @@
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins/border' as *;
+@use '../utils/mixins/breakpoint' as *;
+@use '../utils/mixins/font' as *;
+@use '../utils/mixins/ui' as *;
+
+.stepper {
+
+  @each $name, $value in $theme-button-heights {
+    @if $name == 'base' {
+      height: $value;
+      &__button {
+        width: $value;
+      }
+    } @else {
+      @include breakpoint(#{$name}) {
+        height: $value;
+        &__button {
+          width: $value;
+        }
+      }
+    }
+  }
+
+  @include clarendon-wide( 700 );
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+
+  &__button,
+  &__input {
+    display: inline-flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    background: transparent;
+    color: currentcolor;
+  }
+
+  &__button-icon {
+    display: block;
+    img, svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__input {
+    background: transparent;
+    color: currentcolor;
+    border: none;
+    outline: none;
+    flex: 1;
+    text-align: center;
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  @include breakpoint(lg) {
+    margin: 0;
+  }
+
+}

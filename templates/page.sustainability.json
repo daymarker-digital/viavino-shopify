@@ -1,0 +1,523 @@
+{
+  "order": [
+    "fa3e28fc-aaba-43f0-b8c6-daaafa6dbd23",
+    "9fcd9809-a2ad-4f56-b526-115bb9f89f5f",
+    "3211a35c-23cc-42d6-9036-915d6385cb07",
+    "99bd06e7-8600-407f-9aae-a1fd5a694044",
+    "5bfcbf2e-6356-49f2-84a9-c6d8f50025f8",
+    "3b852134-bfaf-492f-9d7b-58dde8f74859",
+    "4fb448ed-bc29-4397-bf64-1230fd5b7209",
+    "7ea0c2e2-f871-4292-b707-14967399c087",
+    "e8b79da4-9e7d-40ae-bd35-207894fb4112",
+    "b4037536-f94e-46fd-b0da-101216e1f559",
+    "84aad7b0-1196-4e33-bad0-7ceb195a9bbd",
+    "122928e3-b6cf-4f62-91dc-e7cad44ee8b8",
+    "main"
+  ],
+  "sections": {
+    "fa3e28fc-aaba-43f0-b8c6-daaafa6dbd23": {
+      "type": "hero",
+      "blocks": {
+        "ae32cf3c-5861-4528-81f2-758697a9193b": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ page.title }}",
+            "text_colour": "off-white"
+          }
+        }
+      },
+      "block_order": [
+        "ae32cf3c-5861-4528-81f2-758697a9193b"
+      ],
+      "settings": {
+        "height_desktop": "auto",
+        "height_mobile": "auto",
+        "border_top": false,
+        "border_bottom": false,
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/HEADER_2c8396f3-313b-4102-b233-35e0ea43c2fe.jpg",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 68,
+        "padding_bottom": 60,
+        "anchor_id": ""
+      }
+    },
+    "9fcd9809-a2ad-4f56-b526-115bb9f89f5f": {
+      "type": "marquee",
+      "settings": {
+        "text": "<p>We Via Differently<\/p>",
+        "reverse": false,
+        "font_size": 32,
+        "duration": 86,
+        "gap": 10,
+        "style": "tertiary",
+        "border_top": true,
+        "border_bottom": false,
+        "text_colour": "dark",
+        "background": "off-white",
+        "padding_top": 4,
+        "padding_bottom": 8
+      }
+    },
+    "3211a35c-23cc-42d6-9036-915d6385cb07": {
+      "type": "full-width-feature",
+      "blocks": {
+        "c3751e27-6ea3-4b8b-b826-8e2985dbd998": {
+          "type": "block_with_border",
+          "settings": {
+            "background": "image",
+            "background_image": "shopify:\/\/shop_images\/Mask_group_2x_ac7eac72-64af-41d3-8b80-4830bec4fa38_1800x2-2.jpg"
+          }
+        },
+        "3cc26ae5-b07e-46e9-8007-b7c91c0751bd": {
+          "type": "heading",
+          "settings": {
+            "heading": "We Via Differently",
+            "heading_size": "md",
+            "heading_tag": "h2"
+          }
+        },
+        "8138cdf9-39f3-4a17-99de-9a5754804bdd": {
+          "type": "message",
+          "settings": {
+            "message": "<p>Up to 68% of carbon emissions in the wine industry come from packaging and transport. Viavino is offering Italian wine lovers a more sustainable option than traditional glass bottles. <\/p>",
+            "message_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "c3751e27-6ea3-4b8b-b826-8e2985dbd998",
+        "3cc26ae5-b07e-46e9-8007-b7c91c0751bd",
+        "8138cdf9-39f3-4a17-99de-9a5754804bdd"
+      ],
+      "settings": {
+        "height_desktop": "auto",
+        "height_mobile": "auto",
+        "border_top": true,
+        "border_bottom": false,
+        "content_border_enable": true,
+        "content_width_desktop": 75,
+        "content_width_mobile": 100,
+        "text_colour": "off-white",
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/Mask_group_2x_1800x2_2ac20f99-9ae1-4f47-b401-e18b02825765.jpg",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "anchor_id": ""
+      }
+    },
+    "99bd06e7-8600-407f-9aae-a1fd5a694044": {
+      "type": "card-grid",
+      "blocks": {
+        "a3907996-8ade-400b-99a5-526a4327d8f8": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VIA--sustainability-card-grid-01_3x_2048x1_d8518274-31f6-4d7f-980e-802995db471f.jpg",
+            "heading": "Glass?! Oh Madonna",
+            "message": "<p>Made from mostly plant-based materials, our eco-friendly packaging is up to 75% renewable and 100% recyclable.<\/p>"
+          }
+        },
+        "8f4e5adf-75e8-496a-a51e-88a881f03c82": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VIA--sustainability-card-grid-01_3x_2048x2_ad769e01-e579-4aec-b7b6-6d0cdcf0eb8e.jpg",
+            "heading": "Bottles are for bambinos!",
+            "message": "<p>A carton’s <a href=\"https:\/\/www.omsystembolaget.se\/globalassets\/pdf\/hallbarhet\/alko-wine-packaging-lca-update_final-report.pdf\" target=\"_blank\" title=\"https:\/\/www.omsystembolaget.se\/globalassets\/pdf\/hallbarhet\/alko-wine-packaging-lca-update_final-report.pdf\">carbon footprint<\/a> is up to 87% smaller than traditional glass wine bottles and 55% less than cans.<\/p>"
+          }
+        },
+        "ff9c8bf7-963e-4800-a96b-703f38003209": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VIA--sustainability-card-grid-01_3x_2048x2_31db55aa-ec84-49ce-952d-67fe81b28135.jpg",
+            "heading": "Be an \nearth lover",
+            "message": "<p>Viavino is made in an <a href=\"https:\/\/www.equalitas.it\" title=\"https:\/\/www.equalitas.it\"><strong>Equalitas<\/strong><\/a><strong> 3E Certified Sustainable Winery<\/strong> that operates on 100% self-produced green electricity. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "a3907996-8ade-400b-99a5-526a4327d8f8",
+        "8f4e5adf-75e8-496a-a51e-88a881f03c82",
+        "ff9c8bf7-963e-4800-a96b-703f38003209"
+      ],
+      "settings": {
+        "image_aspect_ratio": "3\/3.25",
+        "border_top": true,
+        "border_bottom": false,
+        "anchor_id": ""
+      }
+    },
+    "5bfcbf2e-6356-49f2-84a9-c6d8f50025f8": {
+      "type": "marquee",
+      "settings": {
+        "text": "<p>The Anti-Glass Club<\/p>",
+        "reverse": true,
+        "font_size": 24,
+        "duration": 100,
+        "gap": 14,
+        "style": "secondary",
+        "border_top": true,
+        "border_bottom": false,
+        "text_colour": "dark",
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/off-white-pattern_00d4eb39-736a-42c0-babf-f5ecc3cfb34d.png",
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "3b852134-bfaf-492f-9d7b-58dde8f74859": {
+      "type": "full-width-feature",
+      "blocks": {
+        "343f415f-e891-4915-b875-fdd537d46152": {
+          "type": "block_with_border",
+          "settings": {
+            "background": "rosso"
+          }
+        },
+        "d422f965-c020-47cf-a165-e93394fea9c6": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Anti-Glass Club",
+            "heading_size": "md",
+            "heading_tag": "h2"
+          }
+        },
+        "d837553d-9dca-4503-9939-3f250a92a1b2": {
+          "type": "message",
+          "settings": {
+            "message": "<p>Glass has the highest carbon footprint across all sizes and categories, with values up to 12 times higher than cartons.<\/p><p><strong>1 truck of empty Tetra Pak = 23 trucks of glass wine bottles<\/strong><\/p>",
+            "message_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "343f415f-e891-4915-b875-fdd537d46152",
+        "d422f965-c020-47cf-a165-e93394fea9c6",
+        "d837553d-9dca-4503-9939-3f250a92a1b2"
+      ],
+      "settings": {
+        "height_desktop": "auto",
+        "height_mobile": "auto",
+        "border_top": true,
+        "border_bottom": false,
+        "content_border_enable": true,
+        "content_width_desktop": 75,
+        "content_width_mobile": 85,
+        "text_colour": "off-white",
+        "background": "rosso",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "anchor_id": ""
+      }
+    },
+    "4fb448ed-bc29-4397-bf64-1230fd5b7209": {
+      "type": "fifty-fifty",
+      "disabled": true,
+      "blocks": {
+        "0224fe35-00f6-4a94-a4eb-03a5902d27ad": {
+          "type": "image",
+          "settings": {
+            "image_sizing": "custom",
+            "image_aspect_ratio": "1\/1",
+            "image_border_enable": false,
+            "image_border_colour": "off-black",
+            "image": "shopify:\/\/shop_images\/Group-244_3x_2048x2_8f5450a0-97dc-4077-a635-8406cecb7c2e.jpg",
+            "content_width_desktop": 100,
+            "content_width_mobile": 100,
+            "background": "none",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "37374d47-0443-413d-be97-784bf81ca250": {
+          "type": "text",
+          "settings": {
+            "heading": "Cans?! Ma no!",
+            "heading_size": "sm",
+            "message": "<p>Aluminum cans with zero recycled content are just as bad as glass. And even cans made with 70% recycled aluminum, still have approximately double the carbon footprint of cartons.<\/p>",
+            "message_style": "primary",
+            "button_title": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_background_colour": "none",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black",
+            "content_width_desktop": 75,
+            "content_width_mobile": 85,
+            "content_text_colour": "off-black",
+            "background": "none",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "0224fe35-00f6-4a94-a4eb-03a5902d27ad",
+        "37374d47-0443-413d-be97-784bf81ca250"
+      ],
+      "settings": {
+        "content_border_mobile": true,
+        "content_border_desktop": true,
+        "border_top": true,
+        "border_bottom": false,
+        "background": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
+      }
+    },
+    "7ea0c2e2-f871-4292-b707-14967399c087": {
+      "type": "fifty-fifty",
+      "blocks": {
+        "f9f264a4-df39-4875-8f11-2eb862c39e3c": {
+          "type": "text",
+          "settings": {
+            "heading": "Say 'Si!' to cartons",
+            "heading_size": "sm",
+            "message": "<p><a href=\"https:\/\/www.thinkstep-anz.com\/assets\/Whitepapers-Reports\/TetraPak_IN_a_Nutshell_v2.2_Final.pdf\" target=\"_blank\" title=\"Tetra LCA \">This<\/a> Life Cycle Assessment study found cartons have the lowest - or equal to lowest - carbon footprint in nearly all scenarios of all packaging assessed, regardless of whether they are recycled.<\/p>",
+            "message_style": "primary",
+            "button_title": "Learn More",
+            "button_link": "https:\/\/planetark.org\/newsroom\/news\/report-finds-cartons-have-lower-carbon-footprint-than-cans-glass-and-plastic",
+            "button_style": "secondary",
+            "button_background_colour": "none",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black",
+            "content_width_desktop": 75,
+            "content_width_mobile": 85,
+            "content_text_colour": "off-black",
+            "background": "none",
+            "padding_top": 32,
+            "padding_bottom": 32
+          }
+        },
+        "3afb6950-11e7-44e9-a008-ae37022ba159": {
+          "type": "image",
+          "settings": {
+            "image_sizing": "custom",
+            "image_aspect_ratio": "1\/1",
+            "image_border_enable": false,
+            "image_border_colour": "off-black",
+            "image": "shopify:\/\/shop_images\/Group-244_3x_2048x2_99149d98-20f3-4d2e-aeb6-a4fe15c1375b.jpg",
+            "content_width_desktop": 100,
+            "content_width_mobile": 100,
+            "background": "none",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "f9f264a4-df39-4875-8f11-2eb862c39e3c",
+        "3afb6950-11e7-44e9-a008-ae37022ba159"
+      ],
+      "settings": {
+        "content_border_mobile": true,
+        "content_border_desktop": true,
+        "border_top": true,
+        "border_bottom": false,
+        "background": "off-white",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
+      }
+    },
+    "e8b79da4-9e7d-40ae-bd35-207894fb4112": {
+      "type": "marquee",
+      "settings": {
+        "text": "<p>Why Cartons?<\/p>",
+        "reverse": false,
+        "font_size": 16,
+        "duration": 96,
+        "gap": 9,
+        "style": "primary",
+        "border_top": true,
+        "border_bottom": false,
+        "text_colour": "dark",
+        "background": "rosa",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "b4037536-f94e-46fd-b0da-101216e1f559": {
+      "type": "full-width-feature",
+      "blocks": {
+        "cae2f5a8-fd48-4079-8478-a181fcf32da1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Cartons?",
+            "heading_size": "md",
+            "heading_tag": "h2"
+          }
+        },
+        "0cac9754-8696-47b5-bd8f-974758aac0be": {
+          "type": "block_with_border",
+          "settings": {
+            "background": "image",
+            "background_image": "shopify:\/\/shop_images\/Mask_group_2x_1800x2_30832a59-f31b-4294-9ec7-b10aa564fcb3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "cae2f5a8-fd48-4079-8478-a181fcf32da1",
+        "0cac9754-8696-47b5-bd8f-974758aac0be"
+      ],
+      "settings": {
+        "height_desktop": "auto",
+        "height_mobile": "auto",
+        "border_top": true,
+        "border_bottom": false,
+        "content_border_enable": true,
+        "content_width_desktop": 75,
+        "content_width_mobile": 85,
+        "text_colour": "off-white",
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/Mask_groupcartons-_2x_1800x2_dd0f5bb2-b8d5-4fce-a2e3-bcbf61acfb04.jpg",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "anchor_id": ""
+      }
+    },
+    "84aad7b0-1196-4e33-bad0-7ceb195a9bbd": {
+      "type": "featured-benefits",
+      "blocks": {
+        "c595ae8e-07e6-4ab6-aa3f-dfbed0ded5f4": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VIA--sustainability-card-benefit-image-01_2x_dce613a5-e645-4090-9b87-f0a8b525247f.jpg",
+            "heading": "Eco-Friendly",
+            "message": "<p><a href=\"https:\/\/www.researchgate.net\/publication\/229796182_The_Environmental_Impacts_of_Packaging\" target=\"_blank\" title=\"https:\/\/www.researchgate.net\/publication\/229796182_The_Environmental_Impacts_of_Packaging\">Life Cycle Inventory<\/a> assessments say that even if glass is reused 20 times before being downcycled, it still emits more greenhouse gas emissions than shipping wine in Tetra Pak.<\/p>"
+          }
+        },
+        "f0260995-e468-4303-83b7-7f2128ca8492": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VIA--sustainability-card-benefit-image-02_2x_e98bd930-4398-4c71-86fe-e6733ae4910b.jpg",
+            "heading": "Light",
+            "message": "<p>The rectangular shape and light weight means up to 45% less emissions during shipping.<\/p>"
+          }
+        },
+        "20dbe500-8a25-4c6a-8b49-313020b7692f": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VIA--sustainability-card-benefit-image-03_2x_83dbaa8e-9eac-4c6c-9476-72120c469f31.jpg",
+            "heading": "Recyclable",
+            "message": "<p>95% of Canadians have access to beverage carton recycling - so make sure you recycle your Viavino (after drinking)!<\/p>"
+          }
+        },
+        "edc3f508-9465-46f8-be60-34eee7a4da3c": {
+          "type": "benefit",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VIA--sustainability-card-benefit-image-01_2x_dce613a5-e645-4090-9b87-f0a8b525247f.jpg",
+            "heading": "Another Benefit",
+            "message": "<p>Sed viverra dui augue, in cursus turpis varius eu. Integer cursus libero eget erat sodales, quis ultricies risus ornare. Donec eleifend scelerisque ex, in faucibus risus feugiat at. Nunc venenatis et.<\/p>"
+          }
+        },
+        "5f1d28c4-ff81-4086-99b1-097db65ed524": {
+          "type": "benefit",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VIA--sustainability-card-benefit-image-02_2x_e98bd930-4398-4c71-86fe-e6733ae4910b.jpg",
+            "heading": "Another Benefit 2.0",
+            "message": "<p>Sed congue vitae nisi ac congue. Maecenas quis diam dignissim, lobortis erat ullamcorper, eleifend velit. Aliquam arcu augue, ornare vitae molestie ut, lobortis non quam. Morbi lobortis nunc urna nam.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "c595ae8e-07e6-4ab6-aa3f-dfbed0ded5f4",
+        "f0260995-e468-4303-83b7-7f2128ca8492",
+        "20dbe500-8a25-4c6a-8b49-313020b7692f",
+        "edc3f508-9465-46f8-be60-34eee7a4da3c",
+        "5f1d28c4-ff81-4086-99b1-097db65ed524"
+      ],
+      "settings": {
+        "carousel_autoplay": 3000,
+        "carousel_animation_duration": 450,
+        "carousel_gap": 20,
+        "grid_gutter": 20,
+        "border_top": false,
+        "border_bottom": false,
+        "text_colour": "off-white",
+        "background": "off-black",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container-fluid",
+        "padding_top": 96,
+        "padding_bottom": 120,
+        "anchor_id": ""
+      }
+    },
+    "122928e3-b6cf-4f62-91dc-e7cad44ee8b8": {
+      "type": "full-width-feature",
+      "blocks": {
+        "548b4e3b-52e9-4c18-ad97-5ba3b7226c56": {
+          "type": "heading",
+          "settings": {
+            "heading": "Certifications",
+            "heading_size": "md",
+            "heading_tag": "h2"
+          }
+        },
+        "4362c1c7-3e4b-4275-a2a7-b1ce42d1361b": {
+          "type": "certification",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Artboard_2_2x_f5829c9b-69d8-4a97-87db-7b60d53e6317.png",
+            "logo_link": "https:\/\/www.equalitas.it\/en\/"
+          }
+        },
+        "9e6247bf-414c-496a-8af6-f95fa4331665": {
+          "type": "certification",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Artboard_2_copy_2x_4733567b-ab89-4db2-b1be-2aa876e43d64.png",
+            "logo_link": "https:\/\/fsc.org\/en"
+          }
+        }
+      },
+      "block_order": [
+        "548b4e3b-52e9-4c18-ad97-5ba3b7226c56",
+        "4362c1c7-3e4b-4275-a2a7-b1ce42d1361b",
+        "9e6247bf-414c-496a-8af6-f95fa4331665"
+      ],
+      "settings": {
+        "height_desktop": "auto",
+        "height_mobile": "auto",
+        "border_top": false,
+        "border_bottom": false,
+        "content_border_enable": false,
+        "content_width_desktop": 100,
+        "content_width_mobile": 100,
+        "text_colour": "light",
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/VIA--sustainability-full-width-feature-03_2x_1800x2_04ad455f-f297-417b-888c-30ea74b668fd.jpg",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "full-width",
+        "padding_top": 168,
+        "padding_bottom": 168,
+        "anchor_id": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "width": "full",
+        "background": "image",
+        "container": "container",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "anchor_id": ""
+      }
+    }
+  }
+}

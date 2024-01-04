@@ -1,0 +1,268 @@
+{%- liquid
+
+  assign section_name = 'contact-form'
+  assign section_classes = section_name
+  assign section_id = section_name | append: '--' | append: section.id
+
+  assign aos_id = section_id | append: '--aos'
+  assign aos_delay = 250
+  assign aos_delay_increment = 250
+
+  assign container = section.settings.container | default: 'container'
+  assign form_id = section_id | append: '--contact-form'
+
+  if section.settings.anchor_id != blank
+    assign section_id = section.settings.anchor_id
+  endif
+
+-%}
+
+{%- style -%}
+
+  {%
+    render 'element-styles',
+      element_background: section.settings.background,
+      element_border_bottom: section.settings.border_bottom,
+      element_border_top: section.settings.border_top,
+      element_id: section_id,
+      element_padding_bottom: section.settings.padding_bottom,
+      element_padding_top: section.settings.padding_top
+  %}
+
+{%- endstyle -%}
+
+<link rel="stylesheet" href="{{ 'section-contact-form.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}</noscript>
+
+<div class="{{ section_classes }}" id="{{ section_id }}">
+    {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
+      <div class="{{ section_name }}__main" id="{{ aos_id }}">
+        {%- for block in section.blocks -%}
+
+          {%- liquid
+            assign block_class = section_name | append: '__item ' | append: block.type
+            assign block_id = section_name | append: '__item-' | append: block.id
+          -%}
+
+          <div class="{{ block_class }}" id="{{ block_id }}">
+            <div class="{{ section_name }}__content">
+
+              {%- case block.type -%}
+
+                {%- when 'image' -%}
+
+                  {%- liquid
+                    assign image = block.settings.image | default: false
+                    assign image_enable_border = block.settings.image_enable_border | default: false
+                    assign image_sizing = block.settings.image_sizing | default: 'cover'
+                    assign image_id = section_id | append: '--inverted-corner-box'
+                  -%}
+
+                  {% if image %}
+                    {% capture aos_attrs %}
+                      {% render 'aos-attributes', anchor: aos_id, delay: 250, transition: 'fade-up' %}
+                    {% endcapture %}
+                    <div class="{{ section_name }}__image image" {{ aos_attrs }}>
+                      {% if image_enable_border %}
+                        {%-
+                          render 'inverted-corner-box',
+                          background: 'image',
+                          border: 'off-black',
+                          content: inverted_corner_box_content,
+                          id: image_id,
+                          image: image,
+                          type: 'image'
+                        -%}
+                      {% else %}
+                        {% render 'lazyload-image', image: image %}
+                      {% endif %}
+                    </div>
+                  {% endif %}
+
+                {%- when 'form' -%}
+
+                  {%- liquid
+                    assign heading = block.settings.heading | default: ''
+                    assign heading_size = block.settings.heading_size | default: 'standard'
+                  -%}
+
+                  {% if heading != blank %}
+                    {% capture aos_attrs %}
+                      {% render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-left' %}
+                    {% endcapture %}
+                    {% assign aos_delay = aos_delay | plus: aos_delay_increment %}
+                    <h2 class="{{ section_name }}__heading heading--primary heading--{{ heading_size }}" {{ aos_attrs }}>{{ heading }}</h2>
+                  {% endif %}
+
+                  {% render 'form-contact-us', form_classes: 'contact-form__form', form_id: form_id %}
+
+              {%- endcase -%}
+
+            </div>
+          </div>
+
+        {%- endfor -%}
+      </div>
+    {% render 'bs-container', state: 'closed', col: 'col-12', container: container %}
+</div>
+
+{% schema %}
+{
+  "name": "Contact Form",
+  "tag": "section",
+  "class": "section section--contact-form",
+  "settings": [
+    {
+      "label": "Background",
+      "type": "select",
+      "options": [
+        { "label": "Off-black", "value": "off-black" },
+        { "label": "Off-white", "value": "off-white" },
+        { "label": "Rosa", "value": "rosa" },
+        { "label": "Rosso", "value": "rosso" }
+      ],
+      "default": "off-white",
+      "id": "background"
+    },
+    {
+      "content": "Border",
+      "type": "header"
+    },
+    {
+      "label": "Top Border",
+      "type": "checkbox",
+      "default": true,
+      "id": "border_top"
+    },
+    {
+      "label": "Bottom Border",
+      "type": "checkbox",
+      "default": false,
+      "id": "border_bottom"
+    },
+    {
+      "content": "Container",
+      "type": "header"
+    },
+    {
+      "label": "Container",
+      "type": "select",
+      "options": [
+        {
+          "label": "Static",
+          "value": "container"
+        },
+        {
+          "label": "Fluid",
+          "value": "container-fluid"
+        },
+        {
+          "label": "Full Width",
+          "value": "full-width"
+        }
+      ],
+      "default": "container",
+      "id": "container"
+    },
+    {
+      "content": "Padding",
+      "type": "header"
+    },
+    {
+      "label": "Top Padding",
+      "type": "range",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "id": "padding_top"
+    },
+    {
+      "label": "Bottom Padding",
+      "type": "range",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "id": "padding_bottom"
+    },
+    {
+      "content": "Anchor",
+      "type": "header"
+    },
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Image",
+      "type": "image",
+      "limit": 1,
+      "settings": [
+        {
+          "content": "Content",
+          "type": "header"
+        },
+        {
+          "content": "Image",
+          "type": "paragraph"
+        },
+        {
+          "label": "Enable Image Border",
+          "type": "checkbox",
+          "default": false,
+          "id": "image_enable_border"
+        },
+        {
+          "label": "Image",
+          "type": "image_picker",
+          "id": "image"
+        }
+      ]
+    },
+    {
+      "name": "Form",
+      "type": "form",
+      "limit": 1,
+      "settings": [
+        {
+          "content": "Content",
+          "type": "header"
+        },
+        {
+          "content": "Heading",
+          "type": "paragraph"
+        },
+        {
+          "label": "Heading",
+          "type": "textarea",
+          "id": "heading"
+        },
+        {
+          "label": "Heading Size",
+          "type": "select",
+          "options": [
+             { "label": "Large", "value": "lg" },
+            { "label": "Medium", "value": "md" },
+            { "label": "Small", "value": "sm" },
+            { "label": "Tiny", "value": "xs" }
+          ],
+          "default": "md",
+          "id": "heading_size"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact Form"
+    }
+  ]
+}
+{% endschema %}

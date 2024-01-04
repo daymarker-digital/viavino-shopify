@@ -1,0 +1,171 @@
+@use '../utils/mixins/border' as *;
+@use '../utils/mixins/breakpoint' as *;
+
+.instagram-feed {
+
+  .glide {
+    padding-left: var(--bs-container-fluid-padding);
+  }
+
+  .link {
+    &:hover {
+      opacity: 0.5;
+      color: inherit;
+    }
+  }
+
+  @for $i from 0 through 10 {
+    $count: (4 * $i);
+    [data-count="#{$count}"] {
+      .instagram-feed__item-image {
+        aspect-ratio: 3/2;
+      }
+    }
+  }
+
+  @for $i from 0 through 10 {
+    $count: (4 * $i) + 1;
+    [data-count="#{$count}"] {
+      .instagram-feed__item-image {
+        aspect-ratio: 2.5/3;
+      }
+    }
+  }
+
+  @for $i from 0 through 10 {
+    $count: (4 * $i) + 2;
+    [data-count="#{$count}"] {
+      .instagram-feed__item-image {
+        aspect-ratio: 1/1;
+      }
+    }
+  }
+
+  @for $i from 0 through 10 {
+    $count: (4 * $i) + 3;
+    [data-count="#{$count}"] {
+      .instagram-feed__item-image {
+        aspect-ratio: 4/3;
+      }
+    }
+  }
+
+  @for $i from 0 through 10 {
+    $count: (4 * $i) + 4;
+    [data-count="#{$count}"] {
+      .instagram-feed__item-image {
+        aspect-ratio: 1.5/1;
+      }
+    }
+  }
+
+  &__item {
+
+    a, img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    &-image,
+    &-link {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    img {
+      @include border-solid( var(--theme-border-width) );
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+  &__main {
+    & > div {
+      & + div {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__message {
+    a {
+      @include border-solid( var(--theme-border-width), 'inherit', 'bottom' );
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+
+  &__cta {
+    padding: 0 var(--bs-container-fluid-padding);
+    &-message {
+      font-size: 20px;
+    }
+  }
+
+  @include breakpoint(sm) {
+
+    &__cta {
+      &-message {
+        font-size: 22px;
+      }
+    }
+
+  }
+
+  @include breakpoint(md) {
+
+    &__cta {
+      &-message {
+        font-size: 24px;
+      }
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    &__cta {
+      &-message {
+        font-size: 32px;
+      }
+    }
+
+    &__main {
+      & > div {
+        & + div {
+          margin-top: 30px;
+        }
+      }
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    &__cta {
+      &-message {
+        font-size: 34px;
+      }
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    &__cta {
+      &-message {
+        font-size: 36px;
+      }
+    }
+
+  }
+
+}

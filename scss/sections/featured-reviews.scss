@@ -1,0 +1,13 @@
+@use '../utils/mixins/border' as *;
+@use '../utils/mixins/breakpoint' as *;
+@use '../utils/mixins/font' as *;
+
+.featured-reviews {
+
+  color: rgba(var(--theme-colour-off-black), 1);
+
+  .inverted-corner-box {
+    height: 100%;
+  }
+
+}

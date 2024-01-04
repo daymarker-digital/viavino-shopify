@@ -1,0 +1,150 @@
+@use '../utils/mixins/body-copy' as *;
+@use '../utils/mixins/border' as *;
+@use '../utils/mixins/breakpoint' as *;
+@use '../utils/mixins/font' as *;
+
+.fifty-fifty {
+
+  &__heading,
+  &__body-copy {
+    & + .fifty-fifty__cta {
+      &.primary {
+        margin-top: 42px;
+      }
+      &.secondary {
+         margin-top: 38px;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    &.image {
+
+    }
+    &.text {
+
+    }
+  }
+
+  &__cta {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    .button--secondary {
+      font-size: 22px;
+    }
+  }
+
+  &__heading {
+    & + .body-copy {
+      &--primary {
+        margin-top: 15px;
+      }
+      &--secondary {
+        margin-top: 17px;
+      }
+    }
+  }
+
+  &__item {
+    &.image {
+      order: 1;
+    }
+    &.text {
+      order: 2;
+      aspect-ratio: 3/2.5;
+    }
+  }
+
+  &__main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  @include breakpoint(sm) {
+
+    &__content {
+       &.image {
+        aspect-ratio: 1.5/1;
+      }
+      &.text {
+        aspect-ratio: 3/2;
+      }
+    }
+
+  }
+
+  @include breakpoint(md) {
+
+    &__content {
+      &.image {
+        aspect-ratio: 1.75/1;
+      }
+      &.text {
+        aspect-ratio: 3/1.75;
+      }
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    &__heading,
+    &__body-copy {
+      & + .fifty-fifty__cta {
+        &.primary {
+          margin-top: 40px;
+        }
+        &.secondary {
+           margin-top: 30px;
+        }
+      }
+    }
+
+    &__content {
+      height: 100%;
+      &.image,
+      &.text {
+        aspect-ratio: 1/1;
+      }
+    }
+
+    &__heading {
+      & + .body-copy {
+        &--primary {
+          margin-top: 25px;
+        }
+        &--secondary {
+          margin-top: 21px;
+        }
+      }
+    }
+
+    &__item {
+      &.image,
+      &.text {
+        order: initial;
+      }
+    }
+
+    &__main {
+      grid-template-columns: repeat(2, 50%);
+    }
+
+  }
+
+  @include breakpoint(xl) {}
+
+  @include breakpoint(xxl) {}
+
+}

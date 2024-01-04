@@ -1,0 +1,21 @@
+@use '../utils/mixins/border' as *;
+
+.border {
+
+  &--top {
+    @include border-solid( var(--theme-border-width), 'inherit', 'top' );
+  }
+
+  &--bottom {
+    @include border-solid( var(--theme-border-width), 'inherit', 'bottom' );
+  }
+
+  &--left {
+    @include border-solid( var(--theme-border-width), 'inherit', 'left' );
+  }
+
+  &--right {
+    @include border-solid( var(--theme-border-width), 'inherit', 'right' );
+  }
+
+}

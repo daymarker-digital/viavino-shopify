@@ -1,0 +1,68 @@
+@use '../utils/mixins/breakpoint' as *;
+
+.age-gate {
+
+  .inverted-corner-box {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    &--button {
+      width: 100%;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+    &__content {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .modal {
+    &-content {
+      padding: var(--bs-container-fluid-padding);
+      background: transparent;
+      border: none;
+      outline: none;
+      width: 100%;
+      height: 100%;
+
+    }
+  }
+
+  &__cta {
+    margin: 30px 0;
+  }
+
+  &__heading {
+    & + .age-gate__message {
+      margin-top: 18px;
+    }
+  }
+
+  &__main {
+    padding: var(--bs-container-fluid-padding);
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__message {
+    text-transform: uppercase;
+    & + .age-gate__button {
+      margin-top: 35px;
+    }
+  }
+
+  @include breakpoint(sm) {}
+
+  @include breakpoint(md) {}
+
+  @include breakpoint(lg) {}
+
+  @include breakpoint(xl) {}
+
+  @include breakpoint(xxl) {}
+
+}

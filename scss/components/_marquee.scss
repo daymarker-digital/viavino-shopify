@@ -1,0 +1,91 @@
+@use '../utils/mixins/border' as *;
+@use '../utils/mixins/font' as *;
+
+.marquee {
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX( calc( -100% - var(--marquee-gap) ) );
+    }
+  }
+
+  gap: var(--marquee-gap);
+  display: grid;
+  align-content: center;
+  overflow: hidden;
+  width: 100%;
+
+  p, span {
+    color: currentcolor;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    a {
+      @include border-solid( 2px, 'inherit', 'bottom' );
+      color: currentcolor;
+      text-decoration: none;
+      outline: none;
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+
+  &__group {
+    animation: scroll var(--marquee-duration) linear infinite;
+    gap: var(--marquee-gap);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 100%;
+  }
+
+  &__main {
+    gap: var(--marquee-gap);
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  &--primary,
+  &--tertiary {
+    text-transform: uppercase;
+  }
+
+  &--primary {
+    @include clarendon-wide(700);
+  }
+
+  &--reverse {
+    .marquee__group {
+      animation-delay: calc( var(--marquee-duration) / -2 );
+      animation-direction: reverse;
+    }
+  }
+
+  &--secondary {
+    @include sarina(400);
+  }
+
+  &--tertiary {
+    @include novecento-sans-condensed(700);
+  }
+
+  &:hover {
+    .marquee__group {
+      animation-play-state: paused;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &__group {
+      animation-play-state: paused;
+    }
+  }
+
+}

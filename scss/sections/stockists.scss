@@ -1,0 +1,506 @@
+@use 'sass:color';
+@use 'sass:math';
+@use '../utils/mixins/body-copy' as *;
+@use '../utils/mixins/border' as *;
+@use '../utils/mixins/breakpoint' as *;
+@use '../utils/mixins/button' as *;
+@use '../utils/mixins/button-close' as *;
+@use '../utils/mixins/font' as *;
+@use '../utils/mixins/inverted-corner-box' as *;
+@use '../utils/mixins/ui' as *;
+
+.stockists {
+
+  .storerocket-popup-address,
+  .storerocket-overlay-details-address,
+  .storerocket-result-address {
+    @include new-sprint(300);
+    color: inherit;
+  }
+
+  .storerocket-popup-name,
+  .storerocket-overlay-details-name,
+  .storerocket-result-name {
+    @include clarendon-wide(700);
+    text-transform: uppercase;
+    line-height: 1.25;
+    color: inherit;
+  }
+
+  .storerocket-popup-address,
+  .storerocket-popup-name {
+    padding-right: 30px;
+  }
+
+  .storerocket-no-results-content,
+  .storerocket-overlay-details-content,
+  .storerocket-result,
+  #storerocket-search {
+    padding: 20px var(--bs-container-fluid-padding);
+  }
+
+  .storerocket-popup-buttons-get-directions {
+    @include sarina(400);
+    line-height: 1;
+  }
+
+  .mapboxgl {
+    &-canvas-container {
+      &:after {
+        content: "";
+        display: block;
+        background: #575445;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        mix-blend-mode: color;
+      }
+    }
+    &-popup {
+      max-width: 300px !important;
+      z-index: 15;
+      margin-top: -8px;
+      &-close-button {
+        @include button-close( 12px );
+        top: 20px;
+        right: 20px;
+      }
+      &-content {
+        @include border-solid(var(--theme-border-width), 'off-black' );
+        border-radius: 0;
+        box-shadow: none;
+        background: #E0DDCE;
+        padding: 20px;
+      }
+      &-tip {
+        background-image: url("VIAVINO--map-popup-asset.xs.svg");
+        background-repeat: none;
+        background-size: 100% auto;
+        width: 34px;
+        height: auto;
+        aspect-ratio: 34/20;
+        aspect-ratio: 34/18;
+        aspect-ratio: 34/14;
+        top: -3px;
+        position: relative;
+        border: none;
+      }
+    }
+  }
+
+  .storerocket {
+
+    &-clear-search {
+     @include button-close( 12px );
+      position: relative;
+      order: 3;
+      top: unset;
+      right: unset;
+    }
+
+    &-custom-marker {
+      z-index: 2;
+    }
+
+    &-no-results-content {
+      .storerocket-lead,
+      .storerocket-message-text {
+        display: none !important;
+      }
+      .storerocket-message {
+        &:before {
+          @include body-copy-size("md");
+          @include sarina(400);
+          content: "Scusi! No locations found :("
+        }
+      }
+    }
+
+    &-overlay {
+      &-details-address,
+      &-details-name {
+        @include body-copy-size("md");
+      }
+      &-close-button {
+        @include button-close( 18px );
+        top: 20px;
+        right: 20px;
+      }
+      &-content {
+        color: rgba(var(--theme-colour-off-black), 1);
+        background: rgba(var(--theme-colour-off-white), 1);
+      }
+      &-details-action {
+        &--phone,
+        &--website {
+          display: none !important;
+        }
+      }
+      &-details-action-button {
+        @include inverted-corner-box( $outline: "off-black", $fill: "off-white", $style: "button" );
+        max-width: 450px;
+        .storerocket-icon {
+          display: none;
+        }
+        &:hover {
+          opacity: 1 !important;
+        }
+      }
+      &-details-actions {
+        margin-top: 32px;
+      }
+      &-details-content {
+        & > * {
+          padding: 0;
+        }
+      }
+    }
+
+    &-popup {
+      &-address,
+      &-name {
+        font-size: 14px;
+      }
+      &-address {
+        margin: 10px 0 16px;
+      }
+      &-buttons-get-directions {
+        @include border-solid(var(--theme-border-width), 'inherit', 'bottom');
+        @include sarina(400);
+        transition: border var(--theme-transition--duration);
+        line-height: 1;
+        color: currentcolor;
+        background: none;
+        box-shadow: none;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-radius: 0;
+        font-size: 15px;
+        &:hover {
+          color: currentcolor;
+          border-bottom-color: transparent;
+        }
+      }
+      &-name {
+        a {
+          color: inherit;
+        }
+      }
+    }
+
+    &-query {
+      display: flex;
+      width: 100%;
+      align-items: center;
+    }
+
+    &-result {
+      color: rgba(var(--theme-colour-off-black), 1);
+      background: rgba(var(--theme-colour-off-white), 1);
+      position: relative;
+      border: none;
+      &-address,
+      &-name {
+        @include body-copy-size("md");
+      }
+      &-content {
+        position: relative;
+        z-index: 1;
+      }
+      &-distance {
+        display: none;
+      }
+      &:after {
+        transition: opacity var(--theme-transition--duration);
+        background: rgba(0,0,0,0.1);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 0;
+      }
+      &.is-active,
+      &:hover {
+        background: inherit;
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &-search-field {
+      @include clarendon-wide(700);
+      @include placeholder{
+        color: rgba(var(--theme-colour-off-black), 0.3) !important;
+      }
+      border-bottom: var(--theme-border-width) solid rgba(var(--theme-colour-off-black), 1) !important;
+      color: rgba(var(--theme-colour-off-black), 1);
+      order: 1;
+      padding: 0 24px 0 0 !important;
+      margin: 0 !important;
+      text-transform: uppercase;
+      border-radius: 0;
+    }
+
+    &-search-form {
+      margin-top: 18px;
+      width: 100%;
+    }
+
+    &-search-icon {
+      order: 2;
+      position: relative;
+      top: 0;
+      left: -18px;
+      font-size: 0;
+      height: 18px;
+      width: 18px;
+      padding: 0;
+      margin: 0;
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      path {
+        fill: rgba(var(--theme-colour-off-black), 1);
+      }
+    }
+
+    &-search-spinner {
+      display: none !important;
+    }
+
+  }
+
+  #storerocket {
+
+    &-map-container,
+    &-panel,
+    &-widget {
+      border: none;
+      border-radius: 0;
+      width: 100% !important;
+    }
+
+    &-map-container,
+    &-panel {
+      position: relative !important;
+      height: auto !important;
+      background: transparent;
+      left: unset;
+      right: unset;
+      bottom: unset;
+      top: unset;
+      box-shadow: none;
+      float: none;
+      padding: 0;
+      margin: 0;
+      display: block;
+    }
+
+    &-autocomplete {
+      width: calc( 100% - 16px );
+      top: 100%;
+      margin-top: 8px;
+    }
+
+    &-geolocate-button {
+      display: none;
+    }
+
+    &-map-container {
+      aspect-ratio: 1/1.25 !important;
+    }
+
+    &-search {
+      background: transparent;
+      height: auto;
+      flex-flow: column;
+      align-items: flex-start;
+      border: none;
+      box-shadow: none;
+      border-bottom-color: rgba(var(--theme-colour-off-black), 0.05);
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      &:before {
+        @include body-copy-size("md");
+        @include clarendon-wide(700);
+        color: rgba(var(--theme-colour-off-black), 1);
+        text-transform: uppercase;
+        content: "Store Locator";
+        display: block;
+      }
+    }
+
+    &-overlay {
+      background: rgba(var(--theme-colour-off-white), 1);
+      padding: 0;
+    }
+
+    &-overlay-details {
+      padding-top: 36px;
+    }
+
+    &-panel {
+      background: rgba(var(--theme-colour-off-white), 1);
+      aspect-ratio: 1/1;
+      display: flex;
+      flex-flow: column;
+    }
+
+    &-widget {
+      background: rgba(var(--theme-colour-off-black), 1);
+      gap: var(--theme-border-width);
+      font-family: inherit;
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr;
+      min-height: 0;
+    }
+
+  }
+
+  .is-not-mobile-device &,
+  .is-mobile-device & {
+
+    .mapboxgl {
+      &-canvas-container {
+        &:after {
+          background: #E0DDCE;
+          mix-blend-mode: multiply;
+        }
+      }
+    }
+
+    #storerocket {
+      &-map {
+        canvas {
+          filter: grayscale(1);
+        }
+      }
+    }
+
+  }
+
+  @include breakpoint(sm) {
+
+    #storerocket {
+      &-map-container,
+      &-panel {
+        aspect-ratio: 1.5/1 !important;
+      }
+    }
+
+  }
+
+  @include breakpoint(md) {
+
+    #storerocket {
+      &-map-container,
+      &-panel {
+        aspect-ratio: 1.75/1 !important;
+      }
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    .storerocket-overlay-details-name,
+    .storerocket-result-name {
+      font-size: min(1.5vw, 40px);
+    }
+
+    .storerocket-overlay-details-address,
+    .storerocket-result-address {
+      font-size: min(1.2vw, 24px);
+    }
+
+    .storerocket-no-results-content,
+    .storerocket-overlay-details-content,
+    .storerocket-result,
+    #storerocket-search {
+      padding: 18px 3.75vw 18px var(--bs-container-fluid-padding);
+    }
+
+    .storerocket {
+      &-overlay {
+        &-details-action-button {
+          mask: var(--theme-radial-gradient--lg);
+          &:after,
+          &:before {
+            mask: var(--theme-radial-gradient--lg);
+          }
+        }
+      }
+    }
+
+    #storerocket {
+      &-map-container,
+      &-panel {
+        aspect-ratio: 1.3/1 !important;
+      }
+      &-widget {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    .storerocket-no-results-content,
+    .storerocket-overlay-details-content,
+    .storerocket-result,
+    #storerocket-search {
+      padding: 20px 4vw 20px var(--bs-container-fluid-padding);
+    }
+
+    #storerocket {
+      &-map-container,
+      &-panel {
+        aspect-ratio: 1.35/1 !important;
+      }
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    .storerocket-no-results-content,
+    .storerocket-overlay-details-content,
+    .storerocket-result,
+    #storerocket-search {
+      padding: 22px 4.25vw 22px var(--bs-container-fluid-padding);
+    }
+
+    .storerocket {
+      &-overlay {
+        &-details-action-button {
+          mask: var(--theme-radial-gradient--xxl);
+          &:after,
+          &:before {
+            mask: var(--theme-radial-gradient--xxl);
+          }
+        }
+      }
+    }
+
+    #storerocket {
+      &-map-container,
+      &-panel {
+        aspect-ratio: 1.4/1 !important;
+      }
+    }
+
+  }
+
+}

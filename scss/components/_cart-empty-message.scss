@@ -1,0 +1,24 @@
+@use '../utils/mixins/breakpoint' as *;
+
+.cart-empty-message {
+
+  padding: var(--theme-cart-line-item-padding);
+  min-height: 200px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint(lg) {
+    padding: var(--theme-cart-line-item-padding--lg);
+  }
+
+  @include breakpoint(xl) {
+    padding: var(--theme-cart-line-item-padding--xl);
+  }
+
+  @include breakpoint(xxl) {
+    padding: var(--theme-cart-line-item-padding--xxl);
+  }
+
+}

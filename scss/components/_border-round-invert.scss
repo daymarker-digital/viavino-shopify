@@ -1,0 +1,46 @@
+@use '../utils/mixins/breakpoint' as *;
+
+.border-round-invert {
+  position: relative;
+  --mask: radial-gradient(20px at 20px 20px,#0000 98%,#000) -20px -20px;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+.border-round-invert:before {
+  background: rgba(var(--theme-colour-off-black), 1);
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -5;
+  width: calc(100%);
+  height: calc(100%);
+  --mask: radial-gradient(20px at 20px 20px,#0000 98%,#000) -20px -20px;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+.border-round-invert:after {
+  content: '';
+  top: 3px;
+  left: 3px;
+  bottom: 3px;
+  right: 3px;
+  background: white;
+  position: absolute;
+  z-index: 0;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  --mask: radial-gradient(20px at 20px 20px,#0000 98%,#000) -20px -20px;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+.border-round-invert__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  z-index: 10;
+  padding: 30px;
+}

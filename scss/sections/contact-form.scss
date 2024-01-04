@@ -1,0 +1,104 @@
+@use '../utils/mixins/breakpoint' as *;
+
+.contact-form {
+
+  .form {
+    &__button {
+      max-width: none;
+    }
+  }
+
+  .inverted-corner-box {
+    &--image {
+      width: 100%;
+      aspect-ratio: 3.5/4;
+      height: auto;
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    & + .contact-form__form {
+      margin-top: 20px;
+    }
+  }
+
+  &__item {
+    display: block;
+    & + .contact-form__item {
+      margin-top: 32px;
+    }
+    img, svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  @include breakpoint(sm) {}
+
+  @include breakpoint(md) {}
+
+  @include breakpoint(lg) {
+
+    &__heading {
+      & + .contact-form__form {
+        margin-top: 22px;
+      }
+    }
+
+    &__item {
+      &.form {
+        order: 1;
+      }
+      &.image {
+        order: 2;
+      }
+      & + .contact-form__item {
+        margin-top: 0;
+      }
+    }
+
+    &__main {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      gap: 42px;
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    &__heading {
+      & + .contact-form__form {
+        margin-top: 24px;
+      }
+    }
+
+    &__main {
+      gap: 52px;
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    &__heading {
+      & + .contact-form__form {
+        margin-top: 26px;
+      }
+    }
+
+    &__main {
+      gap: 62px;
+    }
+
+  }
+
+}

@@ -1,0 +1,28 @@
+@use '../utils/mixins/input' as *;
+@use '../utils/mixins/ui' as *;
+
+.input {
+
+  @extend %ui-base;
+  @extend %ui-transition;
+  @extend %ui-input;
+
+  display: inline-flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+
+  &--primary,
+  &--secondary {
+    @extend .input;
+  }
+
+  &--primary {
+    @include input('primary');
+  }
+
+  &--secondary {
+    @include input('secondary');
+  }
+
+}

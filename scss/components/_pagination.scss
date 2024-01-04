@@ -1,0 +1,42 @@
+@use '../utils/mixins/breakpoint' as *;
+@use '../utils/mixins/font' as *;
+
+.pagination {
+
+  @include clarendon-wide(700);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  font-size: 36px;
+
+  .active {
+    border-bottom-style: solid;
+    border-bottom-color: rgba(var(--theme-colour-rosso), 1);
+    border-bottom-width: var(--theme-border-width);
+    color: rgba(var(--theme-colour-rosso), 1);
+  }
+
+  .disabled {}
+
+  .link {
+    color: rgba(var(--theme-colour-off-black), 1);
+    opacity: 0.3333;
+    &:focus,
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__item-title {
+    display: block;
+    line-height: 1;
+  }
+
+  @include breakpoint(lg) {
+    font-size: 50px;
+    gap: 32px;
+  }
+
+}

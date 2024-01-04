@@ -1,0 +1,39 @@
+{%- liquid
+
+  assign snippet_name = 'form-newsletter-signup'
+  assign snippet_classes = snippet_name | append: ' form js--validate-me'
+  assign snippet_id = snippet_name
+
+  assign heading = heading | deafult: ''
+
+  if classes and classes != blank
+    assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes
+  endif
+
+-%}
+
+{%- form 'customer', class: snippet_classes, data-redirect: '/pages/thank-you', id: snippet_id -%}
+
+  {% if heading != blank %}
+    <strong class="form__heading heading--primary">{{ heading }}</strong>
+  {% endif %}
+
+  <div class="form__field field field--email">
+    {% render "input", classes: 'form__input', name: 'contact[email]', placeholder: 'Enter Email', required: true, type: 'email' %}
+    {% render "error-message", message: 'Scuzi! Please enter a valid email address.', position: 'right' %}
+  </div>
+
+  <div class="form__cta">
+    {%- capture inverted_corner_box_content -%}
+      <button class="form__button button" name="submit" type="submit" value="Subscribe">Subscribe</button>
+    {%- endcapture -%}
+    {%-
+      render 'inverted-corner-box',
+      background: 'rosso',
+      border: 'off-white',
+      content: inverted_corner_box_content,
+      type: 'button'
+    -%}
+  </div>
+
+{%- endform -%}

@@ -1,0 +1,46 @@
+{
+  "order": [
+    "main"
+  ],
+  "sections": {
+    "main": {
+      "type": "hero",
+      "blocks": {
+        "3f1b88a6-a61e-4452-a84b-144f9de6a915": {
+          "type": "heading",
+          "settings": {
+            "heading": "Thank You",
+            "text_colour": "off-black"
+          }
+        },
+        "cdd2dde9-fe9c-4300-890c-f2f6eb3469d1": {
+          "type": "button",
+          "settings": {
+            "button_title": "Take me Home",
+            "button_link": "\/",
+            "button_background_colour": "off-black",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-white"
+          }
+        }
+      },
+      "block_order": [
+        "3f1b88a6-a61e-4452-a84b-144f9de6a915",
+        "cdd2dde9-fe9c-4300-890c-f2f6eb3469d1"
+      ],
+      "settings": {
+        "height_desktop": "full-viewport-height",
+        "height_mobile": "100vh",
+        "border_top": false,
+        "border_bottom": false,
+        "background": "off-white",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 0,
+        "padding_bottom": 84,
+        "anchor_id": ""
+      }
+    }
+  }
+}

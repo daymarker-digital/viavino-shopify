@@ -1,0 +1,46 @@
+{%- liquid
+
+  assign snippet_name = 'newsletter-popup'
+  assign snippet_classes = snippet_name | append: ' modal fade'
+  assign snippet_id = snippet_name
+
+  assign background = settings.cart_drawer_background | default: 'off-white'
+  assign heading = settings.cart_drawer_heading | default: 'Your Bag'
+  assign text_colour = settings.cart_drawer_text_colour | default: 'dark'
+
+-%}
+
+<div
+    {%-
+      render 'element-attrs',
+        element_background: settings.age_gate_background,
+        element_class: snippet_classes,
+        element_id: snippet_id,
+    -%}
+    aria-hidden="true"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    data-cookie-duration="{{ cookie_duration }}"
+    tabindex="-1"
+  >
+    <div class="modal-dialog">
+      <div class="{{ snippet_name }}__main modal-main">
+        {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
+          <div class="{{ snippet_name }}__content modal-content">
+
+            <strong class="{{ snippet_name }}__heading heading--page-title">{{ settings.age_gate_heading }}</strong>
+            <div class="{{ snippet_name }}__message body-copy--secondary">{{ settings.age_gate_message }}</div>
+            <button
+              class="{{ snippet_name }}__button button--primary button--colour-secondary"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#{{ snippet_id }}"
+              aria-label="Close"
+            >{{ settings.age_gate_button_title }}</button>
+            <div class="{{ snippet_name }}__disclaimer body-copy--primary">We will save your choice for {{ cookie_duration }} days</div>
+
+          </div>
+        {% render 'bs-container', state: 'closed', col: 'col-12', container: container %}
+      </div>
+    </div>
+  </div>

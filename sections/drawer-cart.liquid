@@ -1,0 +1,78 @@
+{%- liquid
+
+  assign section_name = 'drawer-cart'
+  assign section_classes = section_name
+  assign section_id = 'shopify-section-' | append: section_name
+
+  assign aos_id = section_id | append: '--aos'
+  assign aos_delay = 250
+  assign aos_delay_increment = 250
+
+  assign container = section.settings.container | default: 'container'
+  assign form_action = routes.cart_url
+  assign form_id = section_name | append: '__cart-line-items'
+  assign heading = settings.cart_heading | default: 'Cart'
+
+-%}
+
+{%- style -%}
+
+  {%
+    render 'element-styles',
+      element_background: 'off-white',
+      element_id: section_id
+  %}
+
+{%- endstyle -%}
+
+<div class="{{ section_name }}__header">
+  <div class="{{ section_name }}__header-content">
+    {% if heading != blank %}
+      <strong class="{{ section_name }}__heading">{{ heading }}</strong>
+    {% endif %}
+    <button class="{{ section_name }}__button-close button--close js--close-drawer" data-drawer-id="{{ section_id }}" type="button">
+      {% render 'svg', type: 'icon.close' %}
+    </button>
+  </div>
+</div>
+
+<div class="{{ section_name }}__main">
+  <div class="{{ section_name }}__main-content">
+    <form class="{{ form_id }} js--cart" id="{{ form_id }}" action="{{ routes.cart_url }}" method="post">
+      {%- for item in cart.items -%}
+        {%- render 'card-cart-line-item', card_classes: 'drawer-cart__cart-line-item', card_index: forloop.index, card_item: item -%}
+      {%- endfor -%}
+    </form>
+  </div>
+</div>
+
+<div class="{{ section_name }}__footer">
+
+  <div class="{{ section_name }}__cart-subtotal">
+    <div class="{{ section_name }}__cart-subtotal-label">Subtotal</div>
+    <div class="{{ section_name }}__cart-subtotal-value js--cart-subtotal">{{ cart.items_subtotal_price | money_with_currency }}</div>
+  </div>
+
+  <div class="{{ section_name }}__actions">
+    {%- capture inverted_corner_box_content -%}
+      <button class="{{ section_name }}__button-checkout button--primary text-colour--off-white" form="{{ form_id }}" name="checkout" type="submit" value="Checkout">Checkout</button>
+    {%- endcapture -%}
+    {%-
+      render 'inverted-corner-box',
+      background: 'off-black',
+      border: 'off-black',
+      content: inverted_corner_box_content,
+      type: 'button'
+    -%}
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Drawer Cart",
+    "tag": "section",
+    "class": "section section--drawer-cart drawer-cart drawer",
+    "settings": []
+  }
+{% endschema %}

@@ -1,0 +1,26 @@
+@use "../utils/mixins/breakpoint" as *;
+@use "../utils/variables" as *;
+
+@each $option in $theme-heights {
+  [data-height-mobile="#{$option}"] {
+    @if $option == 'full-viewport-height' {
+      height: 100vh;
+    } @else {
+      height: #{$option};
+    }
+  }
+}
+
+@include breakpoint(lg) {
+
+  @each $option in $theme-heights {
+    [data-height-desktop="#{$option}"] {
+      @if $option == 'full-viewport-height' {
+        height: 100vh;
+      } @else {
+        height: #{$option};
+      }
+    }
+  }
+
+}

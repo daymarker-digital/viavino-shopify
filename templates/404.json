@@ -1,0 +1,53 @@
+{
+  "order": [
+    "main"
+  ],
+  "sections": {
+    "main": {
+      "type": "404",
+      "blocks": {
+        "5cf1b7cf-c14e-44d2-9367-4b74791e30cd": {
+          "type": "extra-adornment",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VIA--404-image_3x_99b1cc0c-3206-4fae-b108-28d13e89962c.png"
+          }
+        },
+        "e2ecfa18-d393-48c0-850e-c4fad6008232": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dispiacente! (Sorry)",
+            "heading_size": "md"
+          }
+        },
+        "9c71acb2-5086-4a1f-949d-c4dd82c1fed6": {
+          "type": "button",
+          "settings": {
+            "button_title": "Back to Home",
+            "button_link": "\/",
+            "button_style": "primary",
+            "button_background_colour": "off-white",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black"
+          }
+        }
+      },
+      "block_order": [
+        "5cf1b7cf-c14e-44d2-9367-4b74791e30cd",
+        "e2ecfa18-d393-48c0-850e-c4fad6008232",
+        "9c71acb2-5086-4a1f-949d-c4dd82c1fed6"
+      ],
+      "settings": {
+        "height_desktop": "100vh",
+        "height_mobile": "100vh",
+        "text_colour": "off-white",
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/VIA--404.jpg",
+        "background_image_position_desktop": "center left",
+        "background_image_position_mobile": "center left",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
+      }
+    }
+  }
+}

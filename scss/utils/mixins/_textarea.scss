@@ -1,0 +1,40 @@
+@use "breakpoint" as *;
+@use "font" as *;
+@use "ui" as *;
+
+@mixin textarea($style:primary) {
+
+  @include clarendon-wide(700);
+  text-transform: none;
+  min-height: 160px;
+
+  @if $style == primary {
+    @include placeholder {
+      text-transform: uppercase;;;
+    }
+    border-bottom-width: var(--theme-border-width);
+    border-bottom-style: solid;
+    border-bottom-color: currentColor;
+  }
+
+  @include breakpoint(sm) {
+    min-height: 170px;
+  }
+
+  @include breakpoint(md) {
+    min-height: 180px;
+  }
+
+  @include breakpoint(lg) {
+    min-height: 160px;
+  }
+
+  @include breakpoint(xl) {
+    min-height: 170px;
+  }
+
+  @include breakpoint(xxl) {
+    min-height: 180px;
+  }
+
+}

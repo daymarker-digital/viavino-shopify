@@ -1,0 +1,13 @@
+.policy {
+
+  &__title {
+    border-bottom-width: var(--theme-border-width);
+    border-bottom-style: solid;
+    border-bottom-color: currentcolor;
+    padding-bottom: 10px;
+    & + .policy__body-copy {
+      margin-top: 30px;
+    }
+  }
+
+}

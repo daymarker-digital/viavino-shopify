@@ -1,0 +1,63 @@
+@use '../utils/mixins/border' as *;
+@use '../utils/mixins/breakpoint' as *;
+
+.featured-products {
+
+  &__cta {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__product {
+
+    &-image {
+      @include border-solid(var(--theme-border-width), 'off-black' );
+      &-link {
+        &:hover {
+          opacity: 0.666;
+        }
+      }
+      img, svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    & + .featured-products__cta {
+      margin-top: 20px;
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    &__product {
+      & + .featured-products__cta {
+        margin-top: 28px;
+      }
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    &__product {
+      & + .featured-products__cta {
+        margin-top: 32px;
+      }
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    &__product {
+      & + .featured-products__cta {
+        margin-top: 36px;
+      }
+    }
+
+  }
+
+}

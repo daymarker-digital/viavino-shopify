@@ -1,0 +1,471 @@
+{%- liquid
+
+  assign section_name = 'sustainability'
+  assign section_classes = section_name
+  assign section_id = section_name | append: '--' | append: section.id
+
+  assign aos_id = section_id | append: '--aos'
+  assign aos_delay = 250
+  assign aos_delay_increment = 250
+
+  assign badges = section.blocks | where: 'type', 'badge' | default: false
+  assign buttons = section.blocks | where: 'type', 'button' | default: false
+  assign container = section.settings.container | default: 'container'
+  assign supporting_image = section.settings.supporting_image | default: false
+  assign text_colour = section.settings.text_colour | default: 'light'
+
+  if section.settings.anchor_id != blank
+    assign section_id = section.settings.anchor_id
+  endif
+
+-%}
+
+{%- style -%}
+
+  {%
+    render 'element-styles',
+      element_background: section.settings.background,
+      element_background_image: section.settings.background_image,
+      element_background_image_position_desktop: section.settings.background_image_position_desktop,
+      element_background_image_position_mobile: section.settings.background_image_position_mobile,
+      element_border_bottom: section.settings.border_bottom,
+      element_border_top: section.settings.border_top,
+      element_id: section_id,
+      element_padding_bottom: section.settings.padding_bottom,
+      element_padding_top: section.settings.padding_top
+  %}
+
+{%- endstyle -%}
+
+<link rel="stylesheet" href="{{ 'section-sustainability.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-sustainability.css' | asset_url | stylesheet_tag }}</noscript>
+
+<div
+  {%-
+    render 'element-attrs',
+      element_class: section_classes,
+      element_id: section_id
+  -%}
+>
+
+  {% if supporting_image %}
+    {%- style -%}
+      #{{ section_id }} .{{ section_name }}__supporting-image {
+          display: none;
+      }
+      @media screen and (min-width: 992px) {
+        #{{ section_id }} .{{ section_name }}__supporting-image {
+          background: url('{{ supporting_image | img_url: '1800x' }}');
+          background-repeat: no-repeat;
+          background-position: center right;
+          background-size: cover;
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+    {%- endstyle -%}
+    {%- liquid
+      capture aos_attrs
+        render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-left'
+      endcapture
+      assign aos_delay = aos_delay | plus: aos_delay_increment
+    -%}
+    <div class="{{ section_name }}__supporting-image" {{ aos_attrs }}></div>
+  {% endif %}
+
+  <div class="{{ section_name }}__main" id="{{ aos_id }}">
+    {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
+      <div class="{{ section_name }}__content{% if supporting_image %} with-supporting-image{% endif %}">
+
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+
+            {%- when 'extra-adornment' %}
+
+              {%- liquid
+                assign image = block.settings.image | default: false
+                capture aos_attrs
+                  render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-down'
+                endcapture
+                assign aos_delay = aos_delay | plus: aos_delay_increment
+              -%}
+              {%- if image -%}
+                <div class="{{ section_name }}__extra-adornment" {{ aos_attrs }}>
+                  {% render 'lazyload-image', image: image %}
+                </div>
+              {%- endif -%}
+
+            {%- when 'heading' -%}
+
+              {%- liquid
+                assign heading = block.settings.heading | default: ''
+                capture aos_attrs
+                  render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-up'
+                endcapture
+                assign aos_delay = aos_delay | plus: aos_delay_increment
+              -%}
+              {% if heading != blank %}
+                <strong class="{{ section_name }}__heading heading--primary text-colour--{{ text_colour }}" {{ aos_attrs }}>{{ heading | escape }}</strong>
+              {%- endif -%}
+
+            {%- when 'message' -%}
+
+              {%- liquid
+                assign message = block.settings.message | default: ''
+                capture aos_attrs
+                  render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-up'
+                endcapture
+                assign aos_delay = aos_delay | plus: aos_delay_increment
+              -%}
+              {%- if message != blank -%}
+                <div class="{{ section_name }}__message body-copy--primary body-copy--lg text-colour--{{ text_colour }}" {{ aos_attrs }}>
+                  {{ message }}
+                </div>
+              {%- endif -%}
+
+          {%- endcase -%}
+        {%- endfor -%}
+
+        {%- if badges.size > 0 or buttons.size > 0 -%}
+          <div class="{{ section_name }}__extras">
+
+            {%- if badges.size > 0 %}
+              <div class="{{ section_name }}__badges">
+                {%- for item in badges -%}
+                  {%- liquid
+                    assign badge = item.settings.badge | default: false
+                    capture aos_attrs
+                      render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-down'
+                    endcapture
+                    assign aos_delay = aos_delay | plus: aos_delay_increment
+                  -%}
+                  {%- if badge -%}
+                    <div class="{{ section_name }}__badges-item" {{ aos_attrs }}>
+                      {% render 'lazyload-image', image: badge %}
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+
+            {%- if buttons.size > 0 %}
+              <div class="{{ section_name }}__cta">
+                {%- for item in buttons -%}
+
+                  {%- liquid
+
+                    assign button_background_colour = item.settings.button_background_colour | default: 'off-white'
+                    assign button_border_colour = item.settings.button_border_colour | default: 'off-black'
+                    assign button_link = item.settings.button_link | default: ''
+                    assign button_text_colour = item.settings.button_text_colour | default: 'off-black'
+                    assign button_title = item.settings.button_title | default: ''
+
+                    capture button_aos_attrs
+                      render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-up'
+                    endcapture
+                    assign aos_delay = aos_delay | plus: aos_delay_increment
+
+                  -%}
+
+                  {% if button_link != blank and button_title != blank %}
+                    {%- capture button_classes -%}
+                      {{ section_name }}__button button--primary button--text-colour-{{ button_text_colour }}
+                    {%- endcapture -%}
+                    {%- capture inverted_corner_box_content -%}
+                      {%- render 'link', classes: button_classes, link: button_link, title: button_title -%}
+                    {%- endcapture -%}
+                    {%-
+                      render 'inverted-corner-box',
+                      aos_attrs: button_aos_attrs,
+                      background: button_background_colour,
+                      border: button_border_colour,
+                      content: inverted_corner_box_content,
+                      type: 'button'
+                    -%}
+                  {% endif %}
+
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+
+          </div>
+        {%- endif -%}
+
+      </div>
+    {% render 'bs-container', state: 'closed', container: container %}
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Sustainability",
+  "tag": "section",
+  "class": "section section--sustainability",
+  "settings": [
+    {
+      "content": "Content",
+      "type": "header"
+    },
+    {
+      "label": "Supporting Image",
+      "type": "image_picker",
+      "id": "supporting_image"
+    },
+    {
+      "content": "Border",
+      "type": "header"
+    },
+    {
+      "label": "Top Border",
+      "type": "checkbox",
+      "default": true,
+      "id": "border_top"
+    },
+    {
+      "label": "Bottom Border",
+      "type": "checkbox",
+      "default": false,
+      "id": "border_bottom"
+    },
+    {
+      "content": "Text Colour",
+      "type": "header"
+    },
+    {
+      "label": "Text Colour",
+      "type": "select",
+      "options": [
+        { "label": "Off-black", "value": "off-black" },
+        { "label": "Off-white", "value": "off-white" }
+      ],
+      "default": "off-black",
+      "id": "text_colour"
+    },
+    {
+      "content": "Background",
+      "type": "header"
+    },
+    {
+      "label": "Background",
+      "type": "select",
+      "options": [
+        { "label": "Image", "value": "image" },
+        { "label": "None", "value": "none" },
+        { "label": "Off-black", "value": "off-black" },
+        { "label": "Off-white", "value": "off-white" },
+        { "label": "Rosa", "value": "rosa" },
+        { "label": "Rosso", "value": "rosso" }
+      ],
+      "default": "none",
+      "id": "background"
+    },
+    {
+      "label": "Background Image",
+      "type": "image_picker",
+      "id": "background_image"
+    },
+    {
+      "label": "Background Image Position (Desktop)",
+      "type": "select",
+      "options": [
+        { "label": "Top Left", "value": "top left" },
+        { "label": "Top Center", "value": "top center" },
+        { "label": "Top Right", "value": "top right" },
+        { "label": "Center Left", "value": "center left" },
+        { "label": "Center Center", "value": "center center" },
+        { "label": "Center Right", "value": "center right" },
+        { "label": "Bottom Left", "value": "bottom left" },
+        { "label": "Bottom Center", "value": "bottom center" },
+        { "label": "Bottom Right", "value": "bottom right" }
+      ],
+      "default": "center center",
+      "id": "background_image_position_desktop"
+    },
+    {
+      "label": "Background Image Position (Mobile)",
+      "type": "select",
+      "options": [
+        { "label": "Top Left", "value": "top left" },
+        { "label": "Top Center", "value": "top center" },
+        { "label": "Top Right", "value": "top right" },
+        { "label": "Center Left", "value": "center left" },
+        { "label": "Center Center", "value": "center center" },
+        { "label": "Center Right", "value": "center right" },
+        { "label": "Bottom Left", "value": "bottom left" },
+        { "label": "Bottom Center", "value": "bottom center" },
+        { "label": "Bottom Right", "value": "bottom right" }
+      ],
+      "default": "center center",
+      "id": "background_image_position_mobile"
+    },
+    {
+      "content": "Container",
+      "type": "header"
+    },
+    {
+      "label": "Container",
+      "type": "select",
+      "options": [
+        {
+          "label": "Static",
+          "value": "container"
+        },
+        {
+          "label": "Fluid",
+          "value": "container-fluid"
+        },
+        {
+          "label": "Full Width",
+          "value": "full-width"
+        }
+      ],
+      "default": "container",
+      "id": "container"
+    },
+    {
+      "content": "Padding",
+      "type": "header"
+    },
+    {
+      "label": "Top Padding",
+      "type": "range",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "id": "padding_top"
+    },
+    {
+      "label": "Bottom Padding",
+      "type": "range",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "id": "padding_bottom"
+    },
+    {
+      "content": "Anchor",
+      "type": "header"
+    },
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Badge",
+      "type": "badge",
+      "limit": 5,
+      "settings": [
+        {
+          "label": "Badge",
+          "type": "image_picker",
+          "id": "badge"
+        }
+      ]
+    },
+    {
+      "name": "Button",
+      "type": "button",
+      "limit": 1,
+      "settings": [
+        {
+          "label": "Button Title",
+          "type": "text",
+          "id": "button_title"
+        },
+        {
+          "label": "Button Link",
+          "type": "url",
+          "id": "button_link"
+        },
+        {
+          "label": "Button Background",
+          "type": "select",
+          "options": [
+            { "label": "None", "value": "none" },
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" },
+            { "label": "Rosa", "value": "rosa" },
+            { "label": "Rosso", "value": "rosso" }
+          ],
+          "default": "none",
+          "id": "button_background_colour"
+        },
+        {
+          "label": "Button Border",
+          "type": "select",
+          "options": [
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" }
+          ],
+          "default": "off-black",
+          "id": "button_border_colour"
+        },
+        {
+          "label": "Button Text Colour",
+          "type": "select",
+          "options": [
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" }
+          ],
+          "default": "off-black",
+          "id": "button_text_colour"
+        }
+      ]
+    },
+    {
+      "name": "Extra Adornment",
+      "type": "extra-adornment",
+      "limit": 1,
+      "settings": [
+        {
+          "label": "Image",
+          "type": "image_picker",
+          "id": "image"
+        }
+      ]
+    },
+    {
+      "name": "Heading",
+      "type": "heading",
+      "limit": 1,
+      "settings": [
+        {
+          "label": "Heading",
+          "type": "text",
+          "id": "heading"
+        }
+      ]
+    },
+    {
+      "name": "Message",
+      "type": "message",
+      "limit": 1,
+      "settings": [
+        {
+          "label": "Message",
+          "type": "richtext",
+          "id": "message"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sustainability"
+    }
+  ]
+}
+{% endschema %}

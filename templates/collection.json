@@ -1,0 +1,51 @@
+{
+  "order": [
+    "40687b1b-73a7-4f91-98b3-ff53f5273225",
+    "main"
+  ],
+  "sections": {
+    "40687b1b-73a7-4f91-98b3-ff53f5273225": {
+      "type": "hero",
+      "blocks": {
+        "28e5b146-c8b6-4b46-9f69-3fda156ca63f": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ collection.title }}",
+            "text_colour": "off-black"
+          }
+        }
+      },
+      "block_order": [
+        "28e5b146-c8b6-4b46-9f69-3fda156ca63f"
+      ],
+      "settings": {
+        "height_desktop": "auto",
+        "height_mobile": "auto",
+        "border_top": false,
+        "border_bottom": false,
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/HEADER_c719de92-6b99-48e2-a3bd-2e123985585b.jpg",
+        "background_image_position_desktop": "bottom center",
+        "background_image_position_mobile": "center center",
+        "container": "full-width",
+        "padding_top": 68,
+        "padding_bottom": 60,
+        "anchor_id": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_image_aspect_ratio": "3.5\/4",
+        "products_per_page": 6,
+        "border_top": true,
+        "border_bottom": false,
+        "container": "container-fluid",
+        "grid_layout": "four-column",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
+      }
+    }
+  }
+}

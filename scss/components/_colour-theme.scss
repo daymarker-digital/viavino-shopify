@@ -1,0 +1,18 @@
+@use '../utils/variables' as *;
+
+@each $name, $colour in $theme-colours {
+  [data-colour-theme="#{$name}"] {
+    $background: rgba(var(--theme-colour-#{$name}), 1);
+    $colour: rgba(var(--theme-colour-off-black), 1);
+
+    @if $name == rosso {
+      $colour: rgba(var(--theme-colour-off-white), 1);
+    }
+
+    &.card-product__button,
+    &.card-review {
+      background: $background;
+      color: $colour;
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "current": {
+    "carousel_button_previous": "shopify:\/\/shop_images\/carousel--navigation-button--prev_2048x4_72d2f64d-262b-4f82-97bb-b6e7e63a9be0.jpg",
+    "carousel_button_next": "shopify:\/\/shop_images\/carousel--navigation-button--next_2048x4_91bb0c20-8cad-4f79-9e29-ca804f19f9a8.jpg",
+    "cart_heading": "Your Bag",
+    "cart_empty_message": "<p>Your cart is empty. Continue browsing <a href=\"\/collections\/merch\" title=\"Merch\">here<\/a>.<\/p>",
+    "cart_drawer_delay_close": 4000,
+    "age_gate_enable": true,
+    "age_gate_cookie_duration": 65,
+    "age_gate_heading": "Scusi!",
+    "age_gate_message": "<p>By entering the website, you confirm that you are of legal drinking age in your country of residence.<\/p>",
+    "age_gate_button_title": "Enter",
+    "age_gate_content_width_mobile": 95,
+    "age_gate_content_width_desktop": 75,
+    "age_gate_text_colour": "light",
+    "age_gate_background": "rosso",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "main_menu": "main-menu",
+          "main_menu_extras": "main-menu-extras"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "3b3a499d-c7b6-4223-a82b-f68ddf357aa1": {
+            "type": "marquee",
+            "settings": {
+              "text": "<p><a href=\"https:\/\/www.instagram.com\/drinkviavino\/\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/drinkviavino\/\">@DrinkViavino<\/a><\/p>",
+              "reverse": false,
+              "font_size": 25,
+              "duration": 85,
+              "gap": 8,
+              "style": "tertiary",
+              "border_top": true,
+              "border_bottom": true,
+              "text_colour": "off-black",
+              "background": "image",
+              "background_image": "shopify:\/\/shop_images\/off-white-pattern_00d4eb39-736a-42c0-babf-f5ecc3cfb34d.png",
+              "padding_top": 8,
+              "padding_bottom": 8
+            }
+          },
+          "fc5f7810-a6c4-44c4-ad24-32f8d19e6caf": {
+            "type": "main",
+            "settings": {
+              "container": "container",
+              "image": "shopify:\/\/shop_images\/footer-image_2048x4_94c27645-0427-4f29-92a7-3f962ed48b3f.jpg",
+              "image_caption": "<p>For more info, please reach out at orders@drinkviavino.com<\/p>",
+              "menu": "footer",
+              "menu_image": "shopify:\/\/shop_images\/footer-menu-image.png",
+              "newsletter_heading": "Newsletter",
+              "social_facebook_url": "",
+              "social_instagram_url": "https:\/\/www.instagram.com\/drinkviavino",
+              "social_twitter_url": ""
+            }
+          },
+          "60ad4b83-4f82-451b-8c9f-549c71b3cf92": {
+            "type": "footnote",
+            "settings": {
+              "copyright": "Fino Vino Beverages Inc. All rights reserved.",
+              "menu": "policies",
+              "border_top": true,
+              "border_bottom": false,
+              "container": "container"
+            }
+          }
+        },
+        "block_order": [
+          "3b3a499d-c7b6-4223-a82b-f68ddf357aa1",
+          "fc5f7810-a6c4-44c4-ad24-32f8d19e6caf",
+          "60ad4b83-4f82-451b-8c9f-549c71b3cf92"
+        ],
+        "settings": {
+        }
+      },
+      "policy-terms-of-service": {
+        "type": "policy-terms-of-service",
+        "settings": {
+          "content_width": "full",
+          "text_colour": "off-white",
+          "background": "rosso",
+          "container": "container",
+          "padding_top": 96,
+          "padding_bottom": 96,
+          "anchor_id": ""
+        }
+      },
+      "policy-privacy": {
+        "type": "policy-privacy",
+        "settings": {
+          "content_width": "full",
+          "text_colour": "off-black",
+          "background": "off-white",
+          "container": "container",
+          "padding_top": 36,
+          "padding_bottom": 36,
+          "anchor_id": ""
+        }
+      },
+      "drawer-menu": {
+        "type": "drawer-menu",
+        "settings": {
+          "text_colour": "off-white",
+          "background": "off-black",
+          "menu_main": "mobile-menu"
+        }
+      },
+      "drawer-cart": {
+        "type": "drawer-cart",
+        "settings": {
+        }
+      },
+      "newsletter-popup": {
+        "type": "newsletter-popup",
+        "settings": {
+          "heading": "Subscribe to find out about community events, product drops, and collaborations.",
+          "subscription_consent": "<p>By clicking below to submit this form, you acknowledge that the information you provide will be processed in accordance with our <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">Privacy Policy<\/a>. You can unsubscribe at anytime.<\/p>"
+        }
+      },
+      "age-gate": {
+        "type": "age-gate",
+        "settings": {
+          "enable": true,
+          "delay": 5000,
+          "cookie_duration": 45,
+          "heading": "Scusi!",
+          "heading_size": "md",
+          "message": "<p>By entering the website, you confirm that you are of legal drinking age in your country of residence.<\/p>",
+          "message_style": "primary",
+          "message_size": "md",
+          "button_title": "Enter",
+          "button_background_colour": "off-white",
+          "button_border_colour": "off-black",
+          "button_text_colour": "off-black",
+          "disclaimer_size": "xs",
+          "text_colour": "off-white",
+          "background": "rosso"
+        }
+      },
+      "cookie-popup": {
+        "type": "cookie-popup",
+        "settings": {
+          "enable": true,
+          "delay": 5500,
+          "cookie_duration": 45,
+          "heading": "Biscotti?",
+          "message": "<p>We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.<\/p>",
+          "button_title": "Accept",
+          "button_background_colour": "off-white",
+          "button_border_colour": "off-white",
+          "button_text_colour": "off-black",
+          "text_colour": "off-white",
+          "border_colour": "off-white",
+          "background": "rosso"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}

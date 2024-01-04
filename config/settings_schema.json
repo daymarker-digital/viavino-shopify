@@ -1,0 +1,77 @@
+[
+  {
+    "name": "theme_info",
+    "theme_author": "Very Polite Agency",
+    "theme_documentation_url": "https:\/\/weareverypolite.com\/",
+    "theme_name": "Viavino",
+    "theme_support_url": "https:\/\/weareverypolite.com\/",
+    "theme_version": "1.0.0"
+  },
+  {
+    "name": "Carousel",
+    "settings": [
+      {
+        "content": "Navigation",
+        "type": "header"
+      },
+      {
+        "content": "Buttons",
+        "type": "paragraph"
+      },
+      {
+        "id": "carousel_button_previous",
+        "label": "Previous Button",
+        "type": "image_picker"
+      },
+      {
+        "id": "carousel_button_next",
+        "label": "Next Button",
+        "type": "image_picker"
+      }
+    ]
+  },
+  {
+    "name": "Cart",
+    "settings": [
+      {
+        "id": "cart_heading",
+        "label": "Heading",
+        "type": "text"
+      },
+      {
+        "id": "cart_empty_message",
+        "label": "Empyt Cart Message",
+        "type": "richtext"
+      },
+      {
+        "label": "Cart Drawer Close Delay",
+        "info": "Time in milliseconds before the cart drawer automatically closes after a product is added to cart.",
+        "type": "range",
+        "min": 3000,
+        "max": 6000,
+        "step": 250,
+        "default": 3250,
+        "id": "cart_drawer_delay_close"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.currency_format.name",
+    "settings": [
+      {
+        "content": "t:settings_schema.currency_format.settings.content",
+        "type": "header"
+      },
+      {
+        "content": "t:settings_schema.currency_format.settings.paragraph",
+        "type": "paragraph"
+      },
+      {
+        "default": true,
+        "id": "currency_code_enabled",
+        "label": "t:settings_schema.currency_format.settings.currency_code_enabled.label",
+        "type": "checkbox"
+      }
+    ]
+  }
+]

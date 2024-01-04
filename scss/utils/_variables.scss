@@ -1,0 +1,204 @@
+// ---------------------------------------- Theme Info
+$theme: (
+  'theme-name': 'Viavino',
+  'theme-uri': 'https://weareverypolite.com',
+  'description': 'We Are Very Polite 2.5 WordPress Theme',
+  'author': 'Very Polite Digital Dept.',
+  'author-uri': 'https://weareverypolite.com',
+  'version': '1.0.0',
+  'license': 'GNU General Public License v2 or later',
+  'license-uri': 'URI: https://www.gnu.org/licenses/gpl-2.0.html',
+  'tags': 'HTML5, CSS3, Responsive, Mobile Friendly',
+  'text-domain': 'viavino',
+);
+
+// ---------------------------------------- AOS Settings
+$theme-aos-settings: (
+  'travel': 8px,
+);
+
+// ---------------------------------------- Typography | Body Copy
+$theme-body-copy-sizes: (
+  'base': 14px,
+  'sm': 14px,
+  'md': 16px,
+  'lg': 14px,
+  'xl': 14px,
+  'xxl': 16px
+);
+
+// ---------------------------------------- Border Radius
+$theme-border: (
+  'radius': 4px,
+  'width': 3px,
+);
+
+// ---------------------------------------- Button | Font Size
+$theme-button-font-sizes: (
+  'base': 13px,
+  'sm': 14px,
+  'md': 15px,
+  'lg': 13px,
+  'xl': 14px,
+  'xxl': 15px
+);
+
+// ---------------------------------------- Button | Height
+$theme-button-heights: (
+  'base': 50px,
+  'sm': 50px,
+  'md': 50px,
+  'lg': 52px,
+  'xl': 58px,
+  'xxl': 62px
+);
+
+// ---------------------------------------- Button | Height
+$theme-button-min-widths: (
+  'base': 136px,
+  'sm': 136px,
+  'md': 136px,
+  'lg': 116px,
+  'xl': 120px,
+  'xxl': 124px
+);
+
+// ---------------------------------------- Colours
+$theme-colours: (
+  'black': #212121,
+  'off-black': #333333,
+  'off-white': #E0DDCE,
+  'rosa': #D7BFBC,
+  'rosso': #A03326,
+  'white': #ffffff
+);
+
+// ---------------------------------------- Drawer Widths
+$theme-drawer-widths: (
+  'base': 100%,
+  'sm': 100%,
+  'md': 100%,
+  'lg': 450px,
+  'xl': 550px,
+  'xxl': 650px
+);
+
+// ---------------------------------------- Font Sizes | Body Copy
+$theme-font-sizes-body-copy: (
+  'base': 16px,
+  'sm': 16px,
+  'md': 18px,
+  'lg': 16px,
+  'xl': 18px,
+  'xxl': 20px
+);
+
+// ---------------------------------------- Font Sizes | Button
+$theme-font-sizes-button: (
+  'base': 16px,
+  'sm': 16px,
+  'md': 18px,
+  'lg': 16px,
+  'xl': 18px,
+  'xxl': 20px
+);
+
+  // 'base': 13px,
+  // 'sm': 14px,
+  // 'md': 15px,
+  // 'lg': 13px,
+  // 'xl': 14px,
+  // 'xxl': 15px
+
+// ---------------------------------------- Font Sizes | Heading
+$theme-font-sizes-heading: (
+  'base': 28px,
+  'sm': 36px,
+  'md': 38px,
+  'lg': 46px,
+  'xl': 56px,
+  'xxl': 66px
+);
+
+// ---------------------------------------- Header Height
+$theme-header-heights: (
+  'base': 72px,
+  'sm': 72px,
+  'md': 72px,
+  'lg': 90px,
+  'xl': 100px,
+  'xxl': 110px
+);
+
+$theme-header-heights-scrolled: (
+  'base': 60px,
+  'sm': 60px,
+  'md': 60px,
+  'lg': 76px,
+  'xl': 76px,
+  'xxl': 76px
+);
+
+$theme-heights: (
+  'full-viewport-height',
+  'adapt',
+  '950px',
+  '850px',
+  '750px',
+  '650px',
+  '550px',
+  '450px',
+  '350px',
+  '250px',
+  '150px',
+);
+
+// ---------------------------------------- AOS Settings
+$theme-layout-settings: (
+  'gutter': 20px,
+  'container-padding': 20px,
+  'breakpoints': (
+    'base': 0,
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+    'xxl': 1400px
+  ),
+  'containers': (
+    'base': 100%,
+    'sm': 540px,
+    'md': 740px,
+    'lg': 960px,
+    'xl': 1160px,
+    'xxl': 1360px
+  )
+);
+
+// ---------------------------------------- Transition Settings
+$theme-transition-settings: (
+  'duration': 280ms,
+  'opacity': 0.3333
+);
+
+// ---------------------------------------- Bootstrap | Gutter
+$grid-gutter-width: 28px;
+
+// ---------------------------------------- Bootstrap | Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// ---------------------------------------- Bootstrap | Container Sizes
+$container-max-widths: (
+  sm: 540px,
+  md: 740px,
+  lg: 960px,
+  xl: 1160px,
+  xxl: 1360px
+);

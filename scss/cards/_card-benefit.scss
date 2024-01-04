@@ -1,0 +1,154 @@
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins/border' as *;
+@use '../utils/mixins/breakpoint' as *;
+
+.card-benefit {
+
+  $card-heading-size: map.get($theme-font-sizes-heading, 'base') * 0.7;
+  $card-image-size: 90px;
+
+  &__heading,
+  &__message {
+    display: block;
+  }
+
+  &__content {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    font-size: $card-heading-size;
+    line-height: 1.1;
+    & + .card-benefit__message {
+      margin-top: 12px;
+    }
+  }
+
+  &__image {
+    width: $card-image-size;
+    height: $card-image-size;
+    border-width: var(--theme-border-width);
+    border-style: solid;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    img, svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    & + .card-benefit__content {
+      margin-top: 28px;
+    }
+  }
+
+  @include breakpoint(sm) {
+
+    $card-heading-size: map.get($theme-font-sizes-heading, 'base') * 0.7;
+    $card-image-size: 95px;
+
+    &__content {
+      width: 75%;
+    }
+
+    &__heading {
+      font-size: $card-heading-size;
+    }
+
+    &__image {
+      width: $card-image-size;
+      height: $card-image-size;
+    }
+
+  }
+
+  @include breakpoint(md) {
+
+    $card-heading-size: map.get($theme-font-sizes-heading, 'base') * 0.7;
+    $card-image-size: 100px;
+
+    &__content {
+      width: 66.6666%;
+    }
+
+    &__heading {
+      font-size: $card-heading-size;
+    }
+
+    &__image {
+      width: $card-image-size;
+      height: $card-image-size;
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    $card-heading-size: map.get($theme-font-sizes-heading, 'base') * 0.6;
+    $card-image-size: 90px;
+
+    &__content {
+      width: 90%;
+    }
+
+    &__heading {
+      font-size: $card-heading-size;
+      & + .card-benefit__message {
+        margin-top: 25px;
+      }
+    }
+
+    &__image {
+      width: $card-image-size;
+      height: $card-image-size;
+      & + .card-benefit__content {
+        margin-top: 48px;
+      }
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    $card-heading-size: map.get($theme-font-sizes-heading, 'base') * 0.65;
+    $card-image-size: 100px;
+
+    &__content {
+      width: 85%;
+    }
+
+    &__heading {
+      font-size: $card-heading-size;
+    }
+
+    &__image {
+      width: $card-image-size;
+      height: $card-image-size;
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    $card-heading-size: map.get($theme-font-sizes-heading, 'base') * 0.7;
+    $card-image-size: 110px;
+
+    &__content {
+      width: 80%;
+    }
+
+    &__heading {
+      font-size: $card-heading-size;
+    }
+
+    &__image {
+      width: $card-image-size;
+      height: $card-image-size;
+    }
+
+  }
+
+}

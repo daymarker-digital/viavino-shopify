@@ -1,0 +1,325 @@
+{
+  "order": [
+    "457f2c38-70e7-45bf-acd8-40764ba2bcae",
+    "329fd4ae-2edc-4b67-a733-1087a298c411",
+    "20b671f3-e9f3-41ee-b0ed-968a0dbf8d18",
+    "cffb2b2d-15b3-4fd2-a884-554244efe006",
+    "d0ca71a3-7d88-4c48-a995-1c040a7fc3e6",
+    "04d22cb0-a7c0-4ca7-b56f-bc179378fa3c",
+    "main"
+  ],
+  "sections": {
+    "457f2c38-70e7-45bf-acd8-40764ba2bcae": {
+      "type": "hero",
+      "blocks": {
+        "4bbbc791-5656-4bc2-8214-4a0673c52389": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Viavino Way",
+            "text_colour": "off-white"
+          }
+        }
+      },
+      "block_order": [
+        "4bbbc791-5656-4bc2-8214-4a0673c52389"
+      ],
+      "settings": {
+        "height_desktop": "auto",
+        "height_mobile": "auto",
+        "border_top": false,
+        "border_bottom": false,
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/HEADER_34e84f99-be75-46e6-a719-00e94517e715.jpg",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 68,
+        "padding_bottom": 60,
+        "anchor_id": ""
+      }
+    },
+    "329fd4ae-2edc-4b67-a733-1087a298c411": {
+      "type": "fifty-fifty",
+      "blocks": {
+        "3a59ea80-635d-49e8-bf66-a5689f1ebca8": {
+          "type": "image",
+          "settings": {
+            "image_sizing": "custom",
+            "image_aspect_ratio": "1\/1",
+            "image_border_enable": false,
+            "image_border_colour": "off-black",
+            "image": "shopify:\/\/shop_images\/our-story--fifty-fifty-01_2048x2_87c1b3cf-0241-4998-8f30-0be23a45f013.jpg",
+            "content_width_desktop": 100,
+            "content_width_mobile": 100,
+            "background": "none",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "f9d9577c-60e3-4d95-9b4c-24822d1402d9": {
+          "type": "text",
+          "settings": {
+            "heading": "Viavino is deconstructing old-world wine culture",
+            "heading_size": "xs",
+            "message": "",
+            "message_style": "primary",
+            "button_title": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_background_colour": "none",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black",
+            "content_width_desktop": 80,
+            "content_width_mobile": 80,
+            "content_text_colour": "off-black",
+            "background": "off-white",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "3a59ea80-635d-49e8-bf66-a5689f1ebca8",
+        "f9d9577c-60e3-4d95-9b4c-24822d1402d9"
+      ],
+      "settings": {
+        "content_border_mobile": true,
+        "content_border_desktop": true,
+        "border_top": true,
+        "border_bottom": false,
+        "background": "none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
+      }
+    },
+    "20b671f3-e9f3-41ee-b0ed-968a0dbf8d18": {
+      "type": "fifty-fifty",
+      "blocks": {
+        "392ee080-f629-4d0e-b88e-d3d3f4f48582": {
+          "type": "text",
+          "settings": {
+            "heading": "The New Way of Wine",
+            "heading_size": "xs",
+            "message": "<p>Traditions of wine and the gatekeepers that hold the rules in place can make you feel green when all you really want is a crisp white.<\/p>",
+            "message_style": "primary",
+            "button_title": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_background_colour": "none",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black",
+            "content_width_desktop": 80,
+            "content_width_mobile": 80,
+            "content_text_colour": "off-black",
+            "background": "none",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "1e2b20e7-1da2-4c7e-95f5-a6e6a1313f39": {
+          "type": "image",
+          "settings": {
+            "image_sizing": "custom",
+            "image_aspect_ratio": "1\/1",
+            "image_border_enable": false,
+            "image_border_colour": "off-black",
+            "image": "shopify:\/\/shop_images\/our-story--fifty-fifty-02_2048x_9ff8cba3-4f13-4bf1-9f1d-30ab70a0e5ac.png",
+            "content_width_desktop": 100,
+            "content_width_mobile": 100,
+            "background": "none",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "392ee080-f629-4d0e-b88e-d3d3f4f48582",
+        "1e2b20e7-1da2-4c7e-95f5-a6e6a1313f39"
+      ],
+      "settings": {
+        "content_border_mobile": true,
+        "content_border_desktop": false,
+        "border_top": true,
+        "border_bottom": false,
+        "background": "rosa",
+        "background_image": "shopify:\/\/shop_images\/our-story--fifty-fifty-02_2048x_5f6849ae-ebaf-42b9-b4ea-947f959060b7.png",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
+      }
+    },
+    "cffb2b2d-15b3-4fd2-a884-554244efe006": {
+      "type": "full-width-feature",
+      "blocks": {
+        "d439b271-edc1-4368-8b4a-a70f6de54129": {
+          "type": "block_with_border",
+          "settings": {
+            "background": "image",
+            "background_image": "shopify:\/\/shop_images\/Mask_group_2x_1800x3_47aa32f9-1132-4e54-afcc-78079a64cbe4.jpg"
+          }
+        },
+        "bc062d7c-07fa-4e4c-8e7f-daa39875662a": {
+          "type": "heading",
+          "settings": {
+            "heading": "Viavino believes that wine is for everyone",
+            "heading_size": "md",
+            "heading_tag": "h2"
+          }
+        },
+        "e6286329-d579-400d-a99a-62d2d041985f": {
+          "type": "message",
+          "settings": {
+            "message": "<p>(of legal drinking age)<\/p>",
+            "message_style": "tertiary"
+          }
+        }
+      },
+      "block_order": [
+        "d439b271-edc1-4368-8b4a-a70f6de54129",
+        "bc062d7c-07fa-4e4c-8e7f-daa39875662a",
+        "e6286329-d579-400d-a99a-62d2d041985f"
+      ],
+      "settings": {
+        "height_desktop": "auto",
+        "height_mobile": "auto",
+        "border_top": true,
+        "border_bottom": false,
+        "content_border_enable": true,
+        "content_width_desktop": 75,
+        "content_width_mobile": 85,
+        "text_colour": "off-white",
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/Mask_group_2x_1800x2_6d0096aa-e66f-4cd0-9c77-f6c3e0cc15f5.jpg",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 68,
+        "padding_bottom": 80,
+        "anchor_id": ""
+      }
+    },
+    "d0ca71a3-7d88-4c48-a995-1c040a7fc3e6": {
+      "type": "fifty-fifty",
+      "blocks": {
+        "fc6e2590-59e9-4257-b2fb-16c0dbc04ea9": {
+          "type": "image",
+          "settings": {
+            "image_sizing": "custom",
+            "image_aspect_ratio": "1\/1",
+            "image_border_enable": false,
+            "image_border_colour": "off-black",
+            "image": "shopify:\/\/shop_images\/our-story--fifty-fifty-03_2048x_94d57fe0-fec1-4b31-ba0e-e63916cfb1aa.jpg",
+            "content_width_desktop": 100,
+            "content_width_mobile": 100,
+            "background": "rosa",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "ef2f0d72-eb9d-4fa7-a893-cc9cb965a1c1": {
+          "type": "text",
+          "settings": {
+            "heading": "It's Wine!",
+            "heading_size": "xs",
+            "message": "<p>You shouldn’t need a minor in Italian geography to buy a wine that will pair well with a beach day. Our tasting notes take the guesswork out of picking a wine to match your mood.<\/p>",
+            "message_style": "primary",
+            "button_title": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_background_colour": "none",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black",
+            "content_width_desktop": 79,
+            "content_width_mobile": 80,
+            "content_text_colour": "off-black",
+            "background": "none",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "fc6e2590-59e9-4257-b2fb-16c0dbc04ea9",
+        "ef2f0d72-eb9d-4fa7-a893-cc9cb965a1c1"
+      ],
+      "settings": {
+        "content_border_mobile": true,
+        "content_border_desktop": true,
+        "border_top": true,
+        "border_bottom": false,
+        "background": "off-white",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
+      }
+    },
+    "04d22cb0-a7c0-4ca7-b56f-bc179378fa3c": {
+      "type": "fifty-fifty",
+      "blocks": {
+        "a450b98f-51fe-4672-9127-9ad986bc55b0": {
+          "type": "text",
+          "settings": {
+            "heading": "Vino that vias",
+            "heading_size": "xs",
+            "message": "<p>We wanted to make a good wine that could travel better. For too long wine has been stuck on the table. But why? Wine is best served in the company of good views and good crews. <\/p><p><\/p><p><strong>Viavino is the Anti-Table Wine<\/strong>.<\/p>",
+            "message_style": "primary",
+            "button_title": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_background_colour": "none",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black",
+            "content_width_desktop": 80,
+            "content_width_mobile": 80,
+            "content_text_colour": "off-black",
+            "background": "none",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "0ebebe8b-f702-4060-ae3c-90980abcfea0": {
+          "type": "image",
+          "settings": {
+            "image_sizing": "custom",
+            "image_aspect_ratio": "1\/1",
+            "image_border_enable": false,
+            "image_border_colour": "off-black",
+            "image": "shopify:\/\/shop_images\/our-story--fifty-fifty-03_2048x2_f253a21d-83f7-4fe0-a784-8cec2506e345.jpg",
+            "content_width_desktop": 100,
+            "content_width_mobile": 100,
+            "background": "rosso",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "a450b98f-51fe-4672-9127-9ad986bc55b0",
+        "0ebebe8b-f702-4060-ae3c-90980abcfea0"
+      ],
+      "settings": {
+        "content_border_mobile": true,
+        "content_border_desktop": true,
+        "border_top": true,
+        "border_bottom": false,
+        "background": "off-white",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "width": "full",
+        "background": "none",
+        "container": "container",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "anchor_id": ""
+      }
+    }
+  }
+}

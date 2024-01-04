@@ -1,0 +1,541 @@
+{%- liquid
+
+  assign section_name = 'footer'
+  assign section_classes = section_name
+  assign section_id = section_name | append: '--' | append: section.id
+
+  assign aos_id = section_id | append: '--aos'
+  assign aos_delay = 250
+  assign aos_delay_increment = 250
+
+  assign container = section.settings.container | default: 'container'
+  assign marquee_id = 'marquee--' | append: section.id
+
+-%}
+
+{%- style -%}
+
+  {%
+    render 'element-styles',
+      element_background: 'off-white',
+      element_border_bottom: section.settings.border_bottom,
+      element_border_top: section.settings.border_top,
+      element_id: section_id,
+      element_padding_bottom: section.settings.padding_bottom,
+      element_padding_top: section.settings.padding_top
+  %}
+
+{%- endstyle -%}
+
+<div class="{{ section_classes }}" id="{{ section_id }}">
+  <div class="{{ section_name }}__main">
+    {%- for block in section.blocks -%}
+       {%- case block.type -%}
+
+          {%- when 'footnote' -%}
+
+            {%- liquid
+              assign border_bottom = block.settings.border_bottom | default: false
+              assign border_top = block.settings.border_top | default: false
+              assign container = block.settings.container | default: 'container'
+              assign copyright = block.settings.copyright | default: 'All rights reserved.'
+              assign element_id = section_name | append: '__footnote'
+              assign menu = block.settings.menu | default: false
+            -%}
+
+            <div class="{{ element_id }}" id="{{ element_id }}">
+
+              {%- style -%}
+                {%
+                  render 'element-styles',
+                    element_border_bottom: border_bottom,
+                    element_border_top: border_top,
+                    element_id: element_id
+                %}
+              {%- endstyle -%}
+
+              {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
+                <div class="{{ section_name }}__footnote-layout">
+
+                  <div class="{{ section_name }}__footnote-brand-image">
+                    <a class="{{ section_name }}__footnote-link link" href="/" target="_self" title="Viavino">
+                      {% render 'svg', type: 'brand.monogram' %}
+                    </a>
+                  </div>
+
+                  <div class="{{ section_name }}__footnote-brand-text">
+                    <a class="{{ section_name }}__footnote-link link" href="/" target="_self" title="Viavino">Viavino</a>
+                  </div>
+
+                 {%- if menu -%}
+                    <nav class="{{ section_name }}__footnote-navigation navigation navigation--footnote">
+                      {%- for link in linklists[menu].links -%}
+                        {%- render 'navigation-item', item_index: forloop.index, item_link: link -%}
+                      {%- endfor -%}
+                    </nav>
+                  {%- endif -%}
+
+                  <div class="{{ section_name }}__footnote-copyright">
+                    <span>&copy; {{ "now" | date: "%Y" }} {{ copyright }}</span>
+                  </div>
+
+                </div>
+              {% render 'bs-container', state: 'closed', col: 'col-12', container: container %}
+            </div>
+
+          {%- when 'main' -%}
+
+            {%- liquid
+              assign container = block.settings.container | default: 'container'
+              assign element_id = section_name | append: '__main'
+              assign image = block.settings.image | default: false
+              assign image_caption = block.settings.image_caption | default: ''
+              assign menu = block.settings.menu | default: false
+              assign menu_image = block.settings.menu_image | default: false
+              assign newsletter_heading = block.settings.newsletter_heading | default: ''
+              assign newsletter_form_id = section_id | append: '-newsletter-form'
+              assign social_facebook_url = block.settings.social_facebook_url | default: ''
+              assign social_instagram_url = block.settings.social_instagram_url | default: ''
+              assign social_twitter_url = block.settings.social_twitter_url | default: ''
+            -%}
+
+            <div class="{{ element_id }}" id="{{ element_id }}">
+              {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
+                <div class="{{ section_name }}__main-layout">
+
+                  <div class="{{ section_name }}__main-image-navigation">
+                    {%- if image -%}
+                      <div class="{{ section_name }}__main-image">
+                        <div class="{{ section_name }}__main-image-media">
+                          {%- render 'lazyload-image', image: image -%}
+                        </div>
+                        {%- if image_caption != blank -%}
+                          <div class="{{ section_name }}__main-image-caption body-copy--primary">
+                            {{- image_caption -}}
+                          </div>
+                        {%- endif -%}
+                      </div>
+                    {%- endif -%}
+
+                    {%- if menu -%}
+                      <nav class="{{ section_name }}__main-navigation navigation navigation--main">
+                        {%- for link in linklists[menu].links -%}
+                          {%- render 'navigation-item', item_index: forloop.index, item_link: link -%}
+                        {%- endfor -%}
+                        {% if menu_image %}
+                          <div class="navigation__item navigation__image">
+                            {% render 'lazyload-image', image: menu_image %}
+                          </div>
+                        {% endif %}
+                      </nav>
+                    {%- endif -%}
+                  </div>
+
+                  <div class="{{ section_name }}__main-newsletter" data-background="rosa">
+                    {%- form 'customer', class: 'footer__main-newsletter-form form-newsletter-signup form js--validate-me', data-redirect: '/pages/thank-you', id: newsletter_form_id -%}
+
+                      {% if newsletter_heading != blank %}
+                        <strong class="form__heading">{{ newsletter_heading }}</strong>
+                      {% endif %}
+
+                      <div class="form__field field field--email">
+                        {% render "input", classes: 'form__input', name: 'contact[email]', placeholder: 'Enter Email', required: true, type: 'email' %}
+                        {% render "error-message", message: 'Scusi! Please enter a valid email address.', position: 'left' %}
+                      </div>
+
+                      <button class="form__button button" name="submit" type="submit" value="Subscribe">Subscribe</button>
+
+                    {%- endform -%}
+                  </div>
+
+                  <div class="{{ section_name }}__main-extras">
+
+                    {% if social_facebook_url != blank or social_instagram_url != blank or social_twitter_url != blank %}
+                      <div class="{{ section_name }}__main-extras-social">
+                        {% render 'social-icon', social_icon_classes: 'footer__main-extras-social-item', social_icon_type: 'Twitter', social_icon_url: social_twitter_url %}
+                        {% render 'social-icon', social_icon_classes: 'footer__main-extras-social-item', social_icon_type: 'Instagram', social_icon_url: social_instagram_url %}
+                        {% render 'social-icon', social_icon_classes: 'footer__main-extras-social-item', social_icon_type: 'Facebook', social_icon_url: social_facebook_url %}
+                      </div>
+                    {% endif %}
+
+                    <div class="{{ section_name }}__main-extras-site-credits">
+                      <a class="{{ section_name }}__main-extras-site-credits-link link" href="https://weareverypolite.com/" target="_blank" title="Site Credits">Site Credits</a>
+                    </div>
+
+                  </div>
+
+                </div>
+              {% render 'bs-container', state: 'closed', col: 'col-12', container: container %}
+            </div>
+
+          {%- when 'marquee' -%}
+
+            {%- assign element_id = section_name | append: '__marquee' -%}
+
+            <div class="{{ element_id }}" id="{{ element_id }}">
+              {%-
+                render 'marquee',
+                  marquee_background: block.settings.background,
+                  marquee_background_image: block.settings.background_image,
+                  marquee_background_image_repeat: 'repeat',
+                  marquee_background_image_size: 'auto',
+                  marquee_border_bottom: block.settings.border_bottom,
+                  marquee_border_top: block.settings.border_top,
+                  marquee_duration: block.settings.duration,
+                  marquee_font_size: block.settings.font_size,
+                  marquee_gap: block.settings.gap,
+                  marquee_id: marquee_id,
+                  marquee_padding_bottom: block.settings.padding_bottom,
+                  marquee_padding_top: block.settings.padding_top,
+                  marquee_reverse: block.settings.reverse,
+                  marquee_style: block.settings.style
+                  marquee_text: block.settings.text,
+                  marquee_text_colour: block.settings.text_colour
+              -%}
+            </div>
+
+        {% endcase %}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "footer",
+  "blocks": [
+    {
+      "name": "Footnote",
+      "type": "footnote",
+      "limit": 1,
+      "settings": [
+        {
+          "content": "Content",
+          "type": "header"
+        },
+        {
+          "label": "Copyright",
+          "info": "Include a custom copyright message, excluding the date and symbol.",
+          "type": "text",
+          "id": "copyright"
+        },
+        {
+          "content": "Menu",
+          "type": "header"
+        },
+        {
+          "label": "Menu",
+          "type": "link_list",
+          "id": "menu"
+        },
+        {
+          "content": "Settings",
+          "type": "header"
+        },
+        {
+          "content": "Border",
+          "type": "header"
+        },
+        {
+          "label": "Top Border",
+          "type": "checkbox",
+          "default": false,
+          "id": "border_top"
+        },
+        {
+          "label": "Bottom Border",
+          "type": "checkbox",
+          "default": false,
+          "id": "border_bottom"
+        },
+        {
+          "content": "Container",
+          "type": "header"
+        },
+        {
+          "label": "Container",
+          "type": "select",
+          "options": [
+            {
+              "label": "Static",
+              "value": "container"
+            },
+            {
+              "label": "Fluid",
+              "value": "container-fluid"
+            },
+            {
+              "label": "Full Width",
+              "value": "full-width"
+            }
+          ],
+          "default": "container",
+          "id": "container"
+        }
+      ]
+    },
+    {
+      "name": "Main",
+      "type": "main",
+      "limit": 1,
+      "settings": [
+        {
+          "content": "Container",
+          "type": "header"
+        },
+        {
+          "label": "Container",
+          "type": "select",
+          "options": [
+            {
+              "label": "Static",
+              "value": "container"
+            },
+            {
+              "label": "Fluid",
+              "value": "container-fluid"
+            },
+            {
+              "label": "Full Width",
+              "value": "full-width"
+            }
+          ],
+          "default": "container",
+          "id": "container"
+        },
+        {
+          "content": "Image",
+          "type": "header"
+        },
+        {
+          "label": "Image",
+          "info": "For optimal results, select an image with a 230∶87 aspect ratio, a target file size of around 150kb, and a minimum width of 900px.",
+          "type": "image_picker",
+          "id": "image"
+        },
+        {
+          "label": "Caption",
+          "type": "richtext",
+          "id": "image_caption"
+        },
+        {
+          "content": "Menu",
+          "type": "header"
+        },
+        {
+          "label": "Menu",
+          "info": "Only the first six items from the selected menu will be displayed.",
+          "type": "link_list",
+          "id": "menu"
+        },
+        {
+          "label": "Image",
+          "info": "For optimal results, select an image with a 282∶121 aspect ratio, a target file size of around 100kb, and a minimum width of 500px.",
+          "type": "image_picker",
+          "id": "menu_image"
+        },
+        {
+          "content": "Newsletter",
+          "type": "header"
+        },
+        {
+          "label": "Heading",
+          "type": "text",
+          "default": "Newsletter",
+          "id": "newsletter_heading"
+        },
+        {
+          "content": "Social",
+          "type": "header"
+        },
+        {
+          "label": "Facebook URL",
+          "type": "text",
+          "id": "social_facebook_url"
+        },
+        {
+          "label": "Instagram URL",
+          "type": "text",
+          "id": "social_instagram_url"
+        },
+        {
+          "label": "Twitter URL",
+          "type": "text",
+          "id": "social_twitter_url"
+        }
+      ]
+    },
+    {
+      "name": "Marquee",
+      "type": "marquee",
+      "limit": 1,
+      "settings": [
+        {
+          "content": "Content",
+          "type": "header"
+        },
+        {
+          "label": "Text",
+          "type": "richtext",
+          "id": "text"
+        },
+        {
+          "content": "Settings",
+          "type": "header"
+        },
+        {
+          "label": "Reverse",
+          "info": "If checked, marquee will run in reverse.",
+          "type": "checkbox",
+          "default": false,
+          "id": "reverse"
+        },
+        {
+          "label": "Font Size",
+          "type": "range",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "default": 20,
+          "id": "font_size"
+        },
+        {
+          "label": "Duration",
+          "info": "Duration, in seconds, that it takes for the marquee to complete a loop. The smaller the number, the faster it goes.",
+          "type": "range",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "default": 75,
+          "id": "duration"
+        },
+        {
+          "label": "Gap",
+          "info": "Gap between items, in pixels.",
+          "type": "range",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "default": 20,
+          "id": "gap"
+        },
+        {
+          "label": "Style",
+          "type": "select",
+          "options": [
+            {
+              "label": "Primary",
+              "value": "primary"
+            },
+            {
+              "label": "Secondary",
+              "value": "secondary"
+            },
+            {
+              "label": "Tertiary",
+              "value": "tertiary"
+            }
+          ],
+          "default": "primary",
+          "id": "style"
+        },
+        {
+          "content": "Border",
+          "type": "header"
+        },
+        {
+          "label": "Top Border",
+          "type": "checkbox",
+          "default": false,
+          "id": "border_top"
+        },
+        {
+          "label": "Bottom Border",
+          "type": "checkbox",
+          "default": false,
+          "id": "border_bottom"
+        },
+        {
+          "label": "Text Colour",
+          "type": "select",
+          "options": [
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" }
+          ],
+          "default": "off-black",
+          "id": "text_colour"
+        },
+        {
+          "content": "Background",
+          "type": "header"
+        },
+        {
+          "label": "Background",
+          "type": "select",
+          "options": [
+            {
+              "label": "Black",
+              "value": "black"
+            },
+            {
+              "label": "Image",
+              "value": "image"
+            },
+            {
+              "label": "None",
+              "value": "none"
+            },
+            {
+              "label": "Off-black",
+              "value": "off-black"
+            },
+            {
+              "label": "Off-white",
+              "value": "off-white"
+            },
+            {
+              "label": "Rosa",
+              "value": "rosa"
+            },
+            {
+              "label": "Rosso",
+              "value": "rosso"
+            }
+          ],
+          "default": "none",
+          "id": "background"
+        },
+        {
+          "label": "Background Image",
+          "type": "image_picker",
+          "id": "background_image"
+        },
+        {
+          "content": "Padding",
+          "type": "header"
+        },
+        {
+          "label": "Top Padding",
+          "type": "range",
+          "min": 0,
+          "max": 200,
+          "step": 4,
+          "unit": "px",
+          "default": 36,
+          "id": "padding_top"
+        },
+        {
+          "label": "Bottom Padding",
+          "type": "range",
+          "min": 0,
+          "max": 200,
+          "step": 4,
+          "unit": "px",
+          "default": 36,
+          "id": "padding_bottom"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,37 @@
+{%- liquid
+
+  assign snippet_name = 'inverted-corner-box'
+  assign snippet_classes = snippet_name
+
+  assign aos_attrs = aos_attrs | default: ''
+  assign background = background | default: 'off-white'
+  assign border = border | default: 'off-black'
+  assign content = content | default: ''
+  assign id = id | default: snippet_name
+  assign image = image | default: false
+  assign type = type | default: 'button'
+
+  assign snippet_classes = snippet_classes | append: ' ' | append: snippet_name | append: '--background-' | append: background
+  assign snippet_classes = snippet_classes | append: ' ' | append: snippet_name | append: '--border-' | append: border
+  assign snippet_classes = snippet_classes | append: ' ' | append: snippet_name | append: '--' | append: type
+
+-%}
+
+{% if 'image' == background and image %}
+  <style>
+    #{{ id }}::after {
+      background: url('{{ image | img_url: '1800x' }}');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+{% endif %}
+
+<div class="{{ snippet_classes | strip_newlines }}" id="{{ id }}" {{ aos_attrs }}>
+  {% if content != blank %}
+    <div class="{{ snippet_name }}__content">
+      {{- content -}}
+    </div>
+  {% endif %}
+</div>

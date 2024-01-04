@@ -1,0 +1,30 @@
+.glide {
+
+  position: relative;
+  min-width: 0; // fix for when glide is child of display: grid
+
+  &__bullet {
+    transition:
+      background var(--theme-transition--duration),
+      border var(--theme-transition--duration),
+      opacity var(--theme-transition--duration);
+    height: var(--theme-border-width);
+    min-height: 0 !important;
+  }
+
+  &__slides {
+    touch-action: auto;
+  }
+
+  &__track {
+    transition: height var(--theme-transition--duration);
+  }
+
+  &[data-glide-item-border] {
+    .inverted-corner-box {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}

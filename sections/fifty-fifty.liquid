@@ -1,0 +1,671 @@
+{%- liquid
+
+  assign section_name = 'fifty-fifty'
+  assign section_classes = section_name
+  assign section_id = section_name | append: '--' | append: section.id
+
+  assign aos_id = section_id | append: '--aos'
+  assign aos_delay = 250
+  assign aos_delay_increment = 250
+
+  assign content_border_desktop = section.settings.content_border_desktop | default: false
+  assign content_border_mobile = section.settings.content_border_mobile | default: false
+
+  if section.settings.anchor_id != blank
+    assign section_id = section.settings.anchor_id
+  endif
+
+-%}
+
+{%- style -%}
+
+  {% if content_border_mobile %}
+    #{{ section_id }} .{{ section_name }}__item.image {
+      border-bottom-width: var(--theme-border-width);
+      border-bottom-color: rgba(var(--theme-colour-off-black), 1);
+      border-bottom-style: solid;
+    }
+  {% endif %}
+
+  @media screen and (min-width: 992px) {
+
+    {% if content_border_desktop %}
+      #{{ section_id }} .{{ section_name }}__item:first-child {
+        border-right-width: var(--theme-border-width);
+        border-right-color: rgba(var(--theme-colour-off-black), 1);
+        border-right-style: solid;
+      }
+    {% endif %}
+
+    {% if content_border_mobile %}
+      #{{ section_id }} .{{ section_name }}__item.image {
+        border-bottom: none;
+      }
+    {% endif %}
+
+  }
+
+  {%
+    render 'element-styles',
+      element_background: section.settings.background,
+      element_background_image: section.settings.background_image,
+      element_border_bottom: section.settings.border_bottom,
+      element_border_top: section.settings.border_top,
+      element_id: section_id,
+      element_padding_bottom: section.settings.padding_bottom,
+      element_padding_top: section.settings.padding_top
+  %}
+
+{%- endstyle -%}
+
+<link rel="stylesheet" href="{{ 'section-fifty-fifty.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-fifty-fifty.css' | asset_url | stylesheet_tag }}</noscript>
+
+<div class="{{ section_classes }}" id="{{ section_id }}">
+  {% render 'bs-container', state: 'open', col: 'col-12', container: 'full-width' %}
+    <div class="{{ section_name }}__main" id="{{ aos_id }}">
+      {%- for block in section.blocks -%}
+
+        {%- liquid
+
+          assign block_background = block.settings.background | default: 'off-white'
+          assign block_background_image = block.settings.background_image | default: false
+
+          assign block_content_text_colour = block.settings.content_text_colour | default: 'off-black'
+          assign block_content_width_desktop = block.settings.content_width_desktop | default: 100
+          assign block_ontent_width_mobile = block.settings.content_width_mobile | default: 100
+
+          assign block_id = section_name | append: '__item-' | append: block.type | append: '-' | append: block.id
+
+          assign block_padding_bottom = block.settings.padding_bottom | default: 0
+          assign block_padding_top = block.settings.padding_top | default: 0
+
+          assign block_type = block.type | default: ''
+
+        -%}
+
+        <div class="{{ section_name }}__item {{ block_type }}" id="{{ block_id }}">
+
+          {%- style -%}
+
+            #{{ block_id }} {
+              padding-top: calc({{ block_padding_top }}px * 0.75);
+              padding-bottom: calc({{ block_padding_bottom }}px  * 0.75);
+            }
+
+            #{{ block_id }} .{{ section_name }}__content {
+              width: {{ block_ontent_width_mobile }}%;
+            }
+
+            @media screen and (min-width: 992px) {
+
+              #{{ block_id }} {
+                padding-top: {{ block_padding_top }}px;
+                padding-bottom: {{ block_padding_bottom }}px;
+              }
+
+              #{{ block_id }} .{{ section_name }}__content {
+                width: {{ block_content_width_desktop }}%;
+              }
+
+            }
+
+            {%
+              render 'element-styles',
+                element_background: block_background,
+                element_background_image: block_background_image,
+                element_id: block_id,
+            %}
+
+          {%- endstyle -%}
+
+          {%- case block_type -%}
+
+            {%- when 'image' -%}
+
+              {%- liquid
+
+                assign image = block.settings.image | default: false
+                assign image_aspect_ratio = block.settings.image_aspect_ratio | default: '1/1'
+                assign image_border_enable = block.settings.image_border_enable | default: false
+                assign image_border_colour = block.settings.image_border_colour | default: 'off-black'
+                assign image_id = 'image-' | append: image.id
+                assign image_sizing = block.settings.image_sizing | default: 'custom'
+
+                capture image_aos_attrs
+                  render 'aos-attributes', anchor: aos_id, delay: 250, transition: 'fade-up'
+                endcapture
+
+              -%}
+
+              {%- if image -%}
+
+                {%- style -%}
+                  {%- if 'custom' == image_sizing -%}
+                    #{{ block_id }} .{{ section_name }}__image {
+                      aspect-ratio: {{ image_aspect_ratio }};
+                    }
+                  {%- endif -%}
+                {%- endstyle -%}
+
+                <div class="{{ section_name }}__content {{ block_type }}">
+                  <div class="{{ section_name }}__image image-sizing--{{ image_sizing }}" {{ image_aos_attrs }}>
+                    {% if image_border_enable %}
+                      {%-
+                        render 'inverted-corner-box',
+                          background: 'image',
+                          border_colour: image_border_colour,
+                          content: '',
+                          id: image_id,
+                          image: image,
+                          type: 'image'
+                      -%}
+                    {% else %}
+                      {%- render 'lazyload-image', image: image -%}
+                    {% endif %}
+                  </div>
+                </div>
+              {%- endif -%}
+
+            {%- when 'text' -%}
+
+              {%- liquid
+
+                assign button_background_colour = block.settings.button_background_colour | default: 'off-white'
+                assign button_border_colour = block.settings.button_border_colour | default: 'off-black'
+                assign button_link = block.settings.button_link | default: ''
+                assign button_style = block.settings.button_style | default: 'primary'
+                assign button_text_colour = block.settings.button_text_colour | default: 'off-black'
+                assign button_title = block.settings.button_title | default: ''
+
+                assign content_text_colour  = block.settings.content_text_colour | default: 'off-white'
+
+                assign heading = block.settings.heading | default: ''
+                assign heading_size = block.settings.heading_size | default: 'md'
+
+                assign message = block.settings.message | default: ''
+                assign message_style = block.settings.message_style | default: 'primary'
+
+              -%}
+
+              {% if button_title != blank or heading != blank or message != blank %}
+                <div class="{{ section_name }}__content {{ block_type }} text-colour--{{ content_text_colour }}">
+
+                  {% if heading != blank %}
+                    {% capture aos_attrs %}
+                      {% render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-left' %}
+                    {% endcapture %}
+                    {% assign aos_delay = aos_delay | plus: aos_delay_increment %}
+                    <h2 class="{{ section_name }}__heading heading--primary heading--{{ heading_size }}" {{ aos_attrs }}>{{ heading }}</h2>
+                  {% endif %}
+
+                  {% if message != blank %}
+                    {% capture aos_attrs %}
+                      {% render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-left' %}
+                    {% endcapture %}
+                    {% assign aos_delay = aos_delay | plus: aos_delay_increment %}
+                    <div class="{{ section_name }}__body-copy body-copy--{{ message_style }} body-copy--lg" {{ aos_attrs }}>{{ message }}</div>
+                  {% endif %}
+
+                  {% if button_link != blank and button_title != blank %}
+                    {% capture aos_attrs %}
+                      {% render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-up' %}
+                    {% endcapture %}
+                    <div class="{{ section_name }}__cta {{ button_style }}" {{ aos_attrs }}>
+
+                      {%- case button_style -%}
+
+                        {%- when 'primary' -%}
+
+                          {%- capture button_classes -%}
+                            {{ section_name }}__button button--{{ button_style }} button--text-colour-{{ button_text_colour }}
+                          {%- endcapture -%}
+                          {%- capture inverted_corner_content -%}
+                            {%- render 'link', classes: button_classes, link: button_link, title: button_title -%}
+                          {%- endcapture -%}
+                          {%-
+                            render 'inverted-corner',
+                              border_colour: button_border_colour,
+                              background_colour: button_background_colour,
+                              content: inverted_corner_content,
+                              type: 'button'
+                          -%}
+
+                        {%- when 'secondary' -%}
+                          {%- capture button_classes -%}
+                            {{ section_name }}__button button--{{ button_style }}
+                          {%- endcapture -%}
+                          {%- render 'link', classes: button_classes, link: button_link, title: button_title -%}
+
+                      {%- endcase -%}
+
+                    </div>
+                  {% endif %}
+
+              </div>
+              {%- endif -%}
+
+          {%- endcase -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  {% render 'bs-container', state: 'closed', container: 'full-width' %}
+</div>
+
+{% schema %}
+{
+  "name": "Fifty Fifty",
+  "tag": "section",
+  "class": "section section--fifty-fifty",
+  "settings": [
+    {
+      "content": "Content",
+      "type": "header"
+    },
+    {
+      "label": "Content Border (Mobile)",
+      "info": "Add horizontal border between content blocks on small screens.",
+      "type": "checkbox",
+      "default": false,
+      "id": "content_border_mobile"
+    },
+    {
+      "label": "Content Border (Desktop)",
+      "info": "Add vertical border between content blocks on large screens.",
+      "type": "checkbox",
+      "default": false,
+      "id": "content_border_desktop"
+    },
+    {
+      "content": "Border",
+      "type": "header"
+    },
+    {
+      "label": "Top Border",
+      "type": "checkbox",
+      "default": false,
+      "id": "border_top"
+    },
+    {
+      "label": "Bottom Border",
+      "type": "checkbox",
+      "default": false,
+      "id": "border_bottom"
+    },
+    {
+      "content": "Layout",
+      "type": "header"
+    },
+    {
+      "label": "Background",
+      "type": "select",
+      "options": [
+        { "label": "Image", "value": "image" },
+        { "label": "None", "value": "none" },
+        { "label": "Off-black", "value": "off-black" },
+        { "label": "Off-white", "value": "off-white" },
+        { "label": "Rosa", "value": "rosa" },
+        { "label": "Rosso", "value": "rosso" }
+      ],
+      "default": "none",
+      "id": "background"
+    },
+    {
+      "label": "Background Image",
+      "type": "image_picker",
+      "id": "background_image"
+    },
+    {
+      "content": "Padding",
+      "type": "header"
+    },
+    {
+      "label": "Top Padding",
+      "type": "range",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "id": "padding_top"
+    },
+    {
+      "label": "Bottom Padding",
+      "type": "range",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "id": "padding_bottom"
+    },
+    {
+      "content": "Anchor",
+      "type": "header"
+    },
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Image",
+      "type": "image",
+      "limit": 1,
+      "settings": [
+        {
+          "content": "Content",
+          "type": "header"
+        },
+        {
+          "label": "Image Sizing",
+          "info": "When set to cover, the image will proportionately fill it's containing space. When set to adapt, the image will appear as uploaded.",
+          "type": "select",
+          "options": [
+            { "label": "Adapt", "value": "adapt" },
+            { "label": "Custom","value": "custom" }
+          ],
+          "default": "custom",
+          "id": "image_sizing"
+        },
+        {
+          "label": "Custom Aspect Ratio",
+          "info": "When sizing set to 'Custom', assign an aspect ratio here.",
+          "type": "text",
+          "default": "1/1",
+          "id": "image_aspect_ratio"
+        },
+        {
+          "label": "Enable Image Border",
+          "type": "checkbox",
+          "default": false,
+          "id": "image_border_enable"
+        },
+        {
+          "label": "Image Border",
+          "type": "select",
+          "options": [
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" }
+          ],
+          "default": "off-black",
+          "id": "image_border_colour"
+        },
+        {
+          "label": "Image",
+          "type": "image_picker",
+          "id": "image"
+        },
+        {
+          "content": "Settings",
+          "type": "header"
+        },
+        {
+          "label": "Content Width (Desktop)",
+          "info": "Adjust the width (in percentage) of the content for large screens.",
+          "type": "range",
+          "min": 50,
+          "max": 100,
+          "step": 1,
+          "default": 100,
+          "id": "content_width_desktop"
+        },
+         {
+          "label": "Content Width (Mobile)",
+          "info": "Adjust the width (in percentage) of the content for small screens.",
+          "type": "range",
+          "min": 50,
+          "max": 100,
+          "step": 1,
+          "default": 100,
+          "id": "content_width_mobile"
+        },
+        {
+          "label": "Background",
+          "type": "select",
+          "options": [
+            { "label": "Image", "value": "image" },
+            { "label": "None", "value": "none" },
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" },
+            { "label": "Rosa", "value": "rosa" },
+            { "label": "Rosso", "value": "rosso" }
+          ],
+          "default": "none",
+          "id": "background"
+        },
+        {
+          "label": "Background Image",
+          "type": "image_picker",
+          "id": "background_image"
+        },
+        {
+          "content": "Padding",
+          "type": "header"
+        },
+        {
+          "label": "Top Padding",
+          "type": "range",
+          "min": 0,
+          "max": 200,
+          "step": 4,
+          "unit": "px",
+          "default": 0,
+          "id": "padding_top"
+        },
+        {
+          "label": "Bottom Padding",
+          "type": "range",
+          "min": 0,
+          "max": 200,
+          "step": 4,
+          "unit": "px",
+          "default": 0,
+          "id": "padding_bottom"
+        }
+      ]
+    },
+    {
+      "name": "Text",
+      "type": "text",
+      "limit": 1,
+      "settings": [
+        {
+          "content": "Content",
+          "type": "header"
+        },
+        {
+          "content": "Heading",
+          "type": "paragraph"
+        },
+        {
+          "label": "Heading",
+          "type": "textarea",
+          "id": "heading"
+        },
+        {
+          "label": "Heading Size",
+          "type": "select",
+          "options": [
+            { "label": "Large", "value": "lg" },
+            { "label": "Medium", "value": "md" },
+            { "label": "Small", "value": "sm" },
+            { "label": "Tiny", "value": "xs" }
+          ],
+          "default": "md",
+          "id": "heading_size"
+        },
+        {
+          "content": "Message",
+          "type": "paragraph"
+        },
+        {
+          "label": "Message",
+          "type": "richtext",
+          "id": "message"
+        },
+        {
+          "label": "Message Style",
+          "type": "select",
+          "options": [
+            { "label": "Primary", "value": "primary" },
+            { "label": "Secondary", "value": "secondary" }
+          ],
+          "default": "primary",
+          "id": "message_style"
+        },
+        {
+          "content": "Button",
+          "type": "paragraph"
+        },
+        {
+          "label": "Button Title",
+          "type": "text",
+          "id": "button_title"
+        },
+        {
+          "label": "Button Link",
+          "type": "url",
+          "id": "button_link"
+        },
+        {
+          "label": "Button Style",
+          "type": "select",
+          "options": [
+            { "label": "Primary", "value": "primary" },
+            { "label": "Secondary", "value": "secondary" }
+          ],
+          "default": "primary",
+          "id": "button_style"
+        },
+        {
+          "label": "Button Background",
+          "type": "select",
+          "options": [
+            { "label": "None", "value": "none" },
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" },
+            { "label": "Rosa", "value": "rosa" },
+            { "label": "Rosso", "value": "rosso" }
+          ],
+          "default": "none",
+          "id": "button_background_colour"
+        },
+        {
+          "label": "Button Border",
+          "type": "select",
+          "options": [
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" }
+          ],
+          "default": "off-black",
+          "id": "button_border_colour"
+        },
+        {
+          "label": "Button Text Colour",
+          "type": "select",
+          "options": [
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" }
+          ],
+          "default": "off-black",
+          "id": "button_text_colour"
+        },
+        {
+          "content": "Settings",
+          "type": "header"
+        },
+        {
+          "label": "Content Width (Desktop)",
+          "info": "Adjust the width (in percentage) of the content for large screens.",
+          "type": "range",
+          "min": 50,
+          "max": 100,
+          "step": 1,
+          "default": 65,
+          "id": "content_width_desktop"
+        },
+         {
+          "label": "Content Width (Mobile)",
+          "info": "Adjust the width (in percentage) of the content for small screens.",
+          "type": "range",
+          "min": 50,
+          "max": 100,
+          "step": 1,
+          "default": 85,
+          "id": "content_width_mobile"
+        },
+        {
+          "content": "Style",
+          "type": "header"
+        },
+        {
+          "content": "Text Colour",
+          "type": "header"
+        },
+        {
+          "label": "Text Colour",
+          "type": "select",
+          "options": [
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" }
+          ],
+          "default": "off-black",
+          "id": "content_text_colour"
+        },
+        {
+          "label": "Background",
+          "type": "select",
+          "options": [
+            { "label": "Image", "value": "image" },
+            { "label": "None", "value": "none" },
+            { "label": "Off-black", "value": "off-black" },
+            { "label": "Off-white", "value": "off-white" },
+            { "label": "Rosa", "value": "rosa" },
+            { "label": "Rosso", "value": "rosso" }
+          ],
+          "default": "none",
+          "id": "background"
+        },
+        {
+          "label": "Background Image",
+          "type": "image_picker",
+          "id": "background_image"
+        },
+        {
+          "content": "Padding",
+          "type": "header"
+        },
+        {
+          "label": "Top Padding",
+          "type": "range",
+          "min": 0,
+          "max": 200,
+          "step": 4,
+          "unit": "px",
+          "default": 0,
+          "id": "padding_top"
+        },
+        {
+          "label": "Bottom Padding",
+          "type": "range",
+          "min": 0,
+          "max": 200,
+          "step": 4,
+          "unit": "px",
+          "default": 0,
+          "id": "padding_bottom"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fifty Fifty"
+    }
+  ]
+}
+{% endschema %}

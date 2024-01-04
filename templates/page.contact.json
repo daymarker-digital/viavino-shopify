@@ -1,0 +1,81 @@
+{
+  "order": [
+    "52a60c1f-2b92-40e3-955c-2a3b032aa7a2",
+    "contact",
+    "main"
+  ],
+  "sections": {
+    "52a60c1f-2b92-40e3-955c-2a3b032aa7a2": {
+      "type": "hero",
+      "blocks": {
+        "9803b0f6-54a8-49d6-8673-ff465645aed5": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contattaci",
+            "text_colour": "off-black"
+          }
+        }
+      },
+      "block_order": [
+        "9803b0f6-54a8-49d6-8673-ff465645aed5"
+      ],
+      "settings": {
+        "height_desktop": "auto",
+        "height_mobile": "auto",
+        "border_top": false,
+        "border_bottom": false,
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/HEADER.jpg",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "bottom center",
+        "container": "container",
+        "padding_top": 68,
+        "padding_bottom": 60,
+        "anchor_id": ""
+      }
+    },
+    "contact": {
+      "type": "contact-form",
+      "blocks": {
+        "8d029e4a-e973-4717-9b0f-fc138ba79c23": {
+          "type": "image",
+          "settings": {
+            "image_enable_border": true,
+            "image": "shopify:\/\/shop_images\/contact-form--image_3x_1800x_db27f317-ab37-48a7-a521-e8b11a203975.jpg"
+          }
+        },
+        "de41225c-af1e-4be4-ab3f-b7078044dc14": {
+          "type": "form",
+          "settings": {
+            "heading": "Any inquiries?",
+            "heading_size": "xs"
+          }
+        }
+      },
+      "block_order": [
+        "8d029e4a-e973-4717-9b0f-fc138ba79c23",
+        "de41225c-af1e-4be4-ab3f-b7078044dc14"
+      ],
+      "settings": {
+        "border_top": true,
+        "border_bottom": false,
+        "container": "container",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "anchor_id": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "width": "full",
+        "background": "none",
+        "container": "container",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "anchor_id": ""
+      }
+    }
+  }
+}

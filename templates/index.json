@@ -1,0 +1,418 @@
+{
+  "order": [
+    "b0a4498a-bca0-42d0-a616-a5313c5f8d1d",
+    "31c1b747-27a5-4614-a47a-31cf6d3acfb7",
+    "1661195827dff74e88",
+    "858ab1d2-5a53-4185-ad07-b4a9e869fa50",
+    "ab9e352f-162c-4143-9b5f-51bae407dc55",
+    "1d026b43-556f-45e0-b1b0-f88e9f064dac",
+    "0acf5f4b-81ec-4fc6-a25a-6a63ac132650",
+    "4b0b629e-fe0e-4216-aca0-6e32db55390a",
+    "3015fe88-4279-4a82-85d5-366c5adfbdcd"
+  ],
+  "sections": {
+    "b0a4498a-bca0-42d0-a616-a5313c5f8d1d": {
+      "type": "hero",
+      "blocks": {
+        "034176bc-76da-450d-9317-53039f95b31f": {
+          "type": "button",
+          "settings": {
+            "button_title": "Learn More",
+            "button_link": "shopify:\/\/pages\/our-story",
+            "button_background_colour": "off-white",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black"
+          }
+        }
+      },
+      "block_order": [
+        "034176bc-76da-450d-9317-53039f95b31f"
+      ],
+      "settings": {
+        "height_desktop": "950px",
+        "height_mobile": "850px",
+        "border_top": false,
+        "border_bottom": false,
+        "background": "image",
+        "background_image_mobile": "shopify:\/\/shop_images\/VinoThatViasHomepageMobile.png",
+        "background_image": "shopify:\/\/shop_images\/Website_Homepage_Banner.png",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 0,
+        "padding_bottom": 84,
+        "anchor_id": ""
+      }
+    },
+    "31c1b747-27a5-4614-a47a-31cf6d3acfb7": {
+      "type": "marquee",
+      "settings": {
+        "text": "<p>The New Way of Wine<\/p>",
+        "reverse": true,
+        "font_size": 32,
+        "duration": 94,
+        "gap": 15,
+        "style": "tertiary",
+        "border_top": true,
+        "border_bottom": false,
+        "text_colour": "dark",
+        "background": "off-white",
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "1661195827dff74e88": {
+      "type": "featured-products",
+      "blocks": {
+        "678fe0c0-249b-40bd-a73a-0569e05a68df": {
+          "type": "product",
+          "settings": {
+            "product": "bianco",
+            "product_image": "shopify:\/\/shop_images\/868_x_1209-2.png",
+            "button_title": "{{ block.settings.product.title }}",
+            "button_link": "\/pages\/our-wine#featured-wine-bianco",
+            "button_background_colour": "off-white",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black"
+          }
+        },
+        "400a548e-17c5-4170-8421-fe8e1d6abe18": {
+          "type": "product",
+          "settings": {
+            "product": "rosato",
+            "product_image": "shopify:\/\/shop_images\/Rosato_in_hand.png",
+            "button_title": "{{ block.settings.product.title }}",
+            "button_link": "\/pages\/our-wine#featured-wine-rosato",
+            "button_background_colour": "rosa",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black"
+          }
+        },
+        "c948e6f1-7072-4cca-8949-4ed7281d7f00": {
+          "type": "product",
+          "settings": {
+            "product": "rosso",
+            "product_image": "shopify:\/\/shop_images\/1.png",
+            "button_title": "{{ block.settings.product.title }}",
+            "button_link": "\/pages\/our-wine#featured-wine-rosso",
+            "button_background_colour": "rosso",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-white"
+          }
+        }
+      },
+      "block_order": [
+        "678fe0c0-249b-40bd-a73a-0569e05a68df",
+        "400a548e-17c5-4170-8421-fe8e1d6abe18",
+        "c948e6f1-7072-4cca-8949-4ed7281d7f00"
+      ],
+      "settings": {
+        "product_image_aspect_ratio": "300\/403",
+        "border_top": true,
+        "border_bottom": false,
+        "container": "container",
+        "grid_layout": "three-column",
+        "grid_gutter": 32,
+        "padding_top": 84,
+        "padding_bottom": 84,
+        "anchor_id": ""
+      }
+    },
+    "858ab1d2-5a53-4185-ad07-b4a9e869fa50": {
+      "type": "sustainability",
+      "blocks": {
+        "fcd81b65-bc0c-4594-8d0c-24dceef5ab68": {
+          "type": "extra-adornment",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VIA--home-sustainability-extra-adornment_3x_3e52e3bd-64bf-4015-baad-e200fade58fc.png"
+          }
+        },
+        "59c14d66-285e-4dfc-8a07-87a696935e52": {
+          "type": "heading",
+          "settings": {
+            "heading": "No glass please!"
+          }
+        },
+        "c415ce4e-b747-4b58-bd0c-cf0bc69c8b21": {
+          "type": "message",
+          "settings": {
+            "message": "<p>Light to ship and to carry - Viavino is wine that travels better. Using Tetra Pak is our way of bringing good Italian wine to you sustainably. <\/p>"
+          }
+        },
+        "106591a4-cc4e-44bf-8b0c-c2a6c0f5b72d": {
+          "type": "badge",
+          "settings": {
+            "badge": "shopify:\/\/shop_images\/VIA--home-sustainability-badge-01_3x_2eb2a301-6e67-4c98-b2b9-b351008fb3bc.png"
+          }
+        },
+        "2fed12dc-37ba-479a-abf0-b6d4af5df4c7": {
+          "type": "badge",
+          "settings": {
+            "badge": "shopify:\/\/shop_images\/VIA--home-sustainability-badge-02_3x_528b5826-13b9-4a6a-bb56-6b7b99e5009d.png"
+          }
+        },
+        "b892b367-6c38-4673-817c-7dc0a754071b": {
+          "type": "button",
+          "settings": {
+            "button_title": "Why Tetra?",
+            "button_link": "shopify:\/\/pages\/sustainability",
+            "button_background_colour": "off-black",
+            "button_border_colour": "off-white",
+            "button_text_colour": "off-white"
+          }
+        }
+      },
+      "block_order": [
+        "fcd81b65-bc0c-4594-8d0c-24dceef5ab68",
+        "59c14d66-285e-4dfc-8a07-87a696935e52",
+        "c415ce4e-b747-4b58-bd0c-cf0bc69c8b21",
+        "106591a4-cc4e-44bf-8b0c-c2a6c0f5b72d",
+        "2fed12dc-37ba-479a-abf0-b6d4af5df4c7",
+        "b892b367-6c38-4673-817c-7dc0a754071b"
+      ],
+      "settings": {
+        "supporting_image": "shopify:\/\/shop_images\/VIA--home-sustainability-supporting-image_3x_1800x_2a56a563-c2b2-408a-943a-e7001659bd59.png",
+        "border_top": true,
+        "border_bottom": false,
+        "text_colour": "off-white",
+        "background": "off-black",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "anchor_id": ""
+      }
+    },
+    "ab9e352f-162c-4143-9b5f-51bae407dc55": {
+      "type": "marquee",
+      "disabled": true,
+      "settings": {
+        "text": "<p>Reviews<\/p>",
+        "reverse": false,
+        "font_size": 28,
+        "duration": 96,
+        "gap": 16,
+        "style": "secondary",
+        "border_top": true,
+        "border_bottom": false,
+        "text_colour": "dark",
+        "background": "off-white",
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "1d026b43-556f-45e0-b1b0-f88e9f064dac": {
+      "type": "featured-reviews",
+      "blocks": {
+        "1fa12558-919f-4ea8-9b98-284925598b5e": {
+          "type": "review",
+          "settings": {
+            "review": "The white wine should be a staple in your refrigerator.",
+            "reviewer_logo": "shopify:\/\/shop_images\/review-logo-01-logo-_3x_a50ecc29-6195-43ce-a68c-ca77ab7093c0.png",
+            "rating": 10,
+            "background": "image",
+            "background_image": "shopify:\/\/shop_images\/off-white-pattern_00d4eb39-736a-42c0-babf-f5ecc3cfb34d.png"
+          }
+        },
+        "5bb644b6-7807-483d-a768-25ac6006b447": {
+          "type": "review",
+          "settings": {
+            "review": "Viavino is for those with a sophisticated palette and a flair for ~*aesthetic*~",
+            "reviewer_logo": "shopify:\/\/shop_images\/review-logo-02-logo-_3x_9ce36da4-9d3d-4d82-8dec-fea51e5a4079.png",
+            "rating": 10,
+            "background": "off-white"
+          }
+        },
+        "c7df46be-3133-43b2-bf7a-b83907caeb9e": {
+          "type": "review",
+          "settings": {
+            "review": "Viavino just might be tapping into the zeitgeist of our times.",
+            "reviewer_logo": "shopify:\/\/shop_images\/review-logo-03-logo-_3x_c9bc9f5a-f3f7-4cbf-ae31-ff62d16dfb4c.png",
+            "rating": 10,
+            "background": "rosa"
+          }
+        }
+      },
+      "block_order": [
+        "1fa12558-919f-4ea8-9b98-284925598b5e",
+        "5bb644b6-7807-483d-a768-25ac6006b447",
+        "c7df46be-3133-43b2-bf7a-b83907caeb9e"
+      ],
+      "disabled": true,
+      "settings": {
+        "carousel_autoplay": 3500,
+        "carousel_animation_duration": 450,
+        "carousel_gap": 32,
+        "border_top": true,
+        "border_bottom": false,
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/section-featured-reviews_2x_1800x_e9bcbed6-52e8-4506-b824-41cc047d3af5.jpg",
+        "background_image_position_desktop": "bottom center",
+        "background_image_position_mobile": "bottom center",
+        "container": "container",
+        "grid_layout": "three-column",
+        "grid_gutter": 32,
+        "padding_top": 52,
+        "padding_bottom": 180,
+        "anchor_id": ""
+      }
+    },
+    "0acf5f4b-81ec-4fc6-a25a-6a63ac132650": {
+      "type": "featured-carousel",
+      "blocks": {
+        "386c8d1e-8eec-4240-9f71-912bc59be4d7": {
+          "type": "slide",
+          "settings": {
+            "image_main": "shopify:\/\/shop_images\/via-1_c6ff6fe2-11cf-4cce-8122-c5cef5615f38.jpg",
+            "image_supporting": "shopify:\/\/shop_images\/Artboard_1_bdd108fb-1f1f-4f2c-8675-81dff666a64c.png",
+            "content_background": "rosso",
+            "content_text_colour": "off-white",
+            "heading": "Viavino <br>Rosso d’Italia",
+            "button_title": "Learn More",
+            "button_link": "\/pages\/our-wine#featured-wine-rosso",
+            "button_background_colour": "rosso",
+            "button_border_colour": "off-white",
+            "button_text_colour": "off-white"
+          }
+        },
+        "87dee094-3102-4cba-8874-234d3b2aa603": {
+          "type": "slide",
+          "settings": {
+            "image_main": "shopify:\/\/shop_images\/via-rosato-3_389abb5e-e0e2-4d84-8e6f-bdad1a187ae4.jpg",
+            "image_supporting": "shopify:\/\/shop_images\/Artboard_1_copy_2_281d4f9d-63b5-4eb8-8142-a56d6b6fd32b.png",
+            "content_background": "off-white",
+            "content_text_colour": "off-black",
+            "heading": "Viavino <br>Bianco d’Italia",
+            "button_title": "Learn More",
+            "button_link": "\/pages\/our-wine#featured-wine-bianco",
+            "button_background_colour": "off-white",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black"
+          }
+        },
+        "2b1e32b7-5579-4d20-adb0-a103c7ab5e68": {
+          "type": "slide",
+          "settings": {
+            "image_main": "shopify:\/\/shop_images\/via-2_9af8b91a-35ea-4e94-afa7-55623ee4af0a.jpg",
+            "image_supporting": "shopify:\/\/shop_images\/Artboard_1_copy_ebab5661-116b-4847-b809-02348f2fda9a.png",
+            "content_background": "rosa",
+            "content_text_colour": "off-black",
+            "heading": "Viavino <br>Rosato d’Italia",
+            "button_title": "Learn More",
+            "button_link": "\/pages\/our-wine#featured-wine-rosato",
+            "button_background_colour": "rosa",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black"
+          }
+        }
+      },
+      "block_order": [
+        "386c8d1e-8eec-4240-9f71-912bc59be4d7",
+        "87dee094-3102-4cba-8874-234d3b2aa603",
+        "2b1e32b7-5579-4d20-adb0-a103c7ab5e68"
+      ],
+      "settings": {
+        "carousel_pagination": true,
+        "carousel_navigation": true,
+        "carousel_autoplay": 4000,
+        "carousel_animation_duration": 1200,
+        "carousel_gap": 40,
+        "border_top": true,
+        "border_bottom": false,
+        "container": "container",
+        "padding_top": 88,
+        "padding_bottom": 52,
+        "anchor_id": ""
+      }
+    },
+    "4b0b629e-fe0e-4216-aca0-6e32db55390a": {
+      "type": "fifty-fifty",
+      "blocks": {
+        "033ba093-8fc2-4286-a5a1-ea3eb5f03f12": {
+          "type": "text",
+          "settings": {
+            "heading": "Store \n<br>Locator",
+            "heading_size": "lg",
+            "message": "",
+            "message_style": "secondary",
+            "button_title": "Find Us Here",
+            "button_link": "shopify:\/\/pages\/store-locator",
+            "button_style": "primary",
+            "button_background_colour": "off-white",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black",
+            "content_width_desktop": 85,
+            "content_width_mobile": 85,
+            "content_text_colour": "off-white",
+            "background": "none",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "7b786dc5-a9c9-4738-b85d-d62c9f0f286b": {
+          "type": "image",
+          "settings": {
+            "image_sizing": "custom",
+            "image_aspect_ratio": "1\/1.25",
+            "image_border_enable": true,
+            "image_border_colour": "off-white",
+            "image": "shopify:\/\/shop_images\/VIA--home-fifty-fifty-01_1800x2_805a51ce-e47f-4cb6-b64a-c0025e59696e.jpg",
+            "content_width_desktop": 80,
+            "content_width_mobile": 80,
+            "background": "none",
+            "padding_top": 0,
+            "padding_bottom": 132
+          }
+        }
+      },
+      "block_order": [
+        "033ba093-8fc2-4286-a5a1-ea3eb5f03f12",
+        "7b786dc5-a9c9-4738-b85d-d62c9f0f286b"
+      ],
+      "settings": {
+        "content_border_mobile": false,
+        "content_border_desktop": false,
+        "border_top": true,
+        "border_bottom": false,
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/Mask_group_2x_1800x_ed5943fe-82fd-43be-a425-9d48af690717.jpg",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "anchor_id": ""
+      }
+    },
+    "3015fe88-4279-4a82-85d5-366c5adfbdcd": {
+      "type": "instagram-feed",
+      "blocks": {
+        "67a3e874-5691-4f4d-96da-fd105d0f34f7": {
+          "type": "feed",
+          "settings": {
+          }
+        },
+        "ee7c90ec-c122-413f-b460-cb7ea715a437": {
+          "type": "cta",
+          "settings": {
+            "message": "<p>Follow us <a href=\"https:\/\/www.instagram.com\/drinkviavino\/\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/drinkviavino\/\">@drinkviavino<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "67a3e874-5691-4f4d-96da-fd105d0f34f7",
+        "ee7c90ec-c122-413f-b460-cb7ea715a437"
+      ],
+      "settings": {
+        "feed_account": "drinkviavino",
+        "feed_limit": 10,
+        "carousel_autoplay": 3000,
+        "carousel_animation_duration": 550,
+        "carousel_gap": 32,
+        "border_top": true,
+        "border_bottom": false,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "anchor_id": ""
+      }
+    }
+  }
+}

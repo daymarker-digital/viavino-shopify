@@ -1,0 +1,76 @@
+{
+  "order": [
+    "ee5f774f-c56d-482a-bef6-03c077536842",
+    "main",
+    "594f46f0-7ddf-4f0b-bb3a-47d7611f960e"
+  ],
+  "sections": {
+    "ee5f774f-c56d-482a-bef6-03c077536842": {
+      "type": "hero",
+      "blocks": {
+        "f11d7e5c-b072-4115-94d4-7c85e2ec6a08": {
+          "type": "heading",
+          "settings": {
+            "heading": "Merch",
+            "text_colour": "off-black"
+          }
+        }
+      },
+      "block_order": [
+        "f11d7e5c-b072-4115-94d4-7c85e2ec6a08"
+      ],
+      "settings": {
+        "height_desktop": "auto",
+        "height_mobile": "auto",
+        "border_top": false,
+        "border_bottom": false,
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/HEADER_c719de92-6b99-48e2-a3bd-2e123985585b.jpg",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "anchor_id": ""
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "product_image_aspect_ratio": "3.5\/4",
+        "product_image_border_enable": true,
+        "carousel_pagination": true,
+        "carousel_autoplay": 3000,
+        "carousel_animation_duration": 450,
+        "carousel_gap": 28,
+        "border_top": true,
+        "border_bottom": false,
+        "container": "container",
+        "padding_top": 48,
+        "padding_bottom": 80,
+        "anchor_id": ""
+      }
+    },
+    "594f46f0-7ddf-4f0b-bb3a-47d7611f960e": {
+      "type": "full-width-feature",
+      "settings": {
+        "height_desktop": "850px",
+        "height_mobile": "650px",
+        "border_top": true,
+        "border_bottom": false,
+        "content_border_enable": false,
+        "content_width_desktop": 100,
+        "content_width_mobile": 100,
+        "text_colour": "dark",
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/VIA--product-full-width-feature_3x_1800x2_2d513001-f602-4cde-857f-523b61060479.jpg",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
+      }
+    }
+  }
+}

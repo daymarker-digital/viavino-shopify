@@ -1,0 +1,104 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins/breakpoint' as *;
+
+.inverted-corner-box {
+
+  mask: var(--theme-radial-gradient);
+  position: relative;
+
+  &:before {
+    background: rgba(var(--theme-colour-off-black), 1);
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -5;
+    width: calc( 100% );
+    height: calc( 100% );
+    mask: var(--theme-radial-gradient);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > a,
+    & > button {
+      width: 100%;
+    }
+  }
+
+  &:after {
+    transition: background var(--theme-transition--duration);
+    content: '';
+    top: var(--theme-border-width);
+    left: var(--theme-border-width);
+    bottom: var(--theme-border-width);
+    right: var(--theme-border-width);
+    background: rgba(var(--theme-colour-off-white), 1);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 0;
+    width: calc( 100% - calc( var(--theme-border-width) * 2 ) );
+    height: calc( 100% - calc( var(--theme-border-width) * 2 ) );
+    mask: var(--theme-radial-gradient);
+  }
+
+  @each $name, $value in $theme-colours {
+
+    &--background-#{$name} {
+      &:after {
+        background: $value;
+      }
+      &.inverted-corner-box--button {
+        &:hover {
+          &:after {
+            background: color.scale( $value, $lightness: -20% );
+          }
+        }
+      }
+    }
+
+    &--border-#{$name} {
+      &:before {
+        background: $value;
+      }
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    mask: var(--theme-radial-gradient--lg);
+
+    &:before {
+      mask: var(--theme-radial-gradient--lg);
+    }
+
+    &:after {
+      mask: var(--theme-radial-gradient--lg);
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    mask: var(--theme-radial-gradient--xxl);
+
+    &:before {
+      mask: var(--theme-radial-gradient--xxl);
+    }
+
+    &:after {
+      mask: var(--theme-radial-gradient--xxl);
+    }
+
+  }
+
+}

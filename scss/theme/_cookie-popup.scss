@@ -1,0 +1,135 @@
+@use '../utils/mixins/breakpoint' as *;
+
+.cookie-popup {
+
+  transition:
+    opacity var(--theme-transition--duration),
+    transform var(--theme-transition--duration);
+  transform: translate3d( 0, 105%, 0 );
+  opacity: 0;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.45) );
+  z-index: 150;
+
+  &__cta,
+  &__heading,
+  &__message {
+    display: block;
+    width: 100%;
+  }
+
+  &__layout,
+  &__main {
+    padding: var(--bs-container-fluid-padding);
+  }
+
+  &__cta {
+    margin-top: 15px;
+  }
+
+  &__layout {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    max-width: 1360px;
+    margin: 0 auto;
+  }
+
+  &__main {
+    width: 100%;
+  }
+
+  &__heading {
+    font-size: 16px;
+    & + .cookie-popup__message {
+      margin-top: 8px;
+    }
+  }
+
+  &__message {
+    font-size: 10px;
+  }
+
+  &.active {
+    transform: translate3d( 0, 0, 0 );
+    opacity: 1;
+  }
+
+  @include breakpoint(md) {
+
+    &__content {
+      flex: 1;
+    }
+
+    &__cta {
+      margin-top: 0;
+      width: 250px;
+    }
+
+    &__layout {
+      flex-flow: row nowrap;
+      align-items: flex-end;
+      gap: var(--bs-container-fluid-padding);
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    &__cta {
+      width: 300px;
+    }
+
+    &__heading {
+      font-size: 20px;
+      & + .cookie-popup__message {
+        margin-top: 10px;
+      }
+    }
+
+    &__layout {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    &__message {
+      font-size: 12px;
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    &__heading {
+      font-size: 22px;
+      & + .cookie-popup__message {
+        margin-top: 11px;
+      }
+    }
+
+    &__message {
+      font-size: 14px;
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    &__heading {
+      font-size: 24px;
+      & + .cookie-popup__message {
+        margin-top: 12px;
+      }
+    }
+
+    &__message {
+      font-size: 16px;
+    }
+
+  }
+
+}

@@ -1,0 +1,36 @@
+<script async src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/glide.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/axios@1.2.2/dist/axios.min.js" integrity="sha256-eIET7hisvt1N1cTLix0TTFDQX7fmx0SXQfX5AvDdp0E=" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script defer src="https://cdn.storerocket.io/widget.js"></script>
+
+<script>
+
+  window.lazySizesConfig = window.lazySizesConfig || {};
+  window.lazySizesConfig.lazyClass = 'lazyload';
+  lazySizesConfig.loadMode = 1;
+
+  document.addEventListener('lazybeforeunveil', function(e){
+    let bg = e.target.getAttribute('data-bg');
+    if ( bg ) e.target.style.backgroundImage = 'url(' + bg + ')';
+  });
+
+  document.addEventListener('lazyloaded', function(e){
+    e.target.parentNode.classList.add('lazyloaded');
+  });
+
+  var WebFontConfig = {
+    typekit: { id: 'taw7nbf' }
+  };
+
+ (function(d) {
+    var wf = d.createElement('script'), s = d.scripts[0];
+    wf.src = 'https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js';
+    wf.async = true;
+    s.parentNode.insertBefore(wf, s);
+ })(document);
+
+</script>
+

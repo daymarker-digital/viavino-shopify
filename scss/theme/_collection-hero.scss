@@ -1,0 +1,23 @@
+.collection-hero {
+
+  &__content {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5.5%;
+    position: relative;
+  }
+
+  &__main {
+    height: 100%;
+    .container,
+    .container-fluid,
+    .row {
+      height: 100%;
+    }
+  }
+
+}

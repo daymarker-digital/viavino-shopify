@@ -1,0 +1,24 @@
+@use '../utils/mixins/border' as *;
+@use '../utils/mixins/breakpoint' as *;
+
+.three-card-grid {
+
+  &__main {
+    background: rgba(var(--theme-colour-off-black), 1);
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: var(--theme-border-width);
+  }
+
+  @include breakpoint(lg) {
+
+    &__main {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: var(--theme-border-width);
+      row-gap: unset;
+    }
+
+  }
+
+}

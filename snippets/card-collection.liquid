@@ -1,0 +1,62 @@
+{%- if card_collection and card_collection != blank %}
+
+  {%- liquid
+
+    comment
+      Accepts:
+        - card_collection: {Object} Collection Liquid object
+        - classes: {String} Optionally include additional classes
+        - id: {String} Optionally include a unique ID
+        - style: {String} Optionally load different card types by passing style option
+    endcomment
+
+    assign snippet_name = 'card-collection'
+    assign snippet_classes = snippet_name | append: ' collection'
+    assign snippet_id = id | default: 'card-collection--' | append: card_collection.id
+    assign style = style | default: 'not-set'
+
+    if classes and classes != empty
+      assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes
+    endif
+
+    assign aos_id = snippet_id | append: '--aos'
+
+    assign date_published = card_collection.published_at
+    assign image = card_collection.featured_image | default: false
+    assign title = card_collection.title | default: ''
+    assign url = card_collection.url | default: ''
+
+  -%}
+
+  <article
+    class="{{ snippet_classes }}"
+    id="{{ snippet_id }}"
+    data-published-at="{{ date_published | date: "%Y-%m-%d %H:%M:%S" }}"
+    data-style="{{ style }}"
+  >
+
+    <div class="{{ snippet_name }}__layout" id="{{ aos_id }}">
+
+      {% case style %}
+        {% when 'featured' %}
+        {% else %}
+          <div class="{{ snippet_name }}__image">
+            <a class="{{ snippet_name }}__image-link link" href="{{ url }}" title="{{ title }}" target="_self">
+              {% if image %}
+                {% render 'lazyload-image', image: image %}
+              {% else %}
+                <img class="{{ snippet_name }}__image lazyload-item lazyload js--product-image-placeholder" src="" alt="Fallback Image" width="" height="" />
+              {% endif %}
+            </a>
+          </div>
+          <div class="{{ snippet_name }}__content">
+            <strong class="{{ snippet_name }}__title">
+              <a class="{{ snippet_name }}__title-link link" href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a>
+            </strong>
+          </div>
+      {% endcase %}
+
+    </div>
+  </article>
+
+{% endif %}

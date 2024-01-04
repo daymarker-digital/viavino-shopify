@@ -1,0 +1,82 @@
+@use '../utils/mixins/breakpoint' as *;
+@use '../utils/mixins/font' as *;
+
+.drawer {
+
+  &-cart,
+  &-menu {
+
+    @include clarendon-wide(700);
+    transition: transform var(--theme-transition--duration);
+    height: var(--theme-viewport-height);
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 150;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    overflow: hidden;
+
+    .button,
+    .link {
+      &.active,
+      &:focus,
+      &:hover {
+        color: inherit;
+        opacity: 0.5;
+      }
+    }
+
+    &__header {
+      &-content {
+        padding: var(--theme-cart-line-item-padding);
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    &-cart,
+    &-menu {
+      &__header {
+        &-content {
+          padding: var(--theme-cart-line-item-padding--lg);
+        }
+      }
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    &-cart,
+    &-menu {
+      &__header {
+        &-content {
+          padding: var(--theme-cart-line-item-padding--xl);
+        }
+      }
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    &-cart,
+    &-menu {
+      &__header {
+        &-content {
+          padding: var(--theme-cart-line-item-padding--xxl);
+        }
+      }
+    }
+
+  }
+
+}

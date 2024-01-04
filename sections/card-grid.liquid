@@ -1,0 +1,129 @@
+{%- liquid
+
+  assign section_name = 'three-card-grid'
+  assign section_classes = section_name
+  assign section_id = section_name | append: '--' | append: section.id
+
+  assign container = section.settings.container | default: 'container'
+  assign cards = section.blocks | where: 'type', 'card' | default: false
+  assign image_aspect_ratio = section.settings.image_aspect_ratio | default: 'auto'
+
+  if section.settings.anchor_id != blank
+    assign section_id = section.settings.anchor_id
+  endif
+
+-%}
+
+{% if cards and cards.size == 3 %}
+
+  {%- style -%}
+
+    #{{ section_id }} .card-grid__image {
+      aspect-ratio: {{ image_aspect_ratio }};
+    }
+
+    {%
+      render 'element-styles',
+        element_border_bottom: section.settings.border_bottom,
+        element_border_top: section.settings.border_top,
+        element_id: section_id,
+    %}
+
+  {%- endstyle -%}
+
+  <link rel="stylesheet" href="{{ 'section-three-card-grid.css' | asset_url }}" media="print" onload="this.media='all'">
+  <noscript>{{ 'section-three-card-grid.css' | asset_url | stylesheet_tag }}</noscript>
+
+  <div
+    {%-
+      render 'element-attrs',
+        element_class: section_classes,
+        element_id: section_id
+    -%}
+  >
+    {% render 'bs-container', state: 'open', col: 'col-12', container: 'full-width' %}
+      <div class="{{ section_name }}__main" id="{{ aos_id }}">
+        {% for item in cards %}
+          <div class="{{ section_name }}__item" data-index="{{ forloop.index }}" role="listitem">
+            {% render 'card-grid', aos_id: section_id, card_item: item, card_index: forloop.index, section_id: section.id %}
+          </div>
+        {% endfor %}
+      </div>
+    {% render 'bs-container', state: 'closed', container: 'full-width' %}
+  </div>
+
+{% endif %}
+
+{% schema %}
+{
+  "name": "Three Card Grid",
+  "tag": "section",
+  "class": "section section--three-card-grid",
+  "settings": [
+    {
+      "label": "Image Aspect Ratio",
+      "type": "text",
+      "id": "image_aspect_ratio"
+    },
+    {
+      "content": "Border",
+      "type": "header"
+    },
+    {
+      "label": "Top Border",
+      "type": "checkbox",
+      "default": true,
+      "id": "border_top"
+    },
+    {
+      "label": "Bottom Border",
+      "type": "checkbox",
+      "default": false,
+      "id": "border_bottom"
+    },
+    {
+      "content": "Anchor",
+      "type": "header"
+    },
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Card",
+      "type": "card",
+      "limit": 3,
+      "settings": [
+        {
+          "content": "Content",
+          "type": "header"
+        },
+        {
+          "label": "Image",
+          "type": "image_picker",
+          "id": "image"
+        },
+        {
+          "label": "Heading",
+          "type": "textarea",
+          "id": "heading"
+        },
+        {
+          "label": "Message",
+          "type": "richtext",
+          "id": "message"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Three Card Grid"
+    }
+  ]
+}
+{% endschema %}

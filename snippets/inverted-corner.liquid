@@ -1,0 +1,36 @@
+{%- liquid
+
+  assign snippet_name = 'inverted-corner'
+  assign snippet_classes = snippet_name
+
+  assign aos_attrs = aos_attrs | default: ''
+  assign background_colour = background_colour | default: 'none'
+  assign border_colour = border_colour | default: 'off-black'
+  assign type = type | default: 'button'
+
+  assign snippet_classes = snippet_classes | append: ' ' | append: snippet_name | append: '--background-' | append: background_colour
+  assign snippet_classes = snippet_classes | append: ' ' | append: snippet_name | append: '--border-' | append: border_colour
+  assign snippet_classes = snippet_classes | append: ' ' | append: snippet_name | append: '--' | append: type
+
+-%}
+
+<div class="{{ snippet_classes | strip_newlines }}" {{ aos_attrs }}>
+
+  {%- case type -%}
+    {%- when 'button' -%}
+      <div class="{{ snippet_name }}__button">
+        <svg x="0px" y="0px" viewBox="0 0 336 48" style="enable-background:new 0 0 336 48;" xml:space="preserve">
+          <path d="M336,35.7V12.3c-6.8,0-12.3-5.5-12.3-12.3H12.3c0,6.8-5.5,12.3-12.3,12.3v23.4c6.8,0,12.3,5.5,12.3,12.3h311.4
+            C323.7,41.2,329.2,35.7,336,35.7z"/>
+        </svg>
+      </div>
+    {%- when 'feature' -%}
+      <div class="{{ snippet_name }}__feature">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 941 381" xml:space="preserve"><path stroke="red" fill="none" stroke-width="3" d="M941 367.5v-354c-7.5 0-13.5-6.1-13.5-13.5h-914c0 7.5-6.1 13.5-13.5 13.5v353.9c7.5 0 13.5 6.1 13.5 13.5h913.9c.1-7.4 6.1-13.4 13.6-13.4z"/></svg>
+      </div>
+
+  {%- endcase -%}
+
+  <div class="{{ snippet_name }}__content">{{- content -}}</div>
+
+</div>

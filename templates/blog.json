@@ -1,0 +1,24 @@
+{
+  "order": [
+    "9ae08ca4-e673-4da6-99a8-63b53338cc42"
+  ],
+  "sections": {
+    "9ae08ca4-e673-4da6-99a8-63b53338cc42": {
+      "type": "marquee",
+      "settings": {
+        "text": "<p>VACANZA REPORT<\/p>",
+        "reverse": false,
+        "font_size": 20,
+        "duration": 75,
+        "gap": 20,
+        "style": "primary",
+        "border_top": false,
+        "border_bottom": false,
+        "text_colour": "off-black",
+        "background": "none",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    }
+  }
+}

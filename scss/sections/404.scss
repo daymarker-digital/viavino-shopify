@@ -1,0 +1,43 @@
+@use '../utils/mixins/breakpoint' as *;
+
+.error-404 {
+
+  &__cta,
+  &__heading,
+  &__image {
+    display: block;
+  }
+
+  &__heading {
+    & + .error-404__cta,
+    & + .error-404__image {
+      margin-top: 20px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    img, svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    & + .error-404__cta,
+    & + .error-404__heading {
+      margin-top: 24px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+}

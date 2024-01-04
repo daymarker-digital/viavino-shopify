@@ -1,0 +1,124 @@
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins/body-copy' as *;
+@use "../utils/mixins/breakpoint" as *;
+@use '../utils/mixins/font' as *;
+
+.body-copy {
+
+  $heading-size: map.get($theme-font-sizes-heading, 'base') * 0.66;
+
+  h1, h2, h3, h4, h5, h6, strong {
+    @include clarendon-wide(700);
+    text-transform: uppercase;
+    display: block;
+    margin: 0 0 18px 0;
+    padding: 0;
+    line-height: 1.05;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: $heading-size;
+  }
+
+  // ---------------------------------------- Styles
+  &--primary {
+    @include body-copy-style( 'primary' );
+  }
+
+  &--secondary {
+    @include body-copy-style( 'secondary' );
+  }
+
+  &--tertiary {
+    @include body-copy-style( 'tertiary' );
+  }
+
+  // ---------------------------------------- Sizes
+  $body-copy-sizes:( 'xl', 'lg', 'md', 'sm', 'xs', 'xxs' );
+
+  @each $size in $body-copy-sizes {
+    &--#{$size} {
+      @include body-copy-size( $size );
+    }
+  }
+
+  @include breakpoint(sm) {
+
+    $heading-size: map.get($theme-font-sizes-heading, 'sm') * 0.66;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: $heading-size;
+    }
+
+  }
+
+  @include breakpoint(md) {
+
+    $heading-size: map.get($theme-font-sizes-heading, 'md') * 0.66;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: $heading-size;
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    $heading-size: map.get($theme-font-sizes-heading, 'lg') * 0.5;
+
+    h1, h2, h3, h4, h5, h6, strong {
+      margin: 0 0 20px 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: $heading-size;
+    }
+
+    ol, p, ul, table {
+      margin-bottom: 22px;
+      & + h1,
+      & + h2,
+      & + h3,
+      & + h4,
+      & + h5,
+      & + h6 {
+        margin-top: 40px;
+      }
+    }
+
+    table {
+      th, td, thead {
+        padding: 10px;
+      }
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    $heading-size: map.get($theme-font-sizes-heading, 'xl') * 0.48;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: $heading-size;
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    $heading-size: map.get($theme-font-sizes-heading, 'xxl') * 0.46;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: $heading-size;
+    }
+
+    table {
+      th, td, thead {
+        padding: 15px;
+      }
+    }
+
+  }
+
+}

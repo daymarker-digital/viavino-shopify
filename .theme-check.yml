@@ -1,0 +1,9 @@
+## Disabled checks
+ImgLazyLoading:
+  enabled: false
+
+UnusedAssign:
+  enbaled: true
+
+UnusedSnippet:
+  enabled: true

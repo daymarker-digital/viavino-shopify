@@ -1,0 +1,89 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins/ui' as *;
+
+@each $name, $value in $theme-colours {
+  [data-background="#{$name}"] {
+
+    $background-colour: rgba(var(--theme-colour-#{$name}), 1);
+    //$border-colour: rgba(var(--theme-colour-off-black), 1);
+    //$text-colour: rgba(var(--theme-colour-off-black), 1);
+    $field-error-background-colour: rgba(var(--theme-colour-off-black), 0.015);
+    $field-error-colour: rgba(var(--theme-colour-rosso), 1);
+    $field-placeholder-colour: rgba(var(--theme-colour-off-black), 0.3333);
+
+    @if $name == 'black' or $name == 'off-black' or $name == 'rosso' {
+      //$border-colour: rgba(var(--theme-colour-off-white), 1);
+      //$text-colour: rgba(var(--theme-colour-off-white), 1);
+      $field-error-background-colour: rgba(var(--theme-colour-rosa), 0.015);
+      $field-error-colour: rgba(var(--theme-colour-rosa), 1);
+      $field-placeholder-colour: rgba(var(--theme-colour-off-white), 0.3333);
+    }
+
+    @if $name != 'image' or $name != 'none' {
+      background: $background-colour;
+    }
+
+    //border-color: $border-colour;
+    //color: $text-colour;
+
+    .input,
+    .textarea {
+      &::placeholder {
+        color: $field-placeholder-colour;
+      }
+    }
+
+    @if $name == 'off-white' or $name == 'rosa' {
+      .button {
+        &--colour-primary {
+          background: rgba(var(--theme-colour-#{$name}), 1);
+          border-color: rgba(var(--theme-colour-off-black), 1);
+          color: rgba(var(--theme-colour-off-black), 1);
+          &:focus,
+          &:hover {
+            background: darken( map.get($theme-colours, $name), 10% );
+            color: rgba(var(--theme-colour-off-black), 1);
+          }
+        }
+        &--colour-secondary {
+          background: rgba(var(--theme-colour-off-black), 1);
+          border-color: rgba(var(--theme-colour-off-black), 1);
+          color: rgba(var(--theme-colour-off-white), 1);
+          &:focus,
+          &:hover {
+            background: darken( map.get($theme-colours, 'off-black'), 10% );
+            color: rgba(var(--theme-colour-off-white), 1);
+          }
+        }
+      }
+    }
+
+    @if $name == 'rosso' {
+      .button {
+        &--colour-primary {
+          background: rgba(var(--theme-colour-#{$name}), 1);
+          border-color: rgba(var(--theme-colour-off-white), 1);
+          color: rgba(var(--theme-colour-off-white), 1);
+          &:focus,
+          &:hover {
+            background: darken( map.get($theme-colours, $name), 10% );
+            color: rgba(var(--theme-colour-off-white), 1);
+          }
+        }
+        &--colour-secondary {
+          background: rgba(var(--theme-colour-off-white), 1);
+          border-color: rgba(var(--theme-colour-off-white), 1);
+          color: rgba(var(--theme-colour-off-black), 1);
+          &:focus,
+          &:hover {
+            background: darken( map.get($theme-colours, 'off-white'), 10% );
+            color: rgba(var(--theme-colour-off-black), 1);
+          }
+        }
+      }
+    }
+
+  }
+}

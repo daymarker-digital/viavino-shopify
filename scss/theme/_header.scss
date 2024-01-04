@@ -1,0 +1,180 @@
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins/breakpoint' as *;
+@use '../utils/mixins/font' as *;
+
+.header {
+
+  @include clarendon-wide(700);
+  transition:
+    background var(--theme-transition--duration),
+    color var(--theme-transition--duration);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  border-bottom-style: solid;
+  border-bottom-width: var(--theme-border-width);
+  background: rgba(var(--theme-colour-off-white), 1);
+  border-bottom-color: rgba(var(--theme-colour-off-black), 1);
+  color: rgba(var(--theme-colour-off-black), 1);
+
+  .button,
+  .link {
+    &.active,
+    &:focus,
+    &:hover {
+      color: inherit;
+      opacity: 0.5;
+    }
+  }
+
+  .navigation {
+    gap: 20px;
+    align-items: center;
+    flex-flow: row nowrap;
+    position: absolute;
+    .button,
+    &__item {
+      text-transform: uppercase;
+    }
+    .link {
+      display: inline-flex;
+      text-align: center;
+    }
+  }
+
+  &__brand {
+    &-link {
+      display: block;
+      height: 38px;
+      width: auto;
+      img, svg {
+        display: block;
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+
+  &__main {
+    @each $name, $value in map.get( $theme-layout-settings, 'breakpoints' ) {
+      @if $name == 'base' {
+        height: var(--theme-header-height);
+      } @else {
+        @include breakpoint(#{$name}) {
+          height: var(--theme-header-height--#{$name});
+        }
+      }
+    }
+    transition: height var(--theme-transition--duration);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &__navigation {
+    &-extras {
+      right: var(--bs-container-fluid-padding);
+    }
+    &-main {
+      left: var(--bs-container-fluid-padding);
+    }
+  }
+
+  .template--404 &,
+  .index & {
+    background: rgba(var(--theme-colour-off-white), 0);
+    border-bottom-color: rgba(var(--theme-colour-off-black), 0);
+    color: rgba(var(--theme-colour-off-white), 1);
+  }
+
+  .scroll-position--scrolled & {
+    background: rgba(var(--theme-colour-off-white), 1);
+    border-bottom-color: rgba(var(--theme-colour-off-black), 1);
+    color: rgba(var(--theme-colour-off-black), 1);
+  }
+
+  .mobile-menu--active & {}
+
+  @include breakpoint(sm) {
+
+    &__brand {
+      &-link {
+        height: 40px;
+      }
+    }
+
+  }
+
+  @include breakpoint(md) {
+
+    &__brand {
+      &-link {
+        height: 42px;
+      }
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    .navigation {
+      font-size: 14px;
+      gap: 24px;
+      &__link {
+        max-width: 100px;
+      }
+    }
+
+    &__brand {
+      &-link {
+        height: 48px;
+      }
+    }
+
+    &__navigation {
+      &-extras,
+      &-main {
+        gap: 30px;
+      }
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    .navigation {
+      font-size: 16px;
+      gap: 32px;
+      &__link {
+        max-width: none;
+      }
+    }
+
+    &__brand {
+      &-link {
+        height: 50px;
+      }
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    .navigation {
+      font-size: 18px;
+      gap: 42px;
+    }
+
+    &__brand {
+      &-link {
+        height: 52px;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,17 @@
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins/breakpoint' as *;
+
+.anchor {
+  position: absolute;
+  z-index: -99999;
+  @each $name, $value in map.get( $theme-layout-settings, 'breakpoints' ) {
+    @if $name == 'base' {
+      top: calc( -1 * var(--theme-header-height) );
+    } @else {
+      @include breakpoint(#{$name}) {
+        top: calc( -1 * var(--theme-header-height--#{$name}) );
+      }
+    }
+  }
+}

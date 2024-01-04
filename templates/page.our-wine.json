@@ -1,0 +1,441 @@
+{
+  "order": [
+    "b8510c7e-e777-4260-8ecb-cedd8c884178",
+    "5d2af833-907f-4c9b-94bb-82bf4ed7c1f5",
+    "a9e103a4-0ed5-4a14-9b1f-57f3edbe974e",
+    "e0c1cfd3-cfbf-4a6c-baa4-b894926d46ff",
+    "52295274-f199-4b3a-b22b-ae097ac15bba",
+    "d4cc95bc-d8c8-4374-b7f5-cabb04431c7e",
+    "4cf01146-29ab-497e-b4fb-cd15b834cdc3",
+    "main"
+  ],
+  "sections": {
+    "b8510c7e-e777-4260-8ecb-cedd8c884178": {
+      "type": "hero",
+      "blocks": {
+        "5c4267b0-86a6-47ec-90c2-5c81689744ad": {
+          "type": "heading",
+          "settings": {
+            "heading": "Il Vino",
+            "text_colour": "off-white"
+          }
+        }
+      },
+      "block_order": [
+        "5c4267b0-86a6-47ec-90c2-5c81689744ad"
+      ],
+      "settings": {
+        "height_desktop": "auto",
+        "height_mobile": "auto",
+        "border_top": false,
+        "border_bottom": false,
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/HEADER_4cb363b0-b620-4dee-a34c-2b91c4a56949.jpg",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 68,
+        "padding_bottom": 60,
+        "anchor_id": ""
+      }
+    },
+    "5d2af833-907f-4c9b-94bb-82bf4ed7c1f5": {
+      "type": "featured-wine",
+      "blocks": {
+        "00c0f9ba-6948-4b19-960f-ae371091b640": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "0999be4b-f12c-47bd-9dca-7e16174dbfd2": {
+          "type": "accordion",
+          "settings": {
+            "open": false,
+            "title": "Technical Information",
+            "content": "<p>{{ section.settings.product.metafields.additional.technical_information | metafield_tag }}<\/p>"
+          }
+        },
+        "30ea5bff-ba8c-4e99-9461-6ed878a0b8e1": {
+          "type": "accordion",
+          "settings": {
+            "open": false,
+            "title": "Flavour Notes",
+            "content": "<p>{{ section.settings.product.metafields.additional.flavour_notes | metafield_tag }}<\/p>"
+          }
+        },
+        "78a5c45c-1295-47c8-b386-8ed67b2167d3": {
+          "type": "accordion",
+          "settings": {
+            "open": false,
+            "title": "Good grapes",
+            "content": "<p>{{ section.settings.product.metafields.additional.wine_pairings | metafield_tag }}<\/p>"
+          }
+        },
+        "5e273e60-9756-4703-abc6-7942e19169e4": {
+          "type": "button",
+          "settings": {
+            "button_title": "Where to Buy",
+            "button_link": "shopify:\/\/pages\/store-locator",
+            "button_background_colour": "off-black",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-white"
+          }
+        },
+        "710cd22c-f13b-44ce-acc0-82da1b763ec7": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_title": "Download Tech Sheet",
+            "button_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0683\/1023\/7481\/files\/VIA--sample-tech-sheet.pdf?v=1674352710",
+            "button_background_colour": "off-white",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black"
+          }
+        }
+      },
+      "block_order": [
+        "00c0f9ba-6948-4b19-960f-ae371091b640",
+        "0999be4b-f12c-47bd-9dca-7e16174dbfd2",
+        "30ea5bff-ba8c-4e99-9461-6ed878a0b8e1",
+        "78a5c45c-1295-47c8-b386-8ed67b2167d3",
+        "5e273e60-9756-4703-abc6-7942e19169e4",
+        "710cd22c-f13b-44ce-acc0-82da1b763ec7"
+      ],
+      "settings": {
+        "product": "bianco",
+        "product_title": "{{ section.settings.product.title }}",
+        "product_layout_desktop": "gallery-left",
+        "product_image_aspect_ratio": "4.5\/5.5",
+        "product_image_border_enable": true,
+        "carousel_pagination": false,
+        "carousel_autoplay": 3000,
+        "carousel_animation_duration": 450,
+        "carousel_gap": 20,
+        "border_top": true,
+        "border_bottom": false,
+        "text_colour": "off-black",
+        "background": "off-white",
+        "container": "container",
+        "padding_top": 84,
+        "padding_bottom": 84,
+        "anchor_id": "featured-wine-bianco"
+      }
+    },
+    "a9e103a4-0ed5-4a14-9b1f-57f3edbe974e": {
+      "type": "featured-wine",
+      "blocks": {
+        "b5a47763-e439-480f-8479-2f07480bd2cc": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "c8b0d00e-5ccc-4c41-bebf-a6ab58ab9e99": {
+          "type": "accordion",
+          "settings": {
+            "open": false,
+            "title": "Technical Information",
+            "content": "<p>{{ section.settings.product.metafields.additional.technical_information | metafield_tag }}<\/p>"
+          }
+        },
+        "a14b98fa-bdd9-4729-a290-693c2a31e331": {
+          "type": "accordion",
+          "settings": {
+            "open": false,
+            "title": "Flavour Notes",
+            "content": "<p>{{ section.settings.product.metafields.additional.flavour_notes | metafield_tag }}<\/p>"
+          }
+        },
+        "aa5c42c0-75c0-45e3-bdd3-eebc85a3f9ce": {
+          "type": "accordion",
+          "settings": {
+            "open": false,
+            "title": "Good grapes",
+            "content": "<p>{{ section.settings.product.metafields.additional.wine_pairings | metafield_tag }}<\/p>"
+          }
+        },
+        "3841b46d-1069-4eb0-a399-b9a74e9f6f86": {
+          "type": "button",
+          "settings": {
+            "button_title": "Where to Buy",
+            "button_link": "shopify:\/\/pages\/store-locator",
+            "button_background_colour": "off-black",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-white"
+          }
+        },
+        "52bb72d3-581e-459e-bda4-064a22f42109": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_title": "Download Tech Sheet",
+            "button_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0683\/1023\/7481\/files\/VIA--sample-tech-sheet.pdf?v=1674352710",
+            "button_background_colour": "rosa",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black"
+          }
+        }
+      },
+      "block_order": [
+        "b5a47763-e439-480f-8479-2f07480bd2cc",
+        "c8b0d00e-5ccc-4c41-bebf-a6ab58ab9e99",
+        "a14b98fa-bdd9-4729-a290-693c2a31e331",
+        "aa5c42c0-75c0-45e3-bdd3-eebc85a3f9ce",
+        "3841b46d-1069-4eb0-a399-b9a74e9f6f86",
+        "52bb72d3-581e-459e-bda4-064a22f42109"
+      ],
+      "settings": {
+        "product": "rosato",
+        "product_title": "{{ section.settings.product.title }}",
+        "product_layout_desktop": "gallery-right",
+        "product_image_aspect_ratio": "4.5\/5.5",
+        "product_image_border_enable": true,
+        "carousel_pagination": false,
+        "carousel_autoplay": 3000,
+        "carousel_animation_duration": 450,
+        "carousel_gap": 20,
+        "border_top": true,
+        "border_bottom": false,
+        "text_colour": "dark",
+        "background": "rosa",
+        "container": "container",
+        "padding_top": 84,
+        "padding_bottom": 84,
+        "anchor_id": "featured-wine-rosato"
+      }
+    },
+    "e0c1cfd3-cfbf-4a6c-baa4-b894926d46ff": {
+      "type": "featured-wine",
+      "blocks": {
+        "3a556ddd-6430-4d9f-8dcc-5727b5de96cf": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "f79dc919-2c21-4747-a777-77a0e9c1ca1e": {
+          "type": "accordion",
+          "settings": {
+            "open": false,
+            "title": "Technical Information",
+            "content": "<p>{{ section.settings.product.metafields.additional.technical_information | metafield_tag }}<\/p>"
+          }
+        },
+        "15d93046-063c-429a-9a06-83e5a9e17173": {
+          "type": "accordion",
+          "settings": {
+            "open": false,
+            "title": "Flavour Notes",
+            "content": "<p>{{ section.settings.product.metafields.additional.flavour_notes | metafield_tag }}<\/p>"
+          }
+        },
+        "c6b4bff4-c69c-43fd-9f32-29cc1cfadd9c": {
+          "type": "accordion",
+          "settings": {
+            "open": false,
+            "title": "Good grapes",
+            "content": "<p>{{ section.settings.product.metafields.additional.wine_pairings | metafield_tag }}<\/p>"
+          }
+        },
+        "82106d6a-38ab-4a49-aacb-4c2fca19beab": {
+          "type": "button",
+          "settings": {
+            "button_title": "Where to Buy",
+            "button_link": "shopify:\/\/pages\/store-locator",
+            "button_background_colour": "off-white",
+            "button_border_colour": "off-white",
+            "button_text_colour": "off-black"
+          }
+        },
+        "131b8f7e-9a3e-4bd2-8757-25f898b2506b": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_title": "Download Tech Sheet",
+            "button_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0683\/1023\/7481\/files\/VIA--sample-tech-sheet.pdf?v=1674352710",
+            "button_background_colour": "rosso",
+            "button_border_colour": "off-white",
+            "button_text_colour": "off-white"
+          }
+        }
+      },
+      "block_order": [
+        "3a556ddd-6430-4d9f-8dcc-5727b5de96cf",
+        "f79dc919-2c21-4747-a777-77a0e9c1ca1e",
+        "15d93046-063c-429a-9a06-83e5a9e17173",
+        "c6b4bff4-c69c-43fd-9f32-29cc1cfadd9c",
+        "82106d6a-38ab-4a49-aacb-4c2fca19beab",
+        "131b8f7e-9a3e-4bd2-8757-25f898b2506b"
+      ],
+      "settings": {
+        "product": "rosso",
+        "product_title": "{{ section.settings.product.title }}",
+        "product_layout_desktop": "gallery-left",
+        "product_image_aspect_ratio": "4.5\/5.5",
+        "product_image_border_enable": false,
+        "carousel_pagination": false,
+        "carousel_autoplay": 3000,
+        "carousel_animation_duration": 450,
+        "carousel_gap": 20,
+        "border_top": true,
+        "border_bottom": false,
+        "text_colour": "off-white",
+        "background": "rosso",
+        "container": "container",
+        "padding_top": 84,
+        "padding_bottom": 84,
+        "anchor_id": "featured-wine-rosso"
+      }
+    },
+    "52295274-f199-4b3a-b22b-ae097ac15bba": {
+      "type": "sustainability",
+      "blocks": {
+        "b01c4449-8148-46a3-9fbd-01c95749de3b": {
+          "type": "extra-adornment",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VIA--our-wine-sustainability-extra-adornment_3x_3ec01fb9-36bc-4aff-bb9b-4be04a69ebce.png"
+          }
+        },
+        "7bd08d19-588d-4f87-b6db-5526797c99d9": {
+          "type": "heading",
+          "settings": {
+            "heading": "No glass please!"
+          }
+        },
+        "4d5d8147-15ee-4501-8519-5432c11d50fa": {
+          "type": "message",
+          "settings": {
+            "message": "<p>Light to ship and to carry - Viavino is wine that travels better. Using Tetra Pak is our way of bringing good Italian wine to you sustainably. <\/p>"
+          }
+        },
+        "94860058-cbb3-4277-8454-c69f8b7e2a85": {
+          "type": "badge",
+          "settings": {
+            "badge": "shopify:\/\/shop_images\/VIA--our-wine-sustainability-extra-adornment-bade-01_3x_267f73b0-7cfe-4d0d-96fc-66d0ed6acdbf.png"
+          }
+        },
+        "7f09aee4-0a3b-4b1b-9f9b-2b2061127da5": {
+          "type": "badge",
+          "settings": {
+            "badge": "shopify:\/\/shop_images\/VIA--our-wine-sustainability-extra-adornment-bade-02_3x_92c000b3-09a1-4b20-be84-d18b3e88e95c.png"
+          }
+        },
+        "2d93b6bc-d044-4a05-8648-dd008a6de761": {
+          "type": "button",
+          "settings": {
+            "button_title": "Why Tetra",
+            "button_link": "shopify:\/\/pages\/sustainability",
+            "button_background_colour": "off-white",
+            "button_border_colour": "off-black",
+            "button_text_colour": "off-black"
+          }
+        }
+      },
+      "block_order": [
+        "b01c4449-8148-46a3-9fbd-01c95749de3b",
+        "7bd08d19-588d-4f87-b6db-5526797c99d9",
+        "4d5d8147-15ee-4501-8519-5432c11d50fa",
+        "94860058-cbb3-4277-8454-c69f8b7e2a85",
+        "7f09aee4-0a3b-4b1b-9f9b-2b2061127da5",
+        "2d93b6bc-d044-4a05-8648-dd008a6de761"
+      ],
+      "settings": {
+        "supporting_image": "shopify:\/\/shop_images\/VIA--home-sustainability-supporting-image_3x_1800x_2a56a563-c2b2-408a-943a-e7001659bd59.png",
+        "border_top": true,
+        "border_bottom": false,
+        "text_colour": "dark",
+        "background": "off-white",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "anchor_id": ""
+      }
+    },
+    "d4cc95bc-d8c8-4374-b7f5-cabb04431c7e": {
+      "type": "marquee",
+      "disabled": true,
+      "settings": {
+        "text": "<p>Reviews<\/p>",
+        "reverse": true,
+        "font_size": 20,
+        "duration": 67,
+        "gap": 14,
+        "style": "secondary",
+        "border_top": true,
+        "border_bottom": false,
+        "text_colour": "light",
+        "background": "off-black",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "4cf01146-29ab-497e-b4fb-cd15b834cdc3": {
+      "type": "featured-reviews",
+      "blocks": {
+        "a7462c68-1acc-45b5-a36e-d822a845523e": {
+          "type": "review",
+          "settings": {
+            "review": "The white wine should be a staple in your refrigerator.",
+            "reviewer_logo": "shopify:\/\/shop_images\/review-logo-01-logo-_3x_a50ecc29-6195-43ce-a68c-ca77ab7093c0.png",
+            "rating": 5,
+            "background": "image",
+            "background_image": "shopify:\/\/shop_images\/off-white-pattern_00d4eb39-736a-42c0-babf-f5ecc3cfb34d.png"
+          }
+        },
+        "95e8c5cc-6c6e-48a5-8813-8e4914dd9440": {
+          "type": "review",
+          "settings": {
+            "review": "Viavino is for those with a sophisticated palette and a flair for ~*aesthetic*~",
+            "reviewer_logo": "shopify:\/\/shop_images\/review-logo-02-logo-_3x_9ce36da4-9d3d-4d82-8dec-fea51e5a4079.png",
+            "rating": 5,
+            "background": "off-white"
+          }
+        },
+        "f829793e-a187-4a72-af91-b367dbcbedba": {
+          "type": "review",
+          "settings": {
+            "review": "Viavino just might be tapping into the zeitgeist of our times.",
+            "reviewer_logo": "shopify:\/\/shop_images\/review-logo-03-logo-_3x_c9bc9f5a-f3f7-4cbf-ae31-ff62d16dfb4c.png",
+            "rating": 5,
+            "background": "rosa"
+          }
+        }
+      },
+      "block_order": [
+        "a7462c68-1acc-45b5-a36e-d822a845523e",
+        "95e8c5cc-6c6e-48a5-8813-8e4914dd9440",
+        "f829793e-a187-4a72-af91-b367dbcbedba"
+      ],
+      "disabled": true,
+      "settings": {
+        "carousel_autoplay": 3500,
+        "carousel_animation_duration": 450,
+        "carousel_gap": 32,
+        "border_top": true,
+        "border_bottom": false,
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/section-featured-reviews_2x_1800x_9125744f-eff4-40ea-bf04-bb1442934b97.jpg",
+        "background_image_position_desktop": "center center",
+        "background_image_position_mobile": "center center",
+        "container": "container",
+        "grid_layout": "three-column",
+        "grid_gutter": 32,
+        "padding_top": 52,
+        "padding_bottom": 180,
+        "anchor_id": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "width": "full",
+        "background": "off-white",
+        "container": "container",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "anchor_id": ""
+      }
+    }
+  }
+}

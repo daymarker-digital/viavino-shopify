@@ -1,0 +1,71 @@
+{%- liquid
+
+  assign snippet_name = 'age-gate'
+  assign snippet_classes = snippet_name | append: ' modal fade'
+  assign snippet_id = snippet_name
+
+  assign container = settings.age_gate_container | default: 'container'
+  assign content_width_desktop = settings.age_gate_content_width_desktop | default: 100
+  assign content_width_mobile = settings.age_gate_content_width_mobile | default: 100
+  assign cookie_duration = settings.age_gate_cookie_duration | default: 30
+  assign enable = settings.age_gate_enable | default: false
+
+-%}
+
+{% if enable %}
+
+  {%- style -%}
+
+    #{{ snippet_id }} .{{ snippet_name }}__content {
+      width: {{ content_width_mobile }}%;
+    }
+
+    @media screen and (min-width: 992px) {
+      #{{ snippet_id }} .{{ snippet_name }}__content {
+        width: {{ content_width_desktop }}%;
+      }
+    }
+
+    {%
+      render 'element-styles',
+        element_background: 'off-white',
+        element_id: snippet_id,
+    %}
+
+  {%- endstyle -%}
+
+  <div
+    {%-
+      render 'element-attrs',
+        element_background: settings.age_gate_background,
+        element_class: snippet_classes,
+        element_id: snippet_id,
+    -%}
+    aria-hidden="true"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+  >
+    <div class="modal-dialog">
+      <div class="{{ snippet_name }}__main modal-main">
+        {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
+          <div class="{{ snippet_name }}__content modal-content">
+
+            <strong class="{{ snippet_name }}__heading heading--page-title">{{ settings.age_gate_heading }}</strong>
+            <div class="{{ snippet_name }}__message body-copy--secondary">{{ settings.age_gate_message }}</div>
+            <button
+              class="{{ snippet_name }}__button button--primary button--colour-secondary"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#{{ snippet_id }}"
+              aria-label="Close"
+            >{{ settings.age_gate_button_title }}</button>
+            <div class="{{ snippet_name }}__disclaimer body-copy--primary">We will save your choice for {{ cookie_duration }} days</div>
+
+          </div>
+        {% render 'bs-container', state: 'closed', col: 'col-12', container: container %}
+      </div>
+    </div>
+  </div>
+
+{% endif %}

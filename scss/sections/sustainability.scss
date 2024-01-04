@@ -1,0 +1,225 @@
+@use '../utils/mixins/breakpoint' as *;
+
+.sustainability {
+
+  position: relative;
+
+  $badge-size: 82px;
+
+  .inverted-corner-box {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  &__extra-adornment,
+  &__heading,
+  &__message {
+    & + .sustainability__extras {
+      margin-top: 40px;
+    }
+  }
+
+  &__badges,
+  &__cta {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  &__heading,
+  &__message {
+    display: block;
+    width: 100%;
+  }
+
+  &__badges {
+    &-item {
+      width: $badge-size;
+      height: $badge-size;
+      img, svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__extra-adornment {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    img, svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    & + .sustainability__heading,
+    & + .sustainability__message {
+      margin-top: 40px;
+    }
+  }
+
+  &__extras {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    flex-flow: column wrap;
+    & > * {
+      & + * {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &__heading {
+    font-size: 22px;
+    line-height: 1;
+    & + .sustainability__message {
+      margin-top: 16px;
+    }
+  }
+
+  &__main {
+    position: relative;
+    z-index: 5;
+  }
+
+  @include breakpoint(sm) {
+
+    $badge-size: 92px;
+
+    &__badges {
+      &-item {
+        width: $badge-size;
+        height: $badge-size;
+      }
+    }
+
+    &__heading {
+      font-size: 26px;
+    }
+
+  }
+
+  @include breakpoint(md) {
+
+    $badge-size: 102px;
+
+    &__badges {
+      &-item {
+        width: $badge-size;
+        height: $badge-size;
+      }
+    }
+
+    &__heading {
+      font-size: 30px;
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    $badge-size: 66px;
+    $badge-gap: 15px;
+
+    .inverted-corner-box {
+      max-width: none;
+    }
+
+    &__badges {
+      width: auto;
+      flex: unset;
+      gap: $badge-gap;
+      &-item {
+        width: $badge-size;
+        height: $badge-size;
+      }
+    }
+
+    &__content {
+      &.with-supporting-image {
+        width: 50%;
+      }
+    }
+
+    &__cta {
+      flex: 1;
+      justify-content: flex-start;
+    }
+
+    &__extras {
+      justify-content: center;
+      flex-flow: row wrap;
+      gap: $badge-gap;
+      & > * {
+        & + * {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &__heading {
+      font-size: 25px;
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    $badge-size: 72px;
+    $badge-gap: 18px;
+
+    &__badges {
+      gap: $badge-gap;
+      &-item {
+        width: $badge-size;
+        height: $badge-size;
+      }
+    }
+
+    &__extras {
+      gap: $badge-gap;
+    }
+
+    &__heading {
+      font-size: 30px;
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    $badge-size: 78px;
+    $badge-gap: 20px;
+
+    &__badges {
+      gap: $badge-gap;
+      &-item {
+        width: $badge-size;
+        height: $badge-size;
+      }
+    }
+
+    &__extras {
+      gap: $badge-gap;
+    }
+
+    &__heading {
+      font-size: 35px;
+    }
+
+  }
+
+}

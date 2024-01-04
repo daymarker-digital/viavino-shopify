@@ -1,0 +1,84 @@
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins/breakpoint' as *;
+
+.drawer-menu {
+
+  $width: map.get($theme-drawer-widths, 'base');
+
+  transform: translate3d( -1 * $width, 0, 0 );
+  left: 0;
+  width: $width;
+
+  .navigation {
+    flex-flow: column wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    &__item {
+      @each $name, $value in $theme-font-sizes-heading {
+        @if $name == 'base' {
+          font-size: 0.9 * $value;
+        } @else {
+          @include breakpoint(#{$name}) {
+            font-size: 0.8 * $value;
+          }
+        }
+      }
+    }
+  }
+
+  &__button {
+    &-close {
+      margin-right: auto;
+    }
+  }
+
+  &__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__main {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .drawer-menu--active & {
+    transform: translate3d( 0,0,0 );
+  }
+
+  @include breakpoint(sm) {
+
+    $width: map.get($theme-drawer-widths, 'sm');
+
+    transform: translate3d( -1 * $width, 0, 0 );
+    width: $width;
+
+  }
+
+  @include breakpoint(md) {
+
+    $width: map.get($theme-drawer-widths, 'md');
+
+    transform: translate3d( -1 * $width, 0, 0 );
+    width: $width;
+
+  }
+
+  @include breakpoint(lg) {
+
+    .drawer-menu--active & {
+      transform: translate3d( -1 * $width, 0, 0 );
+    }
+
+  }
+
+}

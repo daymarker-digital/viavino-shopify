@@ -1,0 +1,121 @@
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins/border' as *;
+@use '../utils/mixins/breakpoint' as *;
+
+.drawer-cart {
+
+  right: 0;
+
+  @each $name, $value in $theme-drawer-widths {
+    @if $name == 'base' {
+      width: $value;
+      transform: translate3d( $value, 0, 0 );
+    } @else {
+      @include breakpoint(#{$name}) {
+        width: $value;
+        transform: translate3d( $value, 0, 0 );
+      }
+    }
+  }
+
+  .inverted-corner-box {
+    width: 100%;
+  }
+
+  &__actions,
+  &__cart-line-items,
+  &__footer {
+    @include border-solid( var(--theme-border-width), 'inherit', 'top' );
+  }
+
+  &__actions,
+  &__cart-subtotal {
+    display: flex;
+  }
+
+  &__actions {
+    justify-content: center;
+    padding: calc( 1.5 * var(--theme-cart-line-item-padding)) var(--theme-cart-line-item-padding);
+  }
+
+  &__button-close {
+    margin-left: auto;
+  }
+
+  &__cart-subtotal {
+    padding: var(--theme-cart-line-item-padding);
+    background: rgba(var(--theme-colour-rosa), 1);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-flow: row nowrap;
+  }
+
+  &__footer {
+    flex-shrink: 0;
+  }
+
+  &__heading {
+    font-size: 20px;
+    line-heigth: 0.9;
+  }
+
+  &__main {
+    flex: 1 1 auto; /* div B should fit the remaining space */
+    overflow-y: auto;
+    &-content {
+      min-height: 100%;
+    }
+  }
+
+  .drawer-cart--active & {
+    transform: translate3d(0,0,0);
+  }
+
+  @include breakpoint(lg) {
+
+    @include border-solid( var(--theme-border-width), 'inherit', 'left' );
+
+    &__actions {
+      justify-content: center;
+      padding: calc( 1.5 * var(--theme-cart-line-item-padding--lg)) var(--theme-cart-line-item-padding--lg);
+    }
+
+    &__cart-subtotal {
+      padding: var(--theme-cart-line-item-padding--lg);
+    }
+
+    &__heading {
+      font-size: 24px;
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    &__actions {
+      justify-content: center;
+      padding: calc( 1.5 * var(--theme-cart-line-item-padding--xl)) var(--theme-cart-line-item-padding--xl);
+    }
+
+    &__cart-subtotal {
+      padding: var(--theme-cart-line-item-padding--xl);
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    &__actions {
+      justify-content: center;
+      padding: calc( 1.5 * var(--theme-cart-line-item-padding--xxl)) var(--theme-cart-line-item-padding--xxl);
+    }
+
+    &__cart-subtotal {
+      padding: var(--theme-cart-line-item-padding--xxl);
+    }
+
+  }
+
+}

@@ -1,0 +1,148 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+
+    {% render 'google-analytics' %}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {%
+      render 'theme--preconnect-resources',
+        resources: 'https://cdn.shopify.com, https://v.shopify.com, https://cdn.jsdelivr.net, https://www.google-analytics.com, https://cdn.storerocket.io'
+    %}
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<meta name="author" content="Very Polite">
+  	<meta http-equiv="Expires" content="7" />
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="wxwOrvDQf7SBMePH7jRxwchaUBA-WeI8rMMKe3FoZIE" />
+
+    <!-- Canonical URL -->
+  	<link rel='canonical' href='{{ canonical_url }}'>
+
+    <!-- Icons -->
+    <link href='{{ "favicon.ico" | asset_url }}' type='image/x-icon' rel='shortcut icon' />
+    <link href='{{ "apple-touch-icon.png" | asset_url }}' type='image/png' rel='apple-touch-icon'>
+
+    {{ content_for_header }}
+
+    <!-- SEO -->
+    {% assign enable_seo = true %}
+    {% if enable_seo %}
+      {% if page_description %}
+        <meta name="description" content="{{ page_description | escape }}">
+      {% endif %}
+      {% render 'theme--meta-tags' %}
+    {% else %}
+  		<meta name="robots" content="noindex, nofollow">
+    {% endif %}
+
+    <link rel="stylesheet" href="{{ 'style.css' | asset_url }}">
+
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      if ( Shopify.designMode ) document.documentElement.classList.add('shopify-design-mode');
+      window.moneyFormat = {{ shop.money_format | json }};
+    </script>
+
+    {% render 'theme--external-scripts' %}
+
+  </head>
+
+  <body class="{% render 'theme--classes' %}">
+
+    {% section 'age-gate' %}
+    {% section 'drawer-menu' %}
+    {% unless request.path == '/cart' %}
+      {% section 'drawer-cart' %}
+    {% endunless %}
+    {% section 'header' %}
+
+    <main class="{% render 'theme--classes' %} content-for-layout focus-none path {{ request.path }}" role="main" tabindex="-1">
+      {% case request.path %}
+        {% when '/policies/privacy-policy' %}
+          {% section 'policy-privacy' %}
+        {% when '/policies/refund-policy' %}
+          {% section 'policy-refund' %}
+        {% when '/policies/shipping-policy' %}
+          {% section 'policy-shipping' %}
+        {% when '/policies/subscription-policy' %}
+          {% section 'policy-subscription' %}
+        {% when '/policies/terms-of-service' %}
+          {% section 'policy-terms-of-service' %}
+        {% else %}
+          {{ content_for_layout }}
+      {% endcase %}
+    </main>
+
+    {% section 'footer' %}
+    {% section 'newsletter-popup' %}
+    {% section 'cookie-popup' %}
+
+    <script>
+      var Theme = Theme || {};
+      Theme.cart = {{ cart | json }};
+      Theme.collection = {{ collection | json }} || {};
+      Theme.currency = {{ shop.currency | json }};
+      Theme.customer = {{ customer | json }} || {};
+      Theme.drawer = {
+        cart: {
+          delay_close: {{ settings.cart_drawer_delay_close | json }} || 3000,
+        }
+      };
+      Theme.icons = {
+        dark: {
+          minus: {{ 'icon--minus.dark.svg' | asset_url | json }},
+          plus: {{ 'icon--plus.dark.svg' | asset_url | json }},
+          trash: {{ 'icon--trash.dark.svg' | asset_url | json }}
+        },
+        light: {
+          minus: {{ 'icon--minus.light.svg' | asset_url | json }},
+          plus: {{ 'icon--plus.light.svg' | asset_url | json }},
+          trash: {{ 'icon--trash.light.svg' | asset_url | json }}
+        }
+      };
+      Theme.moneyFormat = {{ shop.money_format | json }};
+      Theme.orders = [];
+      Theme.product = {{ product | json }} || {};
+      Theme.routes = {
+        root_url: '{{ routes.root_url }}',
+        cart_url: '{{ routes.cart_url }}',
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        cart_update_url: '{{ routes.cart_update_url }}',
+        predictive_search_url: '{{ routes.predictive_search_url }}'
+      };
+      Theme.settings = {
+        cart: {
+          empty_message: {{ settings.cart_empty_message | json }} || '<p>Mi scusi! <br>Cart Empty :(</p>',
+        }
+      };
+      Theme.tools = {
+        imgURLFilter: function(src, size) {
+          return src
+            .replace(/_(pico|icon|thumb|small|compact|medium|large|grande|original|1024x1024|2048x2048|master)+\./g, '.')
+            .replace(/\.jpg|\.png|\.gif|\.jpeg/g, function(match) {
+              return '_'+size+match;
+            });
+        }
+      };
+    </script>
+
+    <script defer src="{{ 'main.min.js' | asset_url }}"></script>
+
+    {% case template %}
+      {% when 'article', 'product' %}
+        {% render 'json-ld' %}
+    {% endcase %}
+
+  </body>
+</html>
