@@ -127,14 +127,14 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/VIA--sustainability-card-grid-01_3x_2048x2_ad769e01-e579-4aec-b7b6-6d0cdcf0eb8e.jpg",
             "heading": "Bottles are for bambinos!",
-            "message": "<p>A carton’s <a href=\"https:\/\/www.omsystembolaget.se\/globalassets\/pdf\/hallbarhet\/alko-wine-packaging-lca-update_final-report.pdf\" target=\"_blank\" title=\"https:\/\/www.omsystembolaget.se\/globalassets\/pdf\/hallbarhet\/alko-wine-packaging-lca-update_final-report.pdf\">carbon footprint<\/a> is up to 87% smaller than traditional glass wine bottles and 55% less than cans.<\/p>"
+            "message": "<p>A carton’s <a href=\"https:\/\/www.omsystembolaget.se\/globalassets\/pdf\/hallbarhet\/alko-wine-packaging-lca-update_final-report.pdf\" target=\"_blank\" title=\"https:\/\/www.omsystembolaget.se\/globalassets\/pdf\/hallbarhet\/alko-wine-packaging-lca-update_final-report.pdf\">carbon footprint<\/a> is up to 87% smaller than traditional glass wine bottles and less than cans.<\/p>"
           }
         },
         "ff9c8bf7-963e-4800-a96b-703f38003209": {
           "type": "card",
           "settings": {
             "image": "shopify:\/\/shop_images\/VIA--sustainability-card-grid-01_3x_2048x2_31db55aa-ec84-49ce-952d-67fe81b28135.jpg",
-            "heading": "Be an \nearth lover",
+            "heading": "Planet Friendly Please",
             "message": "<p>Viavino is made in an <a href=\"https:\/\/www.equalitas.it\" title=\"https:\/\/www.equalitas.it\"><strong>Equalitas<\/strong><\/a><strong> 3E Certified Sustainable Winery<\/strong> that operates on 100% self-produced green electricity. <\/p>"
           }
         }
@@ -154,7 +154,7 @@
     "5bfcbf2e-6356-49f2-84a9-c6d8f50025f8": {
       "type": "marquee",
       "settings": {
-        "text": "<p>The Anti-Glass Club<\/p>",
+        "text": "<p>Certified Sustainable<\/p>",
         "reverse": true,
         "font_size": 24,
         "duration": 100,
@@ -181,23 +181,35 @@
         "d422f965-c020-47cf-a165-e93394fea9c6": {
           "type": "heading",
           "settings": {
-            "heading": "The Anti-Glass Club",
-            "heading_size": "md",
+            "heading": "Equalitas 3e sustainable winery",
+            "heading_size": "sm",
             "heading_tag": "h2"
           }
         },
         "d837553d-9dca-4503-9939-3f250a92a1b2": {
           "type": "message",
           "settings": {
-            "message": "<p>Glass has the highest carbon footprint across all sizes and categories, with values up to 12 times higher than cartons.<\/p><p><strong>1 truck of empty Tetra Pak = 23 trucks of glass wine bottles<\/strong><\/p>",
+            "message": "<p><strong>Environmental • Ethical • Economical <\/strong><\/p><p>Our winery adheres to the stringent Environmental, Ethical, and Economical (3E) sustainability standards of Equalitas.<\/p><p>We're part of a cooperative model that embraces a circular economy, where by-products from winemaking are repurposed for creating other valuable products, such as renewable energy and soil nutrients. This not only enhances environmental sustainability but also adds economic value for the members of the cooperative.<\/p>",
             "message_style": "primary"
+          }
+        },
+        "8709ef1d-b710-42ac-bf07-d482d266cadf": {
+          "type": "button",
+          "settings": {
+            "button_title": "Learn More",
+            "button_link": "https:\/\/www.equalitas.it\/en\/",
+            "button_style": "secondary",
+            "button_background_colour": "rosso",
+            "button_border_colour": "off-white",
+            "button_text_colour": "off-white"
           }
         }
       },
       "block_order": [
         "343f415f-e891-4915-b875-fdd537d46152",
         "d422f965-c020-47cf-a165-e93394fea9c6",
-        "d837553d-9dca-4503-9939-3f250a92a1b2"
+        "d837553d-9dca-4503-9939-3f250a92a1b2",
+        "8709ef1d-b710-42ac-bf07-d482d266cadf"
       ],
       "settings": {
         "height_desktop": "auto",
@@ -219,7 +231,6 @@
     },
     "4fb448ed-bc29-4397-bf64-1230fd5b7209": {
       "type": "fifty-fifty",
-      "disabled": true,
       "blocks": {
         "0224fe35-00f6-4a94-a4eb-03a5902d27ad": {
           "type": "image",
@@ -262,6 +273,7 @@
         "0224fe35-00f6-4a94-a4eb-03a5902d27ad",
         "37374d47-0443-413d-be97-784bf81ca250"
       ],
+      "disabled": true,
       "settings": {
         "content_border_mobile": true,
         "content_border_desktop": true,
@@ -402,8 +414,8 @@
           "type": "benefit",
           "settings": {
             "image": "shopify:\/\/shop_images\/VIA--sustainability-card-benefit-image-02_2x_e98bd930-4398-4c71-86fe-e6733ae4910b.jpg",
-            "heading": "Light",
-            "message": "<p>The rectangular shape and light weight means up to 45% less emissions during shipping.<\/p>"
+            "heading": "Efficient",
+            "message": "<p>Tetra Pak is delivered to the winery on rolls of printed material. This means that <strong>1 truck of Tetra Pak can move the same amount of 'units' as 23 trucks of glass bottles<\/strong>. This amazing efficiency extends to the carton’s end-of-life.<\/p>"
           }
         },
         "20dbe500-8a25-4c6a-8b49-313020b7692f": {
