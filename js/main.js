@@ -7,6 +7,7 @@ import Drawers from './modules/drawers';
 import Forms from './modules/forms';
 import Gliders from './modules/gliders';
 import InstagramFeed from './modules/instagramFeed';
+import PopUps from './modules/popUps';
 import Product from './modules/product';
 import Scrolling from './modules/scrolling';
 import Tools from './modules/tools';
@@ -18,7 +19,7 @@ CookiePopup.init();
 Credits.init();
 Drawers.init();
 Forms.init();
-InstagramFeed.init();
+
 Product.init();
 Scrolling.init();
 
@@ -34,7 +35,11 @@ window.addEventListener( 'load', (event) => {
 
   Tools.setViewportHeightCSSVariable();
   Tools.themeClasses();
+
+  PopUps.init();
+  InstagramFeed.init();
   Gliders.init();
+
   AOS.refresh();
 
   if ( document.querySelector(".storerocket-store-locator") ) {

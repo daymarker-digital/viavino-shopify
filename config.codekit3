@@ -7,7 +7,7 @@
       "uuidString" : "D3507AEE-D391-47BD-8940-33A5C863311C"
     }
   ],
-  "creatorBuild" : "34510",
+  "creatorBuild" : "34564",
   "files" : {
     "\/.editorconfig" : {
       "cB" : 0,
@@ -15,14 +15,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/.editorconfig",
-      "oF" : 0
-    },
-    "\/.env" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.env",
       "oF" : 0
     },
     "\/.gitignore" : {
@@ -886,6 +878,17 @@
       "sC" : 3,
       "tS" : 1
     },
+    "\/js\/modules\/popUps.js" : {
+      "bF" : 3,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/popUps.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
     "\/js\/modules\/product.js" : {
       "bF" : 3,
       "ft" : 64,
@@ -1383,12 +1386,6 @@
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
-    },
-    "\/node_modules" : {
-      "ft" : 65536,
-      "oA" : 2,
-      "oAP" : "\/node_modules",
-      "oF" : 0
     },
     "\/package-lock.json" : {
       "ft" : 524288,
@@ -2206,9 +2203,9 @@
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/assets\/_index.css",
-      "oF" : 0,
+      "oF" : 1,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2223,7 +2220,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-404.css",
-      "oF" : 2,
+      "oF" : 3,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2238,7 +2235,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-collection.css",
-      "oF" : 2,
+      "oF" : 3,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2253,7 +2250,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-contact-form.css",
-      "oF" : 2,
+      "oF" : 3,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2268,7 +2265,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-featured-benefits.css",
-      "oF" : 2,
+      "oF" : 3,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2283,7 +2280,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-featured-carousel.css",
-      "oF" : 2,
+      "oF" : 3,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2298,7 +2295,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-featured-image.css",
-      "oF" : 2,
+      "oF" : 3,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2313,7 +2310,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-featured-products.css",
-      "oF" : 2,
+      "oF" : 3,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2328,7 +2325,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-featured-reviews.css",
-      "oF" : 2,
+      "oF" : 3,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2343,7 +2340,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-featured-wine.css",
-      "oF" : 2,
+      "oF" : 3,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2358,7 +2355,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/fifty-fifty--LEGACY.css",
-      "oF" : 0,
+      "oF" : 1,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2373,7 +2370,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-fifty-fifty.css",
-      "oF" : 2,
+      "oF" : 3,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2388,7 +2385,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-full-width-feature.css",
-      "oF" : 2,
+      "oF" : 3,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2403,7 +2400,22 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/marquee.css",
-      "oF" : 0,
+      "oF" : 1,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/sections\/pop-up.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/section-pop-up.css",
+      "oF" : 3,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2418,7 +2430,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-stockists.css",
-      "oF" : 2,
+      "oF" : 3,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2433,7 +2445,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-sustainability.css",
-      "oF" : 2,
+      "oF" : 3,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2448,7 +2460,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-three-card-grid.css",
-      "oF" : 2,
+      "oF" : 3,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -3437,6 +3449,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/policy-terms-of-service.liquid",
+      "oF" : 0
+    },
+    "\/sections\/pop-up.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/pop-up.liquid",
       "oF" : 0
     },
     "\/sections\/stockists.liquid" : {
@@ -4973,9 +4993,6 @@
       "no-new-native-nonconstructor" : {
         "active" : 0
       },
-      "no-new-object" : {
-        "active" : 0
-      },
       "no-new-symbol" : {
         "active" : 1
       },
@@ -4987,6 +5004,9 @@
       },
       "no-obj-calls" : {
         "active" : 1
+      },
+      "no-object-constructor" : {
+        "active" : 0
       },
       "no-octal" : {
         "active" : 1
@@ -5041,9 +5061,6 @@
       "no-return-assign" : {
         "active" : 0,
         "optionString" : "'except-parens'"
-      },
-      "no-return-await" : {
-        "active" : 0
       },
       "no-script-url" : {
         "active" : 0

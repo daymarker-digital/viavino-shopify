@@ -1,0 +1,14 @@
+.pop-up {
+
+  .modal {
+    &-content {
+      padding: 20px;
+    }
+    &-dialog {
+      [data-colour-theme="off-white"] & {
+        background: var(--theme-colour-off-white);
+      }
+    }
+  }
+
+}
