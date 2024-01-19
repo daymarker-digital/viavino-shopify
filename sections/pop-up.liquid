@@ -100,19 +100,26 @@
   "name": "Pop Up",
   "tag": "section",
   "class": "section section--pop-up pop-up",
-  "presets": [
-    {
-      "name": "Pop Up"
-    }
-  ],
   "settings": [
     {
       "content": "Settings",
       "type": "header"
     },
     {
+      "label": "Colour Theme",
+      "type": "select",
+      "options": [
+        { "label": "Rosa", "value": "rosa" },
+        { "label": "Rosso", "value": "rosso" },
+        { "label": "Off Black", "value": "off-black" },
+        { "label": "Off White", "value": "off-white" }
+      ],
+      "default": "off-white",
+      "id": "colour_theme"
+    },
+    {
       "label": "Delay",
-      "info": "Length of time (in milliseconds) before popup is shown.",
+      "info": "Length of time (in milliseconds) before pop-up is shown.",
       "type": "range",
       "min": 3000,
       "max": 8000,
@@ -135,29 +142,19 @@
       "type": "header"
     },
     {
-      "content": "Heading",
-      "type": "paragraph"
-    },
-    {
       "label": "Heading",
       "type": "text",
       "id": "heading"
     },
     {
-      "label": "Heading Size",
+      "label": "Heading Font Family",
       "type": "select",
       "options": [
-        { "label": "Large", "value": "lg" },
-        { "label": "Medium", "value": "md" },
-        { "label": "Small", "value": "sm" },
-        { "label": "Tiny", "value": "xs" }
+        { "label": "Clarendon Wide Slab", "value": "clarendon-wide-slab" },
+        { "label": "Novecento Sans", "value": "novecento-sans" }
       ],
-      "default": "md",
-      "id": "heading_size"
-    },
-    {
-      "content": "Message",
-      "type": "paragraph"
+      "default": "clarendon-wide-slab",
+      "id": "heading_font_family"
     },
     {
       "label": "Message",
@@ -165,112 +162,20 @@
       "id": "message"
     },
     {
-      "label": "Message Style",
-      "type": "select",
-      "options": [
-        { "label": "Primary", "value": "primary" },
-        { "label": "Secondary", "value": "secondary" },
-        { "label": "Tertiary", "value": "tertiary" }
-      ],
-      "default": "primary",
-      "id": "message_style"
-    },
-    {
-      "label": "Message Size",
-      "type": "select",
-      "options": [
-        { "label": "Large", "value": "lg" },
-        { "label": "Medium", "value": "md" },
-        { "label": "Small", "value": "sm" },
-        { "label": "Tiny", "value": "xs" },
-        { "label": "Fine Print", "value": "xxs" }
-      ],
-      "default": "md",
-      "id": "message_size"
-    },
-    {
-      "content": "Button",
-      "type": "paragraph"
-    },
-    {
-      "label": "Button Title",
+      "label": "Button",
       "type": "text",
+      "default": "Submit",
       "id": "button_title"
     },
     {
-      "label": "Button Background",
-      "type": "select",
-      "options": [
-        { "label": "Off-black", "value": "off-black" },
-        { "label": "Off-white", "value": "off-white" },
-        { "label": "Rosa", "value": "rosa" },
-        { "label": "Rosso", "value": "rosso" }
-      ],
-      "default": "off-white",
-      "id": "button_background_colour"
-    },
+      "label": "Subheading",
+      "type": "richtext",
+      "id": "subheading"
+    }
+  ],
+  "presets": [
     {
-      "label": "Button Border",
-      "type": "select",
-      "options": [
-        { "label": "Off-black", "value": "off-black" },
-        { "label": "Off-white", "value": "off-white" }
-      ],
-      "default": "off-black",
-      "id": "button_border_colour"
-    },
-    {
-      "label": "Button Text Colour",
-      "type": "select",
-      "options": [
-        { "label": "Off-black", "value": "off-black" },
-        { "label": "Off-white", "value": "off-white" }
-      ],
-      "default": "off-black",
-      "id": "button_text_colour"
-    },
-    {
-      "content": "Disclaimer",
-      "type": "paragraph"
-    },
-    {
-      "label": "Disclaimer Size",
-      "type": "select",
-      "options": [
-        { "label": "Large", "value": "lg" },
-        { "label": "Medium", "value": "md" },
-        { "label": "Small", "value": "sm" },
-        { "label": "Tiny", "value": "xs" },
-        { "label": "Fine Print", "value": "xxs" }
-      ],
-      "default": "xs",
-      "id": "disclaimer_size"
-    },
-    {
-      "content": "Style",
-      "type": "header"
-    },
-    {
-      "label": "Text Colour",
-      "type": "select",
-      "options": [
-        { "label": "Off-black", "value": "off-black" },
-        { "label": "Off-white", "value": "off-white" }
-      ],
-      "default": "off-black",
-      "id": "text_colour"
-    },
-    {
-      "label": "Background",
-      "type": "select",
-      "options": [
-        { "label": "Off-black", "value": "off-black" },
-        { "label": "Off-white", "value": "off-white" },
-        { "label": "Rosa", "value": "rosa" },
-        { "label": "Rosso", "value": "rosso" }
-      ],
-      "default": "off-white",
-      "id": "background"
+      "name": "Pop Up"
     }
   ]
 }
