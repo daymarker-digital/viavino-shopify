@@ -1,14 +1,30 @@
 .pop-up {
 
+  .inverted-corner-box {
+    height: 100%;
+    &__content {
+      text-align: center;
+      padding: 30px;
+      min-height: 100%;
+    }
+  }
+
   .modal {
     &-content {
-      padding: 20px;
+      height: 100%;
     }
     &-dialog {
-      [data-colour-theme="off-white"] & {
-        background: var(--theme-colour-off-white);
-      }
+      padding: 20px;
     }
+  }
+
+  &__button {
+    width: 24px !important;
+    height: 24px !important;
+    top: 30px;
+    right: 30px;
+    position: absolute;
+    background: black;
   }
 
 }

@@ -14,12 +14,30 @@
   assign modal_id = section_name | append: section.id
   assign subheading = section.settings.subheading | default: ''
 
+  case colour_theme
+    when 'rosa'
+      # Rosa
+      assign border_colour = 'off-black'
+    when 'rosso'
+      # Rosso
+      assign border_colour = 'off-white'
+    when 'off-black'
+      # Off Black
+      assign border_colour = 'off-white'
+    else
+      # Off White
+      assign border_colour = 'off-black'
+  endcase
+
 -%}
 
 {{ 'section-pop-up.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   #{{ modal_id }} {
+    background: rgba(var(--theme-colour-off-black), 0.95);
+  }
+  #{{ modal_id }} .modal-dialog {
     background: rgba(var(--theme-colour-{{ colour_theme }}), 1);
   }
 {%- endstyle -%}
@@ -39,8 +57,10 @@
 <div class="modal-dialog">
   <div class="modal-content">
 
-    <div class="inverted-corner-box inverted-corner-box--background-{{ background }} inverted-corner-box--border-{{ text_colour }}">
-      <div class="inverted-corner-box__content">
+    <div class="inverted-corner-box inverted-corner-box--background-{{ colour_theme }} inverted-corner-box--border-{{ border_colour }}">
+      <div class="inverted-corner-box__content text-colour--{{ border_colour }}">
+
+        <button class="{{ section_name }}__button button--close js--close-pop-up" type="button">X</button>
 
         <div class="{{ section_name }}__main">
 
