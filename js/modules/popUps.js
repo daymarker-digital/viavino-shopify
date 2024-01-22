@@ -37,12 +37,7 @@ export default class PopUps {
   }
 
   renderInstances() {
-
     const instances = Object.values(this.instances).sort((a, b) => a.priority - b.priority);
-
-
-
-
   }
 
   handleCloseClick() {

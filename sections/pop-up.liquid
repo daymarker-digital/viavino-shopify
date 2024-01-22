@@ -12,7 +12,7 @@
   assign heading = section.settings.heading | default: ''
   assign heading_font_family = section.settings.heading_font_family
   assign message = section.settings.message | default: ''
-  assign modal_id = section_name | append: section.id
+  assign modal_id = section_name
   assign subheading = section.settings.subheading | default: ''
 
   case colour_theme
