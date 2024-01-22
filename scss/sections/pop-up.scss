@@ -1,3 +1,5 @@
+@use '../utils/mixins/breakpoint' as *;
+
 .pop-up {
 
   .inverted-corner-box {
@@ -19,20 +21,85 @@
   }
 
   &__button {
-    width: 22px !important;
-    height: 22px !important;
-    top: 30px;
-    right: 30px;
-    position: absolute;
+    &[class*="close"] {
+      width: 22px;
+      height: 22px;
+      top: 30px;
+      right: 30px;
+      position: absolute;
+      &:focus,
+      &:hover {
+        opacity: 0.5;
+      }
+    }
   }
 
   &__heading {
+    line-height: 1;
     &[class*="clarendon"] {
-      font-size: 25px;
+      font-size: 26px;
+      margin-bottom: 32px;
     }
-    &[class*="clarendon"] {
-      font-size: 25px;
+    &[class*="novecento"] {
+      font-size: 48px;
+      margin-bottom: 28px;
     }
   }
+
+  &__main {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__message {
+    font-size: 15px;
+    line-break: 1.6;
+  }
+
+  &__subheading {
+    font-size: 13px;
+    line-break: 1.54;
+  }
+
+  @include breakpoint(sm) {
+
+    &__main {
+      max-width: 450px;
+    }
+
+  }
+
+  @include breakpoint(md) {
+
+    &__heading {
+      &[class*="clarendon"] {
+        font-size: 32px;
+        margin-bottom: 34px;
+      }
+      &[class*="novecento"] {
+        font-size: 54px;
+        margin-bottom: 30px;
+      }
+    }
+
+    &__main {
+      max-width: 475px;
+    }
+
+    &__message {
+      font-size: 16px;
+    }
+
+    &__subheading {
+      font-size: 14px;
+    }
+
+  }
+
+  @include breakpoint(lg) {}
+
+  @include breakpoint(xl) {}
+
+  @include breakpoint(xxl) {}
 
 }
