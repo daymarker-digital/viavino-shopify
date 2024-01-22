@@ -418,14 +418,14 @@
     "pop_up_UyrCnB": {
       "type": "pop-up",
       "settings": {
-        "colour_theme": "rosso",
+        "colour_theme": "rosa",
         "delay": 4000,
         "cookie_duration": 30,
         "heading": "Mi Scusi!",
-        "heading_font_family": "clarendon-wide-slab",
+        "heading_font_family": "novecento-sans",
         "message": "<p>Nunc vel mauris nec ex feugiat sodales nec sed ipsum. Fusce sed dictum massa, id aliquam mi. Donec at tellus placerat congue. <\/p>",
         "button_title": "Subscribe",
-        "subheading": "<p>By clicking below to submit this form, you acknowledge that the information you provide will be processed in accordance with our <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">Privacy Policy<\/a>. You can unsubscribe at anytime.<\/p>"
+        "subheading": "<p>By submitting this form, you acknowledge that the information you provide will be processed in accordance with our <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">Privacy Policy<\/a>. You can unsubscribe at anytime.<\/p>"
       }
     }
   }
