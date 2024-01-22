@@ -1,0 +1,26 @@
+@use '../utils/mixins/font' as *;
+
+.font {
+
+  &-family {
+    &--clarendon-wide-slab {
+      @include clarendon-wide(700);
+    }
+    &--new-spririt {
+      @include new-sprint(300);
+    }
+    &--novecento-sans {
+      @include novecento-sans-condensed(700);
+    }
+  }
+
+  &-weight {
+    @for $i from 1 through 9 {
+      $weight: $i * 100;
+      &--#{$weight} {
+        font-weight: $weight;
+      }
+    }
+  }
+
+}

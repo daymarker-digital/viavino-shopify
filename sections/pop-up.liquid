@@ -60,20 +60,24 @@
     <div class="inverted-corner-box inverted-corner-box--background-{{ colour_theme }} inverted-corner-box--border-{{ border_colour }}">
       <div class="inverted-corner-box__content text-colour--{{ border_colour }}">
 
-        <button class="{{ section_name }}__button button--close js--close-pop-up" type="button">X</button>
+        <button class="{{ section_name }}__button button--close js--close-pop-up" type="button">
+          {% render 'svg', type: 'icon.close' %}
+        </button>
 
         <div class="{{ section_name }}__main">
 
           {% if heading != blank %}
-            <h2 class="{{ section_name }}__heading">{{ heading }}</h2>
+            <h2 class="{{ section_name }}__heading font-family--{{ heading_font_family }} text-transform--uppercase">{{ heading }}</h2>
           {% endif %}
 
           {% if message != blank %}
-            <div class="{{ section_name }}__message">{{ message }}</div>
+            <div class="{{ section_name }}__message font-family--new-spririt text-transform--uppercase">{{ message }}</div>
           {% endif %}
 
+          <form></form>
+
           {% if subheading != blank %}
-            <strong class="{{ section_name }}__subheading">{{ subheading }}</strong>
+            <strong class="{{ section_name }}__subheading font-family--new-spririt">{{ subheading }}</strong>
           {% endif %}
 
         </div>
