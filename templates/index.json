@@ -425,7 +425,7 @@
         "heading_font_family": "clarendon-wide-slab",
         "message": "<p>Nunc vel mauris nec ex feugiat sodales nec sed ipsum. Fusce sed dictum massa, id aliquam mi. Donec at tellus placerat congue. <\/p>",
         "button_title": "Subscribe",
-        "subheading": "<p>Nunc vel mauris nec ex feugiat sodales nec sed ipsum. Fusce sed dictum massa, id aliquam lorem data mi.<\/p>"
+        "subheading": "<p>By clicking below to submit this form, you acknowledge that the information you provide will be processed in accordance with our <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">Privacy Policy<\/a>. You can unsubscribe at anytime.<\/p>"
       }
     }
   }
