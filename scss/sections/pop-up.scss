@@ -46,26 +46,6 @@
     }
   }
 
-  .text-colour {
-    @each $name, $value in $theme-colours {
-      $input-placeholder-colour: color.adjust($value, $alpha: -0.75);
-      $button-text-colour: map.get($theme-colours, 'off-black');
-      @if $name == 'rosa' and $name == 'off-white' {
-        $button-text-colour: map.get($theme-colours, 'off-white');
-      }
-      &--#{$name} {
-        .form__button {
-          color: $button-text-colour
-        }
-        .form__input {
-          @include placeholder {
-            color: $input-placeholder-colour
-          }
-        }
-      }
-    }
-  }
-
   &__button {
     &[class*="close"] {
       width: 20px;
@@ -109,6 +89,41 @@
     font-size: 13px;
     line-height: 1.54;
     margin-top: 18px;
+    a {
+      color: inherit;
+      text-decoration: none;
+      display: inline-block;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: inherit;
+      line-height: 1;
+      &:focus,
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+
+  @each $name, $value in $theme-colours {
+    &[data-colour-theme="#{$name}"] {
+      $button-text-colour: map.get($theme-colours, 'off-white');
+      $text-colour: map.get($theme-colours, 'off-black');
+      @if $name == "rosso" or $name == "off-black" {
+        $button-text-colour: map.get($theme-colours, 'off-black');
+        $text-colour: map.get($theme-colours, 'off-white');
+      }
+      $input-placeholder-colour: color.adjust($text-colour, $alpha: -0.75);
+      .form {
+        &__button {
+          color: $button-text-colour;
+        }
+        &__input {
+          @include placeholder {
+            color: $input-placeholder-colour;
+          }
+        }
+      }
+    }
   }
 
   @include breakpoint(sm) {
