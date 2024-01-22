@@ -4,6 +4,11 @@
   assign snippet_classes = snippet_name | append: ' form js--validate-me'
   assign snippet_id = snippet_name
 
+  assign button_background = button_background | defautl: 'rosso'
+  assign button_border = button_border | default: 'off-white'
+  assign button_style = button_style | deafult: 'fill'
+  assign button_title = button_title | deafult: 'Subscribe'
+  assign form_id = form_id | deafult: snippet_id
   assign heading = heading | deafult: ''
 
   if classes and classes != blank
@@ -12,27 +17,38 @@
 
 -%}
 
-{%- form 'customer', class: snippet_classes, data-redirect: '/pages/thank-you', id: snippet_id -%}
+{%- form 'customer', class: snippet_classes, data-redirect: '/pages/thank-you', id: form_id -%}
 
   {% if heading != blank %}
     <strong class="form__heading heading--primary">{{ heading }}</strong>
   {% endif %}
 
   <div class="form__field field field--email">
-    {% render "input", classes: 'form__input', name: 'contact[email]', placeholder: 'Enter Email', required: true, type: 'email' %}
-    {% render "error-message", message: 'Scuzi! Please enter a valid email address.', position: 'right' %}
+    {%
+      render "input",
+        classes: 'form__input',
+        name: 'contact[email]',
+        placeholder: 'Enter Email',
+        required: true,
+        type: 'email'
+    %}
+    {%
+      render "error-message",
+        message: 'Scuzi! Please enter a valid email address.',
+        position: 'right'
+    %}
   </div>
 
   <div class="form__cta">
     {%- capture inverted_corner_box_content -%}
-      <button class="form__button button" name="submit" type="submit" value="Subscribe">Subscribe</button>
+      <button class="form__button button" name="submit" type="submit" value="Subscribe">{{ button_title }}</button>
     {%- endcapture -%}
     {%-
       render 'inverted-corner-box',
-      background: 'rosso',
-      border: 'off-white',
-      content: inverted_corner_box_content,
-      type: 'button'
+        background: button_background,
+        border: button_border,
+        content: inverted_corner_box_content,
+        type: 'button'
     -%}
   </div>
 

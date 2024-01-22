@@ -7,7 +7,8 @@
   assign button_title = section.settings.button_title | default: ''
   assign colour_theme = section.settings.colour_theme
   assign cookie_duration = section.settings.cookie_duration
-  assign delay = section.settings.delay
+  assign delay = section.settings.delays | default: 1000
+  assign form_id = section_name | append: "-form-" | append: section.id
   assign heading = section.settings.heading | default: ''
   assign heading_font_family = section.settings.heading_font_family
   assign message = section.settings.message | default: ''
@@ -35,7 +36,7 @@
 
 {%- style -%}
   #{{ modal_id }} {
-    background: rgba(var(--theme-colour-off-black), 0.95);
+    background: rgba(var(--theme-colour-off-black), 0.975);
   }
   #{{ modal_id }} .modal-dialog {
     background: rgba(var(--theme-colour-{{ colour_theme }}), 1);
@@ -55,14 +56,14 @@
 >
 
 <div class="modal-dialog">
-  <div class="modal-content">
+  <div class="modal-content text-colour--{{ border_colour }}">
 
-    <div class="inverted-corner-box inverted-corner-box--background-{{ colour_theme }} inverted-corner-box--border-{{ border_colour }}">
-      <div class="inverted-corner-box__content text-colour--{{ border_colour }}">
+    <button class="{{ section_name }}__button button--close js--close-pop-up" type="button">
+      {% render 'svg', type: 'icon.close' %}
+    </button>
 
-        <button class="{{ section_name }}__button button--close js--close-pop-up" type="button">
-          {% render 'svg', type: 'icon.close' %}
-        </button>
+    <div class="inverted-corner-box inverted-corner-box--background-{{ colour_theme }} inverted-corner-box--border-{{ border_colour }} inverted-corner-box--border">
+      <div class="inverted-corner-box__content">
 
         <div class="{{ section_name }}__main">
 
@@ -74,7 +75,25 @@
             <div class="{{ section_name }}__message font-family--new-spririt text-transform--uppercase">{{ message }}</div>
           {% endif %}
 
-          <form></form>
+          {%- form 'customer', class: 'pop-up__form form js--validate-me', data-redirect: '/pages/thank-you', id: form_id -%}
+
+            <div class="form__field field field--email">
+              {% render "input", classes: 'form__input', name: 'contact[email]', placeholder: 'Email*', required: true, type: 'email' %}
+              {% render "error-message", message: 'Scusi! Please enter a valid email address.', position: 'right' %}
+            </div>
+
+            {%- capture inverted_corner_box_content -%}
+              <button class="form__button button" name="submit" type="submit" value="Subscribe">{{ button_title }}</button>
+            {%- endcapture -%}
+            {%-
+              render 'inverted-corner-box',
+                background: border_colour,
+                border: border_colour,
+                content: inverted_corner_box_content,
+                type: 'button'
+            -%}
+
+          {%- endform -%}
 
           {% if subheading != blank %}
             <strong class="{{ section_name }}__subheading font-family--new-spririt">{{ subheading }}</strong>

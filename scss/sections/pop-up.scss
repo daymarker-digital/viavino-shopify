@@ -1,14 +1,39 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../utils/variables' as *;
 @use '../utils/mixins/breakpoint' as *;
+@use '../utils/mixins/ui' as *;
 
 .pop-up {
 
+  .form {
+    &__button,
+    &__input {
+      height: 52px;
+      line-height: 1;
+      text-transform: uppercase;
+      font-family: "Clarendon Wide";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+    }
+    &__field {
+      & + .inverted-corner-box {
+        margin-top: 24px;
+      }
+    }
+    &__input {
+      border-bottom: var(--theme-border-width) solid;
+    }
+  }
+
   .inverted-corner-box {
-    height: 100%;
+    min-height: 100%;
     &__content {
-      text-align: center;
-      padding: 30px;
       min-height: 100%;
     }
+    &[class*="border"] {}
+    &[class*="button"] {}
   }
 
   .modal {
@@ -17,16 +42,38 @@
     }
     &-dialog {
       padding: 20px;
+      margin: 0 auto;
+    }
+  }
+
+  .text-colour {
+    @each $name, $value in $theme-colours {
+      $input-placeholder-colour: color.adjust($value, $alpha: -0.75);
+      $button-text-colour: map.get($theme-colours, 'off-black');
+      @if $name == 'rosa' and $name == 'off-white' {
+        $button-text-colour: map.get($theme-colours, 'off-white');
+      }
+      &--#{$name} {
+        .form__button {
+          color: $button-text-colour
+        }
+        .form__input {
+          @include placeholder {
+            color: $input-placeholder-colour
+          }
+        }
+      }
     }
   }
 
   &__button {
     &[class*="close"] {
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
       top: 30px;
       right: 30px;
       position: absolute;
+      z-index: 2055;
       &:focus,
       &:hover {
         opacity: 0.5;
@@ -36,19 +83,20 @@
 
   &__heading {
     line-height: 1;
+    margin-bottom: 28px;
     &[class*="clarendon"] {
       font-size: 26px;
-      margin-bottom: 32px;
     }
     &[class*="novecento"] {
       font-size: 48px;
-      margin-bottom: 28px;
     }
   }
 
   &__main {
     margin: 0 auto;
     width: 100%;
+    padding: 30px;
+    text-align: center;
   }
 
   &__message {
@@ -57,14 +105,18 @@
   }
 
   &__subheading {
+    display: block;
     font-size: 13px;
-    line-break: 1.54;
+    line-height: 1.54;
+    margin-top: 18px;
   }
 
   @include breakpoint(sm) {
 
     &__main {
       max-width: 450px;
+      padding-left: 0;
+      padding-right: 0;
     }
 
   }
@@ -72,13 +124,12 @@
   @include breakpoint(md) {
 
     &__heading {
+      margin-bottom: 30px;
       &[class*="clarendon"] {
         font-size: 32px;
-        margin-bottom: 34px;
       }
       &[class*="novecento"] {
         font-size: 54px;
-        margin-bottom: 30px;
       }
     }
 
@@ -96,10 +147,71 @@
 
   }
 
-  @include breakpoint(lg) {}
+  @include breakpoint(lg) {
 
-  @include breakpoint(xl) {}
+    .form {
+      &__button,
+      &__input {
+        height: 52px;
+      }
+      &__field {
+        & + .inverted-corner-box {
+          margin-top: 28px;
+        }
+      }
+      &__input {
+        border-bottom: 3px solid;
+      }
+    }
 
-  @include breakpoint(xxl) {}
+    .modal {
+      &-content {
+        height: 100%;
+      }
+      &-dialog {
+        width: 80%;
+        width: calc(100% - 10vw);
+        height: calc(100% - 10vh);
+        margin-top: 5vh;
+      }
+    }
+
+    &__main {
+      max-width: 540px;
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    .modal {
+      &-dialog {
+        width: calc(100% - 15vw);
+        height: calc(100% - 20vh);
+        margin-top: 10vh;
+      }
+    }
+
+    &__main {
+      max-width: 570px;
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    .modal {
+      &-dialog {
+        width: calc(100% - 20vw);
+        height: calc(100% - 25vh);
+        margin-top: 12.5vh;
+      }
+    }
+
+    &__main {
+      max-width: 600px;
+    }
+
+  }
 
 }
