@@ -12,10 +12,10 @@ import Product from './modules/product';
 import Scrolling from './modules/scrolling';
 import Tools from './modules/tools';
 
-AgeGate.init();
+//AgeGate.init();
 Announcements.init();
 Cart.init();
-CookiePopup.init();
+//CookiePopup.init();
 Credits.init();
 Drawers.init();
 Forms.init();
@@ -36,7 +36,7 @@ window.addEventListener( 'load', (event) => {
   Tools.setViewportHeightCSSVariable();
   Tools.themeClasses();
 
-  PopUps.init();
+  new PopUps();
   InstagramFeed.init();
   Gliders.init();
 

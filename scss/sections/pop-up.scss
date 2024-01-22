@@ -16,6 +16,7 @@
       font-size: 16px;
       font-style: normal;
       font-weight: 700;
+      width: 100%;
     }
     &__field {
       & + .inverted-corner-box {
@@ -23,7 +24,9 @@
       }
     }
     &__input {
-      border-bottom: var(--theme-border-width) solid;
+      border-bottom-width: var(--theme-border-width);
+      border-bottom-style: solid;
+      border-bottom-color: inherit;
     }
   }
 
@@ -46,6 +49,21 @@
     }
   }
 
+  &__form,
+  &__subheading {
+    width: 90%;
+    width: calc(100% - 30px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__message,
+  &__subheading {
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &__button {
     &[class*="close"] {
       width: 20px;
@@ -63,12 +81,12 @@
 
   &__heading {
     line-height: 1;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     &[class*="clarendon"] {
-      font-size: 26px;
+      font-size: 28px;
     }
     &[class*="novecento"] {
-      font-size: 48px;
+      font-size: 54px;
     }
   }
 
@@ -81,7 +99,10 @@
 
   &__message {
     font-size: 15px;
-    line-break: 1.6;
+    line-height: 1.6;
+    & + .form {
+      margin-top: 20px;
+    }
   }
 
   &__subheading {
@@ -165,17 +186,10 @@
   @include breakpoint(lg) {
 
     .form {
-      &__button,
-      &__input {
-        height: 52px;
-      }
       &__field {
         & + .inverted-corner-box {
-          margin-top: 28px;
+          margin-top: 22px;
         }
-      }
-      &__input {
-        border-bottom: 3px solid;
       }
     }
 
@@ -188,6 +202,24 @@
         width: calc(100% - 10vw);
         height: calc(100% - 10vh);
         margin-top: 5vh;
+      }
+    }
+
+    &__form,
+    &__subheading {
+      width: 90%;
+      width: calc(100% - 120px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__heading {
+      margin-bottom: 22px;
+      &[class*="clarendon"] {
+        font-size: 48px;
+      }
+      &[class*="novecento"] {
+        font-size: 65px;
       }
     }
 

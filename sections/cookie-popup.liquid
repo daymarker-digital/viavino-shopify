@@ -1,7 +1,7 @@
 {%- liquid
 
   assign section_name = 'cookie-popup'
-  assign section_classes = section_name
+  assign section_classes = section_name | append: " modal fade js--pop-up"
   assign section_id = 'shopify-section-' | append: section_name
 
   assign aos_id = section_id | append: '--aos'
@@ -9,24 +9,17 @@
   assign aos_delay_increment = 250
 
   assign background = section.settings.background | default: 'off-black'
-
   assign border_colour = section.settings.border_colour | default: 'off-white'
-
   assign button_background_colour = section.settings.button_background_colour | default: 'off-white'
   assign button_border_colour = section.settings.button_border_colour | default: 'off-black'
   assign button_text_colour = section.settings.button_text_colour | default: 'off-black'
   assign button_title = section.settings.button_title | default: 'Accept'
-
   assign cookie_duration = section.settings.cookie_duration | default: 30
-
   assign delay = section.settings.delay | default: 3000
-
   assign enable = section.settings.enable | default: false
-
   assign heading = section.settings.heading | default: ''
-
   assign message = section.settings.message | default: ''
-
+  assign modal_id = section_name
   assign text_colour = section.settings.text_colour | default: 'off-white'
 
 -%}
@@ -41,7 +34,17 @@
     %}
   {%- endstyle -%}
 
-  <div class="{{ section_name }}__main" data-cookie-duration="{{ cookie_duration }}" data-delay="{{ delay }}">
+  <div
+    class="{{ section_classes }}"
+    id="{{ modal_id }}"
+    aria-hidden="true"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    data-cookie-duration="{{ cookie_duration }}"
+    data-delay="{{ delay }}"
+    data-priority="2"
+  >
 
     <div class="inverted-corner-box inverted-corner-box--background-{{ background }} inverted-corner-box--border-{{ border_colour }}">
       <div class="inverted-corner-box__content">

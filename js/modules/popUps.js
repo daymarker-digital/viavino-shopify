@@ -1,6 +1,4 @@
-const elements = document.querySelectorAll(".js--pop-up") || [];
-
-class PopUps {
+export default class PopUps {
 
   _config = {
     debug: true,
@@ -9,17 +7,42 @@ class PopUps {
   }
 
   constructor( block=false ) {
-    this.DOM = {
-      block: block,
-      button_close: block.querySelector(".js--close-pop-up")
-    };
-    this.modal = {
-      id: block.id,
-      instance: false,
-      delay: parseInt(block.dataset.delay),
-      cookie_duration: parseInt(block.dataset.cookieDuration)
-    };
-    this.start();
+
+    this.elements = document.querySelectorAll(".js--pop-up") || [];
+    this.active = false;
+    this.instances = {};
+
+    this.collectInstances();
+    this.renderInstances();
+
+  }
+
+  collectInstances() {
+    this.elements.forEach((element) => {
+
+      const id = element.id;
+      const delay = parseInt(element.dataset.delay);
+      const cookie_duration = parseInt(element.dataset.cookieDuration);
+      const priority = parseInt(element.dataset.priority);
+      const modal = new bootstrap.Modal(element, {});
+
+      this.instances[id] = {
+        delay,
+        cookie_duration,
+        modal,
+        priority
+      }
+
+    });
+  }
+
+  renderInstances() {
+
+    const instances = Object.values(this.instances).sort((a, b) => a.priority - b.priority);
+
+
+
+
   }
 
   handleCloseClick() {
@@ -36,12 +59,24 @@ class PopUps {
   }
 
   start() {
-    if ( true ) {
+    if ( this.showPopUp() ) {
+
+      let whileController = true;
+      let whileCounter = 0;
 
       // init modal instance
       this.modal.instance = new bootstrap.Modal(this.DOM.block, {});
+
       // show modal
-      this.showPopUp();
+      this.renderPopUp();
+
+      console.log('before while');
+      while ( whileController ) {
+        console.log(whileCounter);
+
+      }
+      console.log('after while');
+
       // add event listener to close button
       this.handleCloseClick();
 
@@ -52,19 +87,19 @@ class PopUps {
     }
   }
 
+  renderPopUp() {
+    const { instance: modal } = this.modal;
+    modal.show();
+  }
+
   showPopUp() {
-    const { instance: modal, delay } = this.modal;
+    const { delay } = this.modal;
+    let intervalID;
+
     setTimeout(() => {
       modal.show();
     }, delay );
+
   }
 
 }
-
-const init = () => {
-  elements.forEach((block) => {
-    new PopUps(block);
-  });
-};
-
-export default { init };

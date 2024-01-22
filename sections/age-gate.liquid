@@ -1,7 +1,7 @@
 {%- liquid
 
   assign section_name = 'age-gate'
-  assign section_classes = section_name
+  assign section_classes = section_name | append: " modal fade js--pop-up"
   assign section_id = 'shopify-section-' | append: section_name
 
   assign aos_id = section_id | append: '--aos'
@@ -9,97 +9,85 @@
   assign aos_delay_increment = 250
 
   assign background = section.settings.background | default: 'off-white'
-
   assign button_background_colour = section.settings.button_background_colour | default: 'off-white'
   assign button_border_colour = section.settings.button_border_colour | default: 'off-black'
   assign button_text_colour = section.settings.button_text_colour | default: 'off-black'
   assign button_title = section.settings.button_title | default: ''
-
   assign cookie_duration = section.settings.cookie_duration | default: 30
-
   assign delay = section.settings.delay | default: 4000
-
   assign disclaimer_size = section.settings.disclaimer_size | default: 'xs'
-
-  assign enable = section.settings.enable | default: false
-
   assign heading = section.settings.heading | default: 'Scuzi!'
   assign heading_size = section.settings.heading_size | default: 'md'
-
   assign message = section.settings.message | default: '<p>You confirm that you are of legal drinking age in your country of residence.</p>'
   assign message_size = section.settings.message_size | default: 'sm'
   assign message_style = section.settings.message_style | default: 'primary'
-
   assign modal_id = section_name
   assign text_colour = section.settings.text_colour | default: 'off-black'
 
 -%}
 
-{% if enable %}
+{%- style -%}
 
-  {%- style -%}
+  #{{ section_id }} .modal {
+    background: rgba(var(--theme-colour-{{ background }}), 1);
+  }
 
-    #{{ section_id }} .modal {
-      background: rgba(var(--theme-colour-{{ background }}), 1);
-    }
+{%- endstyle -%}
 
-  {%- endstyle -%}
+<div
+  class="{{ section_classes }}"
+  id="{{ modal_id }}"
+  aria-hidden="true"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  data-cookie-duration="{{ cookie_duration }}"
+  data-delay="{{ delay }}"
+  data-priority="1"
+>
 
-  <div
-    class="{{ section_name }}__modal modal fade"
-    id="{{ modal_id }}"
-    aria-hidden="true"
-    data-bs-backdrop="static"
-    data-bs-keyboard="false"
-    tabindex="-1"
-    data-cookie-duration="{{ cookie_duration }}"
-    data-delay="{{ delay }}"
-  >
+<div class="modal-dialog">
+  <div class="modal-content">
 
-  <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="inverted-corner-box inverted-corner-box--background-{{ background }} inverted-corner-box--border-{{ text_colour }}">
+      <div class="inverted-corner-box__content">
 
-      <div class="inverted-corner-box inverted-corner-box--background-{{ background }} inverted-corner-box--border-{{ text_colour }}">
-        <div class="inverted-corner-box__content">
+        <div class="{{ section_name }}__main text-colour--{{ text_colour }}">
 
-          <div class="{{ section_name }}__main text-colour--{{ text_colour }}">
+          {% if heading != blank %}
+            <strong class="{{ section_name }}__heading heading--primary heading--{{ heading_size }}">{{ heading }}</strong>
+          {% endif %}
+          {% if message != blank %}
+            <div class="{{ section_name }}__message body-copy--{{ message_style }} body-copy--{{ message_size }}">{{ message }}</div>
+          {% endif %}
 
-            {% if heading != blank %}
-              <strong class="{{ section_name }}__heading heading--primary heading--{{ heading_size }}">{{ heading }}</strong>
-            {% endif %}
-            {% if message != blank %}
-              <div class="{{ section_name }}__message body-copy--{{ message_style }} body-copy--{{ message_size }}">{{ message }}</div>
-            {% endif %}
+          {% if button_title != blank %}
+            <div class="{{ section_name }}__cta">
+              {%- capture button_classes -%}
+                {{ section_name }}__button-enter button--primary text-colour--{{ button_text_colour }}
+              {%- endcapture -%}
+              {%- capture inverted_corner_box_content -%}
+                <button class="{{  button_classes }}" type="button" data-bs-toggle="modal" data-bs-target="#{{ modal_id }}" aria-label="Close">{{ button_title }}</button>
+              {%- endcapture -%}
+              {%-
+                render 'inverted-corner-box',
+                background: button_background_colour,
+                border: button_border_colour,
+                content: inverted_corner_box_content,
+                type: 'button'
+              -%}
+            </div>
+          {%- endif -%}
 
-            {% if button_title != blank %}
-              <div class="{{ section_name }}__cta">
-                {%- capture button_classes -%}
-                  {{ section_name }}__button-enter button--primary text-colour--{{ button_text_colour }}
-                {%- endcapture -%}
-                {%- capture inverted_corner_box_content -%}
-                  <button class="{{  button_classes }}" type="button" data-bs-toggle="modal" data-bs-target="#{{ modal_id }}" aria-label="Close">{{ button_title }}</button>
-                {%- endcapture -%}
-                {%-
-                  render 'inverted-corner-box',
-                  background: button_background_colour,
-                  border: button_border_colour,
-                  content: inverted_corner_box_content,
-                  type: 'button'
-                -%}
-              </div>
-            {%- endif -%}
-
-            <div class="{{ section_name }}__disclaimer body-copy--primary body-copy--{{ disclaimer_size }}">We will save your choice for {{ cookie_duration }} days</div>
-
-          </div>
+          <div class="{{ section_name }}__disclaimer body-copy--primary body-copy--{{ disclaimer_size }}">We will save your choice for {{ cookie_duration }} days</div>
 
         </div>
+
       </div>
-
     </div>
-  </div>
 
-{% endif %}
+  </div>
+</div>
 
 {% schema %}
 {
