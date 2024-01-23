@@ -3488,14 +3488,6 @@
       "oAP" : "\/sections\/marquee.liquid",
       "oF" : 0
     },
-    "\/sections\/newsletter-popup.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/newsletter-popup.liquid",
-      "oF" : 0
-    },
     "\/sections\/pickup-availability.liquid" : {
       "cB" : 0,
       "ft" : 8192,
