@@ -32,8 +32,9 @@ export default class PopUps {
       const delay = parseInt(element.dataset.delay);
       const cookie = {
         duration: parseInt(element.dataset.cookieDuration),
-        name: `viavino--${id}`,
         expired: Cookies.get(`viavino--${id}`) ? false : true,
+        name: `viavino--${id}`,
+        value: 'accept'
       };
       const priority = parseInt(element.dataset.priority);
 
@@ -60,7 +61,7 @@ export default class PopUps {
 
       document.getElementById(instanceID).addEventListener('hidden.bs.modal', (event) => {
         console.log(instance.cookie);
-        Cookies.set( instance.cookie.name, 'accept', instance.cookie.duration );
+        Cookies.set( instance.cookie.name, instance.cookie.value, instance.cookie.duration );
         this.renderInstance();
       });
 
