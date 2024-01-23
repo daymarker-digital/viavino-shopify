@@ -15,8 +15,8 @@
     "pop_up_UyrCnB": {
       "type": "pop-up",
       "settings": {
-        "colour_theme": "off-white",
-        "delay": 4000,
+        "colour_theme": "rosso",
+        "delay": 3500,
         "cookie_duration": 30,
         "heading": "Mi Scusi!",
         "heading_font_family": "novecento-sans",
