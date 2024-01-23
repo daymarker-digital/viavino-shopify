@@ -113,13 +113,6 @@
         "settings": {
         }
       },
-      "newsletter-popup": {
-        "type": "newsletter-popup",
-        "settings": {
-          "heading": "Subscribe to find out about community events, product drops, and collaborations.",
-          "subscription_consent": "<p>By clicking below to submit this form, you acknowledge that the information you provide will be processed in accordance with our <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">Privacy Policy<\/a>. You can unsubscribe at anytime.<\/p>"
-        }
-      },
       "age-gate": {
         "type": "age-gate",
         "settings": {
