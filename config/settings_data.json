@@ -143,7 +143,7 @@
       "cookie-popup": {
         "type": "cookie-popup",
         "settings": {
-          "enable": false,
+          "enable": true,
           "delay": 5500,
           "cookie_duration": 45,
           "heading": "Biscotti?",
