@@ -27,11 +27,9 @@
 -%}
 
 {%- style -%}
-
   #{{ section_id }} .modal {
     background: rgba(var(--theme-colour-{{ background }}), 1);
   }
-
 {%- endstyle -%}
 
 <div
@@ -45,47 +43,49 @@
   data-delay="{{ delay }}"
   data-priority="1"
 >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
 
-<div class="modal-dialog">
-  <div class="modal-content">
+        <div class="inverted-corner-box inverted-corner-box--background-{{ background }} inverted-corner-box--border-{{ text_colour }}">
+        <div class="inverted-corner-box__content">
 
-    <div class="inverted-corner-box inverted-corner-box--background-{{ background }} inverted-corner-box--border-{{ text_colour }}">
-      <div class="inverted-corner-box__content">
+          <div class="{{ section_name }}__main text-colour--{{ text_colour }}">
 
-        <div class="{{ section_name }}__main text-colour--{{ text_colour }}">
+            {% if heading != blank %}
+              <strong class="{{ section_name }}__heading heading--primary heading--{{ heading_size }}">{{ heading }}</strong>
+            {% endif %}
+            {% if message != blank %}
+              <div class="{{ section_name }}__message body-copy--{{ message_style }} body-copy--{{ message_size }}">{{ message }}</div>
+            {% endif %}
 
-          {% if heading != blank %}
-            <strong class="{{ section_name }}__heading heading--primary heading--{{ heading_size }}">{{ heading }}</strong>
-          {% endif %}
-          {% if message != blank %}
-            <div class="{{ section_name }}__message body-copy--{{ message_style }} body-copy--{{ message_size }}">{{ message }}</div>
-          {% endif %}
+            {% if button_title != blank %}
+              <div class="{{ section_name }}__cta">
+                {%- capture button_classes -%}
+                  {{ section_name }}__button-enter button--primary text-colour--{{ button_text_colour }}
+                {%- endcapture -%}
+                {%- capture inverted_corner_box_content -%}
+                  <button class="{{  button_classes }}" type="button" data-bs-toggle="modal" data-bs-target="#{{ modal_id }}" aria-label="Close">{{ button_title }}</button>
+                {%- endcapture -%}
+                {%-
+                  render 'inverted-corner-box',
+                  background: button_background_colour,
+                  border: button_border_colour,
+                  content: inverted_corner_box_content,
+                  type: 'button'
+                -%}
+              </div>
+            {%- endif -%}
 
-          {% if button_title != blank %}
-            <div class="{{ section_name }}__cta">
-              {%- capture button_classes -%}
-                {{ section_name }}__button-enter button--primary text-colour--{{ button_text_colour }}
-              {%- endcapture -%}
-              {%- capture inverted_corner_box_content -%}
-                <button class="{{  button_classes }}" type="button" data-bs-toggle="modal" data-bs-target="#{{ modal_id }}" aria-label="Close">{{ button_title }}</button>
-              {%- endcapture -%}
-              {%-
-                render 'inverted-corner-box',
-                background: button_background_colour,
-                border: button_border_colour,
-                content: inverted_corner_box_content,
-                type: 'button'
-              -%}
-            </div>
-          {%- endif -%}
+            <div class="{{ section_name }}__disclaimer body-copy--primary body-copy--{{ disclaimer_size }}">We will save your choice for {{ cookie_duration }} days</div>
 
-          <div class="{{ section_name }}__disclaimer body-copy--primary body-copy--{{ disclaimer_size }}">We will save your choice for {{ cookie_duration }} days</div>
+          </div>
 
         </div>
+      </div>
 
       </div>
     </div>
-
   </div>
 </div>
 

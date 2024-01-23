@@ -27,10 +27,10 @@
 {% if enable %}
 
   {%- style -%}
-  {%
-    render 'element-styles',
-      element_background: background,
-      element_id: section_id
+    {%
+      render 'element-styles',
+        element_background: background,
+        element_id: section_id
     %}
   {%- endstyle -%}
 
@@ -45,47 +45,53 @@
     data-delay="{{ delay }}"
     data-priority="2"
   >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
 
-    <div class="inverted-corner-box inverted-corner-box--background-{{ background }} inverted-corner-box--border-{{ border_colour }}">
-      <div class="inverted-corner-box__content">
+          <div class="inverted-corner-box inverted-corner-box--background-{{ background }} inverted-corner-box--border-{{ border_colour }}">
+          <div class="inverted-corner-box__content">
 
-        <div class="{{ section_name }}__layout">
+            <div class="{{ section_name }}__layout">
 
-          <div class="{{ section_name }}__content text-colour--{{ text_colour }}">
-            {% if heading != blank %}
-              <strong class="{{ section_name }}__heading heading--primary">{{ heading }}</strong>
-            {% endif %}
-            {% if message != blank %}
-              <div class="{{ section_name }}__message body-copy--primary">{{ message }}</div>
-            {% endif %}
-          </div>
+              <div class="{{ section_name }}__content text-colour--{{ text_colour }}">
+                {% if heading != blank %}
+                  <strong class="{{ section_name }}__heading heading--primary">{{ heading }}</strong>
+                {% endif %}
+                {% if message != blank %}
+                  <div class="{{ section_name }}__message body-copy--primary">{{ message }}</div>
+                {% endif %}
+              </div>
 
-          {% if button_title != blank %}
-            <div class="{{ section_name }}__cta">
-              {%- capture button_classes -%}
-                {{ section_name }}__button-accept button--primary text-colour--{{ button_text_colour }}
-              {%- endcapture -%}
-              {%- capture inverted_corner_box_content -%}
-                <button class="{{  button_classes }}" type="button"  data-target="#{{ section_id }}"  aria-label="Accept">{{ button_title }}</button>
-              {%- endcapture -%}
-              {%-
-                render 'inverted-corner-box',
-                background: button_background_colour,
-                border: button_border_colour,
-                content: inverted_corner_box_content,
-                type: 'button'
-              -%}
+              {% if button_title != blank %}
+                <div class="{{ section_name }}__cta">
+                  {%- capture button_classes -%}
+                    {{ section_name }}__button-accept button--primary text-colour--{{ button_text_colour }}
+                  {%- endcapture -%}
+                  {%- capture inverted_corner_box_content -%}
+                    <button class="{{  button_classes }}" type="button"  data-target="#{{ section_id }}"  aria-label="Accept">{{ button_title }}</button>
+                  {%- endcapture -%}
+                  {%-
+                    render 'inverted-corner-box',
+                    background: button_background_colour,
+                    border: button_border_colour,
+                    content: inverted_corner_box_content,
+                    type: 'button'
+                  -%}
+                </div>
+              {%- endif -%}
+
             </div>
-          {%- endif -%}
 
+          </div>
         </div>
 
+        </div>
       </div>
     </div>
-
   </div>
 
-{%- endif -%}
+{% endif %}
 
 {% schema %}
 {

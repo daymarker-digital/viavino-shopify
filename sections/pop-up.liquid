@@ -55,15 +55,16 @@
   data-delay="{{ delay }}"
   data-priority="3"
 >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body text-colour--{{ border_colour }}">
 
-<div class="modal-dialog">
-  <div class="modal-content text-colour--{{ border_colour }}">
 
-    <button class="{{ section_name }}__button button--close js--close-pop-up" type="button">
-      {% render 'svg', type: 'icon.close' %}
-    </button>
+        <button class="{{ section_name }}__button button--close js--close-pop-up" type="button">
+          {% render 'svg', type: 'icon.close' %}
+        </button>
 
-    <div class="inverted-corner-box inverted-corner-box--background-{{ colour_theme }} inverted-corner-box--border-{{ border_colour }} inverted-corner-box--border">
+        <div class="inverted-corner-box inverted-corner-box--background-{{ colour_theme }} inverted-corner-box--border-{{ border_colour }} inverted-corner-box--border">
       <div class="inverted-corner-box__content">
 
         <div class="{{ section_name }}__main">
@@ -105,6 +106,9 @@
       </div>
     </div>
 
+
+      </div>
+    </div>
   </div>
 </div>
 

@@ -1,12 +1,10 @@
 const config = { debug: false, name: 'cookies.js', version: '1.0' };
 
 const set = ( name = '', value = '', expires = 1 ) => {
-
   const d = new Date();
   d.setTime(d.getTime() + (expires * 24 * 60 * 60 * 1000));
   expires = "expires="+d.toUTCString();
   document.cookie = name + "=" + value + ";" + expires + ";path=/";
-
 };
 
 const get = ( name = '' ) => {

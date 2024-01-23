@@ -1,3 +1,5 @@
+import Cookies from 'cookies';
+
 export default class PopUps {
 
   _config = {
@@ -10,34 +12,62 @@ export default class PopUps {
 
     this.elements = document.querySelectorAll(".js--pop-up") || [];
     this.active = false;
-    this.instances = {};
+    this.instances = [];
+    this.instanceIndex = 0;
 
     this.collectInstances();
-    this.renderInstances();
+    this.renderInstance();
 
   }
 
   collectInstances() {
+
     this.elements.forEach((element) => {
 
       const id = element.id;
       const delay = parseInt(element.dataset.delay);
-      const cookie_duration = parseInt(element.dataset.cookieDuration);
+      const cookie = {
+        duration: parseInt(element.dataset.cookieDuration),
+        value: Cookies.get(`viavino--${id}`),
+        expired: Cookies.get(`viavino--${id}`) ? false : true,
+      };
       const priority = parseInt(element.dataset.priority);
-      const modal = new bootstrap.Modal(element, {});
 
-      this.instances[id] = {
+      this.instances.push({
+        element,
+        id,
         delay,
-        cookie_duration,
-        modal,
+        cookie,
         priority
-      }
+      });
 
     });
+
+    this.instances.sort((a, b) => a.priority - b.priority);
+
+    console.log(this.instances);
+
   }
 
-  renderInstances() {
-    const instances = Object.values(this.instances).sort((a, b) => a.priority - b.priority);
+  renderInstance() {
+    if ( this.instances.length > 0 ) {
+
+      const instance = this.instances.shift();
+      instance.modal = new bootstrap.Modal(instance.element, {});
+
+      document.getElementById(instance.id).addEventListener('hidden.bs.modal', (event) => {
+        instance.modal.dispose();
+        this.renderInstance();
+      });
+
+      if ( instance.cookie.expired && instance.modal ) {
+        setTimeout(() => {
+          console.log('showing new modal!');
+          instance.modal.show();
+        }, instance.delay );
+      }
+
+    }
   }
 
   handleCloseClick() {
