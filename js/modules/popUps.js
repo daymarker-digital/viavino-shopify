@@ -60,7 +60,6 @@ export default class PopUps {
       instance.modal = new bootstrap.Modal(`#${instanceID}`, {});
 
       document.getElementById(instanceID).addEventListener('hidden.bs.modal', (event) => {
-        console.log(instance.cookie);
         Cookies.set( instance.cookie.name, instance.cookie.value, instance.cookie.duration );
         this.renderInstance();
       });
@@ -72,12 +71,6 @@ export default class PopUps {
       }
 
     }
-  }
-
-  setCookie(cookie={}) {
-
-
-
   }
 
 }
