@@ -132,6 +132,23 @@
           "text_colour": "off-white",
           "background": "rosso"
         }
+      },
+      "cookie-notice": {
+        "type": "cookie-notice",
+        "settings": {
+          "enable": true,
+          "delay": 5500,
+          "cookie_duration": 45,
+          "heading": "Biscotto!",
+          "message": "<p>We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.<\/p>",
+          "button_title": "Accept",
+          "button_background_colour": "off-white",
+          "button_border_colour": "off-white",
+          "button_text_colour": "off-black",
+          "text_colour": "off-white",
+          "border_colour": "off-white",
+          "background": "rosso"
+        }
       }
     },
     "content_for_index": [
