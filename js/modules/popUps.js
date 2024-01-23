@@ -32,7 +32,7 @@ export default class PopUps {
       const delay = parseInt(element.dataset.delay);
       const cookie = {
         duration: parseInt(element.dataset.cookieDuration),
-        value: Cookies.get(`viavino--${id}`),
+        name: `viavino--${id}`,
         expired: Cookies.get(`viavino--${id}`) ? false : true,
       };
       const priority = parseInt(element.dataset.priority);
@@ -48,8 +48,6 @@ export default class PopUps {
 
     this.instances.sort((a, b) => a.priority - b.priority);
 
-    console.log(this.instances);
-
   }
 
   renderInstance() {
@@ -61,19 +59,24 @@ export default class PopUps {
       instance.modal = new bootstrap.Modal(`#${instanceID}`, {});
 
       document.getElementById(instanceID).addEventListener('hidden.bs.modal', (event) => {
-        //instance.modal.dispose();
+        console.log(instance.cookie);
+        Cookies.set( instance.cookie.name, 'accept', instance.cookie.duration );
         this.renderInstance();
       });
 
       if ( instance.cookie.expired && instance.modal ) {
         setTimeout(() => instance.modal.show(), instance.delay );
+      } else {
+        this.renderInstance();
       }
 
     }
   }
 
-  enableCookie() {
-    console.log('cookie enabled!');
+  setCookie(cookie={}) {
+
+
+
   }
 
 }

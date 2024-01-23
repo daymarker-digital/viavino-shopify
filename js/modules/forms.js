@@ -150,7 +150,7 @@ const onFormFocus = ( form = false ) => {
 };
 
 // ---------------------------------------- Submit Form
-const submitForm = ( formAction = '', formData = false, formRedirect = '' ) => {
+const submitForm = ( formAction = '', formData = false, formRedirect = '', event = {} ) => {
   if ( formAction && formData ) {
 
     document.body.classList.add('form-posting');
@@ -174,7 +174,8 @@ const submitForm = ( formAction = '', formData = false, formRedirect = '' ) => {
       if ( 200 === data.status ) {
         console.log('[ submitForm() Success ]', data );
         if ( formRedirect ) {
-          window.location.replace( formRedirect );
+          //window.location.replace( formRedirect );
+          console.log(event);
         } else {
           document.body.classList.remove('form-posting');
           // let successMessage = document.querySelector(`[action="${formAction}"] .form__success-notification`) || false;
@@ -251,7 +252,7 @@ const init = () => {
     });
 
     ( document.querySelectorAll('form.js--validate-me [type="submit"]') || [] ).forEach( button => {
-      button.addEventListener('click', event => {
+      button.addEventListener('click', (event) => {
 
         event.preventDefault();
 
@@ -280,7 +281,7 @@ const init = () => {
           if ( reCaptcha.enable ) {
             reCaptchaVersion3( 'submit', formAction, formData, formRedirect );
           } else {
-            submitForm( formAction, formData, formRedirect );
+            submitForm( formAction, formData, formRedirect, event );
           }
         }
 
