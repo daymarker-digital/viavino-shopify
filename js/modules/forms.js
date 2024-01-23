@@ -1,6 +1,7 @@
 //////////////////////////////////////////////////////////
 ////  Vars
 //////////////////////////////////////////////////////////
+import Cookies from 'cookies';
 
 const config = { debug: false, name: 'forms.js', version: '1.0' };
 const forms = document.querySelectorAll( 'form.js--validate-me' ) || [];
@@ -174,8 +175,20 @@ const submitForm = ( formAction = '', formData = false, formRedirect = '', event
       if ( 200 === data.status ) {
         console.log('[ submitForm() Success ]', data );
         if ( formRedirect ) {
-          //window.location.replace( formRedirect );
-          console.log(event);
+
+          const popUp = event.target.closest(".js--pop-up");
+
+          if ( popUp ) {
+            const coookie = {
+              duration:  parseInt(popUp.dataset.cookieDuration || 30),
+              name: `viavino--${popUp.id || 'not-set'}`,
+              value: 'accept'
+            }
+            Cookies.set( coookie.name, coookie.value, coookie.duration );
+          }
+
+          window.location.replace( formRedirect );
+
         } else {
           document.body.classList.remove('form-posting');
           // let successMessage = document.querySelector(`[action="${formAction}"] .form__success-notification`) || false;

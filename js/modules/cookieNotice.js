@@ -20,7 +20,6 @@ export default class CookieNotice {
   }
 
   init() {
-    console.log(this.showNotice());
     if ( this.showNotice() ) {
       this.renderNotice();
       this.handleClick();
