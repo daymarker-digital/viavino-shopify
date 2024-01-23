@@ -1,6 +1,10 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../utils/variables' as *;
 @use '../utils/mixins/breakpoint' as *;
+@use '../utils/mixins/ui' as *;
 
-.cookie-popup {
+.cookie-notice {
 
   transition:
     opacity var(--theme-transition--duration),
@@ -45,7 +49,7 @@
 
   &__heading {
     font-size: 16px;
-    & + .cookie-popup__message {
+    & + .cookie-notice__message {
       margin-top: 8px;
     }
   }
@@ -86,7 +90,7 @@
 
     &__heading {
       font-size: 20px;
-      & + .cookie-popup__message {
+      & + .cookie-notice__message {
         margin-top: 10px;
       }
     }
@@ -106,7 +110,7 @@
 
     &__heading {
       font-size: 22px;
-      & + .cookie-popup__message {
+      & + .cookie-notice__message {
         margin-top: 11px;
       }
     }
@@ -121,7 +125,7 @@
 
     &__heading {
       font-size: 24px;
-      & + .cookie-popup__message {
+      & + .cookie-notice__message {
         margin-top: 12px;
       }
     }

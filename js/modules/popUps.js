@@ -15,9 +15,13 @@ export default class PopUps {
     this.instances = [];
     this.instanceIndex = 0;
 
+    this.init();
+
+  }
+
+  init() {
     this.collectInstances();
     this.renderInstance();
-
   }
 
   collectInstances() {
@@ -68,61 +72,8 @@ export default class PopUps {
     }
   }
 
-  handleCloseClick() {
-    if ( this.DOM.button_close && this.modal.instance ) {
-      this.DOM.button_close.addEventListener("click", (e) => {
-        this.modal.instance.hide();
-        this.enableCookie();
-      })
-    }
-  }
-
   enableCookie() {
     console.log('cookie enabled!');
-  }
-
-  start() {
-    if ( this.showPopUp() ) {
-
-      let whileController = true;
-      let whileCounter = 0;
-
-      // init modal instance
-      this.modal.instance = new bootstrap.Modal(this.DOM.block, {});
-
-      // show modal
-      this.renderPopUp();
-
-      console.log('before while');
-      while ( whileController ) {
-        console.log(whileCounter);
-
-      }
-      console.log('after while');
-
-      // add event listener to close button
-      this.handleCloseClick();
-
-      // log data
-      console.log(this.modal);
-      console.log(this.modal.instance._isShown);
-
-    }
-  }
-
-  renderPopUp() {
-    const { instance: modal } = this.modal;
-    modal.show();
-  }
-
-  showPopUp() {
-    const { delay } = this.modal;
-    let intervalID;
-
-    setTimeout(() => {
-      modal.show();
-    }, delay );
-
   }
 
 }

@@ -29,6 +29,8 @@
 
 {% if enable %}
 
+  {{ 'section-age-gate.css' | asset_url | stylesheet_tag }}
+
   {%- style -%}
     #{{ section_id }} .modal {
       background: rgba(var(--theme-colour-{{ background }}), 1);

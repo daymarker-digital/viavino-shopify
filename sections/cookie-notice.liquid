@@ -1,7 +1,7 @@
 {%- liquid
 
-  assign section_name = 'cookie-popup'
-  assign section_classes = section_name | append: " modal fade js--pop-up"
+  assign section_name = 'cookie-notice'
+  assign section_classes = section_name
   assign section_id = 'shopify-section-' | append: section_name
 
   assign aos_id = section_id | append: '--aos'
@@ -26,6 +26,8 @@
 
 {% if enable %}
 
+  {{ 'section-cookie-notice.css' | asset_url | stylesheet_tag }}
+
   {%- style -%}
     {%
       render 'element-styles',
@@ -35,58 +37,46 @@
   {%- endstyle -%}
 
   <div
-    class="{{ section_classes }}"
-    id="{{ modal_id }}"
-    aria-hidden="true"
-    data-bs-backdrop="static"
-    data-bs-keyboard="false"
-    tabindex="-1"
+    class="{{ section_name }}__main"
+    id="{{ section_id }}"
     data-cookie-duration="{{ cookie_duration }}"
     data-delay="{{ delay }}"
-    data-priority="2"
   >
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
 
-          <div class="inverted-corner-box inverted-corner-box--background-{{ background }} inverted-corner-box--border-{{ border_colour }}">
-            <div class="inverted-corner-box__content">
+    <div class="inverted-corner-box inverted-corner-box--background-{{ background }} inverted-corner-box--border-{{ border_colour }}">
+      <div class="inverted-corner-box__content">
 
-              <div class="{{ section_name }}__layout">
+        <div class="{{ section_name }}__layout">
 
-                <div class="{{ section_name }}__content text-colour--{{ text_colour }}">
-                  {% if heading != blank %}
-                    <strong class="{{ section_name }}__heading heading--primary">{{ heading }}</strong>
-                  {% endif %}
-                  {% if message != blank %}
-                    <div class="{{ section_name }}__message body-copy--primary">{{ message }}</div>
-                  {% endif %}
-                </div>
-
-                {% if button_title != blank %}
-                  <div class="{{ section_name }}__cta">
-                    {%- capture button_classes -%}
-                      {{ section_name }}__button-accept button--primary text-colour--{{ button_text_colour }}
-                    {%- endcapture -%}
-                    {%- capture inverted_corner_box_content -%}
-                      <button class="{{  button_classes }}" type="button" data-bs-toggle="modal" data-bs-target="#{{ modal_id }}" aria-label="Accept">{{ button_title }}</button>
-                    {%- endcapture -%}
-                    {%-
-                      render 'inverted-corner-box',
-                      background: button_background_colour,
-                      border: button_border_colour,
-                      content: inverted_corner_box_content,
-                      type: 'button'
-                    -%}
-                  </div>
-                {%- endif -%}
-
-              </div>
-
-            </div>
+          <div class="{{ section_name }}__content text-colour--{{ text_colour }}">
+            {% if heading != blank %}
+              <strong class="{{ section_name }}__heading heading--primary">{{ heading }}</strong>
+            {% endif %}
+            {% if message != blank %}
+              <div class="{{ section_name }}__message body-copy--primary">{{ message }}</div>
+            {% endif %}
           </div>
 
+          {% if button_title != blank %}
+            <div class="{{ section_name }}__cta">
+              {%- capture button_classes -%}
+                {{ section_name }}__button-accept button--primary text-colour--{{ button_text_colour }}
+              {%- endcapture -%}
+              {%- capture inverted_corner_box_content -%}
+                <button class="{{  button_classes }}" type="button" data-target="#shopify-section-cookie-popup" aria-label="Accept">{{ button_title }}</button>
+              {%- endcapture -%}
+              {%-
+                render 'inverted-corner-box',
+                background: button_background_colour,
+                border: button_border_colour,
+                content: inverted_corner_box_content,
+                type: 'button'
+              -%}
+            </div>
+          {%- endif -%}
+
         </div>
+
       </div>
     </div>
   </div>
@@ -95,9 +85,9 @@
 
 {% schema %}
 {
-  "name": "Cookie Popup",
+  "name": "Cookie Pop-up",
   "tag": "section",
-  "class": "section section--cookie-popup cookie-popup",
+  "class": "section section--cookie-notice cookie-notice",
   "settings": [
     {
       "content": "Settings",
@@ -111,7 +101,7 @@
     },
     {
       "label": "Delay",
-      "info": "Length of time (in milliseconds) before popup is shown.",
+      "info": "Length of time (in milliseconds) before notice is shown.",
       "type": "range",
       "min": 3000,
       "max": 8000,

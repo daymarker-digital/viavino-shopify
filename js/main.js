@@ -1,7 +1,7 @@
 import AgeGate from './modules/ageGate';
 import Announcements from './modules/announcements';
 import Cart from './modules/cart';
-import CookiePopup from './modules/cookiePopup';
+import CookieNotice from './modules/cookieNotice';
 import Credits from './modules/credits';
 import Drawers from './modules/drawers';
 import Forms from './modules/forms';
@@ -12,10 +12,9 @@ import Product from './modules/product';
 import Scrolling from './modules/scrolling';
 import Tools from './modules/tools';
 
-//AgeGate.init();
 Announcements.init();
 Cart.init();
-//CookiePopup.init();
+
 Credits.init();
 Drawers.init();
 Forms.init();
@@ -37,6 +36,8 @@ window.addEventListener( 'load', (event) => {
   Tools.themeClasses();
 
   new PopUps();
+  new CookieNotice();
+
   InstagramFeed.init();
   Gliders.init();
 

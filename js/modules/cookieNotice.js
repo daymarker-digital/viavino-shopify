@@ -1,11 +1,27 @@
 import Cookies from 'cookies';
 
-const config = { debug: false, name: 'cookiePopup.js', version: '1.0' };
-const element = {
-  button: document.querySelector('#shopify-section-cookie-popup .cookie-popup__button-accept') || false,
-  main: document.querySelector('#shopify-section-cookie-popup .cookie-popup__main') || false,
-  section: document.getElementById('shopify-section-cookie-popup') || false
-};
+export default class CookieNotice {
+  constructor() {
+    this.cookie = {
+      name: 'viavino--accept-cookies',
+      value: 'yes',
+      expired: function() {
+        return Cookies.get(this.name) ? false : true;
+      }
+    }
+    this.DOM = {
+      button: document.querySelector('#shopify-section-cookie-notice .cookie-notice__button-accept'),
+      main: document.querySelector('#shopify-section-cookie-notice .cookie-notice__main'),
+      section: document.getElementById('shopify-section-cookie-notice')
+    }
+    this.init();
+  }
+  init() {
+    console.log(this.cookie.expired());
+    console.log(this.DOM.main);
+  }
+}
+
 const cookie = {
 	name: 'viavino--accept-cookies',
 	value: 'yes',
@@ -50,4 +66,3 @@ const init = () => {
   if ( config.debug ) console.log(`[ ${config.name} v.${config.version} complete ]`);
 };
 
-export default { init };
