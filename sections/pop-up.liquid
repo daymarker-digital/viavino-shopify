@@ -7,7 +7,7 @@
   assign button_title = section.settings.button_title | default: ''
   assign colour_theme = section.settings.colour_theme
   assign cookie_duration = section.settings.cookie_duration
-  assign delay = section.settings.delays | default: 1000
+  assign delay = section.settings.delaySSS | default: 3500
   assign form_id = section_name | append: "-form-" | append: section.id
   assign heading = section.settings.heading | default: ''
   assign heading_font_family = section.settings.heading_font_family
@@ -59,8 +59,7 @@
     <div class="modal-content">
       <div class="modal-body text-colour--{{ border_colour }}">
 
-
-        <button class="{{ section_name }}__button button--close js--close-pop-up" type="button">
+        <button class="{{ section_name }}__button button--close js--close-pop-up" type="button" data-bs-toggle="modal" data-bs-target="#{{ modal_id }}" aria-label="Close">
           {% render 'svg', type: 'icon.close' %}
         </button>
 
@@ -105,7 +104,6 @@
 
       </div>
     </div>
-
 
       </div>
     </div>

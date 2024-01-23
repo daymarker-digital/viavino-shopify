@@ -34,7 +34,6 @@ export default class PopUps {
       const priority = parseInt(element.dataset.priority);
 
       this.instances.push({
-        element,
         id,
         delay,
         cookie,
@@ -53,18 +52,17 @@ export default class PopUps {
     if ( this.instances.length > 0 ) {
 
       const instance = this.instances.shift();
-      instance.modal = new bootstrap.Modal(instance.element, {});
+      const instanceID = instance.id;
 
-      document.getElementById(instance.id).addEventListener('hidden.bs.modal', (event) => {
-        instance.modal.dispose();
+      instance.modal = new bootstrap.Modal(`#${instanceID}`, {});
+
+      document.getElementById(instanceID).addEventListener('hidden.bs.modal', (event) => {
+        //instance.modal.dispose();
         this.renderInstance();
       });
 
       if ( instance.cookie.expired && instance.modal ) {
-        setTimeout(() => {
-          console.log('showing new modal!');
-          instance.modal.show();
-        }, instance.delay );
+        setTimeout(() => instance.modal.show(), instance.delay );
       }
 
     }
