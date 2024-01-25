@@ -19,7 +19,7 @@
         "cookie_duration": 30,
         "heading": "Hello!",
         "heading_font_family": "novecento-sans",
-        "message": "",
+        "message": "<p>Curabitur ultrices nisi sit amet turpis molestie, eget vestibulum odio nec.<\/p>",
         "button_title": "Submit",
         "subheading": ""
       }
