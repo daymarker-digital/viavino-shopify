@@ -18,9 +18,9 @@
         "colour_theme": "rosa",
         "delay": 3500,
         "cookie_duration": 30,
-        "heading": "Mi Scusi!",
-        "heading_font_family": "novecento-sans",
-        "message": "<p>Nunc vel mauris nec ex feugiat sodales nec sed ipsum. Fusce sed dictum massa, id aliquam mi. Donec at tellus placerat congue. <\/p>",
+        "heading": "Scusi!",
+        "heading_font_family": "clarendon-wide-slab",
+        "message": "<p>Nunc vel mauris nec ex feugiat sodales nec sed ipsum. Fusce sed dictum massa, id aliquam mi.<\/p>",
         "button_title": "Subscribe",
         "subheading": "<p>By submitting this form, you acknowledge that the information you provide will be processed in accordance with our <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">Privacy Policy<\/a>. You can unsubscribe at anytime.<\/p>"
       }
