@@ -444,7 +444,7 @@
         "colour_theme": "off-white",
         "delay": 4000,
         "cookie_duration": 30,
-        "heading": "Sample Headinng",
+        "heading": "Sample Heading",
         "heading_font_family": "novecento-sans",
         "message": "<p>Test test.<\/p>",
         "button_title": "Subscribe",
