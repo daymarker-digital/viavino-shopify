@@ -446,9 +446,9 @@
         "cookie_duration": 30,
         "heading": "Sample Heading",
         "heading_font_family": "novecento-sans",
-        "message": "<p>Test test.<\/p>",
+        "message": "",
         "button_title": "Subscribe",
-        "subheading": "<p>Another test.<\/p>"
+        "subheading": ""
       }
     }
   }
