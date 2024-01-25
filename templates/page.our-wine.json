@@ -1,6 +1,5 @@
 {
   "order": [
-    "pop_up_9mTNVD",
     "b8510c7e-e777-4260-8ecb-cedd8c884178",
     "5d2af833-907f-4c9b-94bb-82bf4ed7c1f5",
     "a9e103a4-0ed5-4a14-9b1f-57f3edbe974e",
@@ -11,19 +10,6 @@
     "main"
   ],
   "sections": {
-    "pop_up_9mTNVD": {
-      "type": "pop-up",
-      "settings": {
-        "colour_theme": "rosa",
-        "delay": 3250,
-        "cookie_duration": 30,
-        "heading": "Hello!",
-        "heading_font_family": "novecento-sans",
-        "message": "<p>Phasellus fringilla magna nec rhoncus efficitur. Mauris ac placerat enim. Aenean dictum orci ut dui pulvinar euismod. Nulla fringilla dapibus egestas.<\/p>",
-        "button_title": "Submit It",
-        "subheading": "<p>Duis convallis, elit quis viverra porta, nisl leo consequat eros, vitae tempus massa dolor at ante. Aliquam et malesuada leo, ac interdum justo morbi.<\/p>"
-      }
-    },
     "b8510c7e-e777-4260-8ecb-cedd8c884178": {
       "type": "hero",
       "blocks": {
