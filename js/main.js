@@ -6,7 +6,6 @@ import Credits from './modules/credits';
 import Drawers from './modules/drawers';
 import Forms from './modules/forms';
 import Gliders from './modules/gliders';
-import InstagramFeed from './modules/instagramFeed';
 import PopUps from './modules/popUps';
 import Product from './modules/product';
 import Scrolling from './modules/scrolling';
@@ -38,7 +37,6 @@ window.addEventListener( 'load', (event) => {
   new PopUps();
   new CookieNotice();
 
-  InstagramFeed.init();
   Gliders.init();
 
   AOS.refresh();

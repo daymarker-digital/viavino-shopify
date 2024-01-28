@@ -1,7 +1,7 @@
 {%- liquid
 
   assign section_name = 'instagram-feed'
-  assign section_classes = section_name
+  assign section_classes = section_name | ' js--instagram-feed'
   assign section_id = section_name | append: '--' | append: section.id
 
   assign aos_id = section_id | append: '--aos'
@@ -12,6 +12,7 @@
   assign carousel_autoplay = section.settings.carousel_autoplay | default: 3500
   assign carousel_gap = section.settings.carousel_gap | default: 28
   assign carousel_id = section_id | append: '--glide'
+
   assign feed_account = section.settings.feed_account | default: 'verypoliteagency'
   assign feed_id = feed_account | append: '--' | append: section_id
   assign feed_limit = section.settings.feed_limit | default: 5
@@ -37,54 +38,48 @@
 {%- endstyle -%}
 
 <div
-  {%-
-    render 'element-attrs',
-      element_class: section_classes,
-      element_id: section_id
-  -%}
+  class="{{ section_classes }}"
+  id="{{ section_id }}"
+  data-feed-account="{{ feed_account }}"
+  data-feed-limit="{{ feed_limit }}"
 >
-  <div class="{{ section_name }}__main" id="{{ aos_id }}">
 
-    {%- for block in section.blocks -%}
-      {%- case block.type -%}
-        {%- when 'cta' -%}
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
 
-          {%- liquid
-            assign message = block.settings.message | default: '<p>Follow us!</p>'
-          -%}
-
-          {%- if message != blank -%}
-            <div class="{{ section_name }}__cta">
-              <div class="{{ section_name }}__cta-message body-copy--tertiary">
-                {{ message }}
-              </div>
-            </div>
-          {%- endif -%}
-
-        {%- when 'feed' -%}
-
-          <div
-            class="glide js--glide js--instagram-feed"
-            id="{{ carousel_id }}"
-            data-feed-account="{{ feed_account }}"
-            data-feed-limit="{{ feed_limit }}"
-            data-glide-animation-duration="{{ carousel_animation_duration }}"
-            data-glide-autoplay="{{ carousel_autoplay }}"
-            data-glide-gap="{{ carousel_gap }}"
-            data-glide-style="{{ section_name }}"
-          >
-            <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides">
-                <!-- JavaScript injected feed items here... -->
-              </ul>
+      {% ### 'cta' %}
+      {%- when 'cta' -%}
+        {%- if message != block.settings.message -%}
+          <div class="{{ section_name }}__cta">
+            <div class="{{ section_name }}__cta-message body-copy--tertiary">
+              {{ block.settings.message }}
             </div>
           </div>
+        {%- endif -%}
 
-      {%- endcase -%}
-    {%- endfor -%}
+      {% ### 'feed' %}
+      {%- when 'feed' -%}
+        <div
+          class="glide js--glide"
+          id="{{ carousel_id }}"
+          data-glide-animation-duration="{{ carousel_animation_duration }}"
+          data-glide-autoplay="{{ carousel_autoplay }}"
+          data-glide-gap="{{ carousel_gap }}"
+          data-glide-style="{{ section_name }}"
+        >
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <!-- JavaScript injected feed items here... -->
+            </ul>
+          </div>
+        </div>
 
-  </div>
+    {%- endcase -%}
+  {%- endfor -%}
+
 </div>
+
+{{ 'section-instagram-feed.js' | asset_url | script_tag }}
 
 {% schema %}
 {

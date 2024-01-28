@@ -326,6 +326,17 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/instagramFeed.min.js" : {
+      "bF" : 3,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/instagramFeed.min.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
     "\/assets\/main.min.js" : {
       "bF" : 3,
       "ft" : 64,
@@ -621,6 +632,17 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/assets\/section-instagram-feed.js" : {
+      "bF" : 3,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/section-instagram-feed.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
     "\/assets\/section-pop-up.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -825,7 +847,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/ageGate.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -836,7 +858,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/announcements.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -845,9 +867,9 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/assets\/breakpoints.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -858,7 +880,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/cart.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -869,7 +891,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/cookieNotice.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -880,7 +902,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/cookies.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -891,7 +913,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/credits.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -902,7 +924,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/drawers.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -913,7 +935,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/forms.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -924,7 +946,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/gliders.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -935,7 +957,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/instagramFeed.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -946,7 +968,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/money.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -957,7 +979,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/popUps.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -968,7 +990,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/product.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -977,9 +999,9 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/assets\/pushMenu.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -990,7 +1012,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/render.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -1001,7 +1023,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/scrolling.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -1012,7 +1034,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/templates.min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 1
     },
@@ -1023,7 +1045,18 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/tools.min.js",
-      "oF" : 0,
+      "oF" : 1,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/sections\/instagram-feed.js" : {
+      "bF" : 3,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/section-instagram-feed.js",
+      "oF" : 2,
       "sC" : 3,
       "tS" : 1
     },
