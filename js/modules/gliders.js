@@ -92,8 +92,6 @@ const createGliderFromElement = ( element = {} ) => {
 
   }
 
-  console.log('createGliderFromElement', gliders);
-
 };
 
 const getOptions = ( custom = {} ) => {
