@@ -407,7 +407,7 @@
         "feed_limit": 9,
         "carousel_autoplay": 3250,
         "carousel_animation_duration": 750,
-        "carousel_gap": 28,
+        "carousel_gap": 32,
         "border_top": true,
         "border_bottom": false,
         "padding_top": 80,
