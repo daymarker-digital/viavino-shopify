@@ -404,7 +404,7 @@
       ],
       "settings": {
         "feed_account": "drinkviavino",
-        "feed_limit": 10,
+        "feed_limit": 7,
         "carousel_autoplay": 3000,
         "carousel_animation_duration": 550,
         "carousel_gap": 32,
