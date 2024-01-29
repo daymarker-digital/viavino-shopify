@@ -326,62 +326,6 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
-    "\/assets\/instagram-feed.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/instagram-feed.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/assets\/Instagram.min.js" : {
-      "bF" : 3,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/Instagram.min.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/instagramFeed.legacy.min.js" : {
-      "bF" : 3,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/instagramFeed.legacy.min.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/instagramFeed.min.js" : {
-      "bF" : 3,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/instagramFeed.min.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/LocalStorage.min.js" : {
-      "bF" : 3,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/LocalStorage.min.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
     "\/assets\/main.min.js" : {
       "bF" : 3,
       "ft" : 64,
