@@ -6,9 +6,9 @@ const gliders = {};
 const createGliderFromElement = ( element = {} ) => {
 
   let element_id = element?.id ?? '';
-  let animationDuration = parseInt( element.dataset?.glideAnimationDuration ) ?? 450;
-  let autoplay = parseInt( element.dataset?.glideAutoplay ) ?? 3500;
-  let gap = parseInt( element.dataset?.glideGap ) ?? 36;
+  let animationDuration = parseInt( element.dataset?.glideAnimationDuration || 450 );
+  let autoplay = parseInt( element.dataset?.glideAutoplay || 3600 );
+  let gap = parseInt( element.dataset?.glideGap || 36 );
   let style = element.dataset?.glideStyle ?? '';
   let options = getOptions({ animationDuration, autoplay, gap });
 
@@ -17,37 +17,37 @@ const createGliderFromElement = ( element = {} ) => {
       options.breakpoints = {
         // up to 9999
         9999: {
-          gap: gap,
+          gap,
           peek: { before: 0, after: 175 },
           perView: 3
         },
         // up to 1400
         1399: {
-          gap: gap,
+          gap,
           peek: { before: 0, after: 175 },
           perView: 2
         },
         // up to 1200
         1199: {
-          gap: gap,
+          gap,
           peek: { before: 0, after: 175 },
           perView: 2
         },
         // up to 992
         991: {
-          gap: gap,
+          gap,
           peek: { before: 0, after: 100 },
           perView: 2
         },
         // up to 768
         767: {
-          gap: gap,
+          gap,
           peek: { before: 0, after: 150 },
           perView: 1
         },
         // up to 576
         575: {
-          gap: gap,
+          gap,
           peek: { before: 0, after: 100 },
           perView: 1
         }
@@ -91,6 +91,8 @@ const createGliderFromElement = ( element = {} ) => {
     gliders[element_id] = { element_id, glide };
 
   }
+
+  console.log('createGliderFromElement', gliders);
 
 };
 

@@ -1,99 +1,145 @@
-import Render from 'render';
-import Tools from 'tools';
+import Gliders from './gliders';
+import Instagram from '../utils/Instagram';
+import LocalStorage from '../utils/LocalStorage';
 
-const MAX_MINUTES = 300;
-const config = { debug: false, name: 'instagramFeed.js', version: '1.0' };
-const feed = {
-  account: '',
-  block_name: 'instagram-feed',
-  element: false,
-  glider_id: '',
-  glider: {},
-  item_count: 0,
-  items: [],
-  interval: null,
-  limit: 0,
-  local_storage: {
-    data: {},
-    data: 0,
-    name: 'very-polite-instagram-feed',
-  },
-};
+export default class InstagramFeed {
 
-const asyncGetMedia = async ( token = '' ) => {
-
-  return await fetch( `https://graph.instagram.com/me/media?fields=id,media_type,media_url,permalink&access_token=${token}`, { method: 'GET' } )
-  .then((response) => {
-    return response.json();
-  })
-  .catch((error) => {
-    console.log('[ asyncGetMedia() ] :: Error', error );
-  });
-
-};
-
-const asyncGetToken = async ( account = '' ) => {
-
-  return await fetch( `https://very-polite-instagram-feed.herokuapp.com/token?userAccount=${account}`, { method: 'GET' } )
-  .then((response) => {
-    return response.json();
-  })
-  .catch((error) => {
-    console.log('[ asyncGetToken() ] :: Error', error );
-  });
-
-};
-
-const localStorageNotExpired = ( data = '' ) => {
-
-  let local_storage_data = JSON.parse( data );
-  let local_storage_date = local_storage_data?.date || 0;
-  let time_difference_milliseconds = Date.now() - local_storage_date;
-  let time_difference_minutes = ( time_difference_milliseconds / 60000 ).toFixed(2);
-
-  if ( time_difference_minutes > MAX_MINUTES ) {
-    return false;
+  _config = {
+    debug: true,
+    name: "InstagramFeed",
+    version: "1.0"
   }
 
-  return true;
+  constructor() {
+    this.elements = document.querySelectorAll(".js--instagram-feed") || [];
+    this.instances = [];
+    this.storage = {
+      maxMinutes: 300,
+      prefix: "daymarker-digital-instagram-feed"
+    };
+    this.init();
+  }
 
-}
+  init() {
+    this.collectInstances();
+    this.renderInstances();
+  }
 
-const init = () => {
-  if ( config.debug ) console.log(`[ ${config.name} v.${config.version} initialized ]`);
+  collectInstances() {
+    this.elements.forEach((element) => {
 
-    ( document.querySelectorAll( '.js--instagram-feed' ) || [] ).forEach( element => {
+      const id = element.id;
+      const carousel = {
+        animationDuration: parseInt(element.dataset.carouselAnimationDuration || 450),
+        autoplay: parseInt(element.dataset.carouselAutoplay || 3500),
+        gap: parseInt(element.dataset.carouselGap || 30)
+      };
+      const feed = {
+        account: element.dataset.feedAccount || "not-set",
+        limit: parseInt(element.dataset.feedLimit || 9)
+      };
 
-      feed.account = element.dataset?.feedAccount || '';
-      feed.element = element;
-      feed.id = element?.id || '';
-      feed.limit = element.dataset?.feedLimit || 3;
-      feed.local_storage.name += `--${feed.account}`;
-      feed.local_storage.data = Tools.getLocalStorageDataByKey( feed.local_storage.name ) || false;
+      this.instances.push({
+        element,
+        id,
+        carousel,
+        feed
+      });
 
-      if ( feed.account ) {
-        if ( feed.local_storage.data && localStorageNotExpired( feed.local_storage.data ) ) {
+    });
+  }
 
-          let data = JSON.parse( feed.local_storage.data );
-          feed.items = data.items;
-          Render.instagramFeed( feed );
+  renderFeedFromInstance(instance = {}) {
 
-        } else {
-          asyncGetToken( feed.account ).then( data => {
-            asyncGetMedia( data.token ).then( result => {
+    let itemCount = 0;
+    const { carousel, element, feed, items } = instance;
 
-              feed.items = result.data;
-              Tools.setLocalStorageDataByKey( feed.local_storage.name, JSON.stringify({ account: feed.account, date: Date.now(), items: feed.items }) );
-              Render.instagramFeed( feed );
+    carousel.container = element.querySelector(".instagram-feed__carousel") || false;
+    carousel.id = `instagram-feed__${Date.now()}`;
 
-            });
-          });
+    if ( carousel.container && items.length ) {
+
+      let slides = items.map((item, index) => {
+
+        const {
+          media_type: type,
+          media_url: src,
+          permalink: link
+        } = item;
+
+        if ( ( "CAROUSEL_ALBUM" === type || "IMAGE" === type ) && ( itemCount < feed.limit ) ) {
+          itemCount++;
+          return `
+            <li class="glide__slide" data-count="${itemCount}">
+              <div class="instagram-feed__item">
+                <a class="instagram-feed__link link" href="${link}" target="_blank">
+                  <img class="instagram-feed__image" src="${src}" alt="Instagram Image" width="350" height="350" />
+                </a>
+              </div>
+            </li>
+          `;
         }
+
+      }).join('');
+
+      carousel.container.innerHTML = `
+        <div
+          class="glide"
+          id="${carousel.id}"
+          data-glide-animation-duration="${carousel.animationDuration}"
+          data-glide-autoplay="${carousel.autoplay}"
+          data-glide-gap="${carousel.gap}"
+          data-glide-style="instagram-feed"
+        >
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">${slides}</ul>
+          </div>
+        </div>
+      `;
+
+      Gliders.createGliderFromElement(document.getElementById(carousel.id));
+
+    }
+
+  }
+
+  renderInstances() {
+    this.instances.forEach((instance) => {
+
+      const { account } = instance.feed;
+      const { maxMinutes: storageMaxMinutes, prefix: storagePrefix } = this.storage;
+      const storedData = {};
+
+      storedData.name = `${storagePrefix}--${account}`;
+      storedData.data = LocalStorage.getDataByKey(storedData.name);
+      storedData.expired = LocalStorage.expired(storedData.data, storageMaxMinutes, "minutes");
+
+      if ( storedData.expired ) {
+        Instagram.asyncGetToken(account).then((data) => {
+          Instagram.asyncGetMedia(data.token).then((result) => {
+
+            instance.items = result.data || [];
+
+            storedData.data = JSON.stringify({
+              account: account,
+              date: Date.now(),
+              items: instance.items
+            });
+
+            LocalStorage.setDataByKey(storedData.name, storedData.data);
+            this.renderFeedFromInstance(instance);
+
+          });
+        });
+      } else {
+
+        const { items } = JSON.parse(storedData.data);
+        instance.items = items;
+        this.renderFeedFromInstance(instance);
+
       }
 
     });
+  }
 
-  if ( config.debug ) console.log(`[ ${config.name} v.${config.version} complete ]`);
-};
-
-export default { init };
+}

@@ -1,5 +1,9 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../utils/variables' as *;
 @use '../utils/mixins/border' as *;
 @use '../utils/mixins/breakpoint' as *;
+@use '../utils/mixins/ui' as *;
 
 .instagram-feed {
 
@@ -7,90 +11,34 @@
     padding-left: var(--bs-container-fluid-padding);
   }
 
-  .link {
-    &:hover {
-      opacity: 0.5;
-      color: inherit;
+  &__image,
+  &__link {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__cta {
+    padding: 0 var(--bs-container-fluid-padding);
+    &-message {
+      font-size: 20px;
     }
   }
 
-  @for $i from 0 through 10 {
-    $count: (4 * $i);
-    [data-count="#{$count}"] {
-      .instagram-feed__item-image {
-        aspect-ratio: 3/2;
-      }
-    }
-  }
-
-  @for $i from 0 through 10 {
-    $count: (4 * $i) + 1;
-    [data-count="#{$count}"] {
-      .instagram-feed__item-image {
-        aspect-ratio: 2.5/3;
-      }
-    }
-  }
-
-  @for $i from 0 through 10 {
-    $count: (4 * $i) + 2;
-    [data-count="#{$count}"] {
-      .instagram-feed__item-image {
-        aspect-ratio: 1/1;
-      }
-    }
-  }
-
-  @for $i from 0 through 10 {
-    $count: (4 * $i) + 3;
-    [data-count="#{$count}"] {
-      .instagram-feed__item-image {
-        aspect-ratio: 4/3;
-      }
-    }
-  }
-
-  @for $i from 0 through 10 {
-    $count: (4 * $i) + 4;
-    [data-count="#{$count}"] {
-      .instagram-feed__item-image {
-        aspect-ratio: 1.5/1;
-      }
-    }
+  &__image {
+    @include border-solid( var(--theme-border-width) );
+    height: 100%;
+    object-fit: cover;
   }
 
   &__item {
-
-    a, img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    &-image,
-    &-link {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    &__image {
-      width: 100%;
-    }
-
-    img {
-      @include border-solid( var(--theme-border-width) );
-      height: 100%;
-      object-fit: cover;
-    }
-
+    width: 100%;
+    height: auto;
   }
 
-  &__main {
-    & > div {
-      & + div {
-        margin-top: 20px;
-      }
+  &__link {
+    &:hover {
+      opacity: 0.5;
     }
   }
 
@@ -103,10 +51,54 @@
     }
   }
 
-  &__cta {
-    padding: 0 var(--bs-container-fluid-padding);
-    &-message {
-      font-size: 20px;
+  @for $i from 0 through 10 {
+    $count: (4 * $i);
+    [data-count="#{$count}"] {
+      .instagram-feed__image {
+        aspect-ratio: 3/2;
+      }
+    }
+  }
+
+  @for $i from 0 through 10 {
+    $count: (4 * $i) + 1;
+    [data-count="#{$count}"] {
+      .instagram-feed__image {
+        aspect-ratio: 2.5/3;
+      }
+    }
+  }
+
+  @for $i from 0 through 10 {
+    $count: (4 * $i) + 2;
+    [data-count="#{$count}"] {
+      .instagram-feed__image {
+        aspect-ratio: 1/1;
+      }
+    }
+  }
+
+  @for $i from 0 through 10 {
+    $count: (4 * $i) + 3;
+    [data-count="#{$count}"] {
+      .instagram-feed__image {
+        aspect-ratio: 4/3;
+      }
+    }
+  }
+
+  @for $i from 0 through 10 {
+    $count: (4 * $i) + 4;
+    [data-count="#{$count}"] {
+      .instagram-feed__image {
+        aspect-ratio: 1.5/1;
+      }
+    }
+  }
+
+  & > div {
+    & + div {
+      margin-top: 20px;
     }
   }
 
@@ -138,11 +130,9 @@
       }
     }
 
-    &__main {
-      & > div {
-        & + div {
-          margin-top: 30px;
-        }
+    & > div {
+      & + div {
+        margin-top: 30px;
       }
     }
 
