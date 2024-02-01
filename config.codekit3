@@ -28,7 +28,7 @@
     "\/.nova\/Configuration.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/.nova\/Configuration.json",
+      "oAP" : "\/.nova\/Configuration-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -49,7 +49,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_text-colour.css",
+      "oAP" : "\/assets\/_text-colour-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -107,7 +107,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/cookie-pop-up.css",
+      "oAP" : "\/assets\/cookie-pop-up-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -119,7 +119,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/customer.css",
+      "oAP" : "\/assets\/customer-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -129,7 +129,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/customer.min.js",
+      "oAP" : "\/assets\/customer-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -140,7 +140,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/facets.min.js",
+      "oAP" : "\/assets\/facets-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -161,7 +161,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/featured-benefits.css",
+      "oAP" : "\/assets\/featured-benefits-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -199,7 +199,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/featured-reviews.css",
+      "oAP" : "\/assets\/featured-reviews-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -211,7 +211,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/fifty-fifty--LEGACY.css",
+      "oAP" : "\/assets\/fifty-fifty--LEGACY-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -221,7 +221,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/global.min.js",
+      "oAP" : "\/assets\/global-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -332,7 +332,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/main.min.min.js",
+      "oAP" : "\/assets\/main.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -345,7 +345,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/password.css",
+      "oAP" : "\/assets\/password-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -355,7 +355,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/pickup-availability.min.js",
+      "oAP" : "\/assets\/pickup-availability-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -368,7 +368,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/pop-up.css",
+      "oAP" : "\/assets\/pop-up-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -378,7 +378,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/predictive-search.min.js",
+      "oAP" : "\/assets\/predictive-search-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -389,7 +389,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/product-form.min.js",
+      "oAP" : "\/assets\/product-form-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -400,7 +400,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/product-model.min.js",
+      "oAP" : "\/assets\/product-model-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -411,7 +411,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/pushMenu.min.min.js",
+      "oAP" : "\/assets\/pushMenu.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -437,7 +437,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-404.css",
+      "oAP" : "\/assets\/section-404-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -449,7 +449,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-age-gate.css",
+      "oAP" : "\/assets\/section-age-gate-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -461,7 +461,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-card-grid.css",
+      "oAP" : "\/assets\/section-card-grid-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -473,7 +473,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-collection.css",
+      "oAP" : "\/assets\/section-collection-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -485,7 +485,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-contact-form.css",
+      "oAP" : "\/assets\/section-contact-form-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -497,7 +497,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-cookie-notice.css",
+      "oAP" : "\/assets\/section-cookie-notice-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -509,7 +509,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-cookie-pop-up.css",
+      "oAP" : "\/assets\/section-cookie-pop-up-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -521,7 +521,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-featured-benefits.css",
+      "oAP" : "\/assets\/section-featured-benefits-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -533,7 +533,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-featured-carousel.css",
+      "oAP" : "\/assets\/section-featured-carousel-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -545,7 +545,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-featured-image.css",
+      "oAP" : "\/assets\/section-featured-image-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -557,7 +557,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-featured-products.css",
+      "oAP" : "\/assets\/section-featured-products-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -569,7 +569,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-featured-reviews.css",
+      "oAP" : "\/assets\/section-featured-reviews-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -581,7 +581,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-featured-wine.css",
+      "oAP" : "\/assets\/section-featured-wine-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -593,7 +593,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-fifty-fifty.css",
+      "oAP" : "\/assets\/section-fifty-fifty-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -605,7 +605,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-full-width-feature.css",
+      "oAP" : "\/assets\/section-full-width-feature-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -617,7 +617,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-instagram-feed.css",
+      "oAP" : "\/assets\/section-instagram-feed-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -627,7 +627,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/section-instagram-feed.min.js",
+      "oAP" : "\/assets\/section-instagram-feed-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -640,7 +640,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-pop-up.css",
+      "oAP" : "\/assets\/section-pop-up-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -652,7 +652,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-stockists.css",
+      "oAP" : "\/assets\/section-stockists-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -664,7 +664,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-sustainability.css",
+      "oAP" : "\/assets\/section-sustainability-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -676,7 +676,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/section-three-card-grid.css",
+      "oAP" : "\/assets\/section-three-card-grid-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -686,7 +686,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/share.min.js",
+      "oAP" : "\/assets\/share-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -719,7 +719,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/stockists.css",
+      "oAP" : "\/assets\/stockists-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -731,7 +731,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/style.css",
+      "oAP" : "\/assets\/style-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -741,7 +741,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/theme-editor.min.js",
+      "oAP" : "\/assets\/theme-editor-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -805,7 +805,7 @@
     "\/config\/settings_data.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/config\/settings_data.json",
+      "oAP" : "\/config\/settings_data-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -813,7 +813,7 @@
     "\/config\/settings_schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/config\/settings_schema.json",
+      "oAP" : "\/config\/settings_schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -824,7 +824,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/main.min.js",
+      "oAP" : "\/js\/main-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -835,7 +835,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/ageGate.min.js",
+      "oAP" : "\/js\/modules\/ageGate-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 1
@@ -846,7 +846,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/announcements.min.js",
+      "oAP" : "\/js\/modules\/announcements-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 1
@@ -857,7 +857,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/breakpoints.min.js",
+      "oAP" : "\/js\/modules\/breakpoints-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 1
@@ -868,7 +868,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/cart.min.js",
+      "oAP" : "\/js\/modules\/cart-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 1
@@ -879,7 +879,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/cookieNotice.min.js",
+      "oAP" : "\/js\/modules\/cookieNotice-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -890,7 +890,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/cookies.min.js",
+      "oAP" : "\/js\/modules\/cookies-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -901,7 +901,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/credits.min.js",
+      "oAP" : "\/js\/modules\/credits-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 1
@@ -912,7 +912,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/drawers.min.js",
+      "oAP" : "\/js\/modules\/drawers-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 1
@@ -923,7 +923,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/forms.min.js",
+      "oAP" : "\/js\/modules\/forms-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -934,7 +934,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/gliders.min.js",
+      "oAP" : "\/js\/modules\/gliders-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -945,7 +945,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/instagramFeed.min.js",
+      "oAP" : "\/js\/modules\/instagramFeed-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -956,7 +956,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/money.min.js",
+      "oAP" : "\/js\/modules\/money-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 1
@@ -967,7 +967,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/popUps.min.js",
+      "oAP" : "\/js\/modules\/popUps-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -978,7 +978,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/product.min.js",
+      "oAP" : "\/js\/modules\/product-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 1
@@ -989,7 +989,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/pushMenu.min.js",
+      "oAP" : "\/js\/modules\/pushMenu-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 1
@@ -1000,7 +1000,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/render.min.js",
+      "oAP" : "\/js\/modules\/render-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 1
@@ -1011,7 +1011,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/scrolling.min.js",
+      "oAP" : "\/js\/modules\/scrolling-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 1
@@ -1022,7 +1022,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/templates.min.js",
+      "oAP" : "\/js\/modules\/templates-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 1
@@ -1033,7 +1033,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/tools.min.js",
+      "oAP" : "\/js\/modules\/tools-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 1
@@ -1044,7 +1044,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/instagram-feed.min.js",
+      "oAP" : "\/js\/sections\/instagram-feed-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -1055,7 +1055,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/Instagram.min.js",
+      "oAP" : "\/js\/utils\/Instagram-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -1066,7 +1066,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/LocalStorage.min.js",
+      "oAP" : "\/js\/utils\/LocalStorage-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -1090,7 +1090,7 @@
     "\/locales\/bg-BG.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/bg-BG.json",
+      "oAP" : "\/locales\/bg-BG-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1098,7 +1098,7 @@
     "\/locales\/cs.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/cs.json",
+      "oAP" : "\/locales\/cs-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1106,7 +1106,7 @@
     "\/locales\/cs.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/cs.schema.json",
+      "oAP" : "\/locales\/cs.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1114,7 +1114,7 @@
     "\/locales\/da.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/da.json",
+      "oAP" : "\/locales\/da-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1122,7 +1122,7 @@
     "\/locales\/da.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/da.schema.json",
+      "oAP" : "\/locales\/da.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1130,7 +1130,7 @@
     "\/locales\/de.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/de.json",
+      "oAP" : "\/locales\/de-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1138,7 +1138,7 @@
     "\/locales\/de.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/de.schema.json",
+      "oAP" : "\/locales\/de.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1146,7 +1146,7 @@
     "\/locales\/el.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/el.json",
+      "oAP" : "\/locales\/el-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1154,7 +1154,7 @@
     "\/locales\/en.default.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/en.default.json",
+      "oAP" : "\/locales\/en.default-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1162,7 +1162,7 @@
     "\/locales\/en.default.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/en.default.schema.json",
+      "oAP" : "\/locales\/en.default.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1170,7 +1170,7 @@
     "\/locales\/es.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/es.json",
+      "oAP" : "\/locales\/es-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1178,7 +1178,7 @@
     "\/locales\/es.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/es.schema.json",
+      "oAP" : "\/locales\/es.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1186,7 +1186,7 @@
     "\/locales\/fi.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/fi.json",
+      "oAP" : "\/locales\/fi-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1194,7 +1194,7 @@
     "\/locales\/fi.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/fi.schema.json",
+      "oAP" : "\/locales\/fi.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1202,7 +1202,7 @@
     "\/locales\/fr.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/fr.json",
+      "oAP" : "\/locales\/fr-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1210,7 +1210,7 @@
     "\/locales\/fr.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/fr.schema.json",
+      "oAP" : "\/locales\/fr.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1218,7 +1218,7 @@
     "\/locales\/hr-HR.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/hr-HR.json",
+      "oAP" : "\/locales\/hr-HR-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1226,7 +1226,7 @@
     "\/locales\/hu.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/hu.json",
+      "oAP" : "\/locales\/hu-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1234,7 +1234,7 @@
     "\/locales\/id.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/id.json",
+      "oAP" : "\/locales\/id-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1242,7 +1242,7 @@
     "\/locales\/it.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/it.json",
+      "oAP" : "\/locales\/it-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1250,7 +1250,7 @@
     "\/locales\/it.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/it.schema.json",
+      "oAP" : "\/locales\/it.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1258,7 +1258,7 @@
     "\/locales\/ja.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/ja.json",
+      "oAP" : "\/locales\/ja-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1266,7 +1266,7 @@
     "\/locales\/ja.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/ja.schema.json",
+      "oAP" : "\/locales\/ja.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1274,7 +1274,7 @@
     "\/locales\/ko.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/ko.json",
+      "oAP" : "\/locales\/ko-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1282,7 +1282,7 @@
     "\/locales\/ko.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/ko.schema.json",
+      "oAP" : "\/locales\/ko.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1290,7 +1290,7 @@
     "\/locales\/lt-LT.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/lt-LT.json",
+      "oAP" : "\/locales\/lt-LT-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1298,7 +1298,7 @@
     "\/locales\/nb.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/nb.json",
+      "oAP" : "\/locales\/nb-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1306,7 +1306,7 @@
     "\/locales\/nb.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/nb.schema.json",
+      "oAP" : "\/locales\/nb.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1314,7 +1314,7 @@
     "\/locales\/nl.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/nl.json",
+      "oAP" : "\/locales\/nl-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1322,7 +1322,7 @@
     "\/locales\/nl.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/nl.schema.json",
+      "oAP" : "\/locales\/nl.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1330,7 +1330,7 @@
     "\/locales\/pl.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/pl.json",
+      "oAP" : "\/locales\/pl-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1338,7 +1338,7 @@
     "\/locales\/pl.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/pl.schema.json",
+      "oAP" : "\/locales\/pl.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1346,7 +1346,7 @@
     "\/locales\/pt-BR.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/pt-BR.json",
+      "oAP" : "\/locales\/pt-BR-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1354,7 +1354,7 @@
     "\/locales\/pt-BR.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/pt-BR.schema.json",
+      "oAP" : "\/locales\/pt-BR.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1362,7 +1362,7 @@
     "\/locales\/pt-PT.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/pt-PT.json",
+      "oAP" : "\/locales\/pt-PT-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1370,7 +1370,7 @@
     "\/locales\/pt-PT.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/pt-PT.schema.json",
+      "oAP" : "\/locales\/pt-PT.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1378,7 +1378,7 @@
     "\/locales\/ro-RO.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/ro-RO.json",
+      "oAP" : "\/locales\/ro-RO-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1386,7 +1386,7 @@
     "\/locales\/ru.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/ru.json",
+      "oAP" : "\/locales\/ru-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1394,7 +1394,7 @@
     "\/locales\/sk-SK.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/sk-SK.json",
+      "oAP" : "\/locales\/sk-SK-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1402,7 +1402,7 @@
     "\/locales\/sl-SI.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/sl-SI.json",
+      "oAP" : "\/locales\/sl-SI-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1410,7 +1410,7 @@
     "\/locales\/sv.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/sv.json",
+      "oAP" : "\/locales\/sv-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1418,7 +1418,7 @@
     "\/locales\/sv.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/sv.schema.json",
+      "oAP" : "\/locales\/sv.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1426,7 +1426,7 @@
     "\/locales\/th.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/th.json",
+      "oAP" : "\/locales\/th-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1434,7 +1434,7 @@
     "\/locales\/th.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/th.schema.json",
+      "oAP" : "\/locales\/th.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1442,7 +1442,7 @@
     "\/locales\/tr.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/tr.json",
+      "oAP" : "\/locales\/tr-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1450,7 +1450,7 @@
     "\/locales\/tr.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/tr.schema.json",
+      "oAP" : "\/locales\/tr.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1458,7 +1458,7 @@
     "\/locales\/vi.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/vi.json",
+      "oAP" : "\/locales\/vi-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1466,7 +1466,7 @@
     "\/locales\/vi.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/vi.schema.json",
+      "oAP" : "\/locales\/vi.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1474,7 +1474,7 @@
     "\/locales\/zh-CN.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/zh-CN.json",
+      "oAP" : "\/locales\/zh-CN-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1482,7 +1482,7 @@
     "\/locales\/zh-CN.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/zh-CN.schema.json",
+      "oAP" : "\/locales\/zh-CN.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1490,7 +1490,7 @@
     "\/locales\/zh-TW.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/zh-TW.json",
+      "oAP" : "\/locales\/zh-TW-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1498,7 +1498,7 @@
     "\/locales\/zh-TW.schema.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/locales\/zh-TW.schema.json",
+      "oAP" : "\/locales\/zh-TW.schema-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1512,7 +1512,7 @@
     "\/package-lock.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/package-lock.json",
+      "oAP" : "\/package-lock-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1520,7 +1520,7 @@
     "\/package.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/package.json",
+      "oAP" : "\/package-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -1561,7 +1561,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_card-article.css",
+      "oAP" : "\/scss\/cards\/_card-article.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1576,7 +1576,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_card-benefit.css",
+      "oAP" : "\/scss\/cards\/_card-benefit.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1591,7 +1591,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_card-collection.css",
+      "oAP" : "\/scss\/cards\/_card-collection.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1606,7 +1606,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_card-grid.css",
+      "oAP" : "\/scss\/cards\/_card-grid.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1621,7 +1621,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_card-line-item.css",
+      "oAP" : "\/scss\/cards\/_card-line-item.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1636,7 +1636,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_card-product.css",
+      "oAP" : "\/scss\/cards\/_card-product.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1651,7 +1651,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_card-review.css",
+      "oAP" : "\/scss\/cards\/_card-review.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1666,7 +1666,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_index.css",
+      "oAP" : "\/scss\/cards\/_index.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1681,7 +1681,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_accordion.css",
+      "oAP" : "\/scss\/components\/_accordion.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1696,7 +1696,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_anchor.css",
+      "oAP" : "\/scss\/components\/_anchor.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1711,7 +1711,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_aos.css",
+      "oAP" : "\/scss\/components\/_aos.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1726,7 +1726,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_background.css",
+      "oAP" : "\/scss\/components\/_background.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1741,7 +1741,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_body-copy.css",
+      "oAP" : "\/scss\/components\/_body-copy.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1756,7 +1756,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_border-round-invert.css",
+      "oAP" : "\/scss\/components\/_border-round-invert.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1771,7 +1771,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_border.css",
+      "oAP" : "\/scss\/components\/_border.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1786,7 +1786,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_button.css",
+      "oAP" : "\/scss\/components\/_button.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1801,7 +1801,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_cart-empty-message.css",
+      "oAP" : "\/scss\/components\/_cart-empty-message.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1816,7 +1816,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_cart-line-item.css",
+      "oAP" : "\/scss\/components\/_cart-line-item.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1831,7 +1831,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_collapsible.css",
+      "oAP" : "\/scss\/components\/_collapsible.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1846,7 +1846,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_colour-theme.css",
+      "oAP" : "\/scss\/components\/_colour-theme.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1861,7 +1861,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_error-message.css",
+      "oAP" : "\/scss\/components\/_error-message.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1876,7 +1876,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_field.css",
+      "oAP" : "\/scss\/components\/_field.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1891,7 +1891,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_font.css",
+      "oAP" : "\/scss\/components\/_font.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1906,7 +1906,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_form.css",
+      "oAP" : "\/scss\/components\/_form.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1921,7 +1921,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_glide.css",
+      "oAP" : "\/scss\/components\/_glide.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1936,7 +1936,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_grid.css",
+      "oAP" : "\/scss\/components\/_grid.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1951,7 +1951,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_heading--LEGACY.css",
+      "oAP" : "\/scss\/components\/_heading--LEGACY.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1966,7 +1966,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_heading.css",
+      "oAP" : "\/scss\/components\/_heading.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1981,7 +1981,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_height.css",
+      "oAP" : "\/scss\/components\/_height.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1996,7 +1996,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_image.css",
+      "oAP" : "\/scss\/components\/_image.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2011,7 +2011,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_index.css",
+      "oAP" : "\/scss\/components\/_index.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2026,7 +2026,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_input.css",
+      "oAP" : "\/scss\/components\/_input.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2041,7 +2041,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_inverted-corner-box.css",
+      "oAP" : "\/scss\/components\/_inverted-corner-box.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2056,7 +2056,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_label.css",
+      "oAP" : "\/scss\/components\/_label.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2071,7 +2071,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_lazyload.css",
+      "oAP" : "\/scss\/components\/_lazyload.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2086,7 +2086,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_link.css",
+      "oAP" : "\/scss\/components\/_link.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2101,7 +2101,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_marquee.css",
+      "oAP" : "\/scss\/components\/_marquee.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2116,7 +2116,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_media.css",
+      "oAP" : "\/scss\/components\/_media.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2131,7 +2131,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_modal.css",
+      "oAP" : "\/scss\/components\/_modal.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2146,7 +2146,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_navigation.css",
+      "oAP" : "\/scss\/components\/_navigation.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2161,7 +2161,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_pagination.css",
+      "oAP" : "\/scss\/components\/_pagination.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2176,7 +2176,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_price.css",
+      "oAP" : "\/scss\/components\/_price.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2191,7 +2191,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_radio.css",
+      "oAP" : "\/scss\/components\/_radio.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2206,7 +2206,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_section.css",
+      "oAP" : "\/scss\/components\/_section.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2221,7 +2221,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_select.css",
+      "oAP" : "\/scss\/components\/_select.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2236,7 +2236,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_stepper.css",
+      "oAP" : "\/scss\/components\/_stepper.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2251,7 +2251,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_text.css",
+      "oAP" : "\/scss\/components\/_text.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2266,7 +2266,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_textarea.css",
+      "oAP" : "\/scss\/components\/_textarea.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2281,7 +2281,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_title.css",
+      "oAP" : "\/scss\/components\/_title.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2296,7 +2296,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_index.css",
+      "oAP" : "\/scss\/layouts\/_index.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2311,7 +2311,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/password.css",
+      "oAP" : "\/scss\/password.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2326,7 +2326,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/_index.css",
+      "oAP" : "\/scss\/sections\/_index.css",
       "oF" : 1,
       "oS" : 3,
       "pg" : 0,
@@ -2356,7 +2356,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/age-gate.css",
+      "oAP" : "\/scss\/sections\/age-gate.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2401,7 +2401,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/cookie-notice.css",
+      "oAP" : "\/scss\/sections\/cookie-notice.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2506,7 +2506,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/fifty-fifty--LEGACY.css",
+      "oAP" : "\/scss\/sections\/fifty-fifty--LEGACY.css",
       "oF" : 1,
       "oS" : 3,
       "pg" : 0,
@@ -2551,7 +2551,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/instagram-feed.css",
+      "oAP" : "\/scss\/sections\/instagram-feed.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2566,7 +2566,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/marquee.css",
+      "oAP" : "\/scss\/sections\/marquee.css",
       "oF" : 1,
       "oS" : 3,
       "pg" : 0,
@@ -2581,7 +2581,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/pop-up.css",
+      "oAP" : "\/scss\/sections\/pop-up.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2656,7 +2656,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_404.css",
+      "oAP" : "\/scss\/theme\/_404.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2671,7 +2671,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_article.css",
+      "oAP" : "\/scss\/theme\/_article.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2686,7 +2686,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_blog.css",
+      "oAP" : "\/scss\/theme\/_blog.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2701,7 +2701,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_body.css",
+      "oAP" : "\/scss\/theme\/_body.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2716,7 +2716,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_cart.css",
+      "oAP" : "\/scss\/theme\/_cart.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2731,7 +2731,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_collection-hero.css",
+      "oAP" : "\/scss\/theme\/_collection-hero.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2746,7 +2746,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_collection.css",
+      "oAP" : "\/scss\/theme\/_collection.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2761,7 +2761,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_container.css",
+      "oAP" : "\/scss\/theme\/_container.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2776,7 +2776,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_css-variables.css",
+      "oAP" : "\/scss\/theme\/_css-variables.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2791,7 +2791,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_drawer-cart.css",
+      "oAP" : "\/scss\/theme\/_drawer-cart.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2806,7 +2806,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_drawer-menu.css",
+      "oAP" : "\/scss\/theme\/_drawer-menu.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2821,7 +2821,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_drawer.css",
+      "oAP" : "\/scss\/theme\/_drawer.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2836,7 +2836,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_fonts.css",
+      "oAP" : "\/scss\/theme\/_fonts.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2851,7 +2851,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_footer.css",
+      "oAP" : "\/scss\/theme\/_footer.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2866,7 +2866,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_header.css",
+      "oAP" : "\/scss\/theme\/_header.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2881,7 +2881,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_hero.css",
+      "oAP" : "\/scss\/theme\/_hero.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2896,7 +2896,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_index.css",
+      "oAP" : "\/scss\/theme\/_index.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2911,7 +2911,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_inverted-corner.css",
+      "oAP" : "\/scss\/theme\/_inverted-corner.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2926,7 +2926,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_newsletter-popup.css",
+      "oAP" : "\/scss\/theme\/_newsletter-popup.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2941,7 +2941,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_page.css",
+      "oAP" : "\/scss\/theme\/_page.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2956,7 +2956,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_password.css",
+      "oAP" : "\/scss\/theme\/_password.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2971,7 +2971,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_policy.css",
+      "oAP" : "\/scss\/theme\/_policy.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2986,7 +2986,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_product.css",
+      "oAP" : "\/scss\/theme\/_product.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3001,7 +3001,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_push-menu.css",
+      "oAP" : "\/scss\/theme\/_push-menu.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3016,7 +3016,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_index.css",
+      "oAP" : "\/scss\/utils\/_index.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3031,7 +3031,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_variables.css",
+      "oAP" : "\/scss\/utils\/_variables.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3046,7 +3046,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_hex-to-rgb.css",
+      "oAP" : "\/scss\/utils\/functions\/_hex-to-rgb.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3061,7 +3061,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_body-copy.css",
+      "oAP" : "\/scss\/utils\/mixins\/_body-copy.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3076,7 +3076,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_border.css",
+      "oAP" : "\/scss\/utils\/mixins\/_border.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3091,7 +3091,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_breakpoint.css",
+      "oAP" : "\/scss\/utils\/mixins\/_breakpoint.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3106,7 +3106,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_button-close.css",
+      "oAP" : "\/scss\/utils\/mixins\/_button-close.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3121,7 +3121,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_button.css",
+      "oAP" : "\/scss\/utils\/mixins\/_button.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3136,7 +3136,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_colour-theme.css",
+      "oAP" : "\/scss\/utils\/mixins\/_colour-theme.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3151,7 +3151,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_font.css",
+      "oAP" : "\/scss\/utils\/mixins\/_font.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3166,7 +3166,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_heading--LEGACY.css",
+      "oAP" : "\/scss\/utils\/mixins\/_heading--LEGACY.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3181,7 +3181,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_heading.css",
+      "oAP" : "\/scss\/utils\/mixins\/_heading.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3196,7 +3196,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_input.css",
+      "oAP" : "\/scss\/utils\/mixins\/_input.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3211,7 +3211,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_inverted-corner-box.css",
+      "oAP" : "\/scss\/utils\/mixins\/_inverted-corner-box.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3226,7 +3226,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_link.css",
+      "oAP" : "\/scss\/utils\/mixins\/_link.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3241,7 +3241,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_textarea.css",
+      "oAP" : "\/scss\/utils\/mixins\/_textarea.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3256,7 +3256,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_tools.css",
+      "oAP" : "\/scss\/utils\/mixins\/_tools.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3271,7 +3271,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_ui.css",
+      "oAP" : "\/scss\/utils\/mixins\/_ui.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3286,7 +3286,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_index.css",
+      "oAP" : "\/scss\/vendors\/_index.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -4087,7 +4087,7 @@
     "\/templates\/404.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/404.json",
+      "oAP" : "\/templates\/404-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4095,7 +4095,7 @@
     "\/templates\/article.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/article.json",
+      "oAP" : "\/templates\/article-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4103,7 +4103,7 @@
     "\/templates\/blog.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/blog.json",
+      "oAP" : "\/templates\/blog-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4111,7 +4111,7 @@
     "\/templates\/cart.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/cart.json",
+      "oAP" : "\/templates\/cart-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4119,7 +4119,7 @@
     "\/templates\/collection.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/collection.json",
+      "oAP" : "\/templates\/collection-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4191,7 +4191,7 @@
     "\/templates\/index.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/index.json",
+      "oAP" : "\/templates\/index-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4199,7 +4199,7 @@
     "\/templates\/list-collections.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/list-collections.json",
+      "oAP" : "\/templates\/list-collections-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4207,7 +4207,7 @@
     "\/templates\/page.contact.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/page.contact.json",
+      "oAP" : "\/templates\/page.contact-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4215,7 +4215,7 @@
     "\/templates\/page.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/page.json",
+      "oAP" : "\/templates\/page-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4223,7 +4223,7 @@
     "\/templates\/page.our-story.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/page.our-story.json",
+      "oAP" : "\/templates\/page.our-story-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4231,7 +4231,7 @@
     "\/templates\/page.our-wine.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/page.our-wine.json",
+      "oAP" : "\/templates\/page.our-wine-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4239,7 +4239,7 @@
     "\/templates\/page.store-locator.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/page.store-locator.json",
+      "oAP" : "\/templates\/page.store-locator-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4247,7 +4247,7 @@
     "\/templates\/page.sustainability.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/page.sustainability.json",
+      "oAP" : "\/templates\/page.sustainability-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4255,7 +4255,7 @@
     "\/templates\/page.thank-you.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/page.thank-you.json",
+      "oAP" : "\/templates\/page.thank-you-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4263,7 +4263,7 @@
     "\/templates\/password.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/password.json",
+      "oAP" : "\/templates\/password-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4271,7 +4271,7 @@
     "\/templates\/product.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/product.json",
+      "oAP" : "\/templates\/product-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4279,7 +4279,7 @@
     "\/templates\/search.json" : {
       "ft" : 524288,
       "oA" : 0,
-      "oAP" : "\/templates\/search.json",
+      "oAP" : "\/templates\/search-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -4589,7 +4589,7 @@
     "bowerTargetDependencyListType" : 1,
     "bowerUseExactVersion" : 0,
     "browserRefreshDelay" : 0,
-    "browserslistString" : "cover 98%, not dead",
+    "browserslistString" : ">0.2%, last 2 versions, Firefox ESR, not dead",
     "buildEnvironment" : 0,
     "buildFolderActive" : 0,
     "buildFolderName" : "build",
@@ -4600,7 +4600,7 @@
       "NODE_ENV:::production"
     ],
     "esLintConfigFileHandlingType" : 0,
-    "esLintECMAVersion" : 0,
+    "esLintECMAVersion" : 7,
     "esLintEnvironmentsMask" : 1,
     "esLintRules" : {
       "accessor-pairs" : {
@@ -4898,7 +4898,7 @@
         "active" : 1
       },
       "no-compare-neg-zero" : {
-        "active" : 0
+        "active" : 1
       },
       "no-cond-assign" : {
         "active" : 1,
@@ -4909,7 +4909,7 @@
         "optionString" : "{'allowParens': true, 'onlyOneSimpleParam': false}"
       },
       "no-console" : {
-        "active" : 1,
+        "active" : 0,
         "optionString" : "{'allow': ['warn', 'error']}"
       },
       "no-const-assign" : {
@@ -5053,7 +5053,7 @@
       },
       "no-irregular-whitespace" : {
         "active" : 1,
-        "optionString" : "{'skipStrings': true, 'skipComments': false, 'skipRegExps': true, 'skipTemplates': true}"
+        "optionString" : "{'skipStrings': true, 'skipComments': false, 'skipRegExps': true, 'skipTemplates': true, 'skipJSXText': true}"
       },
       "no-iterator" : {
         "active" : 0
@@ -5079,10 +5079,10 @@
       },
       "no-magic-numbers" : {
         "active" : 0,
-        "optionString" : "{'ignore': [], 'ignoreArrayIndexes': true, 'ignoreDefaultValues': false, 'enforceConst': false, 'detectObjects': false}"
+        "optionString" : "{'ignore': [], 'ignoreArrayIndexes': true, 'ignoreDefaultValues': false, 'ignoreClassFieldInitialValues': false, 'enforceConst': false, 'detectObjects': false}"
       },
       "no-misleading-character-class" : {
-        "active" : 0
+        "active" : 1
       },
       "no-mixed-operators" : {
         "active" : 0,
@@ -5575,8 +5575,8 @@
       "transpilerStyle" : 1
     },
     "languageDefaultsCSS" : {
-      "autoOutputAction" : 2,
-      "autoOutputPathFilenamePattern" : "*.css",
+      "autoOutputAction" : 0,
+      "autoOutputPathFilenamePattern" : "*-min.css",
       "autoOutputPathRelativePath" : "",
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
@@ -5628,20 +5628,20 @@
     },
     "languageDefaultsJS" : {
       "autoOutputAction" : 0,
-      "autoOutputPathFilenamePattern" : "*.min.js",
-      "autoOutputPathRelativePath" : ".\/assets\/",
+      "autoOutputPathFilenamePattern" : "*-min.js",
+      "autoOutputPathRelativePath" : "\/min",
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
-      "autoOutputPathStyle" : 1,
-      "bundleFormat" : 3,
+      "autoOutputPathStyle" : 0,
+      "bundleFormat" : 0,
       "minifierStyle" : 1,
       "sourceMapStyle" : 0,
       "syntaxCheckerStyle" : 3,
-      "transpilerStyle" : 1
+      "transpilerStyle" : 0
     },
     "languageDefaultsJSON" : {
-      "autoOutputAction" : 0,
-      "autoOutputPathFilenamePattern" : "*.json",
+      "autoOutputAction" : 1,
+      "autoOutputPathFilenamePattern" : "*-min.json",
       "autoOutputPathRelativePath" : "",
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
@@ -5718,7 +5718,7 @@
       "autoOutputPathReplace2" : "",
       "autoOutputPathStyle" : 0,
       "optimizerType" : 1,
-      "quality" : 100,
+      "quality" : 90,
       "webpOptimizationPresetUUID" : "lpckwebp-none",
       "webpRGBQuality" : 75
     },
@@ -5737,17 +5737,17 @@
     "languageDefaultsSASS" : {
       "autoOutputAction" : 0,
       "autoOutputPathFilenamePattern" : "*.css",
-      "autoOutputPathRelativePath" : ".\/assets\/",
+      "autoOutputPathRelativePath" : "..\/css",
       "autoOutputPathReplace1" : "sass",
       "autoOutputPathReplace2" : "css",
-      "autoOutputPathStyle" : 1,
+      "autoOutputPathStyle" : 0,
       "compilerType" : 0,
       "cssoStyle" : 0,
       "decimalPrecision" : 10,
       "emitCharset" : 1,
-      "outputStyle" : 3,
+      "outputStyle" : 0,
       "purgeCSSStyle" : 0,
-      "shouldRunAutoprefixer" : 1,
+      "shouldRunAutoprefixer" : 0,
       "shouldRunBless" : 0,
       "sourceMapStyle" : 0
     },
@@ -5784,7 +5784,7 @@
       "sourceMapStyle" : 0
     },
     "languageDefaultsSVG" : {
-      "autoOutputAction" : 0,
+      "autoOutputAction" : 2,
       "autoOutputPathFilenamePattern" : "*.svg",
       "autoOutputPathRelativePath" : "",
       "autoOutputPathReplace1" : "",
@@ -5858,7 +5858,7 @@
       "process.env.NODE_ENV:::$NODE_ENV",
       "ENVIRONMENT:::$NODE_ENV"
     ],
-    "rollupTreeshakingEnabled" : 0,
+    "rollupTreeshakingEnabled" : 1,
     "rollupTreeshakingModuleSideEffects" : 1,
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
     "sourceFolderName" : "source",
@@ -5876,7 +5876,7 @@
     "tsESModuleInterop" : 0,
     "tsExactOptionalPropertyTypes" : 0,
     "tsExperimentalDecorators" : 0,
-    "tsForceConsistentCasingInFileNames" : 0,
+    "tsForceConsistentCasingInFileNames" : 1,
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
     "tsJSXFactory" : "React.createElement",
