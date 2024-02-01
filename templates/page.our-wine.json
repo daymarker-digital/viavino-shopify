@@ -440,6 +440,7 @@
     },
     "pop_up_7rR6aW": {
       "type": "pop-up",
+      "disabled": true,
       "settings": {
         "colour_theme": "off-white",
         "delay": 4000,
