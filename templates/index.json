@@ -417,6 +417,7 @@
     },
     "pop_up_UyrCnB": {
       "type": "pop-up",
+      "disabled": true,
       "settings": {
         "colour_theme": "rosa",
         "delay": 3000,
