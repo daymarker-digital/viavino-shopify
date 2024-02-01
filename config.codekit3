@@ -825,7 +825,7 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/main.min.js",
-      "oF" : 2,
+      "oF" : 0,
       "sC" : 3,
       "tS" : 1
     },
@@ -880,7 +880,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/cookieNotice.min.js",
-      "oF" : 1,
+      "oF" : 0,
       "sC" : 3,
       "tS" : 1
     },
@@ -891,7 +891,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/cookies.min.js",
-      "oF" : 1,
+      "oF" : 0,
       "sC" : 3,
       "tS" : 1
     },
@@ -924,7 +924,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/forms.min.js",
-      "oF" : 1,
+      "oF" : 0,
       "sC" : 3,
       "tS" : 1
     },
@@ -935,7 +935,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/gliders.min.js",
-      "oF" : 1,
+      "oF" : 0,
       "sC" : 3,
       "tS" : 1
     },
@@ -946,7 +946,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/instagramFeed.min.js",
-      "oF" : 1,
+      "oF" : 0,
       "sC" : 3,
       "tS" : 1
     },
@@ -968,7 +968,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/popUps.min.js",
-      "oF" : 1,
+      "oF" : 0,
       "sC" : 3,
       "tS" : 1
     },
@@ -1044,8 +1044,8 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/section-instagram-feed.js",
-      "oF" : 3,
+      "oAP" : "\/assets\/instagram-feed.min.js",
+      "oF" : 0,
       "sC" : 3,
       "tS" : 1
     },
@@ -1056,7 +1056,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/Instagram.min.js",
-      "oF" : 1,
+      "oF" : 0,
       "sC" : 3,
       "tS" : 1
     },
@@ -1067,7 +1067,7 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/LocalStorage.min.js",
-      "oF" : 1,
+      "oF" : 0,
       "sC" : 3,
       "tS" : 1
     },
@@ -2356,8 +2356,8 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/section-age-gate.css",
-      "oF" : 3,
+      "oAP" : "\/assets\/age-gate.css",
+      "oF" : 0,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2401,8 +2401,8 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/section-cookie-notice.css",
-      "oF" : 2,
+      "oAP" : "\/assets\/cookie-notice.css",
+      "oF" : 0,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2551,8 +2551,8 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/section-instagram-feed.css",
-      "oF" : 2,
+      "oAP" : "\/assets\/instagram-feed.css",
+      "oF" : 0,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -2581,8 +2581,8 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/section-pop-up.css",
-      "oF" : 3,
+      "oAP" : "\/assets\/pop-up.css",
+      "oF" : 0,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
