@@ -9,7 +9,7 @@
     "0acf5f4b-81ec-4fc6-a25a-6a63ac132650",
     "4b0b629e-fe0e-4216-aca0-6e32db55390a",
     "3015fe88-4279-4a82-85d5-366c5adfbdcd",
-    "pop_up_UyrCnB"
+    "pop_up_XGqHxL"
   ],
   "sections": {
     "b0a4498a-bca0-42d0-a616-a5313c5f8d1d": {
@@ -415,18 +415,17 @@
         "anchor_id": ""
       }
     },
-    "pop_up_UyrCnB": {
+    "pop_up_XGqHxL": {
       "type": "pop-up",
-      "disabled": true,
       "settings": {
-        "colour_theme": "rosa",
-        "delay": 3000,
-        "cookie_duration": 30,
-        "heading": "Scusi!",
-        "heading_font_family": "clarendon-wide-slab",
-        "message": "<p>Nunc vel mauris nec ex feugiat sodales nec sed ipsum. Fusce sed dictum massa, id aliquam mi.<\/p>",
-        "button_title": "Subscribe It",
-        "subheading": "<p>By submitting this form, you acknowledge that the information you provide will be processed in accordance with our <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">Privacy Policy<\/a>. You can unsubscribe at anytime.<\/p>"
+        "colour_theme": "off-white",
+        "delay": 4000,
+        "cookie_duration": 5,
+        "heading": "WINE CULT",
+        "heading_font_family": "novecento-sans",
+        "message": "<p>Join us<\/p>",
+        "button_title": "Subscribe",
+        "subheading": "<p>Wine cult is monthly curation of culture, events, and opinions by Viavino. Tell your family. Bring your friends. Join the cult. <\/p>"
       }
     }
   }
