@@ -417,7 +417,6 @@
     },
     "pop_up_XGqHxL": {
       "type": "pop-up",
-      "disabled": true,
       "settings": {
         "colour_theme": "off-white",
         "delay": 4000,
@@ -426,7 +425,7 @@
         "heading_font_family": "novecento-sans",
         "message": "<p>Join us<\/p>",
         "button_title": "Subscribe",
-        "subheading": "<p>Wine cult is monthly email curation of culture, events, and opinions by Viavino. Tell your family. Bring your friends. Join the cult. <\/p>"
+        "subheading": "<p>Join now for an upcoming monthly email with curations of culture, events, and community news.<\/p><p>Bring your friends. Join the cult. <\/p>"
       }
     }
   }
