@@ -81,7 +81,7 @@
           "type": "product",
           "settings": {
             "product": "rosato",
-            "product_image": "shopify:\/\/shop_images\/via-2.jpg",
+            "product_image": "shopify:\/\/shop_images\/52CB6B34-4BC0-4664-8F77-BD6CCA03E33F.jpg",
             "button_title": "{{ block.settings.product.title }}",
             "button_link": "\/pages\/our-wine#featured-wine-rosato",
             "button_background_colour": "rosa",
