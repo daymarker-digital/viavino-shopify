@@ -69,7 +69,7 @@
           "type": "product",
           "settings": {
             "product": "bianco",
-            "product_image": "shopify:\/\/shop_images\/9FFA0934-F2B7-4E59-94E3-B634EDF65333.jpg",
+            "product_image": "shopify:\/\/shop_images\/Untitled_design-5_06b676e2-9792-417c-84a9-244756f82ca2.png",
             "button_title": "{{ block.settings.product.title }}",
             "button_link": "\/pages\/our-wine#featured-wine-bianco",
             "button_background_colour": "off-white",
@@ -81,7 +81,7 @@
           "type": "product",
           "settings": {
             "product": "rosato",
-            "product_image": "shopify:\/\/shop_images\/295FE786-3895-4B98-A47D-3E5AB09C0C50.jpg",
+            "product_image": "shopify:\/\/shop_images\/via-2.jpg",
             "button_title": "{{ block.settings.product.title }}",
             "button_link": "\/pages\/our-wine#featured-wine-rosato",
             "button_background_colour": "rosa",
@@ -93,7 +93,7 @@
           "type": "product",
           "settings": {
             "product": "rosso",
-            "product_image": "shopify:\/\/shop_images\/DEA3EED2-7B13-4FBE-9ADD-880CEB3F6AB1.jpg",
+            "product_image": "shopify:\/\/shop_images\/7C57DEE7-3118-42A9-ADC5-60D6792260B5.jpg",
             "button_title": "{{ block.settings.product.title }}",
             "button_link": "\/pages\/our-wine#featured-wine-rosso",
             "button_background_colour": "rosso",
