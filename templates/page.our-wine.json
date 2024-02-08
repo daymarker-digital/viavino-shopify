@@ -441,14 +441,14 @@
     "pop_up_7rR6aW": {
       "type": "pop-up",
       "settings": {
-        "colour_theme": "off-white",
-        "delay": 4000,
+        "colour_theme": "off-black",
+        "delay": 7000,
         "cookie_duration": 30,
-        "heading": "Sample Heading",
+        "heading": "WINE CULT",
         "heading_font_family": "novecento-sans",
-        "message": "",
+        "message": "<p>JOIN US<\/p>",
         "button_title": "Subscribe",
-        "subheading": ""
+        "subheading": "<p>Subscribe for an upcoming monthly newsletter with aromas of remote locales, notes of fresh pasta, and lingering tastes of dolce vita. <\/p>"
       }
     }
   }
