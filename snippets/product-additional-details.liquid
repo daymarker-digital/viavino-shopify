@@ -5,7 +5,7 @@
     assign template_name = 'product'
     assign snippet_name = 'product-additional-details'
 
-    assign product_details = false
+    assign product_details = product.metafields.additional.details | default: false
 
   -%}
 
