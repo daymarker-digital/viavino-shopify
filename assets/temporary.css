@@ -5,3 +5,9 @@ html, body {
 .product__additional-details {
   margin-top: 25px;
 }
+
+.product__additional-details-heading {
+  text-transform: uppercase;
+  display: block;
+  margin: 0 0 15px 0;
+}
