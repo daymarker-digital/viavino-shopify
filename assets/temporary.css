@@ -12,6 +12,12 @@ html, body {
   margin: 0 0 15px 0;
 }
 
-.product__additional-details-content {
-  
+.product__additional-details-content {}
+
+.product__additional-details-content ol,
+.product__additional-details-content ul {
+  text-align: left;
+  width: 80%;
+  marging-left: auto;
+  margin-right: auto;
 }
