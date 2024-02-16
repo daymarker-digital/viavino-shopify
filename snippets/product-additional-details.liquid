@@ -10,7 +10,7 @@
   -%}
 
   {% if product_details != blank %}
-    <div class="{{ template_name }}__additional-details body-copy--primary body-copy--md">{{ product_details }}</div>
+    <div class="{{ template_name }}__additional-details body-copy--primary body-copy--md" style="display:none;">{{ product_details }}</div>
   {% endif %}
 
 {%- endif -%}
