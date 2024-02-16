@@ -12,7 +12,9 @@
   {% if product_details != blank %}
     <div class="{{ template_name }}__additional-details body-copy--primary body-copy--md" style="display:none;">
       <strong class="{{ template_name }}__additional-details-heading body-copy--primary body-copy--md">Details</strong>
-      {{ product_details | metafield_tag }}
+      <div class="{{ template_name }}__additional-details-content">
+        {{ product_details | metafield_tag }}
+      </div>
     </div>
   {% endif %}
 
