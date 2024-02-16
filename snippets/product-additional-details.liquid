@@ -10,8 +10,10 @@
   -%}
 
   {% if product_details != blank %}
-    <strong class="body-copy--primary body-copy--md">Details</strong>
-    <div class="{{ template_name }}__additional-details body-copy--primary body-copy--md" style="display:none;">{{ product_details | metafield_tag }}</div>
+    <div class="{{ template_name }}__additional-details body-copy--primary body-copy--md" style="display:none;">
+      <strong class="body-copy--primary body-copy--md">Details</strong>
+      {{ product_details | metafield_tag }}
+    </div>
   {% endif %}
 
 {%- endif -%}
