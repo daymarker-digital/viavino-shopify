@@ -1,0 +1,16 @@
+{%- if product and product != blank -%}
+
+  {%- liquid
+
+    assign template_name = 'product'
+    assign snippet_name = 'product-additional-details'
+
+    assign product_details = false
+
+  -%}
+
+  {% if product_details != blank %}
+    <div class="{{ template_name }}__additional-details body-copy--primary body-copy--md">{{ product_details }}</div>
+  {% endif %}
+
+{%- endif -%}
