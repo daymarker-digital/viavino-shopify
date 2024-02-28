@@ -417,6 +417,7 @@
     },
     "pop_up_XGqHxL": {
       "type": "pop-up",
+      "disabled": true,
       "settings": {
         "colour_theme": "off-black",
         "delay": 4000,
