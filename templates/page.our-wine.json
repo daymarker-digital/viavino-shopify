@@ -4,6 +4,7 @@
     "5d2af833-907f-4c9b-94bb-82bf4ed7c1f5",
     "a9e103a4-0ed5-4a14-9b1f-57f3edbe974e",
     "e0c1cfd3-cfbf-4a6c-baa4-b894926d46ff",
+    "17115740738d3807dc",
     "52295274-f199-4b3a-b22b-ae097ac15bba",
     "d4cc95bc-d8c8-4374-b7f5-cabb04431c7e",
     "4cf01146-29ab-497e-b4fb-cd15b834cdc3",
@@ -281,6 +282,26 @@
         "padding_top": 84,
         "padding_bottom": 84,
         "anchor_id": "featured-wine-rosso"
+      }
+    },
+    "17115740738d3807dc": {
+      "type": "apps",
+      "blocks": {
+        "thingtesting_tt_reviews_ad7ikh": {
+          "type": "shopify:\/\/apps\/thingtesting\/blocks\/tt-reviews\/baaca7f0-e8ce-4b49-bb89-1445a26440f8",
+          "settings": {
+            "heading": "Honest reviews from Thingtesting.",
+            "stars_fill_color": "#a03326",
+            "heading_color": "#333333",
+            "text_color": "#333333"
+          }
+        }
+      },
+      "block_order": [
+        "thingtesting_tt_reviews_ad7ikh"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "52295274-f199-4b3a-b22b-ae097ac15bba": {

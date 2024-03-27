@@ -3,6 +3,7 @@
     "b0a4498a-bca0-42d0-a616-a5313c5f8d1d",
     "31c1b747-27a5-4614-a47a-31cf6d3acfb7",
     "1661195827dff74e88",
+    "1711573854d684bbad",
     "858ab1d2-5a53-4185-ad07-b4a9e869fa50",
     "ab9e352f-162c-4143-9b5f-51bae407dc55",
     "1d026b43-556f-45e0-b1b0-f88e9f064dac",
@@ -117,6 +118,25 @@
         "padding_top": 84,
         "padding_bottom": 84,
         "anchor_id": ""
+      }
+    },
+    "1711573854d684bbad": {
+      "type": "apps",
+      "blocks": {
+        "thingtesting_tt_rating_qf3dFg": {
+          "type": "shopify:\/\/apps\/thingtesting\/blocks\/tt-rating\/baaca7f0-e8ce-4b49-bb89-1445a26440f8",
+          "settings": {
+            "horizontal_alignment": "center",
+            "size": "small",
+            "color": "black"
+          }
+        }
+      },
+      "block_order": [
+        "thingtesting_tt_rating_qf3dFg"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "858ab1d2-5a53-4185-ad07-b4a9e869fa50": {
