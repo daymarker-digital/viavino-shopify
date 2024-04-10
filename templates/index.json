@@ -4,9 +4,9 @@
     "31c1b747-27a5-4614-a47a-31cf6d3acfb7",
     "1661195827dff74e88",
     "1711573854d684bbad",
+    "1d026b43-556f-45e0-b1b0-f88e9f064dac",
     "858ab1d2-5a53-4185-ad07-b4a9e869fa50",
     "ab9e352f-162c-4143-9b5f-51bae407dc55",
-    "1d026b43-556f-45e0-b1b0-f88e9f064dac",
     "0acf5f4b-81ec-4fc6-a25a-6a63ac132650",
     "4b0b629e-fe0e-4216-aca0-6e32db55390a",
     "3015fe88-4279-4a82-85d5-366c5adfbdcd",
@@ -139,6 +139,61 @@
         "include_margins": true
       }
     },
+    "1d026b43-556f-45e0-b1b0-f88e9f064dac": {
+      "type": "featured-reviews",
+      "blocks": {
+        "1fa12558-919f-4ea8-9b98-284925598b5e": {
+          "type": "review",
+          "settings": {
+            "review": "If the idea of good, portable Italian wine doesn't delight you, then their branding and color palette will surely pique your interest.",
+            "reviewer_logo": "shopify:\/\/shop_images\/Thingtesting_logo.png",
+            "rating": 10,
+            "background": "image",
+            "background_image": "shopify:\/\/shop_images\/off-white-pattern_00d4eb39-736a-42c0-babf-f5ecc3cfb34d.png"
+          }
+        },
+        "5bb644b6-7807-483d-a768-25ac6006b447": {
+          "type": "review",
+          "settings": {
+            "review": "Forward-thinking vintners are swapping esotericism for\naccessible pairings, sustainable packaging and a 'deluxified'\napproach to wine, ushering in a new era of inclusive wine culture.",
+            "reviewer_logo": "shopify:\/\/shop_images\/250ml_Viavino_Tetra-3_2b0f388c-bd0e-4d63-b9ac-067335e152ec.png",
+            "rating": 10,
+            "background": "off-white"
+          }
+        },
+        "c7df46be-3133-43b2-bf7a-b83907caeb9e": {
+          "type": "review",
+          "settings": {
+            "review": "Our next prediction? A Tetra Pak renaissance. Just like boxed wine got a glow up, so is the Tetra Pak, see Viavino.",
+            "reviewer_logo": "shopify:\/\/shop_images\/Snaxshot_2021-2.webp",
+            "rating": 10,
+            "background": "rosa"
+          }
+        }
+      },
+      "block_order": [
+        "1fa12558-919f-4ea8-9b98-284925598b5e",
+        "5bb644b6-7807-483d-a768-25ac6006b447",
+        "c7df46be-3133-43b2-bf7a-b83907caeb9e"
+      ],
+      "settings": {
+        "carousel_autoplay": 3500,
+        "carousel_animation_duration": 450,
+        "carousel_gap": 32,
+        "border_top": true,
+        "border_bottom": false,
+        "background": "image",
+        "background_image": "shopify:\/\/shop_images\/section-featured-reviews_2x_1800x_e9bcbed6-52e8-4506-b824-41cc047d3af5.jpg",
+        "background_image_position_desktop": "bottom center",
+        "background_image_position_mobile": "bottom center",
+        "container": "container",
+        "grid_layout": "three-column",
+        "grid_gutter": 32,
+        "padding_top": 52,
+        "padding_bottom": 180,
+        "anchor_id": ""
+      }
+    },
     "858ab1d2-5a53-4185-ad07-b4a9e869fa50": {
       "type": "sustainability",
       "blocks": {
@@ -221,62 +276,6 @@
         "background": "off-white",
         "padding_top": 8,
         "padding_bottom": 8
-      }
-    },
-    "1d026b43-556f-45e0-b1b0-f88e9f064dac": {
-      "type": "featured-reviews",
-      "blocks": {
-        "1fa12558-919f-4ea8-9b98-284925598b5e": {
-          "type": "review",
-          "settings": {
-            "review": "The white wine should be a staple in your refrigerator.",
-            "reviewer_logo": "shopify:\/\/shop_images\/review-logo-01-logo-_3x_a50ecc29-6195-43ce-a68c-ca77ab7093c0.png",
-            "rating": 10,
-            "background": "image",
-            "background_image": "shopify:\/\/shop_images\/off-white-pattern_00d4eb39-736a-42c0-babf-f5ecc3cfb34d.png"
-          }
-        },
-        "5bb644b6-7807-483d-a768-25ac6006b447": {
-          "type": "review",
-          "settings": {
-            "review": "Viavino is for those with a sophisticated palette and a flair for ~*aesthetic*~",
-            "reviewer_logo": "shopify:\/\/shop_images\/review-logo-02-logo-_3x_9ce36da4-9d3d-4d82-8dec-fea51e5a4079.png",
-            "rating": 10,
-            "background": "off-white"
-          }
-        },
-        "c7df46be-3133-43b2-bf7a-b83907caeb9e": {
-          "type": "review",
-          "settings": {
-            "review": "Viavino just might be tapping into the zeitgeist of our times.",
-            "reviewer_logo": "shopify:\/\/shop_images\/review-logo-03-logo-_3x_c9bc9f5a-f3f7-4cbf-ae31-ff62d16dfb4c.png",
-            "rating": 10,
-            "background": "rosa"
-          }
-        }
-      },
-      "block_order": [
-        "1fa12558-919f-4ea8-9b98-284925598b5e",
-        "5bb644b6-7807-483d-a768-25ac6006b447",
-        "c7df46be-3133-43b2-bf7a-b83907caeb9e"
-      ],
-      "disabled": true,
-      "settings": {
-        "carousel_autoplay": 3500,
-        "carousel_animation_duration": 450,
-        "carousel_gap": 32,
-        "border_top": true,
-        "border_bottom": false,
-        "background": "image",
-        "background_image": "shopify:\/\/shop_images\/section-featured-reviews_2x_1800x_e9bcbed6-52e8-4506-b824-41cc047d3af5.jpg",
-        "background_image_position_desktop": "bottom center",
-        "background_image_position_mobile": "bottom center",
-        "container": "container",
-        "grid_layout": "three-column",
-        "grid_gutter": 32,
-        "padding_top": 52,
-        "padding_bottom": 180,
-        "anchor_id": ""
       }
     },
     "0acf5f4b-81ec-4fc6-a25a-6a63ac132650": {
