@@ -1,7 +1,7 @@
 {%- assign resources = resources | default: '' -%}
 {%- if resources != blank -%}
 
-  {%- assign relationships = 'preconnect', 'dns-prefetch' | split: ', ' -%}
+  {%- assign relationships = 'preconnect' | split: ', ' -%}
   {%- assign resources = resources | split: ', ' -%}
 
   {%- for rel in relationships -%}
@@ -11,3 +11,13 @@
   {%- endfor -%}
 
 {%- endif -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- assign relationships = 'preconnect', 'dns-prefetch' | split: ', ' -%}"
+  to: "{%- assign relationships = 'preconnect' | split: ', ' -%}"
+  position: 84..141
+{% endcomment %}
