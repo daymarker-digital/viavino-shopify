@@ -15,11 +15,7 @@
 
 {%- style -%}
 
-  {%
-    render 'element-styles',
-      element_background: section.settings.background | default: 'off-white',
-      element_id: section_id
-  %}
+  {% render 'element-styles', element_background: section.settings.background, default: 'off-white', element_id: section_id %}
 
 {%- endstyle -%}
 
@@ -89,3 +85,19 @@
     ]
   }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%
+        render 'element-styles',
+          element_background: section.settings.background | default: 'off-white',
+          element_id: section_id
+      %}
+  to: "{% render 'element-styles', element_background: section.settings.background,
+    default: 'off-white', element_id: section_id %}"
+  position: 426..550
+{% endcomment %}
